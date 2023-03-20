@@ -9,6 +9,7 @@ book:
     - index.qmd
     - intro.qmd
     - ch2_review.qmd
+    - ch8_discussion.qmd
 
 bibliography: references.bib
 

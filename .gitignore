@@ -2,8 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
-_book/*.pdf
+_book/
 figures/
 *cache/
 *_files/
 .quarto/
+
+/.quarto/
