@@ -1,0 +1,13 @@
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{framed}
+\usepackage{tcolorbox}
+\newtcolorbox[auto counter, number within=chapter]{blackbox}[2][]{
+  colback=white,
+  colframe=black,
+  coltext=black,
+  boxsep=2pt,
+  title = Box ~\thetcbcounter: #2,#1,
+  arc=4pt}
+\let\oldchapter\chapter
+\renewcommand\chapter{\clearpage\oldchapter}

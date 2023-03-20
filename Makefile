@@ -1,0 +1,3 @@
+.PHONY:
+thesis :
+	quarto render

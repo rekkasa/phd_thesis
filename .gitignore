@@ -4,3 +4,6 @@
 .Ruserdata
 _book/*.pdf
 figures/
+*cache/
+*_files/
+.quarto/

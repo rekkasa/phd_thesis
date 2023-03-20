@@ -1,0 +1,25 @@
+project:
+  type: book
+book:
+  title: "Baseline risk in medical decision making"
+  subtitle: "From outcome prediction to the assessment of treatment effect heterogeneity"
+  author: "Alexandros Rekkas"
+  date: "3/19/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - ch2_review.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    include-in-header:
+      - preamble.tex
+    documentclass: book
+    toc-depth: 1
+
+
+
