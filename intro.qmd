@@ -17,22 +17,28 @@ patient's osteoporotic fracture risk
 
 Risk prediction models, i.e. mathematical functions relating the presence of the
 outcome of interest to a set of measured predictors (covariates)
-[https://heart.bmj.com/content/98/9/683], are important empirical tools for the
-assessment of a patient's baseline risk. Adequate evaluation of a prediction
-model's performance in new patients is crucial. In most cases, this mainly
-focuses on the prediction model's discriminative performance, i.e. its ability
-to separate lower from higher risk patients, and its calibration, i.e. the
-agreement of predicted risk to observed event rates [Ewout book; TRIPOD]. Though
-measures of discrimination and calibration are useful for assessing the
-predictive performance of one or multiple prediction models, they do not provide
-insight into the added value of using these models for medical decision
-making. Baseline risk is only one of the crucial pieces required for predicting
-individual responses to treatment. Knowledge of the patients' responsiveness to
-treatment, their vulnerability to side-effects and their utilities for other
-relevant outcomes is necessary information required for making truly informed
-clinical decisions [Kravitz, 2004].
+[REF](https://heart.bmj.com/content/98/9/683), are important empirical tools for
+the assessment of a patient’s baseline risk. For example, the Systematic
+COronary Risk Evaluation (SCORE) system can be used to assess a patient’s
+baseline 10-year cardiovascular risk (figure 1A). The performance of a
+prediction model in new patients is crucial. Model performance is often
+expressed by its discrimination, i.e. its ability to separate lower from higher
+risk patients, and its calibration, i.e. the agreement of predicted risk to
+observed event rates [Ewout book; TRIPOD]. Although a risk prediction model may
+perform well in terms of discrimination and calibration for risk, it is not
+necessarily helpful for medical decision making. Baseline risk is only one of
+the crucial pieces required for predicting individual responses to treatment.
+Knowledge of the patients’ responsiveness to treatment, their vulnerability to
+side-effects and their utilities for other relevant outcomes is necessary
+information required for making truly informed clinical decisions [Kravitz,
+2004]. Predicting more individualized responses to treatment is the challenge of
+this thesis.
 
-## Personalizing treatment effect
+```{r hypertensionGuidelines, echo=FALSE, fig.cap="European guidelines for the treatment of hypertension. Acronyms...A 65-year old woman...Treatment for her..."}
+knitr::include_graphics("figures/hypertensionGuidelines.png")
+```
+
+## Prediction of treatment effect
 
 In order to provide the most optimal medical care, doctors are advised to align
 their clinical practice with the results of well-conducted clinical trials, or
@@ -43,7 +49,7 @@ population. However, the estimated treatment effect is often an average of
 heterogeneous treatment effects and, as such, may not be applicable to most
 patient subgroups, let alone individual patients. If a treatment causes a
 serious adverse event, then treating all patients on the basis of an observed
-overall positive treatment effect may be harmful for some [Rothwell, Lancet
+average positive treatment effect may be harmful for some [Rothwell, Lancet
 1995; ...].
 
 Conceptually, heterogeneity of treatment effect (HTE) is the variation of

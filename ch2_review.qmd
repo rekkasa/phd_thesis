@@ -103,12 +103,12 @@ determining the benefits of therapy.
 Due to the absence of medical subject headings (MeSH) for HTE, we used a
 relatively broad search strategy to maximize sensitivity. For the time period
 1/1/2000 through 8/9/2018, we searched Medline and Cochrane Central using the
-text word search strategy from Table \ref{tab:searchStrategy}. We also retrieved seminal articles
-suggested by a technical expert panel (TEP). The TEP was comprised of 16 experts
-who represented various perspectives on predictive HTE analyses, including
-expertise in HTE, prediction modeling, clinical trials, and guideline
-development as well as a patient advocate. More details on the TEP are available
-in the PATH Statement (***REF: 12, 13***).
+text word search strategy from Table \ref{tab:searchStrategy}. We also retrieved
+seminal articles suggested by a technical expert panel (TEP). The TEP was
+comprised of 16 experts who represented various perspectives on predictive HTE
+analyses, including expertise in HTE, prediction modeling, clinical trials, and
+guideline development as well as a patient advocate. More details on the TEP are
+available in the PATH Statement (***REF: 12, 13***).
 
 \begin{table}[h]
 \centering
