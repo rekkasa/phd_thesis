@@ -7,5 +7,6 @@ figures/
 *cache/
 *_files/
 .quarto/
+data/
 
 /.quarto/

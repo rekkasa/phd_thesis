@@ -10,6 +10,9 @@ figures/reviewFigure.tiff : code/ReviewPlot.R
 figures/reviewDiagram.pdf : code/GetReviewDiagram.sh
 	$<
 
+figures/riskBenefit.tiff : code/RiskBenefit.R
+	$<
+
 _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	preamble.tex \
 	index.qmd \
