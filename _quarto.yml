@@ -9,17 +9,20 @@ book:
     - index.qmd
     - intro.qmd
     - ch2_review.qmd
+    - ch3_framework.qmd
+    - ch4_simulation.qmd
+    - ch5_melanoma.qmd
+    - ch6_covid.qmd
+    - ch7_osteoporosis.qmd
     - ch8_discussion.qmd
 
 bibliography: references.bib
 
 format:
-  html:
-    theme: cosmo
   pdf:
+    documentclass: book
     include-in-header:
       - preamble.tex
-    documentclass: book
     toc-depth: 1
 
 

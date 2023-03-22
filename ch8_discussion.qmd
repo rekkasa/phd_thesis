@@ -1,52 +1,51 @@
-# General discussion {#discussion}
+# General discussion
 
-
+\vspace*{\fill}\par
 \pagebreak
-\vfill
+
 ## Main findings 
 
 This thesis had three main research aims (Box \ref{resultsBox}). In chapter
-\@ref(review) we reviewed the available literature on predictive approaches to
-treatment effect heterogeneity. In chapter \@ref(framework) we presented a
+@sec-review we reviewed the available literature on predictive approaches to
+treatment effect heterogeneity. In chapter @sec-framework we presented a
 standardized framework for the assessment of treatment effect heterogeneity
 using a risk-based approach in observational data. We applied this framework in
 two different clinical settings. First, we evaluated effect heterogeneity of
 thiazides or thiazide-like diuretics compared to angiotensin-converting enzyme
-inhibitors for the treatment of hypertension (chapter \@ref(framework)). Second,
+inhibitors for the treatment of hypertension (chapter @sec-framework). Second,
 we evaluated treatment effect heterogeneity of teriparatide compared to oral
-bisphosphonates for patients with osteoporosis (chapter \@ref(osteoporosis)). In
-chapter \@ref(simulation) we presented risk-based approaches for predicting
-individualized treatment effect. Finally, in chapters \@ref(melanoma) and
-\@ref(covid) we presented the development and validation of models for
+bisphosphonates for patients with osteoporosis (chapter @sec-osteoporosis). In
+chapter @sec-simulation we presented risk-based approaches for predicting
+individualized treatment effect. Finally, in chapters @sec-melanoma and
+@sec-covid we presented the development and validation of models for
 prediction of baseline risk in melanoma and COVID-19 patients.
 
-\subsection*{}
 \begin{blackbox}[label={resultsBox}]{Results regarding the aims of this thesis}
 \textbf{Aim 1}: \textit{Systematically review the current literature on predictive
 approaches to treatment effect heterogeneity}.
 \begin{itemize}
-\item{We found 36 papers on regression-based methods. Based on the reference class for patient similarity regarding treatment effect heterogeneity, we categorized existing methods to risk modeling (similarity based on risk factors), treatment effect modeling (similarity based on risk factors and effect modifiers), and optimal treatment regime methods (similarity based solely on effect modifiers).}
+\item We found 36 papers on regression-based methods. Based on the reference class for patient similarity regarding treatment effect heterogeneity, we categorized existing methods to risk modeling (similarity based on risk factors), treatment effect modeling (similarity based on risk factors and effect modifiers), and optimal treatment regime methods (similarity based solely on effect modifiers).\newline
 \end{itemize}
 \textbf{Aim 2}: \textit{Develop scalable and reproducible risk-based predictive approaches to the assessment of treatment effect heterogeneity}.
 \begin{itemize} 
-\item{We developed a standardized five-step framework for evaluating treatment
+\item We developed a standardized five-step framework for evaluating treatment
 effect heterogeneity within the observational setting using
-a risk-based approach}.
-\item{We found in simulations that a simple linear interaction of baseline risk 
+a risk-based approach.
+\item We found in simulations that a simple linear interaction of baseline risk 
 with treatment adequately predicted absolute treatment effects for individual
-patients in many common scenarios.}
+patients in many common scenarios.\newline
 \end{itemize}
 \textbf{Aim 3}: \textit{Apply risk-based methods to better guide medical decisions}
 \begin{itemize}
-\item {We developed and validated a prediction model for sentinel node positive
-melanoma patients.}
-\item {We developed and validated a prediction model for predicting mortality
+\item We developed and validated a prediction model for sentinel node positive
+melanoma patients.
+\item We developed and validated a prediction model for predicting mortality
 and need for intensive care unit admission in patients who present to the emergency
 department with suspected COVID-19. We implemented the model in publicly available
-online and mobile applications.}
-\item {We evaluated effect heterogeneity of teriparatide treatment compared to
+online applications.
+\item We evaluated effect heterogeneity of teriparatide treatment compared to
 treatment with oral bisphosphonates in osteoporosis patients using our five-step
-framework.}
+framework.
 \end{itemize}
 \end{blackbox}
 

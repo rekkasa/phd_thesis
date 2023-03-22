@@ -1,13 +1,33 @@
 \usepackage{booktabs}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{relsize}
 \usepackage{color}
 \usepackage{framed}
-\usepackage{tcolorbox}
+\usepackage{lmodern}
+\usepackage[most]{tcolorbox}
+\let\paragraph\oldparagraph
+\let\subparagraph\oldsubparagraph
+\usepackage[compact]{titlesec}
+
+\newcommand\Chapter[2]{
+  \chapter[#1: {\itshape#2}]{#1\\\medskip\smaller\itshape#2}
+}
+
+
+\titleformat{\chapter}[display]
+  {\bfseries\Large}
+  {\filcenter\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+  {5ex}
+  {\titlerule\vspace{1ex}\filcenter}
+  [\vspace{1ex}\titlerule]
+  \pagebreak
+
 \newtcolorbox[auto counter, number within=chapter]{blackbox}[2][]{
   colback=white,
   colframe=black,
   coltext=black,
   boxsep=2pt,
+  breakable,
   title = Box ~\thetcbcounter: #2,#1,
   arc=4pt}
-\let\oldchapter\chapter
-\renewcommand\chapter{\clearpage\oldchapter}
+\renewcommand{\floatpagefraction}{.8}

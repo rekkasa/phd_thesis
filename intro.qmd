@@ -1,4 +1,4 @@
-# Introduction {.unnumbered}
+# Introduction
 
 \vspace*{\fill}\par
 \pagebreak
@@ -13,12 +13,12 @@ initiation is based---among other things---on the patient's baseline 10-year
 cardiovascular risk [https://doi.org/10.1093/eurheartj/ehy339]. Similarly, an
 algorithm for management of osteoporosis has been suggested, based on a
 patient's osteoporotic fracture risk
-[https://doi.org/10.1007/s00198-019-05176-3].
+[**REF**](https://doi.org/10.1007/s00198-019-05176-3).
 
 Risk prediction models, i.e. mathematical functions relating the presence of the
 outcome of interest to a set of measured predictors (covariates)
-[REF](https://heart.bmj.com/content/98/9/683), are important empirical tools for
-the assessment of a patient’s baseline risk. For example, the Systematic
+[**REF**](https://heart.bmj.com/content/98/9/683), are important empirical tools
+for the assessment of a patient’s baseline risk. For example, the Systematic
 COronary Risk Evaluation (SCORE) system can be used to assess a patient’s
 baseline 10-year cardiovascular risk (figure 1A). The performance of a
 prediction model in new patients is crucial. Model performance is often
@@ -52,8 +52,18 @@ serious adverse event, then treating all patients on the basis of an observed
 average positive treatment effect may be harmful for some [Rothwell, Lancet
 1995; ...].
 
-Conceptually, heterogeneity of treatment effect (HTE) is the variation of
-treatment effects on the individual level across the population
+Heterogeneity of treatment effect (HTE) is the variation of treatment effects on
+the individual level across the population
+[https://doi.org/10.1111/j.0887-378X.2004.00327.x]. The identification and
+quantification of HTE is crucial for guiding medical decision making and lies at
+the core of patient-centered outcomes research. Despite HTE being widely
+anticipated, however, its evaluation is not straightforward. Individual
+treatment effects are—by their nature—unobservable: the moment a patient
+receives a specific treatment, their response under the alternatives becomes
+unmeasurable (fundamental problem of causal inference; [Holland, 1986]).
+
+Heterogeneity of treatment effect (HTE) is the variation of treatment effects on
+the individual level across the population
 [https://doi.org/10.1111/j.0887-378X.2004.00327.x]. The identification and
 quantification of HTE is crucial for guiding medical decision making and lies at
 the core of patient-centered outcomes research. Despite HTE being widely
@@ -62,28 +72,28 @@ treatment effects are---by their nature---unobservable: the moment a patient
 receives a specific treatment, their response under the alternatives becomes
 unmeasurable (fundamental problem of causal inference; [Holland, 1986]).
 
-To evaluate a specific individual's response under alternative treatments,
-researchers need to observe the outcomes of other "similar" patients that
-actually received one of the other candidate treatments. More individualized
-treatment effects are derived from the average effects estimated within a
-subgroup of similar patients. However, patient similarity is not straightforward
-to assess. Patients differ in a vast number of characteristics which may or may
-not be relevant to modifying treatment responses. Identification of such patient
-characteristics can be quite complicated. In clinical trials it usually relies
-on the detection of statistically significant interactions of treatment with
-measured covariates (subgroup analyses).
+To evaluate a specific individual’s response under an alternative treatment,
+researchers need to observe the outcomes of other “similar” patients that
+actually received the alternative treatment. More individualized treatment
+effects are often derived from the average effects estimated within a subgroup
+of similar patients. However, patient similarity is not straightforward to
+assess. Patients differ in a vast number of characteristics which may or may not
+be relevant to modifying treatment responses. Identification of such patient
+characteristics is challenging. In clinical trials it usually relies on the
+detection of statistically significant (pre-specified) interactions of treatment
+with measured covariates (subgroup analyses).
 
-As clinical trials are usually only adequately powered to detect overall effects
-of a certain size, this kind of analyses can be problematic. Existing guidance
-on carrying out subgroup analyses attempts to mitigate these issues [refs]. Lack
-of statistical power often results in falsely concluding "consistency" of the
+As clinical trials are in general only adequately powered to detect an overall
+treatment effect of a certain size, subgroup analyses can be problematic. Lack
+of statistical power often results in falsely concluding “consistency” of the
 treatment effect across several subpopulations of interest or overestimating the
 effect size of a treatment-covariate interaction. The former because an existing
 interaction effect was smaller than the detectable effect size, the latter
-because of false positives introduced from multiple testing. In Figure
-\@ref(fig:power) the statistical power for detecting an interaction effect of
-equal size to the main effect is below 30\%, despite the clinical trial being
-powered at 80\% for the detection of the overall effect.
+because of false positives introduced from multiple testing. In Figure 1.1 the
+statistical power for detecting an interaction effect of equal size to the main
+effect is below 30%, despite the clinical trial being powered at 80% for the
+detection of the overall effect. Existing guidance on carrying out subgroup
+analyses attempts to mitigate these issues (**REFS**).
 
 ```{r power, cache=TRUE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/PowerPlot.tiff")))
@@ -92,35 +102,36 @@ grid::grid.raster(tiff::readTIFF(here::here("figures/PowerPlot.tiff")))
 Baseline risk is an important determinant of treatment effect [refs]. It sets an
 upper bound on the treatment effect size. Low risk patients can only experience
 minimal treatment benefit before their risk is reduced to zero, while high risk
-patients can benefit much more. This means that baseline risk can be used as a
-subgrouping variable for assessing HTE. For many common settings prediction
-models of high quality for estimating baseline risk already exist and can be
-directly applied to the data at hand [refs]. If no such models exist, the
-researcher can develop one from the available dataset [refs].
+patients can benefit much more. Consequently, baseline risk can be used as a
+subgrouping variable for assessing HTE. For many populations of patients for
+whom we aim to estimate treatment effects, well-performing models for predicting
+baseline risk already exist and can be used to stratify the patients into
+subgroups [refs]. If no such models exist, the researcher can develop one in the
+dataset that is used for treatment effect estimation (**REFS**).
 
-Baseline risk can also be used for directly predicting individual treatment
-benefit [Califf; Dahabreh, IJE 2016]. For example Califf et al [ref] predicted
-individual benefits regarding mortality with tissue plasminogen activator (tPA)
-compared to streptokinase treatment in patients with acute myocardial infarction
-using baseline mortality risk and assuming a constant relative tPA treatment
-effect. However, relative treatment effect does not need to be assumed
-constant. Modeling more flexible interactions of treatment with baseline outcome
-risk may provide more informative absolute benefit predictions for individual
-patients.
+Baseline risk can also be used directly for predicting individual treatment
+benefit [**REF**: Califf; Dahabreh, IJE 2016]. For example Califf et al
+(**REF**) predicted individual benefits regarding 30-day mortality with tissue
+plasminogen activator (tPA) compared to streptokinase treatment in patients with
+acute myocardial infarction using baseline mortality risk and assuming a
+constant relative tPA treatment effect. However, relative treatment effect does
+not need to be constant. Modeling more flexible interactions of treatment with
+baseline outcome risk may provide more accurate absolute benefit predictions for
+individual patients.
 
-Depending on the scale treatment effect is measured, HTE may or may not be
-identified (Figure \@ref(fig:scale)). For example, despite finding statistically
-significant subgroup effect evaluated on the relative scale, the absolute risk
-difference between the two groups may be so small that has no clinical relevance
-[http://dx.doi.org/10.1016/j.jclinepi.2013.11.003]. Therefore, in the presence
-of a truly effective treatment, effect heterogeneity should always be
-anticipated on some scale [Dahabreh, IJE 2016], as baseline risk is bound to
-vary across trial patients. If effect modifiers are known and the available
-sample size provides adequate statistical power for evaluating
+Depending on the scale treatment effect is measured on, HTE may or may not be
+identified (Figure 1.2). For example, despite finding statistically significant
+subgroup effect evaluated on the relative scale, the absolute risk difference
+between the two groups may be too small to have any clinical relevance
+[**REF**](http://dx.doi.org/10.1016/j.jclinepi.2013.11.003). Therefore, in the
+presence of a truly effective treatment, effect heterogeneity should always be
+anticipated on some scale [**REF**: Dahabreh, IJE 2016], as baseline risk is
+bound to vary across trial patients. If effect modifiers are known and the
+available sample size provides adequate statistical power for evaluating
 treatment-covariate interactions, modeling these interactions would be the
 optimal approach for assessing HTE. However, this approach may lead to
 overfitting and unstable estimates for the interaction effects if the
-aforementioned conditions are not met [Balan, JCE].
+aforementioned conditions are not met [**REF**: Balan, JCE].
 
 ```{r scale, cache=TRUE, echo=FALSE, fig.cap="Scale dependency of treatment effect heterogeneity. In the left panel a constant odds ratio of 0.8 is assumed. In the right panel a constant absolute risk reduction of 0.1 is assumed.", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ScalePlot.tiff")))
@@ -144,22 +155,22 @@ comparison very challenging.
 If all relevant patient characteristics on which the treating physician based
 their decision have been captured in the observational dataset, methods are
 available that can be used to account for these systematic differences
-[refs]. Among the more popular ones is limiting the analyses to the propensity
-score matched subpopulation. Propensity scores are the patient-specific
-probabilities of receiving the treatment under study and have been shown to have
-the balancing property, i.e., conditional on the propensity score treatment
-assignment is independent of the potential outcomes [refs]. This means that in a
-subset of patients with equal propensity scores there are no differences in
-covariate distributions between patients receiving the treatment under study and
-those who are not. Consequently, patients within this subset can be assumed to
-be randomized.
+(**REFS**). Among the more popular ones is limiting the analyses to the
+propensity score matched subpopulation. Propensity scores are the
+patient-specific probabilities of receiving the treatment under study and have
+been shown to have the balancing property, i.e., conditional on the propensity
+score treatment assignment is independent of the potential outcomes (**REFS**).
+This means that in a subset of patients with equal propensity scores, covariate
+distributions do not differ between patients receiving the treatment under study
+and those who are not. Consequently, patients within this subset can be assumed
+to be randomized.
 
 Unfortunately, more often than not, a critical amount of the information that
-went into treatment decisions is not captured. As a consequence, propensity
+was used for treatment decisions is not captured. As a consequence, propensity
 score adjustment will not suffice to evaluate treatment effects using the
 observational data, be it overall or subgroup effects. Sensitivity analyses
 searching for evidence of this systematic unmeasured imbalances have been
-proposed and can be of assistance in many situations [refs].
+proposed and can be of assistance in many situations (**REFS**)
 
 Another important problem with observational databases is that they use
 different architectures. As anyone gathering routinely observed healthcare data
@@ -167,18 +178,18 @@ did so in a way that was more convenient to them, a plethora of structures for
 the resulting databases arose. Diseases, treatments, medical exams and many more
 aspects of healthcare are often coded differently in different observational
 databases. In addition, more fundamental disparities between databases also
-factor in database incopatibility: different types of information are recorded
-in different databases. Different patient characteristics are captured---at
-different levels of detail---in a general practitioner database, in a hospital
+factor in database incompatibility: different types of information are recorded
+in different databases. Different patient characteristics are captured—at
+different levels of detail—in a general practitioner database, in a hospital
 medical record or in an administrative claims database. This means that
-combining results from multiple databases is not a simple task.
+combining results from multiple databases is not a simple task
 
-One of the solutions put forward for handling database incompatibility was the
-creation of the Observational Medical Outcomes Partnership Common Data Model
-(OMOP-CDM) [refs]. This provided a standard for structuring an observational
-database, while large effort was put into developing processes for mapping
-existing databases from their own specific structure to OMOP-CDM. With this high
-level of standardization achieved, the design and execution of highly scalable
+One of the solutions for handling database incompatibility was the creation of
+the Observational Medical Outcomes Partnership Common Data Model (OMOP-CDM)
+(**REFS**). This provided a standard for structuring an observational database,
+while large effort was put into developing processes for mapping existing
+databases from their own specific structure to OMOP-CDM. With this high level of
+standardization achieved, the design and execution of highly scalable
 observational studies was made possible. Common definitions of diseases,
 treatments, and outcomes can now be applied uniformly across a network of many
 databases containing information on hundreds of millions of patients. An
@@ -205,7 +216,7 @@ the number of measured patient characteristics increases with the number of
 patients. Attempting a treatment effect modeling approach, where
 treatment-covariate interactions are modeled for the prediction of
 individualized treatment benefits, suffers from the same statistical power
-issues and often results to highly variable estimates. Therefore, using baseline
+issues and often results in highly variable estimates. Therefore, using baseline
 outcome risk as the subgrouping variable, can provide useful insight into
 treatment effect heterogeneity within the observational setting. Modern
 libraries for developing risk prediction models and for correcting for
@@ -229,46 +240,22 @@ and observational data. The specific research aims are:
 3. *Apply risk-based methods to better guide medical decisions*. We will develop
    baseline risk prediction models in several clinical case studies.
 
-In **Chapter 2** we present the results of a scoping literature review of
-regression modeling approaches for the assessment of treatment effect
-heterogeneity in the clinical trial setting. The identified methods are divided
-into broader categories based on how they incorporate prognostic factors and
-treatment effect modifiers.
-
-In **Chapter 3** we develop a standardized scalable framework for the assessment
-of treatment effect heterogeneity using a risk-stratified approach in the
-observational setting. We, also, develop the software for the execution of the
-framework in observational databases mapped to OMOP-CDM. We, finally,
-demonstrate the application of the framework, assessing treatment effect
-heterogeneity in first-line treatment for hypertension across three US claims
-databases.
-
-In **Chapter 4** we compare different risk-based methods for predicting
-individualized treatment effects using an extensive simulation study. We only
-consider the clinical trial setting were treatment is admistered at random.
-
-In **Chapter 5** we develop a model for the prediction of 5-year recurrence risk
-in sentinel node positive melanoma patients, using data from nine European
-Organization for Research and Treatment of Cancer centers. We calibrate the
-recurrence model to predict 5-year risk of distant metastasis and overall
-mortality and develop a nomogram for graphical representation. The models are,
-then, externally validated in a prospective cohort of positive sentinel node
-melanoma patients in Germany.
-
-In **Chapter 6** we develop a model for the prediction of 28-day mortality for
+In **@sec-review** we present the results of a scoping literature review
+of regression modeling approaches for the assessment of treatment effect
+heterogeneity in the clinical trial setting. In **@sec-framework** we
+develop a standardized scalable framework for the assessment of treatment effect
+heterogeneity using a risk-stratified approach in the observational setting. In
+**@sec-simulation** we compare different risk-based methods for predicting
+individualized treatment effects using extensive simulations of clinical trials.
+In **@sec-melanoma** we develop and externally validate a model for the
+prediction of 5-year recurrence risk in sentinel node positive melanoma
+patients, using data from nine European Organization for Research and Treatment
+of Cancer centers. In **@sec-covid** we develop and temporally validate
+a model for the prediction of 28-day mortality and admission to the ICU for
 patients presenting at the emergency department with suspected COVID-19
-infection at four large Dutch hospitals between March and August, 2020. We
-predict 28-day admission to the intensive care unit by calibrating the mortality
-model. An easy to use web application is also supplied. We perform temporal
-validation to assess model performance using data between September and
-December, 2020.
-
-In **Chapter 7** we apply the standardized framework developed in chapter 3 to
-evaluate effect heterogeneity of teripatide treatment compared to oral
-bisphosphonates in female patients above the age of 50 with established
-osteoporosis. We use different risk stratification approaches based on quantiles
-of predicted risk and externally derived risk thresholds for treatment. We
-evaluate the presence of residual confounding using sensitivity analyses.
-
-Finally, in **Chapter 8** we present a general discussion along with
-perspectives on future work.
+infection at four large Dutch hospitals between March and August, 2020. In
+**@sec-osteoporosis** we apply the standardized framework developed in
+**@sec-framework** to evaluate effect heterogeneity of teripatide treatment
+compared to oral bisphosphonates in female patients above the age of 50 with
+established osteoporosis. Finally, in Chapter 8 we present a general discussion
+along with perspectives on future work.
