@@ -15,8 +15,10 @@ book:
     - ch6_covid.qmd
     - ch7_osteoporosis.qmd
     - ch8_discussion.qmd
+    - references.qmd
 
 bibliography: references.bib
+csl: nature.csl
 
 format:
   pdf:

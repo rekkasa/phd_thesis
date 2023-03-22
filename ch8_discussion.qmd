@@ -1,4 +1,4 @@
-# General discussion
+# General discussion {#sec-discussion}
 
 \vspace*{\fill}\par
 \pagebreak
@@ -108,13 +108,13 @@ modifiers for the evaluation of treatment effect heterogeneity. Their aim is not
 to provide personalized treatment effect estimates or to separate patients into
 subgroups of similar expected treatment effect, but rather to classify them into
 two categories: patients who benefit from treatment and patients who do not. If
-there are no major treatment-related harms or costs, they can be used out of the
-box to guide medical decisions. However, in the presence of serious treatment
-adverse events, these methods may be more challenging to implement, as the
-effect of baseline risk factors is not taken into account. This means that the
-baseline risk of the main outcome of interest is not evaluated and, therefore,
-the absolute risk reduction achieved with treatment cannot be compared to the
-risk increase for the adverse event in question.
+there are no major treatment-related harms or costs, they can be used to guide
+medical decisions. However, in the presence of serious treatment adverse events,
+these methods may be more challenging to implement, as the effect of baseline
+risk factors is not taken into account. This means that the baseline risk of the
+main outcome of interest is not evaluated and, therefore, the absolute risk
+reduction achieved with treatment cannot be compared to the risk increase for
+the adverse event in question.
 
 In a similar literature review focusing on subgroup idenetification, 
 [Lipkovich et al](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.7064)
@@ -192,28 +192,20 @@ primarily defined based on treatment effect modifiers}.
 
 ## Risk-based predictive approaches to treatment effect heterogeneity
 
-In this thesis, we separate predictive approaches (predict which treatment will
-result in better outcomes for an individual) from causal
-approaches (exploratory or confirmatory subgroup analyses) for the evaluation
-of treatment effect heterogeneity, focusing on the former. The Predictive
-Approaches to Treatment effect Heterogeneity (PATH) statement aimed to provide
-guidance on the conduct of predictive analyses of treatment effect heterogeneity
-(**REF: PATH**). Using variation in risk difference across patient subgroups as
-the point of clinical relevance, the PATH statement presented comprehensive
-guidance on performing risk-based evaluation of treatment effect heterogeneity.
-It explored the settings within which a risk-based approach would be most
-appropriate. It provided guidance on best practices when undertaking a
-risk-based approach for the evaluation of treatment effect heterogeneity and
-presented its limitations. Finally, it identified several knowledge gaps that
-need to be addressed in future research. Among many others, the need for further
-research in the evaluation of treatment effect heterogeneity in observational
-data and methods for individualization of predicted treatment effect were
-highlighted. Research on both these knowledge gaps was presented in this thesis
-(chapters \@ref(framework) and \@ref(simulation)).
+The Predictive Approaches to Treatment effect Heterogeneity (PATH) statement
+aimed to provide guidance on the conduct of predictive analyses of treatment
+effect heterogeneity (**REF**: PATH). Using variation in baseline risk across
+patient subgroups, the PATH statement presented comprehensive guidance on
+performing risk-based evaluation of treatment effect heterogeneity. It also
+identified several knowledge gaps that need to be addressed in future research.
+Among many others, the need for further research in the evaluation of treatment
+effect heterogeneity in observational rather than experimental/randomized data
+and methods for individualization of predicted treatment effect were
+highlighted.
 
 In chapter \@ref(framework), we proposed a five-step standardized framework for
 evaluating treatment effect heterogeneity within the observational setting using
-a risk-based approach (box \ref{frameworkBox}). We alse developed a software
+a risk-based approach (box \ref{frameworkBox}). We also developed a software
 package for performing such analyses. We made our software compatible with
 databases mapped to OMOP-CDM to allow for scalability and reproducibility of the
 analyses. The potential of this approach was demonstrated in a small-scale
@@ -274,11 +266,9 @@ Risk stratified approaches to treatment effect heterogeneity estimate treatment
 effects for groups of patients with more similar, but not necessarily equal,
 baseline risk. Consequently, with larger variability in predicted risk and
 strong treatment effects, strata-specific estimates of treatment effect may not
-apply to individuals.
-
-In chapter \@ref(simulation), we compared regression-based methods for
-personalizing predictions of treatment effect using baseline risk in a
-simulation study. Focusing on the RCT setting, methods assuming a constant
+apply to individuals. In chapter \@ref(simulation), we compared regression-based
+methods for personalizing predictions of treatment effect using baseline risk in
+a simulation study. Focusing on the RCT setting, methods assuming a constant
 relative treatment effect, or a linear interaction of the linear predictor for
 risk with treatment, or finally non-linear interactions in the form of
 restricted cubic splines were compared. Additionally, an adaptive approach using
@@ -294,12 +284,12 @@ to the sample at hand.
 
 Although risk is a mathematical determinant of treatment effect, an important
 limitation of risk-based methods for the evaluation of treatment effect
-heterogeneity is the imposition of strong assumptions on the relationship
-between treatment effect and risk factors. Since treatment benefit is modeled as
-a function of predicted baseline risk, all risk factors are assumed be similarly
-associated with treatment effect. More specifically, the effects of risk factors
-on treatment effect are assumed to be proportional to their effect on baseline
-risk (**REF: Hoogland et al**). Even though models allowing for individual
+heterogeneity is the strong assumptions on the relationship between treatment
+effect and risk factors. Since treatment benefit is modeled as a function of
+predicted baseline risk, all risk factors are assumed be similarly associated
+with treatment effect. More specifically, the effects of risk factors on
+treatment effect are assumed to be proportional to their effect on baseline risk
+(**REF: Hoogland et al**). Although models allowing for individual
 treatment-covariate interactions may be considered more realistic, estimation of
 these interaction effects can be very challenging. (**REFS!!**). Randomized
 controlled trials are often adequately powered for the detection of a main
@@ -307,14 +297,14 @@ treatment effect and not for the estimation of interaction effects.
 Consequently, interaction effects are often overestimated, leading to major
 overestimation of treatment effect heterogeneity ("overfitting").
 
-Therefore, in settings with smaller sample sizes, absence of information on
-treatment effect modification, or a large number of candidate effect modifiers,
-the adoption of a risk-based approach for the evaluation of treatment effect
-heterogeneity is appropriate. In these settings, the bias introduced
-by---potentially falsely---assuming that treatment effect is a function of
-baseline risk may still result in more accurate representation of treatment
-effect heterogeneity, compared to a highly variable treatment effect modeling
-approach. With larger sample sizes or well-studied treatment effect
+Therefore, in settings with smaller sample sizes, in the absence of information
+on treatment effect modification, or in the presence of large number of
+candidate effect modifiers, the adoption of a risk-based approach for the
+evaluation of treatment effect heterogeneity is appropriate. In these settings,
+the bias introduced by---potentially falsely---assuming that treatment effect is
+a function of baseline risk may still result in more accurate representation of
+treatment effect heterogeneity, compared to a highly variable treatment effect
+modeling approach. With larger sample sizes or well-studied treatment effect
 modification, treatment effect modeling may be the optimal approach. Again,
 special care, such as penalization of interaction effects may still be required
 as a measure against overfitting (**REFS!!**). In general, there is no single
@@ -322,23 +312,21 @@ approach that can universally outperform all others, but it grossly depends on
 the setting at hand.
 
 In our simulation study we only considered risk modeling approaches and did not
-compare them with treatment effect modeling methods. As already explained,
-depending on the setting, one approach may outperform the other when
-individualizing treatment benefits. The considered simulation scenarios always
-assumed the presence of true interactions of treatment with baseline risk,
-without allowing for interactions of treatment with individual predictors. In a
-small set of additional simulation scenarios, the performance of the considered
-risk-based methods was evaluated in the presence of true treatment-covariate
-interactions. Despite the main conclusions remaining unchanged, the errors for
-all approaches increased considerably. In these scenarios, using a treatment
-effect modeling approach with appropriate penalization on the interaction
-effects may have performed better with larger sample size and/or strong
-treatment-covariate interactions (**REF van Klaveren, Simulations**).
+compare them with treatment effect modeling methods. Most of the considered
+simulation scenarios assumed the presence of true interactions of treatment with
+baseline risk, without allowing for interactions of treatment with individual
+predictors. In a small set of additional simulation scenarios, the performance
+of the considered risk-based methods was evaluated in the presence of true
+treatment-covariate interactions. Although the conclusions about the optimal
+risk-based approaches were similar, the errors for all approaches increased
+considerably. In these scenarios, using a treatment effect modeling approach
+with appropriate penalization on the interaction effects may have performed
+better with larger sample size and/or strong treatment-covariate interactions
+(**REF van Klaveren, Simulations**).
 
-With the development of the framework presented in chapter \@ref(framework) our
+With the development of the framework presented in chapter @sec-framework our
 aim was to enable the evaluation of treatment effect heterogeneity using readily
-available observational patient data, while avoiding much of the cost for
-setting up a clinical trial. Despite its great promise, however, observational
+available observational patient data. Despite its great promise, observational
 data suffers from major imbalances in treatment assignment, great disparities in
 the level clinical information is captured between different vendors, and
 high-dimensionality (**REFS!!**). Consequently, traditional statistical
@@ -374,8 +362,8 @@ compared to treatment with oral bisphosphonates in patients with osteoporosis
 \end{itemize}
 \end{blackbox}
 
-We developed and externally validated a nomogram for the prediction of
-recurrence, distant metastasis, and overall mortality 5-year risk positive
+We developed and externally validated a nomogram for the prediction of 5-year
+risk of recurrence, distant metastasis, and overall mortality for positive
 sentinel node (SN) melanoma patients. We initially fitted a Cox regression model
 for recurrence using four baseline covariates. Models for distant metastasis and
 overall mortality were derived by recalibrating the baseline hazard and the
@@ -403,8 +391,8 @@ development of our prediction model for ICU admission, the strong correlation
 between death and need for intensive care was exploited, by recalibrating the
 mortality prediction model for the outcome of ICU admission. The prediction
 models displayed good performance (discrimination and calibration) in the
-validation set, were easy to use, and were freely available online and with
-mobile applications.
+validation set, were easy to use, and were freely available online and in mobile
+applications.
 
 The prediction models of chapters \@ref(melanoma) and \@ref(covid) are
 applicable to the populations from which the model development samples were
@@ -416,11 +404,12 @@ Patient populations can vary substantially over time as they become older,
 lifestyle habits evolve, and new treatments become available. Same with
 measurements of predictors, they can be different depending on the time they
 were made. In addition, the characteristics of populations located in different
-places may be be significantly different compared to the model development
-population and disparities in data capture may also be present. To that end, we
-externally validated the EORTC-DeCOG nomgram of chapter \@ref(melanoma) in data
+places may be significantly different compared to the model development
+population  – beyond those represented in the prediction model – and disparities
+in data capture may also be present. To give insight into its transportability,
+we externally validated the EORTC-DeCOG nomgram of chapter @sec-melanoma in data
 from Germany and adopted a leave-one-center-out validation approach for the COPE
-prediction model of chapter \@ref(covid).
+prediction model of chapter 4 (**REF**: internal-exetrnal paper Ewout).
 
 Prediction models for COVID-19 are not easily transportable to settings outside
 the ones they were actually developed
@@ -460,7 +449,7 @@ observational databases from around the world. Extension of the small-scale
 application to the entire set of comparisons considered in that study is a
 realistic aim.
 
-For example, the PATH statement suggested developing the internal prediction
+The PATH statement rightly suggested developing the internal prediction
 model on the pooled study population to avoid biases in the risk stratified
 treatment effect estimates, both on the relative and the absolute scale (**REF:
 van Klaveren, Simulation; Burke, 2014; Abadie**). Despite this being
@@ -480,7 +469,7 @@ study. Extensive literature on machine learning algorithms for estimating
 conditional average treatment effects and for correcting overfitted
 regression-based treatment effect modeling approaches provides a broad set of
 candidate methods for the evaluation of treatment effect heterogeneity on the
-observational setting. A head-to-head comparison of these methods and the
-proposed risk-based approaches can provide further insights into their relative
-performance and help guide model selection and implementation in different
-settings.
+observational setting (**REFS**). A head-to-head comparison of these methods and
+the proposed risk-based approaches can provide further insights into their
+relative performance and help guide model selection and implementation in
+different settings.
