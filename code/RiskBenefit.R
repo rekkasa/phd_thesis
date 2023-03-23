@@ -52,7 +52,7 @@ p1 <- stratifiedData$data %>%
       y = meanRisk
     )
   ) +
-  ggplot2::geom_bar(stat = "identity") +
+  ggplot2::geom_bar(stat = "identity", fill = "#F99B45") +
   ggplot2::scale_y_reverse(limits = c(25, 0)) +
   ggplot2::ylab(label = "Average predicted risk (%)") +
   ggplot2::theme(
@@ -82,26 +82,46 @@ p2 <- stratifiedData$data %>%
       labels = paste0("Q", 1:4)
     )
   ) %>%
-  ggplot2::ggplot() +
-  ggplot2::geom_pointrange(
+  ggplot2::ggplot(
     ggplot2::aes(
       x = riskStratum,
       y = estimate,
       ymin = lower,
       ymax = upper,
-      color = "Stratified"
-    ),
-    key_glyph = "rect",
-    fatten = .4
+      group = 1
+    )
   ) +
+  # ggplot2::geom_pointrange(
+  #   ggplot2::aes(
+  #     x = riskStratum,
+  #     y = estimate,
+  #     ymin = lower,
+  #     ymax = upper
+  #   ),
+  #   color = "#D95980",
+  #   key_glyph = "rect",
+  #   fatten = 1,
+  #   size = 2
+  # ) +
+  ggplot2::geom_point(
+    color = "#D95980",
+    key_glyph = "rect",
+    size = 4
+  ) +
+  ggplot2::geom_line(color = "#D95980", linewidth = 1, linetype = 3, alpha = .4) +
+  ggplot2::geom_errorbar(width = 0, size = 1.2, color = "#D95980") +
   ggplot2::scale_y_continuous(
     limits = c(-.5, 5),
     labels = scales::label_number(accuracy = .1)
   ) +
   ggplot2::geom_hline(yintercept = 0, linetype = 2) +
+  ggplot2::ylab(label = "Risk difference (%)") +
+  ggplot2::xlab(label = "Predicted risk quarter") +
   ggplot2::theme(
     legend.position = "none",
-    # plot.background = ggplot2::element_rect(fill = "#F1F3F8"),
+    axis.text = ggplot2::element_text(size = 10),
+    axis.title = ggplot2::element_text(size = 12),
+    axis.ticks = ggplot2::element_blank(),
     plot.background = ggplot2::element_blank(),
     panel.grid.minor = ggplot2::element_blank(),
     panel.grid.major.x = ggplot2::element_blank(),
@@ -116,8 +136,8 @@ p <- gridExtra::grid.arrange(p1, p2, ncol = 1)
 ggplot2::ggsave(
   "figures/riskBenefit.tiff",
   plot = p,
-  height = 4,
-  width = 6,
+  height = 6,
+  width = 8,
   dpi = 1000,
   compression = "lzw+p",
   bg = "#F0F2F3"

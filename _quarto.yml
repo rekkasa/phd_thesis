@@ -26,6 +26,3 @@ format:
     include-in-header:
       - preamble.tex
     toc-depth: 1
-
-
-

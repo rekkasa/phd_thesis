@@ -4,7 +4,7 @@
 \vspace*{\fill}\par
 \pagebreak
 ```
-## Prediction outcome risk
+## Prediction of outcome risk
 
 A patient's baseline risk---her or his probability of experiencing an outcome of
 interest---is a crucial component of medical decision making. For example, in
@@ -14,6 +14,10 @@ initiation is based---among other things---on the patient's baseline 10-year
 cardiovascular risk [@williams20182018]. Similarly, an algorithm for management
 of osteoporosis has been suggested, based on a patient's osteoporotic fracture
 risk [@kanis2019algorithm].
+
+```{r fig-hypertensionGuidelines, echo=FALSE, fig.cap="European guidelines for the treatment of hypertension. Acronyms...A 65-year old woman...Treatment for her...",fig.pos="H"}
+knitr::include_graphics("figures/hypertensionGuidelines.png")
+```
 
 Risk prediction models, i.e. mathematical functions relating the presence of the
 outcome of interest to a set of measured predictors (covariates), are important
@@ -29,14 +33,11 @@ may perform well in terms of discrimination and calibration for risk, it is not
 necessarily helpful for medical decision making. Baseline risk is only one of
 the crucial pieces required for predicting individual responses to treatment.
 Knowledge of the patients' responsiveness to treatment, their vulnerability to
-side-effects and their utilities for other relevant outcomes is necessary
+side-effects and their preferences for other relevant outcomes is necessary
 information required for making truly informed clinical decisions
 [@kravitz2004evidence]. Predicting more individualized responses to treatment is
 the challenge of this thesis.
 
-```{r fig-hypertensionGuidelines, echo=FALSE, fig.cap="European guidelines for the treatment of hypertension. Acronyms...A 65-year old woman...Treatment for her..."}
-knitr::include_graphics("figures/hypertensionGuidelines.png")
-```
 
 ## Prediction of treatment effect
 
@@ -44,21 +45,22 @@ In order to provide the most optimal medical care, doctors are advised to align
 their clinical practice with the results of well-conducted clinical trials, or
 the aggregated results from multiple such trials [@greenfield2007heterogeneity].
 This approach implicitly assumes that all patients eligible for treatment
-experience the same effects (benefits and harms) of treatment as the reference
+experience the same effects---benefits and harms---of treatment as the reference
 trial population. However, the estimated treatment effect is often an average of
 heterogeneous treatment effects and, as such, may not be applicable to most
 patient subgroups, let alone individual patients. If a treatment causes a
 serious adverse event, then treating all patients on the basis of an observed
-average positive treatment effect may be harmful for some [@rothwell1995can]
+average positive treatment effect may be harmful for some [@rothwell1995can].
 
 Heterogeneity of treatment effect (HTE) is the variation of treatment effects on
-the individual level across the population [@kravitz2004evidence]. The identification and
-quantification of HTE is crucial for guiding medical decision making and lies at
-the core of patient-centered outcomes research. Despite HTE being widely
-anticipated, however, its evaluation is not straightforward. Individual
-treatment effects are---by their nature---unobservable: the moment a patient
-receives a specific treatment, their response under the alternatives becomes
-unmeasurable (fundamental problem of causal inference [@holland1986statistics]).
+the individual level across the population [@kravitz2004evidence]. The
+identification and quantification of HTE is crucial for guiding medical decision
+making and lies at the core of patient-centered outcomes research. Despite HTE
+being widely anticipated, however, its evaluation is not straightforward.
+Individual treatment effects are---by their nature---unobservable: the moment a
+patient receives a specific treatment, their response under the alternatives
+becomes unmeasurable (fundamental problem of causal inference
+[@holland1986statistics]).
 
 To evaluate a specific individual's response under an alternative treatment,
 researchers need to observe the outcomes of other "similar" patients that
@@ -87,16 +89,23 @@ analyses attempts to mitigate these issues (**REFS**).
 grid::grid.raster(tiff::readTIFF(here::here("figures/PowerPlot.tiff")))
 ```
 
+## Prediction of treatment effect using outcome risk
+
 Baseline risk is an important determinant of treatment effect \[refs\]. It sets
 an upper bound on the treatment effect size. Low risk patients can only
 experience minimal treatment benefit before their risk is reduced to zero, while
-high risk patients can benefit much more. Consequently, baseline risk can be
-used as a subgrouping variable for assessing HTE. For many populations of
-patients for whom we aim to estimate treatment effects, well-performing models
-for predicting baseline risk already exist and can be used to stratify the
-patients into subgroups (**REFS**). If no such models exist, the researcher can
-develop one in the dataset that is used for treatment effect estimation
+high risk patients can benefit much more (@fig-riskBenefit). Consequently,
+baseline risk can be used as a subgrouping variable for assessing HTE. For many
+populations of patients for whom we aim to estimate treatment effects,
+well-performing models for predicting baseline risk already exist and can be
+used to stratify the patients into subgroups (**REFS**). If no such models
+exist, the researcher can develop one in the dataset that is used for treatment
+effect estimation
 [@kent2010assessing;@burke2014using;@kent2019predictive1;@kent2019predictive2;@abadie2018endogenous].
+
+```{r fig-riskBenefit, cache=FALSE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/riskBenefit.tiff")))
+```
 
 Baseline risk can also be used directly for predicting individual treatment
 benefit [@califf1997selection;@dahabreh2016using]. For example Califf et al
@@ -122,7 +131,7 @@ optimal approach for assessing HTE. However, this approach may lead to
 overfitting and unstable estimates for the interaction effects if the
 aforementioned conditions are not met [@klaveren2018proposed].
 
-```{r scale, cache=TRUE, echo=FALSE, fig.cap="Scale dependency of treatment effect heterogeneity. In the left panel a constant odds ratio of 0.8 is assumed. In the right panel a constant absolute risk reduction of 0.1 is assumed.", fig.show="hold", out.width = '100%'}
+```{r fig-scale, cache=TRUE, echo=FALSE, fig.cap="Scale dependency of treatment effect heterogeneity. In the left panel a constant odds ratio of 0.8 is assumed. In the right panel a constant absolute risk reduction of 0.1 is assumed.", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ScalePlot.tiff")))
 ```
 
@@ -147,8 +156,8 @@ available that can be used to account for these systematic differences
 (**REFS**). Among the more popular ones is limiting the analyses to the
 propensity score matched subpopulation. Propensity scores are the
 patient-specific probabilities of receiving the treatment under study and have
-been shown to have the balancing property, i.e., conditional on the propensity
-score treatment assignment is independent of the potential outcomes (**REFS**).
+been shown to have the balancing property, that is, conditional on the propensity
+score, treatment assignment is independent of the potential outcomes (**REFS**).
 This means that in a subset of patients with equal propensity scores, covariate
 distributions do not differ between patients receiving the treatment under study
 and those who are not. Consequently, patients within this subset can be assumed

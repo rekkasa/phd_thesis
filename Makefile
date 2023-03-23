@@ -27,7 +27,8 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/PowerPlot.tiff \
 	figures/reviewFigure.tiff \
 	figures/ScalePlot.tiff \
-	figures/reviewDiagram.pdf
+	figures/reviewDiagram.pdf\
+	figures/riskBenefit.tiff
 	bash -c "quarto render";
 
 

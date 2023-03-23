@@ -229,7 +229,7 @@ included in the review concerning model evaluation in the setting of predictive
 HTE (4 papers) were assigned to a separate category as they are relevant to all
 identified approaches.
 
-\begin{blackbox}[label={equations}]{Equations corresponding to treatment effect hetergoenetiy assessment methods.}
+\begin{blackbox}[label={equations},breakable]{Equations corresponding to treatment effect hetergoenetiy assessment methods.}
 \textbf{Risk modeling}
 
 A multivariate regression model $f$ that predicts the risk of an outcome $y$
