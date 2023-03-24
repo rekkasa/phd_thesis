@@ -8,5 +8,5 @@ figures/
 *_files/
 .quarto/
 data/
-
+Rplots.pdf
 /.quarto/
