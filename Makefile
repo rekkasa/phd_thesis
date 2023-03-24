@@ -1,3 +1,6 @@
+data/introduction/gusto.rda : code/GetGustoData.sh
+	$<
+
 figures/PowerPlot.tiff : code/PowerPlot.R
 	$<
 
@@ -32,6 +35,7 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	ch6_covid.qmd \
 	ch7_osteoporosis.qmd \
 	ch8_discussion.qmd \
+	data/introduction/gusto.rda \
 	figures/hypertensionGuidelines.png \
 	figures/PowerPlot.tiff \
 	figures/reviewFigure.tiff \
