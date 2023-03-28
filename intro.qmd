@@ -15,28 +15,21 @@ cardiovascular risk [@williams20182018]. Similarly, an algorithm for management
 of osteoporosis has been suggested, based on a patient's osteoporotic fracture
 risk [@kanis2019algorithm].
 
-```{r fig-hypertensionGuidelines, echo=FALSE, fig.cap="European guidelines for the treatment of hypertension. Acronyms...A 65-year old woman...Treatment for her...",fig.pos="H"}
-knitr::include_graphics("figures/hypertensionGuidelines.png")
-```
-
 Risk prediction models, i.e. mathematical functions relating the presence of the
 outcome of interest to a set of measured predictors (covariates), are important
 empirical tools for the assessment of a patient's baseline risk
-[@moons2012risk]. For example, the Systematic COronary Risk Evaluation (SCORE)
-system [@conroy2003estimation] can be used to assess a patient's baseline
-10-year cardiovascular risk (@fig-hypertensionGuidelines). The performance of a
-prediction model in new patients is crucial. Model performance is often
-expressed by its discrimination, i.e. its ability to separate lower from higher
-risk patients, and its calibration, i.e. the agreement of predicted risk to
-observed event rates [@steyerberg2019clinical]. Although a risk prediction model
-may perform well in terms of discrimination and calibration for risk, it is not
-necessarily helpful for medical decision making. Baseline risk is only one of
-the crucial pieces required for predicting individual responses to treatment.
-Knowledge of the patients' responsiveness to treatment, their vulnerability to
-side-effects and their preferences for other relevant outcomes is necessary
-information required for making truly informed clinical decisions
-[@kravitz2004evidence]. Predicting more individualized responses to treatment is
-the challenge of this thesis.
+[@moons2012risk]. The performance of a prediction model in new patients is
+crucial. Model performance is often expressed by its discrimination, i.e. its
+ability to separate lower from higher risk patients, and its calibration, i.e.
+the agreement of predicted risk to observed event rates
+[@steyerberg2019clinical]. Although a risk prediction model may perform well in
+terms of discrimination and calibration for risk, it is not necessarily helpful
+for medical decision making. Baseline risk is only one of the crucial pieces
+required for predicting individual responses to treatment. Knowledge of the
+patients' responsiveness to treatment, their vulnerability to side-effects and
+their preferences for other relevant outcomes is necessary information required
+for making truly informed clinical decisions [@kravitz2004evidence]. Predicting
+more individualized responses to treatment is the challenge of this thesis.
 
 
 ## Prediction of treatment effect
@@ -85,7 +78,7 @@ effect is below 30%, despite the clinical trial being powered at 80% for the
 detection of the overall effect. Existing guidance on carrying out subgroup
 analyses attempts to mitigate these issues (**REFS**).
 
-```{r power, cache=TRUE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", fig.show="hold", out.width = '100%'}
+```{r fig-power, cache=FALSE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/PowerPlot.tiff")))
 ```
 
@@ -152,23 +145,23 @@ comparison very challenging.
 
 If all relevant patient characteristics on which the treating physician based
 their decision have been captured in the observational dataset, methods are
-available that can be used to account for these systematic differences
-(**REFS**). Among the more popular ones is limiting the analyses to the
+available that can be used to account for these systematic differences [@rosenbaum1983central;@d_agostino_jr_1998propensity;@austin2011introduction;@dahabreh2012do]. Among the more popular ones is limiting the analyses to the
 propensity score matched subpopulation. Propensity scores are the
 patient-specific probabilities of receiving the treatment under study and have
-been shown to have the balancing property, that is, conditional on the propensity
-score, treatment assignment is independent of the potential outcomes (**REFS**).
-This means that in a subset of patients with equal propensity scores, covariate
-distributions do not differ between patients receiving the treatment under study
-and those who are not. Consequently, patients within this subset can be assumed
-to be randomized.
+been shown to have the balancing property, that is, conditional on the
+propensity score, treatment assignment is independent of the potential outcomes
+[@rosenbaum1983central]. This means that in a subset of patients with equal
+propensity scores, covariate distributions do not differ between patients
+receiving the treatment under study and those who are not. Consequently,
+patients within this subset can be assumed to be randomized.
 
 Unfortunately, more often than not, a critical amount of the information that
 was used for treatment decisions is not captured. As a consequence, propensity
 score adjustment will not suffice to evaluate treatment effects using the
 observational data, be it overall or subgroup effects. Sensitivity analyses
 searching for evidence of this systematic unmeasured imbalances have been
-proposed and can be of assistance in many situations (**REFS**)
+proposed and can be of assistance in many situations
+[@schuemie2014interpreting;@ryan2013defining;@schuemie2016robust;@schuemie2018empirical].
 
 Another important problem with observational databases is that they use
 different architectures. As anyone gathering routinely observed healthcare data
@@ -184,17 +177,17 @@ combining results from multiple databases is not a simple task
 
 One of the solutions for handling database incompatibility was the creation of
 the Observational Medical Outcomes Partnership Common Data Model (OMOP-CDM)
-(**REFS**). This provided a standard for structuring an observational database,
-while large effort was put into developing processes for mapping existing
-databases from their own specific structure to OMOP-CDM. With this high level of
-standardization achieved, the design and execution of highly scalable
-observational studies was made possible. Common definitions of diseases,
-treatments, and outcomes can now be applied uniformly across a network of many
-databases containing information on hundreds of millions of patients. An
-analysis plan can be executed following the exact same steps across the network
-providing effect estimates derived in different populations. The fragmented
-information scattered across multiple databases can now be summarized in a
-consistent way to give a fuller picture.
+[@hripcsak2015observational;@matcho2014fidelity]. This provided a standard for
+structuring an observational database, while large effort was put into
+developing processes for mapping existing databases from their own specific
+structure to OMOP-CDM. With this high level of standardization achieved, the
+design and execution of highly scalable observational studies was made possible.
+Common definitions of diseases, treatments, and outcomes can now be applied
+uniformly across a network of many databases containing information on hundreds
+of millions of patients. An analysis plan can be executed following the exact
+same steps across the network providing effect estimates derived in different
+populations. The fragmented information scattered across multiple databases can
+now be summarized in a consistent way to give a fuller picture.
 
 The power of the common database structure was demonstrated in a large-scale
 comparative effectiveness study of first-line treatment for hypertension

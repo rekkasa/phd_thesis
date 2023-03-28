@@ -10,9 +10,6 @@ figures/ScalePlot.tiff : code/ScalePlot.R
 figures/reviewFigure.tiff : code/ReviewPlot.R
 	$<
 
-figures/reviewDiagram.pdf : code/GetReviewDiagram.sh
-	$<
-
 figures/riskBenefit.tiff : code/RiskBenefit.R
 	$<
 
@@ -35,6 +32,7 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	ch6_covid.qmd \
 	ch7_osteoporosis.qmd \
 	ch8_discussion.qmd \
+	references.bib \
 	data/introduction/gusto.rda \
 	figures/hypertensionGuidelines.png \
 	figures/PowerPlot.tiff \
@@ -48,3 +46,6 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 .PHONY:
 thesis :
 	quarto render
+
+environment :
+	R -e "renv::restore()"

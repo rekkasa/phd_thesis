@@ -277,6 +277,30 @@ global network of observational databases mapped to OMOP-CDM.
 
 \end{blackbox}
 
+With the development of the framework presented in chapter @sec-framework our
+aim was to enable the evaluation of treatment effect heterogeneity using readily
+available observational patient data. Despite its great promise, observational
+data suffers from major imbalances in treatment assignment, great disparities in
+the level clinical information is captured between different vendors, and
+high-dimensionality (**REFS!!**). Consequently, traditional statistical
+inference methods often fail to produce unbiased treatment effect estimates.
+Despite great advances in methods research with observational data, strong
+assumptions---often unverifiable---are required to overcome very fundamental
+design limitations (**Varadhan et al, 2013**).
+
+In the development of the framework in chapter \@ref(framework), considerable
+attention is given to the evaluation of diagnostics at every step of the
+process. More specifically, the overlap of the propensity score distributions
+between treatment arms along with the balance in standardized covariate means
+after propensity score adjustment are evaluated. However, these approaches only
+focus on adjustment for observed confounding, i.e. confounding that can be
+eliminated by conditioning on observed covariates. Consequently, both the
+overall and the risk-stratified treatment effect estimates, can still be biased
+due to unobserved confounding. Using negative control analyses we can evaluate
+the presence of unobserved confounding and---to some extent---calibrate the
+derived estimates.
+
+
 Risk stratified approaches to treatment effect heterogeneity estimate treatment
 effects for groups of patients with more similar, but not necessarily equal,
 baseline risk. Consequently, with larger variability in predicted risk and
@@ -339,29 +363,6 @@ with appropriate penalization on the interaction effects may have performed
 better with larger sample size and/or strong treatment-covariate interactions
 (**REF van Klaveren, Simulations**).
 
-With the development of the framework presented in chapter @sec-framework our
-aim was to enable the evaluation of treatment effect heterogeneity using readily
-available observational patient data. Despite its great promise, observational
-data suffers from major imbalances in treatment assignment, great disparities in
-the level clinical information is captured between different vendors, and
-high-dimensionality (**REFS!!**). Consequently, traditional statistical
-inference methods often fail to produce unbiased treatment effect estimates.
-Despite great advances in methods research with observational data, strong
-assumptions---often unverifiable---are required to overcome very fundamental
-design limitations (**Varadhan et al, 2013**).
-
-In the development of the framework in chapter \@ref(framework), considerable
-attention is given to the evaluation of diagnostics at every step of the
-process. More specifically, the overlap of the propensity score distributions
-between treatment arms along with the balance in standardized covariate means
-after propensity score adjustment are evaluated. However, these approaches only
-focus on adjustment for observed confounding, i.e. confounding that can be
-eliminated by conditioning on observed covariates. Consequently, both the
-overall and the risk-stratified treatment effect estimates, can still be biased
-due to unobserved confounding. Using negative control analyses we can evaluate
-the presence of unobserved confounding and---to some extent---calibrate the
-derived estimates.
-
 ## Applications
 
 \begin{blackbox}[label={applications}]{Summary of applications}
@@ -415,16 +416,14 @@ drawn. The general problem of transportability of prediction models in space and
 time is an important issue, that needs to be considered when evaluating
 prediction models 
 (**REFS:** [van Calster et al, 2023](https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-023-02779-w) and [Luijken et al, 2019](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.8183)).
-Patient populations can vary substantially over time as they become older,
-lifestyle habits evolve, and new treatments become available. Same with
-measurements of predictors, they can be different depending on the time they
-were made. In addition, the characteristics of populations located in different
-places may be significantly different compared to the model development
-population  – beyond those represented in the prediction model – and disparities
-in data capture may also be present. To give insight into its transportability,
-we externally validated the EORTC-DeCOG nomgram of chapter @sec-melanoma in data
-from Germany and adopted a leave-one-center-out validation approach for the COPE
-prediction model of chapter 4 (**REF**: internal-exetrnal paper Ewout).
+Patient populations can vary substantially over time as they become older, In
+addition, the characteristics of populations located in different places may be
+significantly different compared to the model development population  – beyond
+those represented in the prediction model – and disparities in data capture may
+also be present. To give insight into its transportability, we externally
+validated the EORTC-DeCOG nomgram of chapter @sec-melanoma in data from Germany
+and adopted a leave-one-center-out validation approach for the COPE prediction
+model of chapter 4 (**REF**: internal-exetrnal paper Ewout).
 
 Prediction models for COVID-19 are not easily transportable to settings outside
 the ones they were actually developed

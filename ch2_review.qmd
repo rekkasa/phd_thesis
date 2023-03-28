@@ -42,27 +42,26 @@ medical practice. Randomized clinical trials (RCTs) and meta-analyses of RCTs
 are regarded as the gold standards for determining the comparative efficacy or
 effectiveness of two (or more) treatments within the EBM framework. Within this
 framework, as described in Guyatt et al’s classic User’s Guide to the Medical
-Literature II (***REF: 1***) “if the patient meets all the trial inclusion
+Literature II [@guyatt1993users] “if the patient meets all the trial inclusion
 criteria, and doesn’t violate any of the exclusion criteria---there is little
 question that the results of the trial are applicable”. It has thus been argued
 that RCTs should attempt to include even broader populations to ensure
-generalizability of their results to more (and more diverse) individuals (**REF:
-2, 3**).
+generalizability of their results to more (and more diverse) individuals [@schwartz1967explanatory;@ford2016pragmatic].
 
 However, generalizability of an RCT result and applicability to a specific
-patient move in opposite directions (***REF: 4, 5***). When trial enrollees differ
-from one another in many observed determinants of the outcome of interest (both
-primary and safety), it can be unclear to whom the overall average benefit-harm
-trade-offs actually apply---even among those included in the trial (**REF: 6,
-7**). Precision medicine aims to target the appropriate treatment to the
-appropriate patients. As such, analysis of heterogeneity of treatment effect
-(HTE), i.e. non-random variation in the direction or magnitude of a treatment
-effect for subgroups within a population (***REF: 8***), is the cornerstone of
-precision medicine; its goal is to predict the optimal treatments at the
-individual level, accounting for an individual’s risk for harm and benefit
-outcomes.
+patient move in opposite directions [@caplan2001evidence;@kent2009pragmatism].
+When trial enrollees differ from one another in many observed determinants of
+the outcome of interest (both primary and safety), it can be unclear to whom the
+overall average benefit-harm trade-offs actually apply---even among those
+included in the trial [@rothwell1995can;@kent2007limitations]. Precision
+medicine aims to target the appropriate treatment to the appropriate patients.
+As such, analysis of heterogeneity of treatment effect (HTE), i.e. non-random
+variation in the direction or magnitude of a treatment effect for subgroups
+within a population [@varadhan2013framework], is the cornerstone of precision
+medicine; its goal is to predict the optimal treatments at the individual level,
+accounting for an individual’s risk for harm and benefit outcomes.
 
-In this scoping review (***REF: 9***), we aim to identify and categorize the
+In this scoping review [@daudt2013enhancing], we aim to identify and categorize the
 variety of regression-based approaches for predictive heterogeneity of treatment
 effects analysis. Predictive approaches to HTE analyses are those that provide
 individualized predictions of potential outcomes in a particular patient with

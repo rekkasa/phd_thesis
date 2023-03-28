@@ -1,6 +1,10 @@
 #!/usr/bin/env Rscript
 
-library(dplyr)
+message("\nGenerating risk-benefit evolution figure of introduction...")
+
+suppressPackageStartupMessages({
+  library(dplyr)
+})
 
 load("data/introduction/gusto.rda")
 
@@ -57,7 +61,9 @@ p1 <- stratifiedData$data %>%
   ggplot2::ylab(label = "Average predicted risk (%)") +
   ggplot2::theme(
     axis.title.x = ggplot2::element_blank(),
+    axis.title.y = ggplot2::element_text(size = 15),
     axis.text.x = ggplot2::element_blank(),
+    axis.text.y = ggplot2::element_text(size = 13),
     axis.ticks.x = ggplot2::element_blank(),
     # plot.background = ggplot2::element_rect(fill = "#F1F3F8"),
     plot.background = ggplot2::element_blank(),
@@ -119,8 +125,8 @@ p2 <- stratifiedData$data %>%
   ggplot2::xlab(label = "Predicted risk quarter") +
   ggplot2::theme(
     legend.position = "none",
-    axis.text = ggplot2::element_text(size = 10),
-    axis.title = ggplot2::element_text(size = 12),
+    axis.text = ggplot2::element_text(size = 13),
+    axis.title = ggplot2::element_text(size = 15),
     axis.ticks = ggplot2::element_blank(),
     plot.background = ggplot2::element_blank(),
     panel.grid.minor = ggplot2::element_blank(),
@@ -141,4 +147,13 @@ ggplot2::ggsave(
   dpi = 1000,
   compression = "lzw+p",
   bg = "#F0F2F3"
+)
+
+message(
+  crayon::green(
+    paste(
+      "\u2713 Figure saved at:",
+      "figures/riskBenefit.tiff\n"
+    )
+  )
 )
