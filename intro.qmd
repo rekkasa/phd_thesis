@@ -72,11 +72,11 @@ of statistical power often results in falsely concluding "consistency" of the
 treatment effect across several subpopulations of interest or overestimating the
 effect size of a treatment-covariate interaction. The former because an existing
 interaction effect was smaller than the detectable effect size, the latter
-because of false positives introduced from multiple testing. In Figure 1.1 the
+because of false positives introduced from multiple testing. In @fig-power the
 statistical power for detecting an interaction effect of equal size to the main
 effect is below 30%, despite the clinical trial being powered at 80% for the
 detection of the overall effect. Existing guidance on carrying out subgroup
-analyses attempts to mitigate these issues (**REFS**).
+analyses attempts to mitigate these issues [@guyatt1993users;@sun2014how;@rothwell2005subgroup].
 
 ```{r fig-power, cache=FALSE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/PowerPlot.tiff")))
@@ -84,16 +84,16 @@ grid::grid.raster(tiff::readTIFF(here::here("figures/PowerPlot.tiff")))
 
 ## Prediction of treatment effect using outcome risk
 
-Baseline risk is an important determinant of treatment effect \[refs\]. It sets
-an upper bound on the treatment effect size. Low risk patients can only
-experience minimal treatment benefit before their risk is reduced to zero, while
-high risk patients can benefit much more (@fig-riskBenefit). Consequently,
-baseline risk can be used as a subgrouping variable for assessing HTE. For many
-populations of patients for whom we aim to estimate treatment effects,
-well-performing models for predicting baseline risk already exist and can be
-used to stratify the patients into subgroups (**REFS**). If no such models
-exist, the researcher can develop one in the dataset that is used for treatment
-effect estimation
+Baseline risk is an important determinant of treatment effect
+[@kent2010assessing;@kent2018personalized]. It sets an upper bound on the
+treatment effect size. Low risk patients can only experience minimal treatment
+benefit before their risk is reduced to zero, while high risk patients can
+benefit much more (@fig-riskBenefit). Consequently, baseline risk can be used as
+a subgrouping variable for assessing HTE. For many populations of patients for
+whom we aim to estimate treatment effects, well-performing models for predicting
+baseline risk already exist and can be used to stratify the patients into
+subgroups (**REFS**). If no such models exist, the researcher can develop one in
+the dataset that is used for treatment effect estimation
 [@kent2010assessing;@burke2014using;@kent2019predictive1;@kent2019predictive2;@abadie2018endogenous].
 
 ```{r fig-riskBenefit, cache=FALSE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", out.width = '100%'}
