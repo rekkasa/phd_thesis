@@ -89,41 +89,41 @@ for (i in seq_along(databases)) {
     scale_x_continuous(
       breaks = seq(0, 1, .5)
     ) +
-    scale_y_continuous(breaks = 0:3) +
+    scale_y_continuous(limits = c(0, 4), breaks = 0:4) +
     ggplot2::facet_grid(~riskStratum) +
-    # ggplot2::ylab(
-    #   label = toupper(databases[i])
-    # ) +
     ggplot2::xlab(
       label = "Preference score"
     ) +
     ggplot2::scale_fill_manual(
-      values = alpha(c("#fc8d59", "#91bfdb"), .6)
+      values = alpha(c("#F99B45", "#63AAC0"), .8)
     ) +
     ggplot2::scale_color_manual(
-      values = alpha(c("#fc8d59", "#91bfdb"), .9)
+      values = alpha(c("#F99B45", "#63AAC0"), .9)
     ) +
-    theme_classic() +
     ggplot2::theme(
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8"),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3"),
       legend.title    = ggplot2::element_blank(),
       legend.position = "none",
+      axis.line       = element_line(color = "black"),
       axis.title.x    = element_blank(),
       axis.title.y    = element_blank(),
-      # axis.line.y     = element_blank(),
-      # axis.ticks.y    = element_blank(),
-      # axis.text.y     = element_blank(),
-      axis.text.x     = element_text(size = 22),
-      axis.text.y     = element_text(size = 22),
-      axis.title      = element_text(size = 30),
-      strip.text      = element_text(size = 25)
+      axis.text.x     = element_text(size = 7),
+      axis.text.y     = element_text(size = 7),
+      axis.title      = element_text(size = 10),
+      strip.text      = element_text(size = 10),
+      panel.spacing    = unit(0, "mm"),
+      plot.margin = unit(c(4, 0, 0, 0), "mm")
     )
   pp[[i]] <- pp[[i]] +
     ggplot2::geom_text(
       data = annotations,
       mapping = ggplot2::aes(x = -Inf, y = -Inf, label = overlap),
-      hjust   = -6,
-      vjust   = -2,
-      size    = 6
+      hjust   = -3.1,
+      vjust   = -1,
+      size    = 2.5
     )
 
   if (i != 1) {
@@ -135,17 +135,19 @@ for (i in seq_along(databases)) {
   } else {
     pp[[i]] <- pp[[i]] +
       ggplot2::theme(
-        legend.position = c(.066, .9),
-        legend.text = element_text(size = 14.2)
+        legend.position = c(.13, .9),
+        legend.text = element_text(size = 6),
+        legend.background = element_blank(),
+        legend.key.size = unit(3.5, "mm")
       )
   }
 }
 
-bottom <- textGrob("Preference score", gp = gpar(fontsize = 30))
-left <- textGrob("Density", gp = gpar(fontsize = 30), rot = 90)
+bottom <- textGrob("Preference score", gp = gpar(fontsize = 10))
+left <- textGrob("Density", gp = gpar(fontsize = 10), rot = 90)
 right <- textGrob(
   "CCAE                                MDCD                                MDCR",
-  gp = gpar(fontsize = 30),
+  gp = gpar(fontsize = 10),
   rot = 270
 )
 
@@ -161,10 +163,9 @@ plot <- gridExtra::grid.arrange(
 ggsave(
   "figures/ch3-PsDensity.tiff",
   plot,
-  compression = "lzw",
-  height = 6,
-  width = 8,
+  height = 5,
+  width = 6.5,
   dpi = 1000,
   compression = "lzw+p",
-  bg = "#F0F2F3"
+  bg = "#F1F3F8"
 )

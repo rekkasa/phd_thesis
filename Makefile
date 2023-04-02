@@ -58,7 +58,8 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/reviewFigure.tiff \
 	figures/ScalePlot.tiff \
 	figures/reviewDiagram.pdf\
-	figures/riskBenefit.tiff
+	figures/riskBenefit.tiff \
+	figures/ch3-PsDensity.tiff
 	bash -c "quarto render";
 
 

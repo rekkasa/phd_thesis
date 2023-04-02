@@ -215,6 +215,10 @@ even after stratification on the propensity scores for the two lower acute MI
 risk groups of MDCD (***Figure 3***). Therefore, results from analyses in this
 database should be interpreted with caution.
 
+```{r fig-psDensity, cache=FALSE, echo=FALSE, fig.cap="Density of preference scores", fig.show="hold", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-PsDensity.tiff")))
+```
+
 Finally, the distribution of the estimated relative risks with regard to a total
 of 76 negative control outcomes (Supplementary Results Section C) showed no
 evidence of residual confounding, except for CCAE (***Figure 4***) 17–19. Hazard
