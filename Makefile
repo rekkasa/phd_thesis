@@ -1,16 +1,16 @@
-data/introduction/gusto.rda : code/GetGustoData.sh
+data/introduction/gusto.rda : code/ch1-GetGustoData.sh
 	$<
 
-figures/PowerPlot.tiff : code/PowerPlot.R
+figures/PowerPlot.tiff : code/ch1-PowerPlot.R
 	$<
 
-figures/ScalePlot.tiff : code/ScalePlot.R
+figures/ScalePlot.tiff : code/ch1-ScalePlot.R
 	$<
 
-figures/reviewFigure.tiff : code/ReviewPlot.R
+figures/reviewFigure.tiff : code/ch1-ReviewPlot.R
 	$<
 
-figures/riskBenefit.tiff : code/RiskBenefit.R
+figures/riskBenefit.tiff : code/ch1-RiskBenefit.R
 	$<
 
 figures/hypertensionGuidelines.png :
