@@ -20,6 +20,21 @@
       ],
       "Hash": "b2866e62bab9378c3cc9476a1954226b"
     },
+    "EmpiricalCalibration": {
+      "Package": "EmpiricalCalibration",
+      "Version": "3.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "Rcpp",
+        "ggplot2",
+        "gridExtra",
+        "methods",
+        "rlang"
+      ],
+      "Hash": "909c2b66ab1d9dd69a7bbef7e4195e14"
+    },
     "Formula": {
       "Package": "Formula",
       "Version": "1.2-5",

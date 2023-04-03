@@ -121,6 +121,10 @@ framework and made it publicly available
 (https://github.com/OHDSI/RiskStratifiedEstimation). An overview of the entire
 framework can be found in ***Figure 1***.
 
+```{r fig-framework, cache=FALSE, echo=FALSE, fig.cap="Illustration of the framework’s application on two observational databases, preferably mapped to OMOP-CDM.",fig.align='center'}
+knitr::include_graphics("figures/ch3-Framework.pdf")
+```
+
 As a demonstration, we evaluated treatment effect heterogeneity of thiazide or
 thiazide-like diuretics compared to ACE inhibitors using acute MI risk
 quarter-specific effect estimates, both on the relative and on the absolute

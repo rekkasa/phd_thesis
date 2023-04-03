@@ -12,6 +12,10 @@ figures/reviewDiagram.pdf :
 	wget -O figures/reviewDiagram.pdf \
 		https://github.com/rekkasa/phd_thesis/raw/figures/figures/reviewDiagram.pdf
 
+figures/ch3-Framework.pdf :
+	wget -O figures/ch3-Framework.pdf \
+		https://github.com/rekkasa/phd_thesis/raw/large-files/figures/ch3-Framework.pdf
+
 data/framework/map_exposures.rds : code/GetRawData.R
 	$< map_exposures.rds framework
 
