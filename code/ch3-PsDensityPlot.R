@@ -63,7 +63,7 @@ for (i in seq_along(databases)) {
 
     total <- integrate(fmax, 0, 1)$value
     intersection <- integrate(fmin, 0, 1)$value
-    overlap[j] <- paste0(format(round(100 * intersection/total, 1), nsmall=1), "%")
+    overlap[j] <- paste0(format(round(100 * intersection/total, 1), nsmall = 1), "%")
   }
 
   annotations <- data.frame(
@@ -101,7 +101,7 @@ for (i in seq_along(databases)) {
       values = alpha(c("#F99B45", "#63AAC0"), .9)
     ) +
     ggplot2::theme(
-      plot.background = ggplot2::element_rect(fill = "#F1F3F8"),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
       panel.grid.minor = ggplot2::element_blank(),
       panel.grid.major.x = ggplot2::element_blank(),
       panel.background = ggplot2::element_rect(fill = "#F0F2F3"),
@@ -110,10 +110,11 @@ for (i in seq_along(databases)) {
       axis.line       = element_line(color = "black"),
       axis.title.x    = element_blank(),
       axis.title.y    = element_blank(),
-      axis.text.x     = element_text(size = 7),
-      axis.text.y     = element_text(size = 7),
-      axis.title      = element_text(size = 10),
-      strip.text      = element_text(size = 10),
+      axis.text.x     = element_text(size = 10),
+      axis.text.y     = element_text(size = 10),
+      axis.title      = element_text(size = 14),
+      strip.text      = element_text(size = 14),
+      strip.background = element_rect(fill = "#F1F3F8"),
       panel.spacing    = unit(0, "mm"),
       plot.margin = unit(c(4, 0, 0, 0), "mm")
     )
@@ -121,9 +122,9 @@ for (i in seq_along(databases)) {
     ggplot2::geom_text(
       data = annotations,
       mapping = ggplot2::aes(x = -Inf, y = -Inf, label = overlap),
-      hjust   = -3.1,
+      hjust   = -2.5,
       vjust   = -1,
-      size    = 2.5
+      size    = 3.5
     )
 
   if (i != 1) {
@@ -135,19 +136,20 @@ for (i in seq_along(databases)) {
   } else {
     pp[[i]] <- pp[[i]] +
       ggplot2::theme(
-        legend.position = c(.13, .9),
-        legend.text = element_text(size = 6),
+        legend.position = c(.5, .9),
+        legend.text = element_text(size = 8),
         legend.background = element_blank(),
-        legend.key.size = unit(3.5, "mm")
+        legend.key.size = unit(3.5, "mm"),
+        legend.direction = "horizontal"
       )
   }
 }
 
-bottom <- textGrob("Preference score", gp = gpar(fontsize = 10))
-left <- textGrob("Density", gp = gpar(fontsize = 10), rot = 90)
+bottom <- textGrob("Preference score", gp = gpar(fontsize = 14))
+left <- textGrob("Density", gp = gpar(fontsize = 14), rot = 90)
 right <- textGrob(
-  "CCAE                                MDCD                                MDCR",
-  gp = gpar(fontsize = 10),
+  "CCAE                           MDCD                          MDCR",
+  gp = gpar(fontsize = 14),
   rot = 270
 )
 
@@ -158,13 +160,14 @@ plot <- gridExtra::grid.arrange(
   bottom = bottom,
   left = left,
   right = right,
-  nrow = 3
+  nrow = 3,
+  newpage = FALSE
 )
 ggsave(
   "figures/ch3-PsDensity.tiff",
   plot,
-  height = 5,
-  width = 6.5,
+  height = 5.5,
+  width = 7.5,
   dpi = 1000,
   compression = "lzw+p",
   bg = "#F1F3F8"

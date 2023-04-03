@@ -7,7 +7,7 @@ book:
   date: "3/19/2023"
   chapters:
     - index.qmd
-    - intro.qmd
+    - ch1_introduction.qmd
     - ch2_review.qmd
     - ch3_framework.qmd
     - ch4_simulation.qmd

@@ -183,7 +183,7 @@ from reference lists of eligible articles. These 174 full-text articles were
 again screened in duplicate with group consensus resolution of conflicts in
 meetings. A total of 36 articles met eligibility criteria (@fig-reviewFlowChart).
 
-```{r fig-reviewFlowChart, echo=FALSE, fig.cap="Figure flow chart"}
+```{r fig-reviewFlowChart, cache=TRUE, echo=FALSE, fig.cap="Figure flow chart"}
 knitr::include_graphics("figures/reviewDiagram.pdf")
 ```
 
@@ -213,7 +213,7 @@ assignment rule dividing the trial population into those who benefit from
 treatment and those who do not (***Table 2, eq. 5***). Contrary to previous
 methods, baseline risk or the magnitude of absolute
 
-```{r reviewResults, cache=FALSE, echo=FALSE, fig.cap="Results of the review.", fig.show="hold", out.width = '100%'}
+```{r reviewResults, cache=TRUE, echo=FALSE, fig.cap="Results of the review.", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/reviewFigure.tiff")))
 ```
 
