@@ -61,7 +61,7 @@ plotAbsoluteBenefit <- function(data, projectDir, type) {
       validationDataset[[i]] <- SimulateHte::runDataGeneration(
         databaseSettings = validationDatabaseSettings,
         propensitySettings = settings$simulationSettings$propensitySettings,
-        baselineRiskSetting = settings$simulationSettings$baselineRiskSettings,
+        baselineRiskSettings = settings$simulationSettings$baselineRiskSettings,
         treatmentEffectSettings = settings$simulationSettings$treatmentEffectSettings
       )
     }

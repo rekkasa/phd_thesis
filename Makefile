@@ -49,8 +49,13 @@ data/framework/mappedOverallRelativeResults.rds : code/GetRawData.R
 data/framework/mappedOverallAbsoluteResults.rds : code/GetRawData.R
 	$< mappedOverallAbsoluteResults.rds framework
 
-data/simulation/analysisIds.rds : code/GetRawData.R
-	$< analysisIds.rds framework
+data/simulation/analysisIds.csv :
+	wget -O data/simulation/analysisIds.csv \
+		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/data/simulation/analysisIds.csv
+
+data/simulation/rmse.csv :
+	wget -O data/simulation/rmse.csv \
+		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/data/simulation/rmse.csv
 
 # ===================================================================================================================
 # Make figures
@@ -108,6 +113,14 @@ figures/ch3-AbsoluteResultsSafety.tiff : code/ch3-CombinedAbsoluteSafety.R \
 	data/framework/map_outcomes.rds \
 	data/framework/mappedOverallAbsoluteResults.rds 
 	$< acute_myocardial_infarction main
+
+figures/rmse_moderate_base.tiff : code/ch4-PlotRmse.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	code/ch4-Absolute.R\
+	data/simulation/rmse.csv\
+	data/processed/analysisIds.csv
+	$< moderate 4250 0.75 base
 
 # ===================================================================================================================
 # Make thesis

@@ -36,11 +36,11 @@ library(ggside)
 #   2. Generates the boxplot list
 #   3. Generates the absolute plots
 # --------------------------------------
-source("code/helpers/CreateManuscriptPlots.R")
-source("code/helpers/PlotResult.R")
-source("code/helpers/Absolute.R")
+source("code/ch4-CreateManuscriptPlots.R")
+source("code/ch4-PlotResult.R")
+source("code/ch4-Absolute.R")
 
-scenarioIds <- readr::read_csv("data/processed/analysisIds.csv") %>%
+scenarioIds <- readr::read_csv("data/simulation/analysisIds.csv") %>%
   filter(
     base == args_base,
     !(type %in% c("quadratic-moderate", "linear-moderate")),
@@ -87,7 +87,7 @@ limitsHigh <- ifelse(
 )
 
 processed <- readr::read_csv(
-  file = file.path("data/processed", metricFile)
+  file = file.path("data/simulation", metricFile)
 ) %>%
   mutate_at(
     c(
@@ -368,6 +368,7 @@ bottom.grob <- grid.arrange(
 res <- grid.arrange(arrangeGrob(pp, left = left.grob, right = right.grob, bottom = bottom.grob))
 
 fileName <- paste0(
+  "ch4-",
   paste(
     metric,
     args_base,
@@ -376,11 +377,12 @@ fileName <- paste0(
   ),
   ".tiff"
 )
-ggplot2::ggsave(
+ggsave(
   file.path("figures", fileName),
-  plot = res,
-  dpi = 1200,
-  width = 10,
-  height = 8,
-  compression = "lzw"
+  relativePlot,
+  height = 7.5,
+  width = 8,
+  dpi = 1000,
+  compression = "lzw+p",
+  bg = "#F1F3F8"
 )
