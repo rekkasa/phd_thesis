@@ -1,0 +1,25 @@
+2021-11-02 02:18:30	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-11-02 02:18:30	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-11-02 02:18:30	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-11-02 02:18:40	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-02 02:18:40	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-11-02 02:20:33	[Thread 19]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-02 02:20:34	[Thread 19]	WARN	SimulationEvaluationHte	fun	Run failed for seed:86432
+2021-11-02 02:20:50	[Thread 37]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-02 02:20:50	[Thread 37]	WARN	SimulationEvaluationHte	fun	Run failed for seed:74566
+2021-11-02 02:23:58	[Thread 32]	WARN	stats	simpleLoess	pseudoinverse used at -0.020109
+2021-11-02 02:23:58	[Thread 32]	WARN	stats	simpleLoess	neighborhood radius 0.014554
+2021-11-02 02:23:58	[Thread 32]	WARN	stats	simpleLoess	reciprocal condition number  4.7845e-16
+2021-11-02 02:23:58	[Thread 32]	WARN	stats	simpleLoess	There are other near singularities as well. 0.00021181
+2021-11-02 02:28:14	[Thread 13]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-02 02:28:14	[Thread 13]	WARN	SimulationEvaluationHte	fun	Run failed for seed:32539
+2021-11-02 02:29:34	[Thread 2]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-02 02:29:34	[Thread 2]	WARN	SimulationEvaluationHte	fun	Run failed for seed:69371
+2021-11-02 02:32:02	[Thread 25]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-02 02:32:02	[Thread 25]	WARN	SimulationEvaluationHte	fun	Run failed for seed:83406
+2021-11-02 02:35:48	[Thread 16]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-02 02:35:49	[Thread 16]	WARN	SimulationEvaluationHte	fun	Run failed for seed:44834
+2021-11-02 02:37:42	[Thread 41]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-02 02:37:42	[Thread 41]	WARN	SimulationEvaluationHte	fun	Run failed for seed:35203
+2021-11-02 02:38:47	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-02 02:38:48	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

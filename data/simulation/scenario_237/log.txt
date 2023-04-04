@@ -1,0 +1,45 @@
+2021-11-01 13:49:40	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-11-01 13:49:40	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-11-01 13:49:40	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-11-01 13:49:51	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-01 13:49:51	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-11-01 13:51:55	[Thread 37]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 13:51:55	[Thread 37]	WARN	SimulationEvaluationHte	fun	Run failed for seed:74566
+2021-11-01 13:51:57	[Thread 19]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 13:51:57	[Thread 19]	WARN	SimulationEvaluationHte	fun	Run failed for seed:86432
+2021-11-01 13:53:41	[Thread 30]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 13:53:41	[Thread 30]	WARN	SimulationEvaluationHte	fun	Run failed for seed:79694
+2021-11-01 13:53:54	[Thread 17]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 13:53:54	[Thread 17]	WARN	SimulationEvaluationHte	fun	Run failed for seed:10073
+2021-11-01 13:54:07	[Thread 46]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 13:54:07	[Thread 46]	WARN	SimulationEvaluationHte	fun	Run failed for seed:12301
+2021-11-01 13:55:56	[Thread 24]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 13:55:56	[Thread 24]	WARN	SimulationEvaluationHte	fun	Run failed for seed:68211
+2021-11-01 13:57:06	[Thread 5]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 13:57:06	[Thread 5]	WARN	SimulationEvaluationHte	fun	Run failed for seed:76781
+2021-11-01 13:59:17	[Thread 3]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 13:59:17	[Thread 3]	WARN	SimulationEvaluationHte	fun	Run failed for seed:32539
+2021-11-01 13:59:32	[Thread 11]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 13:59:32	[Thread 11]	WARN	SimulationEvaluationHte	fun	Run failed for seed:8457
+2021-11-01 14:00:40	[Thread 41]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:00:40	[Thread 41]	WARN	SimulationEvaluationHte	fun	Run failed for seed:69371
+2021-11-01 14:00:58	[Thread 3]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:00:58	[Thread 3]	WARN	SimulationEvaluationHte	fun	Run failed for seed:66407
+2021-11-01 14:01:23	[Thread 36]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:01:23	[Thread 36]	WARN	SimulationEvaluationHte	fun	Run failed for seed:99390
+2021-11-01 14:03:02	[Thread 20]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:03:02	[Thread 20]	WARN	SimulationEvaluationHte	fun	Run failed for seed:83406
+2021-11-01 14:06:19	[Thread 4]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:06:19	[Thread 4]	WARN	SimulationEvaluationHte	fun	Run failed for seed:80859
+2021-11-01 14:06:52	[Thread 46]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:06:52	[Thread 46]	WARN	SimulationEvaluationHte	fun	Run failed for seed:44834
+2021-11-01 14:07:04	[Thread 38]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:07:04	[Thread 38]	WARN	SimulationEvaluationHte	fun	Run failed for seed:67201
+2021-11-01 14:07:16	[Thread 37]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:07:16	[Thread 37]	WARN	SimulationEvaluationHte	fun	Run failed for seed:11441
+2021-11-01 14:08:32	[Thread 33]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:08:32	[Thread 33]	WARN	SimulationEvaluationHte	fun	Run failed for seed:35203
+2021-11-01 14:09:08	[Thread 1]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-01 14:09:08	[Thread 1]	WARN	SimulationEvaluationHte	fun	Run failed for seed:27349
+2021-11-01 14:09:58	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-01 14:09:59	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

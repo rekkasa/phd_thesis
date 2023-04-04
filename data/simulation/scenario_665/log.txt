@@ -1,0 +1,7 @@
+2022-01-28 16:45:47	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2022-01-28 16:45:47	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2022-01-28 16:45:47	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2022-01-28 16:45:59	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2022-01-28 16:45:59	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2022-01-28 17:04:16	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2022-01-28 17:04:16	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

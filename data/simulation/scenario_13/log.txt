@@ -1,0 +1,11 @@
+2021-10-29 15:09:26	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-10-29 15:09:26	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-10-29 15:09:26	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-10-29 15:09:36	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-10-29 15:09:36	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-10-29 15:17:46	[Thread 27]	WARN	stats	simpleLoess	pseudoinverse used at -0.04032
+2021-10-29 15:17:46	[Thread 27]	WARN	stats	simpleLoess	neighborhood radius 0.047838
+2021-10-29 15:17:46	[Thread 27]	WARN	stats	simpleLoess	reciprocal condition number  0
+2021-10-29 15:17:46	[Thread 27]	WARN	stats	simpleLoess	There are other near singularities as well. 0.0091541
+2021-10-29 15:27:09	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-10-29 15:27:10	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

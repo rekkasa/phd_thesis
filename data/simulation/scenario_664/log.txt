@@ -1,0 +1,9 @@
+2022-01-28 16:26:54	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2022-01-28 16:26:54	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2022-01-28 16:26:54	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2022-01-28 16:27:07	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2022-01-28 16:27:07	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2022-01-28 16:42:30	[Thread 6]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2022-01-28 16:42:30	[Thread 6]	WARN	SimulationEvaluationHte	fun	Run failed for seed:79730
+2022-01-28 16:45:44	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2022-01-28 16:45:45	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

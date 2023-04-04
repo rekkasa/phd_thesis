@@ -1,0 +1,23 @@
+2021-11-03 23:33:44	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-11-03 23:33:44	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-11-03 23:33:44	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-11-03 23:33:54	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-03 23:33:54	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-11-03 23:37:36	[Thread 6]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-03 23:37:36	[Thread 6]	WARN	SimulationEvaluationHte	fun	Run failed for seed:79642
+2021-11-03 23:37:38	[Thread 10]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-03 23:37:39	[Thread 10]	WARN	SimulationEvaluationHte	fun	Run failed for seed:37477
+2021-11-03 23:41:25	[Thread 34]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-03 23:41:26	[Thread 34]	WARN	SimulationEvaluationHte	fun	Run failed for seed:16453
+2021-11-03 23:42:36	[Thread 13]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-03 23:42:36	[Thread 13]	WARN	SimulationEvaluationHte	fun	Run failed for seed:48714
+2021-11-03 23:44:33	[Thread 15]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-03 23:44:33	[Thread 15]	WARN	SimulationEvaluationHte	fun	Run failed for seed:5639
+2021-11-03 23:46:53	[Thread 43]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-03 23:46:53	[Thread 43]	WARN	SimulationEvaluationHte	fun	Run failed for seed:83406
+2021-11-03 23:48:42	[Thread 42]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-03 23:48:43	[Thread 42]	WARN	SimulationEvaluationHte	fun	Run failed for seed:56668
+2021-11-03 23:49:05	[Thread 32]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-03 23:49:05	[Thread 32]	WARN	SimulationEvaluationHte	fun	Run failed for seed:27444
+2021-11-03 23:53:45	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-03 23:53:46	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

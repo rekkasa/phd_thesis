@@ -1,0 +1,47 @@
+2021-10-30 05:26:31	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-10-30 05:26:31	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-10-30 05:26:31	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-10-30 05:26:40	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-10-30 05:26:40	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-10-30 05:28:25	[Thread 42]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:28:25	[Thread 42]	WARN	SimulationEvaluationHte	fun	Run failed for seed:37283
+2021-10-30 05:28:31	[Thread 14]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:28:31	[Thread 14]	WARN	SimulationEvaluationHte	fun	Run failed for seed:43576
+2021-10-30 05:28:36	[Thread 23]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:28:36	[Thread 23]	WARN	SimulationEvaluationHte	fun	Run failed for seed:71996
+2021-10-30 05:31:22	[Thread 4]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:31:22	[Thread 4]	WARN	SimulationEvaluationHte	fun	Run failed for seed:10221
+2021-10-30 05:31:58	[Thread 40]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:31:58	[Thread 40]	WARN	SimulationEvaluationHte	fun	Run failed for seed:1994
+2021-10-30 05:33:03	[Thread 35]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:33:03	[Thread 35]	WARN	SimulationEvaluationHte	fun	Run failed for seed:88121
+2021-10-30 05:33:43	[Thread 27]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:33:43	[Thread 27]	WARN	SimulationEvaluationHte	fun	Run failed for seed:39863
+2021-10-30 05:34:39	[Thread 25]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:34:39	[Thread 25]	WARN	SimulationEvaluationHte	fun	Run failed for seed:48714
+2021-10-30 05:36:27	[Thread 24]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:36:27	[Thread 24]	WARN	SimulationEvaluationHte	fun	Run failed for seed:43398
+2021-10-30 05:37:47	[Thread 24]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:37:47	[Thread 24]	WARN	SimulationEvaluationHte	fun	Run failed for seed:69557
+2021-10-30 05:37:48	[Thread 19]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:37:48	[Thread 19]	WARN	SimulationEvaluationHte	fun	Run failed for seed:29366
+2021-10-30 05:37:55	[Thread 37]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:37:55	[Thread 37]	WARN	SimulationEvaluationHte	fun	Run failed for seed:14910
+2021-10-30 05:38:32	[Thread 40]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:38:32	[Thread 40]	WARN	SimulationEvaluationHte	fun	Run failed for seed:75652
+2021-10-30 05:38:42	[Thread 26]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:38:42	[Thread 26]	WARN	SimulationEvaluationHte	fun	Run failed for seed:4393
+2021-10-30 05:38:46	[Thread 43]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:38:46	[Thread 43]	WARN	SimulationEvaluationHte	fun	Run failed for seed:79474
+2021-10-30 05:40:12	[Thread 15]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:40:13	[Thread 15]	WARN	SimulationEvaluationHte	fun	Run failed for seed:56668
+2021-10-30 05:42:00	[Thread 38]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:42:00	[Thread 38]	WARN	SimulationEvaluationHte	fun	Run failed for seed:49085
+2021-10-30 05:42:34	[Thread 35]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:42:34	[Thread 35]	WARN	SimulationEvaluationHte	fun	Run failed for seed:80849
+2021-10-30 05:43:48	[Thread 35]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:43:48	[Thread 35]	WARN	SimulationEvaluationHte	fun	Run failed for seed:78318
+2021-10-30 05:43:55	[Thread 16]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 05:43:55	[Thread 16]	WARN	SimulationEvaluationHte	fun	Run failed for seed:50961
+2021-10-30 05:44:42	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-10-30 05:44:43	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

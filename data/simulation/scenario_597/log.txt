@@ -1,0 +1,25 @@
+2021-11-06 07:58:30	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-11-06 07:58:30	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-11-06 07:58:30	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-11-06 07:58:42	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-06 07:58:42	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-11-06 08:00:31	[Thread 19]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:00:31	[Thread 19]	WARN	SimulationEvaluationHte	fun	Run failed for seed:86432
+2021-11-06 08:02:39	[Thread 32]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:02:40	[Thread 32]	WARN	SimulationEvaluationHte	fun	Run failed for seed:12301
+2021-11-06 08:07:22	[Thread 5]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:07:22	[Thread 5]	WARN	SimulationEvaluationHte	fun	Run failed for seed:56320
+2021-11-06 08:07:29	[Thread 14]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:07:29	[Thread 14]	WARN	SimulationEvaluationHte	fun	Run failed for seed:32539
+2021-11-06 08:08:40	[Thread 23]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:08:40	[Thread 23]	WARN	SimulationEvaluationHte	fun	Run failed for seed:47037
+2021-11-06 08:08:55	[Thread 17]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:08:55	[Thread 17]	WARN	SimulationEvaluationHte	fun	Run failed for seed:69371
+2021-11-06 08:11:24	[Thread 32]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:11:25	[Thread 32]	WARN	SimulationEvaluationHte	fun	Run failed for seed:83406
+2021-11-06 08:12:02	[Thread 8]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:12:02	[Thread 8]	WARN	SimulationEvaluationHte	fun	Run failed for seed:47596
+2021-11-06 08:16:54	[Thread 46]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:16:54	[Thread 46]	WARN	SimulationEvaluationHte	fun	Run failed for seed:27349
+2021-11-06 08:17:39	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-06 08:17:40	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

@@ -1,0 +1,10 @@
+2021-11-02 23:29:55	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-11-02 23:29:55	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-11-02 23:29:55	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-11-02 23:30:04	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-02 23:30:04	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-11-02 23:40:17	[Thread 28]	WARN	stats	simpleLoess	pseudoinverse used at 0.010404
+2021-11-02 23:40:17	[Thread 28]	WARN	stats	simpleLoess	neighborhood radius 0.004055
+2021-11-02 23:40:17	[Thread 28]	WARN	stats	simpleLoess	reciprocal condition number  3.4739e-15
+2021-11-02 23:47:33	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-02 23:47:34	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

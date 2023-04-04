@@ -1,0 +1,25 @@
+2021-10-30 04:31:00	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-10-30 04:31:00	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-10-30 04:31:00	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-10-30 04:31:09	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-10-30 04:31:09	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-10-30 04:32:47	[Thread 19]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 04:32:47	[Thread 19]	WARN	SimulationEvaluationHte	fun	Run failed for seed:86432
+2021-10-30 04:33:07	[Thread 37]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 04:33:07	[Thread 37]	WARN	SimulationEvaluationHte	fun	Run failed for seed:74566
+2021-10-30 04:34:51	[Thread 36]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 04:34:52	[Thread 36]	WARN	SimulationEvaluationHte	fun	Run failed for seed:12301
+2021-10-30 04:39:31	[Thread 41]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 04:39:31	[Thread 41]	WARN	SimulationEvaluationHte	fun	Run failed for seed:32539
+2021-10-30 04:39:46	[Thread 13]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 04:39:46	[Thread 13]	WARN	SimulationEvaluationHte	fun	Run failed for seed:8457
+2021-10-30 04:40:59	[Thread 11]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 04:40:59	[Thread 11]	WARN	SimulationEvaluationHte	fun	Run failed for seed:69371
+2021-10-30 04:42:47	[Thread 21]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 04:42:47	[Thread 21]	WARN	SimulationEvaluationHte	fun	Run failed for seed:83406
+2021-10-30 04:46:11	[Thread 14]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 04:46:11	[Thread 14]	WARN	SimulationEvaluationHte	fun	Run failed for seed:44834
+2021-10-30 04:47:52	[Thread 44]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-10-30 04:47:52	[Thread 44]	WARN	SimulationEvaluationHte	fun	Run failed for seed:35203
+2021-10-30 04:49:12	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-10-30 04:49:13	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

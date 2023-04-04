@@ -1,0 +1,17 @@
+2021-11-05 09:36:51	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-11-05 09:36:51	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-11-05 09:36:51	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-11-05 09:37:01	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-05 09:37:01	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-11-05 09:40:46	[Thread 26]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-05 09:40:46	[Thread 26]	WARN	SimulationEvaluationHte	fun	Run failed for seed:12301
+2021-11-05 09:45:44	[Thread 20]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-05 09:45:44	[Thread 20]	WARN	SimulationEvaluationHte	fun	Run failed for seed:32539
+2021-11-05 09:46:48	[Thread 2]	WARN	stats	simpleLoess	pseudoinverse used at 0.00078877
+2021-11-05 09:46:48	[Thread 2]	WARN	stats	simpleLoess	neighborhood radius 0.00673
+2021-11-05 09:46:48	[Thread 2]	WARN	stats	simpleLoess	reciprocal condition number  0
+2021-11-05 09:46:48	[Thread 2]	WARN	stats	simpleLoess	There are other near singularities as well. 0.00018117
+2021-11-05 09:46:56	[Thread 17]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-05 09:46:56	[Thread 17]	WARN	SimulationEvaluationHte	fun	Run failed for seed:47037
+2021-11-05 09:55:25	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-05 09:55:26	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors

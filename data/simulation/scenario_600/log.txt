@@ -1,0 +1,55 @@
+2021-11-06 08:56:38	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting simulation
+2021-11-06 08:56:38	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Genarated seeds
+2021-11-06 08:56:38	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Starting generation of the validation dataset
+2021-11-06 08:56:49	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-06 08:56:49	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Running simulations...
+2021-11-06 08:58:25	[Thread 3]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:58:25	[Thread 3]	WARN	SimulationEvaluationHte	fun	Run failed for seed:58606
+2021-11-06 08:58:42	[Thread 19]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:58:42	[Thread 19]	WARN	SimulationEvaluationHte	fun	Run failed for seed:86432
+2021-11-06 08:59:02	[Thread 44]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:59:03	[Thread 44]	WARN	SimulationEvaluationHte	fun	Run failed for seed:73138
+2021-11-06 08:59:07	[Thread 46]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 08:59:07	[Thread 46]	WARN	SimulationEvaluationHte	fun	Run failed for seed:10217
+2021-11-06 09:00:18	[Thread 6]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:00:18	[Thread 6]	WARN	SimulationEvaluationHte	fun	Run failed for seed:55519
+2021-11-06 09:00:50	[Thread 40]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:00:50	[Thread 40]	WARN	SimulationEvaluationHte	fun	Run failed for seed:55058
+2021-11-06 09:01:57	[Thread 19]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:01:57	[Thread 19]	WARN	SimulationEvaluationHte	fun	Run failed for seed:90381
+2021-11-06 09:02:03	[Thread 17]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:02:03	[Thread 17]	WARN	SimulationEvaluationHte	fun	Run failed for seed:79453
+2021-11-06 09:02:23	[Thread 40]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:02:23	[Thread 40]	WARN	SimulationEvaluationHte	fun	Run failed for seed:19728
+2021-11-06 09:02:24	[Thread 39]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:02:25	[Thread 39]	WARN	SimulationEvaluationHte	fun	Run failed for seed:81821
+2021-11-06 09:02:26	[Thread 11]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:02:26	[Thread 11]	WARN	SimulationEvaluationHte	fun	Run failed for seed:27044
+2021-11-06 09:02:32	[Thread 27]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:02:32	[Thread 27]	WARN	SimulationEvaluationHte	fun	Run failed for seed:50264
+2021-11-06 09:03:51	[Thread 32]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:03:51	[Thread 32]	WARN	SimulationEvaluationHte	fun	Run failed for seed:61368
+2021-11-06 09:05:58	[Thread 44]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:05:58	[Thread 44]	WARN	SimulationEvaluationHte	fun	Run failed for seed:7141
+2021-11-06 09:08:32	[Thread 17]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:08:32	[Thread 17]	WARN	SimulationEvaluationHte	fun	Run failed for seed:64793
+2021-11-06 09:08:53	[Thread 33]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:08:53	[Thread 33]	WARN	SimulationEvaluationHte	fun	Run failed for seed:14910
+2021-11-06 09:10:30	[Thread 41]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:10:30	[Thread 41]	WARN	SimulationEvaluationHte	fun	Run failed for seed:11639
+2021-11-06 09:10:34	[Thread 45]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:10:34	[Thread 45]	WARN	SimulationEvaluationHte	fun	Run failed for seed:48683
+2021-11-06 09:10:42	[Thread 3]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:10:42	[Thread 3]	WARN	SimulationEvaluationHte	fun	Run failed for seed:97539
+2021-11-06 09:12:18	[Thread 15]	WARN	stats	simpleLoess	pseudoinverse used at 0.015038
+2021-11-06 09:12:18	[Thread 15]	WARN	stats	simpleLoess	neighborhood radius 0.13297
+2021-11-06 09:12:18	[Thread 15]	WARN	stats	simpleLoess	reciprocal condition number  1.4691e-15
+2021-11-06 09:12:18	[Thread 15]	WARN	stats	simpleLoess	There are other near singularities as well. 0.0044204
+2021-11-06 09:12:47	[Thread 31]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:12:47	[Thread 31]	WARN	SimulationEvaluationHte	fun	Run failed for seed:53030
+2021-11-06 09:13:39	[Thread 37]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:13:39	[Thread 37]	WARN	SimulationEvaluationHte	fun	Run failed for seed:4969
+2021-11-06 09:15:14	[Thread 16]	WARN	rms	lrm	Unable to fit model using “lrm.fit”
+2021-11-06 09:15:14	[Thread 16]	WARN	SimulationEvaluationHte	fun	Run failed for seed:79572
+2021-11-06 09:15:57	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Done
+2021-11-06 09:15:58	[Main thread]	INFO	SimulationEvaluationHte	runAnalysis	Simulation finished without errors
