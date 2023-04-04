@@ -49,6 +49,9 @@ data/framework/mappedOverallRelativeResults.rds : code/GetRawData.R
 data/framework/mappedOverallAbsoluteResults.rds : code/GetRawData.R
 	$< mappedOverallAbsoluteResults.rds framework
 
+data/simulation/analysisIds.rds : code/GetRawData.R
+	$< analysisIds.rds framework
+
 # ===================================================================================================================
 # Make figures
 # ===================================================================================================================
@@ -129,6 +132,7 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/reviewDiagram.pdf\
 	figures/riskBenefit.tiff \
 	figures/ch3-PsDensity.tiff \
+	figures/ch3-Framework.pdf \
 	figures/ch3-CovariateBalance.tiff \
 	figures/ch3-NegativeControlsOverall.tiff \
 	figures/ch3-RelativeResultsMain.tiff \
