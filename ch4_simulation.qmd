@@ -37,42 +37,47 @@ predictions.
 Predictive approaches to heterogeneity of treatment effects (HTE) aim at the
 development of models predicting either individualized effects or which of two
 (or more) treatments is better for an individual with regard to a specific
-outcome of interest [1]. These predictive approaches  include both regression
-and machine learning techniques and are the subject of active research [2–5]. In
-prior work, we divided regression-based methods for the evaluation of treatment
-effect heterogeneity in three broader categories: risk modeling, treatment
-effect modeling and optimal treatment regime methods [6]. Risk modeling methods
-use only prognostic factors to define patient subgroups, relying on the
-mathematical dependency between baseline risk and treatment effect [2, 7].
+outcome of interest [@varadhan2013framework]. These predictive approaches
+include both regression and machine learning techniques and are the subject of
+active research
+[@kent2018personalized;@athey2016recursive;@powers2018some;@wager2018estimation].
+In prior work, we divided regression-based methods for the evaluation of
+treatment effect heterogeneity in three broader categories: risk modeling,
+treatment effect modeling and optimal treatment regime methods
+[@rekkas2020predictive]. Risk modeling methods use only prognostic factors to
+define patient subgroups, relying on the mathematical dependency between
+baseline risk and treatment effect [@kent2018personalized;@kent2010assessing].
 Treatment effect modeling methods use both prognostic factors and treatment
 effect modifiers to explore characteristics that interact with the effects of
 therapy. They can be applied in one stage by directly modeling
 treatment-covariate interactions, in which case penalization of the interaction
-effects is needed to reduce the effects of overfitting [8], or in two stages
-that rely on updating working absolute benefit models [9, 10]. Optimal treatment
-regime methods focus primarily on treatment effect modifiers in order to
-classify the trial population into those who benefit from treatment and those
-who do not [11–14].
+effects is needed to reduce the effects of overfitting [@basu2017benefit], or in
+two stages that rely on updating working absolute benefit models
+[@cai2010analysis;@k_unzel2019metalearners]. Optimal treatment regime methods
+focus primarily on treatment effect modifiers in order to classify the trial
+population into those who benefit from treatment and those who do not
+[@zhang2012estimating;@zhang2012robust;@foster2014simple;@xu2015regularized].
 
 In a previous simulation study, modeling treatment-covariate interactions often
 led to poorly calibrated predictions of benefit on the absolute scale (risk
-difference between treatment arms), compared to risk-modeling methods [15]. In
-the presence of true treatment-covariate interactions, however, effect modeling
-methods were better able to separate lower from higher benefit patients [15,
-16]. By assuming treatment effect is a function of baseline risk, risk modeling
-methods impose a restriction on the shape of treatment effect heterogeneity.
-With smaller sample sizes or limited information on effect modification, risk
-modeling methods, because of their reduced complexity, can provide a good option
-for evaluating treatment effect heterogeneity. Conversely, with larger sample
-sizes and/or a limited set of well-studied strong effect modifiers, treatment
-effect modeling methods can potentially result in a better bias-variance
-tradeoff. Therefore, the setting in which treatment effect heterogeneity is
-evaluated is crucial for the selection of the optimal approach.
+difference between treatment arms), compared to risk-modeling methods
+[@klaveren2019models]. In the presence of true treatment-covariate interactions,
+however, effect modeling methods were better able to separate lower from higher
+benefit patients [@klaveren2019models;@hoogland2021tutorial]. By assuming
+treatment effect is a function of baseline risk, risk modeling methods impose a
+restriction on the shape of treatment effect heterogeneity. With smaller sample
+sizes or limited information on effect modification, risk modeling methods,
+because of their reduced complexity, can provide a good option for evaluating
+treatment effect heterogeneity. Conversely, with larger sample sizes and/or a
+limited set of well-studied strong effect modifiers, treatment effect modeling
+methods can potentially result in a better bias-variance tradeoff. Therefore,
+the setting in which treatment effect heterogeneity is evaluated is crucial for
+the selection of the optimal approach.
 
 Risk modeling methods predict similar treatment benefit for patients with
 similar baseline outcome risk, i.e. a similar probability of experiencing the
 outcome of interest in the absence of treatment. These methods are not new and
-are quite intuitive to practitioners [6]. Often medical guidelines rely on a
+are quite intuitive to practitioners [@rekkas2020predictive]. Often medical guidelines rely on a
 risk stratified approach to target treatments to different patients. In
 addition, re-analyses of studies that only looked at overall results using risk
 stratification often resulted to important insight on how treatment effects
@@ -80,19 +85,20 @@ varied for different patients. For example, a risk stratified analysis of
 patients with acute myocardial infarction (MI) based on the Thrombolysis in
 Myocardial Infarction (TIMI) risk score found no benefit for patients who
 underwent primary angioplasty compared to fibrinolysis. However, there was a
-significant benefit for patients with a high TIMI score [17]. Infants at lower
+significant benefit for patients with a high TIMI score [@thune2005simple]. Infants at lower
 risk of bronchopulmonary dysplasia benefit relatively more from vitamin A
-therapy than infants at higher risk [18]. Finally, higher risk prediabetic
-patients benefit relatively more from metformin than lower risk patients [19].
+therapy than infants at higher risk [@rysavy2021should]. Finally, higher risk prediabetic
+patients benefit relatively more from metformin than lower risk patients [@sussman2015improving].
 
 Most often, risk-modeling approaches are carried out in two steps: first a risk
 prediction model is developed externally or internally on the entire RCT
 population, “blinded” to treatment; then the RCT population is stratified using
-this prediction model to evaluate risk-based treatment effect variation [7, 20,
-21]. This approach identified substantial absolute treatment effect differences
-between low-risk and high-risk patients in a re-analysis of 32 large trials
-[22]. However, even though treatment effect estimates at the risk subgroup level
-may be accurate, these estimates may not apply to individual patients, as
+this prediction model to evaluate risk-based treatment effect variation
+[@kent2010assessing;@kent2019predictive1;@kent2019predictive2]. This approach
+identified substantial absolute treatment effect differences between low-risk
+and high-risk patients in a re-analysis of 32 large trials [@kent2016risk].
+However, even though treatment effect estimates at the risk subgroup level may
+be accurate, these estimates may not apply to individual patients, as
 homogeneity of treatment effects is assumed within risk strata. With stronger
 overall treatment effect and larger variability in predicted risks, patients
 assigned to the same risk subgroup may still differ substantially with regard to
@@ -161,7 +167,7 @@ respectively. We also evaluated the effect of risk model discriminative ability,
 adjusting the baseline covariate coefficients, such that the AUC of the
 regression model in the control arm was 0.65 and 0.85, respectively. These settings resulted in a simulation study of 648 scenarios covering the
 HTE observed in 32 large trials as well as many other potential variations of
-risk-based treatment effect (Supplement, Sections 2 and 3) [22].
+risk-based treatment effect (Supplement, Sections 2 and 3) [@kent2016risk].
 
 We analyzed the sensitivity of the results to correlation between baseline
 characteristics. We first sampled 8 continuous variables 
@@ -185,7 +191,7 @@ setting treatment assignment to 0. A more intuitive approach would be to derive
 the prediction model solely on the control patients. However, this has been
 shown to lead to biased benefit predictions, because with limited sample size
 the model will be overfitted to the control arm and induce spurious treatment
-interactions [15, 23, 24].
+interactions [@klaveren2019models;@burke2014using;@abadie2018endogenous].
 
 We compared different methods for predicting absolute treatment benefit, that is
 the risk difference between distinct treatment assignments. We use the term
@@ -193,13 +199,13 @@ absolute treatment benefit to distinguish from relative treatment benefit that
 relies on the ratio of predicted risk under different treatment assignments.
 
 A stratified HTE method has been suggested as an alternative to traditional
-subgroup analyses [20, 21]. Patients are stratified into equally-sized risk
-strata—in this case based on risk quartiles. Absolute treatment effects, within
-risk strata, expressed as absolute risk differences, are estimated by the
-difference in event rate between control and treatment arm patients. We
-considered this approach as a reference, expecting it to perform worse than the
-other candidates, as its objective is to provide an illustration of HTE rather
-than to optimize individualized benefit predictions.
+subgroup analyses [@kent2019predictive1;@kent2019predictive2]. Patients are
+stratified into equally-sized risk strata—in this case based on risk quartiles.
+Absolute treatment effects, within risk strata, expressed as absolute risk
+differences, are estimated by the difference in event rate between control and
+treatment arm patients. We considered this approach as a reference, expecting it
+to perform worse than the other candidates, as its objective is to provide an
+illustration of HTE rather than to optimize individualized benefit predictions.
 
 Second, we fitted a logistic regression model which assumes constant relative
 treatment effect (constant odds ratio), that is, 
@@ -217,10 +223,10 @@ $\tau(x;\hat{\beta}) = \text{expit}(\delta_0+\delta_2\hat{lp}_0)-\text{expit}\Bi
 We will refer to this method as the linear interaction approach.
 
 Fourth, we used restricted cubic splines (RCS) to relax the linearity assumption
-on the effect of the linear predictor [25]. We considered splines with 3
-(RCS-3), 4 (RCS-4) and 5 (RCS-5) knots, together with their interaction with
-treatment, to compare models with different levels of flexibility (Supplement,
-section 4).
+on the effect of the linear predictor [@harrell1988regression]. We considered
+splines with 3 (RCS-3), 4 (RCS-4) and 5 (RCS-5) knots, together with their
+interaction with treatment, to compare models with different levels of
+flexibility (Supplement, section 4).
 
 Finally, we considered an adaptive approach using Akaike’s Information Criterion
 (AIC) for model selection. More specifically, we ranked the constant relative
@@ -249,16 +255,17 @@ of observed outcomes between the untreated and the treated patient of each
 matched patient pair. Since matching may not be perfect, that is, predicted
 benefits for the patients of the pair may not be equal, pair-specific predicted
 benefit is defined as the average of predicted benefit within each matched
-patient pair [26]. Then, the c-for-benefit represents the probability that from
-two randomly chosen predicted benefit-matched patient pairs with unequal
-observed benefit, the pair with greater observed benefit also has a higher
-predicted benefit
+patient pair [@klaveren2018proposed]. Then, the c-for-benefit represents the
+probability that from two randomly chosen predicted benefit-matched patient
+pairs with unequal observed benefit, the pair with greater observed benefit also
+has a higher predicted benefit
 
 We evaluated calibration in a similar manner, using the integrated calibration
-index (ICI) for benefit [27]. The observed benefits are regressed on the
-predicted benefits using a locally weighted scatterplot smoother (loess). The
-ICI-for-benefit is the average absolute difference between predicted and smooth
-observed benefit. Values closer to 0 represent better calibration.
+index (ICI) for benefit [@austin2019integrated]. The observed benefits are
+regressed on the predicted benefits using a locally weighted scatterplot
+smoother (loess). The ICI-for-benefit is the average absolute difference between
+predicted and smooth observed benefit. Values closer to 0 represent better
+calibration.
 
 For each scenario we performed 500 replications, within which all the considered
 models were fitted. We simulated a super-population of size 500,000 for each
@@ -273,13 +280,14 @@ randomized to tissue plasminogen activator (tPA) treatment and 20,162 were
 randomized to streptokinase. The outcome of interest was 30-day mortality (total
 of 2,128 events), recorded for all patients.
 
-This dataset has been used extensively in prior studies [28, 29]. Therefore, we
-used the same set of seven covariates that was previously used to fit a logistic
-regression model (age, Killip class, systolic blood pressure, heart rate, an
-indicator of previous MI, and the location of MI) along with a binary covariate
-for treatment indication, to predict 30-day mortality risk (Supplement, Section
-10). Predicted baseline risk is derived by setting the treatment indicator to 0
-for all patients.
+This dataset has been used extensively in prior studies
+[@califf1997selection;@steyerberg2000clinical]. Therefore, we used the same set
+of seven covariates that was previously used to fit a logistic regression model
+(age, Killip class, systolic blood pressure, heart rate, an indicator of
+previous MI, and the location of MI) along with a binary covariate for treatment
+indication, to predict 30-day mortality risk (Supplement, Section 10). Predicted
+baseline risk is derived by setting the treatment indicator to 0 for all
+patients.
 
 
 ## Results {.unnumbered}
@@ -414,6 +422,10 @@ events) allowed for flexible modeling approaches, a simpler constant treatment
 effect model is adequate for predicting absolute 30-day mortality benefits of
 treatment with tPA in patients with acute MI.
 
+```{r fig-gusto, cache=FALSE, echo=FALSE, fig.cap="6 Individualized absolute beneft predictions based on baseline risk when using a constant treatment efect approach, a linear interaction approach and RCS smoothing using 3 knots. Risk stratifed estimates of absolute beneft are presented within quartiles of baseline risk as reference. 95% confdence bands were generated using 10,000 bootstrap resamples, where the prediction model was reftted in each run to capture the uncertainty in baseline risk predictions. For the risk stratifcation approach, we also provide 95% confdence intervals for the baseline risk quarter-specifc average predicted risk over the 10,000 bootstrap samples.",fig.align='center'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Gusto.tiff")))
+```
+
 ## Discussion {.unnumbered}
 
 The linear interaction and the RCS-3 models displayed very good performance
@@ -438,7 +450,7 @@ preferable. Even with the substantial sample size of our base case scenario, the
 flexible) RCS approach for most simulation settings. The even less flexible
 constant treatment effect model, however, was only optimal when the treatment
 effect was truly constant. Moreover, the assumption of a constant treatment
-effect may often be too strong [22, 30].
+effect may often be too strong [@kent2016risk;@claggett2014treatment].
 
 RCS-4 and RCS-5 were too flexible in all considered scenarios, as indicated by
 higher RMSE, increased variability of discrimination for benefit and worse
@@ -483,7 +495,7 @@ a function of baseline risk in the majority of the simulation scenarios, thus
 ignoring any actual treatment effect modification of individual factors. We
 attempted to expand our scenarios by considering moderate and strong constant
 treatment-related harms, applied on the absolute scale, in line with previous
-work [31]. In a limited set of scenarios with true interactions between
+work [@glasziou1995evidence]. In a limited set of scenarios with true interactions between
 treatment assignment and covariates, our conclusions remained unchanged
 (Supplement, Section 8). Even though the average error rates increased for all
 the considered methods, due to the miss-specification of the outcome model, the
@@ -496,26 +508,28 @@ effects.
 We only focused on risk-based methods, using baseline risk as a reference in a
 two-stage approach to individualizing benefit predictions. However, there is a
 plethora of different methods, ranging from treatment effect modeling to
-tree-based approaches available in more recent literature [4, 5, 8, 32–36]. Many
-of these methods rely on incorporating treatment-covariate interactions when
-predicting benefits. An important caveat of such approaches is their sensitivity
-to overfitting, which may exaggerate the magnitude of predicted benefits. This
-can be mitigated using methods such as cross-validation or regularization to
-penalize the effect of treatment-covariate interactions. In the presence of a
-limited set of true strong treatment-covariate interactions and adequate sample
-size, treatment effect modeling methods may outperform risk modeling methods.
-However, often treatment effect modifiers are unknown and the available sample
-size does not allow for the exploration of a large number of interaction
-effects. In these cases, risk modeling approaches like the ones presented here
-can provide individualized benefit predictions that improve on the
-“one-size-fits-all” overall RCT result. In a previous simulation study, a
+tree-based approaches available in more recent literature
+[@powers2018some;@wager2018estimation;@basu2017benefit;@claggett2014treatment;@tern_es2017identification;@berger2014bayesian;@athey2019generalized;@lu2018estimating].
+Many of these methods rely on incorporating treatment-covariate interactions
+when predicting benefits. An important caveat of such approaches is their
+sensitivity to overfitting, which may exaggerate the magnitude of predicted
+benefits. This can be mitigated using methods such as cross-validation or
+regularization to penalize the effect of treatment-covariate interactions. In
+the presence of a limited set of true strong treatment-covariate interactions
+and adequate sample size, treatment effect modeling methods may outperform risk
+modeling methods. However, often treatment effect modifiers are unknown and the
+available sample size does not allow for the exploration of a large number of
+interaction effects. In these cases, risk modeling approaches like the ones
+presented here can provide individualized benefit predictions that improve on
+the “one-size-fits-all” overall RCT result. In a previous simulation study, a
 simpler risk modeling approach was consistently better calibrated for benefit
-compared to more complex treatment effect modelling approaches [15]. Similarly,
-when SYNTAX score II, a model developed for identifying patients with complex
-coronary artery disease that benefit more from percutaneous coronary
-intervention or from coronary artery bypass grafting was redeveloped using fewer
-treatment-covariate interactions had better external performance compared to its
-predecessor [37, 38].
+compared to more complex treatment effect modelling approaches
+[@klaveren2019models]. Similarly, when SYNTAX score II, a model developed for
+identifying patients with complex coronary artery disease that benefit more from
+percutaneous coronary intervention or from coronary artery bypass grafting was
+redeveloped using fewer treatment-covariate interactions had better external
+performance compared to its predecessor
+[@farooq2013anatomical;@takahashi2020redevelopment].
 
 Finally, in all our simulation scenarios we assumed all covariates to be
 statistically independent, the effect of continuous covariates to be linear, and

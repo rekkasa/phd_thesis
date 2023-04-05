@@ -65,6 +65,10 @@ data/simulation/calibration.csv :
 	wget -O data/simulation/calibration.csv \
 		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/data/simulation/calibration.csv
 
+data/simulation/bootstrapData.csv :
+	wget -O data/simulation/bootstrapData.csv \
+		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/data/simulation/bootstrapData.csv
+
 data/simulation/scenario_217/settings.rds :code/GetRawData.R
 	$< settings.rds simulation scenario_217
 data/simulation/scenario_218/settings.rds :code/GetRawData.R
@@ -270,6 +274,12 @@ figures/ch4-calibration_moderate_base.tiff : code/ch4-CalibrationBase.R\
 	code/ch4-PlotResult.R\
 	data/simulation/calibration.csv
 	$< moderate 4250 0.75 base
+
+figures/ch4-Gusto.tiff : code/ch4-GustoPlot.R\
+	data/introduction/gusto.rda\
+	data/simulation/bootstrapData.csv
+	$<
+
 # ===================================================================================================================
 # Make thesis
 # ===================================================================================================================
@@ -304,7 +314,8 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/ch4-rmse_moderate_sample_size.tiff \
 	figures/ch4-rmse_moderate_auc.tiff \
 	figures/ch4-discrimination_moderate_base.tiff \
-	figures/ch4-calibration_moderate_base.tiff
+	figures/ch4-calibration_moderate_base.tiff \
+	figures/ch4-Gusto.tiff
 	bash -c "quarto render";
 
 
