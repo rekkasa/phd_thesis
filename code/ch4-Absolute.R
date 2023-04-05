@@ -47,11 +47,23 @@ plotAbsoluteBenefit <- function(data, projectDir, type) {
         )
     }
     if (!missing(projectDir)) {
+      message(
+        paste(
+          "Getting",
+          file.path(
+            projectDir,
+            "data",
+            "simulation",
+            scenarioDir,
+            "settings.rds"
+          )
+        )
+      )
       settings <- readRDS(
         file.path(
           projectDir,
           "data",
-          "raw",
+          "simulation",
           scenarioDir,
           "settings.rds"
         )
@@ -115,10 +127,10 @@ plotAbsoluteBenefit <- function(data, projectDir, type) {
         scale_xsidey_continuous() +
         scale_fill_manual(
           values = c(
-            "#26547C",
-            "#06D6A0",
-            "#EF476F"
-          )
+            "#284E60",
+            "#F99B45",
+            "#63AAC0"
+          ),
         )
     }
   }

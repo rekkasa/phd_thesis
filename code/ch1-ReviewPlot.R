@@ -47,10 +47,10 @@ p <- data.frame(
     ))
   ) +
   ggplot2::theme(
-    plot.background = ggplot2::element_rect(fill = "#F1F3F8"),
     panel.grid.minor = ggplot2::element_blank(),
     panel.grid.major.x = ggplot2::element_blank(),
-    panel.background = ggplot2::element_rect(fill = "#F0F2F3"),
+    plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+    panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
     legend.position = c(.23, .82),
     legend.title = ggplot2::element_blank(),
     legend.box.background = ggplot2::element_rect(color = "black"),

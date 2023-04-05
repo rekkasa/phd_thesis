@@ -61,9 +61,9 @@ createPlot <- function(
     ggplot2::scale_fill_manual(
       name = "Constant treatment-\n related harm",
       values = c(
-        "#26547C",
-        "#06D6A0",
-        "#EF476F"
+        "#284E60",
+        "#F99B45",
+        "#63AAC0"
       ),
       breaks = c(
         "absent",
@@ -82,7 +82,12 @@ createPlot <- function(
       limits = c(limits[1], limits[2])
     ) +
     # ggplot2::ylim(limits[1], limits[2]) +
-    ggplot2::theme_bw()
+    ggplot2::theme(
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
+    )
 
   if (!missing(title)) {
     plot <- plot +

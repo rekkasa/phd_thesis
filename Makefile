@@ -57,6 +57,90 @@ data/simulation/rmse.csv :
 	wget -O data/simulation/rmse.csv \
 		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/data/simulation/rmse.csv
 
+data/simulation/discrimination.csv :
+	wget -O data/simulation/discrimination.csv \
+		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/data/simulation/discrimination.csv
+
+data/simulation/calibration.csv :
+	wget -O data/simulation/calibration.csv \
+		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/data/simulation/calibration.csv
+
+data/simulation/scenario_217/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_217
+data/simulation/scenario_218/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_218
+data/simulation/scenario_219/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_219
+data/simulation/scenario_289/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_289
+
+data/simulation/scenario_290/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_290
+data/simulation/scenario_291/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_291
+data/simulation/scenario_361/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_361
+data/simulation/scenario_362/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_362
+data/simulation/scenario_363/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_363
+data/simulation/scenario_397/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_397
+data/simulation/scenario_398/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_398
+data/simulation/scenario_399/settings.rds :code/GetRawData.R
+	$< settings.rds simulation scenario_399
+
+data/simulation/scenario_241/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_241
+data/simulation/scenario_242/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_242
+data/simulation/scenario_243/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_243
+data/simulation/scenario_313/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_313
+data/simulation/scenario_314/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_314
+data/simulation/scenario_315/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_315
+data/simulation/scenario_385/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_385
+data/simulation/scenario_386/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_386
+data/simulation/scenario_387/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_387
+data/simulation/scenario_421/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_421
+data/simulation/scenario_422/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_422
+data/simulation/scenario_423/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_423
+
+
+data/simulation/scenario_225/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_225
+data/simulation/scenario_226/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_226
+data/simulation/scenario_227/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_227
+data/simulation/scenario_297/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_297
+data/simulation/scenario_298/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_298
+data/simulation/scenario_299/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_299
+data/simulation/scenario_369/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_369
+data/simulation/scenario_370/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_370
+data/simulation/scenario_371/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_371
+data/simulation/scenario_405/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_405
+data/simulation/scenario_406/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_406
+data/simulation/scenario_407/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_407
 # ===================================================================================================================
 # Make figures
 # ===================================================================================================================
@@ -114,14 +198,78 @@ figures/ch3-AbsoluteResultsSafety.tiff : code/ch3-CombinedAbsoluteSafety.R \
 	data/framework/mappedOverallAbsoluteResults.rds 
 	$< acute_myocardial_infarction main
 
-figures/rmse_moderate_base.tiff : code/ch4-PlotRmse.R\
+figures/ch4-rmse_moderate_base.tiff : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
 	code/ch4-PlotResult.R\
 	code/ch4-Absolute.R\
 	data/simulation/rmse.csv\
-	data/processed/analysisIds.csv
+	data/simulation/analysisIds.csv \
+	data/simulation/scenario_217/settings.rds \
+	data/simulation/scenario_218/settings.rds \
+	data/simulation/scenario_219/settings.rds \
+	data/simulation/scenario_289/settings.rds \
+	data/simulation/scenario_290/settings.rds \
+	data/simulation/scenario_291/settings.rds \
+	data/simulation/scenario_361/settings.rds \
+	data/simulation/scenario_362/settings.rds \
+	data/simulation/scenario_363/settings.rds \
+	data/simulation/scenario_397/settings.rds \
+	data/simulation/scenario_398/settings.rds \
+	data/simulation/scenario_399/settings.rds
 	$< moderate 4250 0.75 base
 
+figures/ch4-rmse_moderate_sample_size.tiff : code/ch4-PlotRmse.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	code/ch4-Absolute.R\
+	data/simulation/rmse.csv\
+	data/simulation/analysisIds.csv \
+	data/simulation/scenario_241/settings.rds \
+	data/simulation/scenario_242/settings.rds \
+	data/simulation/scenario_243/settings.rds \
+	data/simulation/scenario_313/settings.rds \
+	data/simulation/scenario_314/settings.rds \
+	data/simulation/scenario_315/settings.rds \
+	data/simulation/scenario_385/settings.rds \
+	data/simulation/scenario_386/settings.rds \
+	data/simulation/scenario_387/settings.rds \
+	data/simulation/scenario_421/settings.rds \
+	data/simulation/scenario_422/settings.rds \
+	data/simulation/scenario_423/settings.rds
+	$< moderate 17000 0.75 sample_size
+
+figures/ch4-rmse_moderate_auc.tiff : code/ch4-PlotRmse.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	code/ch4-Absolute.R\
+	data/simulation/rmse.csv\
+	data/simulation/analysisIds.csv \
+	data/simulation/scenario_225/settings.rds \
+	data/simulation/scenario_226/settings.rds \
+	data/simulation/scenario_227/settings.rds \
+	data/simulation/scenario_297/settings.rds \
+	data/simulation/scenario_298/settings.rds \
+	data/simulation/scenario_299/settings.rds \
+	data/simulation/scenario_369/settings.rds \
+	data/simulation/scenario_370/settings.rds \
+	data/simulation/scenario_371/settings.rds \
+	data/simulation/scenario_405/settings.rds \
+	data/simulation/scenario_406/settings.rds \
+	data/simulation/scenario_407/settings.rds 
+	$< moderate 4250 0.85 auc
+
+figures/ch4-discrimination_moderate_base.tiff : code/ch4-DiscriminationBase.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	data/simulation/discrimination.csv\
+	data/simulation/analysisIds.csv
+	$< moderate 4250 0.75 base
+
+figures/ch4-calibration_moderate_base.tiff : code/ch4-CalibrationBase.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	data/simulation/calibration.csv
+	$< moderate 4250 0.75 base
 # ===================================================================================================================
 # Make thesis
 # ===================================================================================================================
@@ -151,7 +299,12 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/ch3-RelativeResultsMain.tiff \
 	figures/ch3-AbsoluteResultsMain.tiff \
 	figures/ch3-RelativeResultsSafety.tiff \
-	figures/ch3-AbsoluteResultsSafety.tiff
+	figures/ch3-AbsoluteResultsSafety.tiff \
+	figures/ch4-rmse_moderate_base.tiff \
+	figures/ch4-rmse_moderate_sample_size.tiff \
+	figures/ch4-rmse_moderate_auc.tiff \
+	figures/ch4-discrimination_moderate_base.tiff \
+	figures/ch4-calibration_moderate_base.tiff
 	bash -c "quarto render";
 
 

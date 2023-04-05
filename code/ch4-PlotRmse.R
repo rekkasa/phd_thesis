@@ -64,11 +64,7 @@ titles <- scenarioIds %>%
 
 names(titles) <- NULL
 
-titlePrefix <- paste0(
-  "**",
-  LETTERS[1:5],
-  ".**"
-)
+titlePrefix <- paste0(LETTERS[1:5], ")")
 
 titles <- paste(
   titlePrefix,
@@ -115,7 +111,7 @@ absolutePlots <- scenarioIds %>%
       type,
       ~ plotAbsoluteBenefit(
         data = .x,
-        projectDir = "~/Documents/Projects/arekkas_HteSimulation_XXXX_2021",
+        projectDir = ".",
         type = .y
       )
     )
@@ -142,20 +138,27 @@ plotList <- plotResult(scenarios, processed, titles, metric = metric, limits = c
 gridList <- list(
   plotList[[1]] +
     theme(
-      panel.grid.minor = element_blank(),
-      plot.title = element_markdown(size = 9),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
+      plot.title = element_text(size = 12),
       axis.title.x = ggplot2::element_blank(),
       axis.title.y = ggplot2::element_blank(),
       # axis.text.x = element_blank(),
-      axis.text.x = element_text(size = 8),
-      axis.text.y = element_text(size = 8),
+      axis.text.x = element_text(size = 10),
+      axis.text.y = element_text(size = 10),
       legend.direction = "horizontal",
-      legend.title = element_text(size = 7.5),
-      legend.text = element_text(size = 7),
-      legend.position = c(.273, .848)
+      legend.title = element_text(size = 9.5),
+      legend.text = element_text(size = 9),
+      legend.position = c(.458, .792),
+      # legend.box.background = ggplot2::element_rect(color = "black"),
+      legend.box.background = ggplot2::element_blank(),
+      # legend.background = ggplot2::element_rect(fill = "#F1F3F8")
+      legend.background = ggplot2::element_blank()
     ),
   absolutePlots$plot[[1]] +
-    ggtitle("Simulated absolute benefit in treated patients") +
+    ggtitle("True absolute benefit") +
     xlim(c(0, .5)) +
     scale_y_continuous(
       position = "right",
@@ -165,35 +168,40 @@ gridList <- list(
     scale_color_manual(
       name = "Constant treatment-\n related harm",
       values = c(
-        "#26547C",
-        "#06D6A0",
-        "#EF476F"
-      )
+        "#284E60",
+        "#F99B45",
+        "#63AAC0"
+      ),
     ) +
-    theme_bw() +
     theme(
-      panel.grid.minor = element_blank(),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
       axis.title.x = element_blank(),
       axis.title.y = element_blank(),
       # axis.text.x = element_blank(),
-      axis.text.x = element_text(size = 8),
-      axis.text.y = element_text(size = 8),
+      axis.text.x = element_text(size = 10),
+      axis.text.y = element_text(size = 10),
       ggside.line = element_blank(),
       ggside.rect = element_blank(),
       ggside.axis.text = element_blank(),
       ggside.axis.ticks.length = unit(0, "pt"),
       ggside.panel.scale = .07,
-      plot.title = element_markdown(size = 9),
+      plot.title = element_text(size = 12),
       legend.position = "none"
     ),
   plotList[[2]] +
     theme(
-      panel.grid.minor = element_blank(),
-      plot.title = element_markdown(size = 9),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
+      plot.title = element_text(size = 12),
       axis.title = element_blank(),
       # axis.text.x = element_blank(),
-      axis.text.x = element_text(size = 8),
-      axis.text.y = element_text(size = 8),
+      axis.text.x = element_text(size = 10),
+      axis.text.y = element_text(size = 10),
       ggside.line = element_blank(),
       ggside.rect = element_blank(),
       ggside.axis.text = element_blank(),
@@ -211,35 +219,40 @@ gridList <- list(
     ) +
     scale_color_manual(
       name = "Constant treatment-\n related harm",
-      values = c(
-        "#26547C",
-        "#06D6A0",
-        "#EF476F"
-      )
+    values = c(
+      "#284E60",
+      "#F99B45",
+      "#63AAC0"
+    ),
     ) +
-    theme_bw() +
     theme(
-      panel.grid.minor = element_blank(),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
       axis.title.x = element_blank(),
       axis.title.y = element_blank(),
       # axis.text.x = element_blank(),
-      axis.text.x = element_text(size = 8),
-      axis.text.y = element_text(size = 8),
+      axis.text.x = element_text(size = 10),
+      axis.text.y = element_text(size = 10),
       ggside.line = element_blank(),
       ggside.rect = element_blank(),
       ggside.axis.text = element_blank(),
       ggside.axis.ticks.length = unit(0, "pt"),
       ggside.panel.scale = .07,
-      plot.title = element_markdown(size = 9, color = "white"),
+      plot.title = element_text(size = 12, color = "#F1F3F8"),
       legend.position = "none"
     ),
   plotList[[3]] +
     theme(
-      panel.grid.minor = element_blank(),
-      plot.title = element_markdown(size = 9),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
+      plot.title = element_text(size = 12),
       axis.title = element_blank(),
       # axis.text.x = element_blank(),
-      axis.text.x = element_text(size = 8),
+      axis.text.x = element_text(size = 10),
       legend.position = "none"
     ),
   absolutePlots$plot[[3]] +
@@ -253,36 +266,41 @@ gridList <- list(
     scale_color_manual(
       name = "Constant treatment-\n related harm",
       values = c(
-        "#26547C",
-        "#06D6A0",
-        "#EF476F"
-      )
+        "#284e60",
+        "#f99b45",
+        "#63aac0"
+      ),
     ) +
-    theme_bw() +
     theme(
-      panel.grid.minor = element_blank(),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
       axis.title.x = element_blank(),
       axis.title.y = element_blank(),
-      axis.text.y = element_text(size = 8),
+      axis.text.y = element_text(size = 10),
       # axis.text.x = element_blank(),
-      axis.text.x = element_text(size = 8),
+      axis.text.x = element_text(size = 10),
       ggside.line = element_blank(),
       ggside.rect = element_blank(),
       ggside.axis.text = element_blank(),
       ggside.axis.ticks.length = unit(0, "pt"),
       ggside.panel.scale = .07,
-      plot.title = element_markdown(size = 9, color = "white"),
+      plot.title = element_text(size = 12, color = "#F1F3F8"),
       legend.position = "none"
     ),
   plotList[[4]] +
     theme(
-      panel.grid.minor = element_blank(),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
       axis.title = element_blank(),
       # axis.text.x = element_text(size = 8),
-      axis.text.x = element_text(size = 8),
-      axis.text.y = element_text(size = 8),
+      axis.text.x = element_text(size = 10),
+      axis.text.y = element_text(size = 10),
       legend.position = "none",
-      plot.title = element_markdown(size = 9)
+      plot.title = element_text(size = 12)
     ),
   absolutePlots$plot[[4]] +
     ggtitle("Simulated absolute benefit in treatment arm") +
@@ -295,24 +313,26 @@ gridList <- list(
     scale_color_manual(
       name = "Constant treatment-\n related harm",
       values = c(
-        "#26547C",
-        "#06D6A0",
-        "#EF476F"
-      )
+        "#284e60",
+        "#f99b45",
+        "#63aac0"
+      ),
     ) +
-    theme_bw() +
     theme(
-      panel.grid.minor = element_blank(),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
       axis.title.x = element_blank(),
-      axis.text.x = element_text(size = 8),
-      axis.text.y = element_text(size = 8),
+      axis.text.x = element_text(size = 10),
+      axis.text.y = element_text(size = 10),
       axis.title.y = element_blank(),
       ggside.line = element_blank(),
       ggside.rect = element_blank(),
       ggside.axis.text = element_blank(),
       ggside.axis.ticks.length = unit(0, "pt"),
       ggside.panel.scale = .07,
-      plot.title = element_markdown(size = 9, color = "white"),
+      plot.title = element_text(size = 12, color = "#F1F3F8"),
       legend.position = "none"
     )
 )
@@ -349,19 +369,20 @@ right.grob <- grid::textGrob(
 bottom.left.grob <- grid::textGrob(
   "Method",
   just = "center",
-  gp = gpar(fontsize = 10)
+  gp = gpar(fontsize = 12)
 )
 
 bottom.right.grob <- grid::textGrob(
   "Baseline risk",
   just = "center",
-  gp = gpar(fontsize = 10)
+  gp = gpar(fontsize = 12)
 )
 
 bottom.grob <- grid.arrange(
   bottom.left.grob,
   bottom.right.grob,
   nrow = 1,
+  padding = .2,
   widths = c(2, 1)
 )
 
@@ -379,9 +400,9 @@ fileName <- paste0(
 )
 ggsave(
   file.path("figures", fileName),
-  relativePlot,
-  height = 7.5,
-  width = 8,
+  res,
+  height = 6.5,
+  width = 7.5,
   dpi = 1000,
   compression = "lzw+p",
   bg = "#F1F3F8"
