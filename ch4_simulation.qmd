@@ -314,7 +314,7 @@ approaches. When we assumed a stronger relative treatment effect, the relative
 differences between approaches were similar to the base-case scenario
 (Supplement, Figure S10).
 
-```{r fig-rmseBase, cache=FALSE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications was calculated from a simulated super-population of size 500,000. The scenario with true constant relative treatment effect (panel A) had a true prediction c-statistic of 0.75 and sample size of 4250. The RMSE is also presented for strong linear (panel B), strong quadratic (panel C), and non-monotonic (panel D) deviations from constant relative treatment efects. Panels on the right side present the true relations between baseline risk (x-axis) and absolute treatment beneft (y-axis). The 2.5, 25, 50, 75, and 97.5 percentiles of the risk distribution are expressed by the boxplot on the top. The 2.5, 25, 50, 75, and 97.5 percentiles of the true beneft distributions are expressed by the boxplots on the side of the right-handside panel.",fig.align='center'}
+```{r fig-rmseBase, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications was calculated from a simulated super-population of size 500,000. The scenario with true constant relative treatment effect (panel A) had a true prediction c-statistic of 0.75 and sample size of 4250. The RMSE is also presented for strong linear (panel B), strong quadratic (panel C), and non-monotonic (panel D) deviations from constant relative treatment efects. Panels on the right side present the true relations between baseline risk (x-axis) and absolute treatment beneft (y-axis). The 2.5, 25, 50, 75, and 97.5 percentiles of the risk distribution are expressed by the boxplot on the top. The 2.5, 25, 50, 75, and 97.5 percentiles of the true beneft distributions are expressed by the boxplots on the side of the right-handside panel.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-rmse_moderate_base.tiff")))
 ```
 
@@ -336,7 +336,7 @@ non-monotonic deviations (median RMSE: linear interaction 0.014; RCS-3 0.010).
 Due to the large sample size, the RMSE of the adaptive approach was even more
 similar to the best-performing method, and the constant relative treatment
 effect model was less often wrongly selected (Supplement, Figure S4).
-```{r fig-rmseSampleSize, cache=FALSE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples of size 17,000 rather than 4,250 in @fig-rmseBase. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
+```{r fig-rmseSampleSize, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples of size 17,000 rather than 4,250 in @fig-rmseBase. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-rmse_moderate_sample_size.tiff")))
 ```
 
@@ -351,7 +351,7 @@ replications in the strong linear and non-monotonic deviation scenarios without
 treatment-related harms, respectively), leading to increased variability of the
 RMSE (Supplement, Figure S5).
 
-```{r fig-rmseAuc, cache=FALSE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples 4,250. True prediction c-statistic of 0.85. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
+```{r fig-rmseAuc, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples 4,250. True prediction c-statistic of 0.85. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-rmse_moderate_auc.tiff")))
 ```
 
@@ -373,7 +373,7 @@ c-statistic to 0.85 the adaptive approach was, again, more conservative,
 especially with non-monotonic deviations and null or moderate treatment-related
 harms (Supplement, Figure S7).
 
-```{r fig-discriminationBase, cache=FALSE, echo=FALSE, fig.cap="Discrimination for beneft of the considered methods across 500 replications calculated in simulated samples of size 4,250 using the c-statistic for beneft. The c-statistic for beneft represents the probability that from two randomly chosen matched patient pairs with unequal observed beneft, the pair with greater observed beneft also has a higher predicted beneft. True prediction c-statistic of 0.75.",fig.align='center'}
+```{r fig-discriminationBase, cache=TRUE, echo=FALSE, fig.cap="Discrimination for beneft of the considered methods across 500 replications calculated in simulated samples of size 4,250 using the c-statistic for beneft. The c-statistic for beneft represents the probability that from two randomly chosen matched patient pairs with unequal observed beneft, the pair with greater observed beneft also has a higher predicted beneft. True prediction c-statistic of 0.75.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-discrimination_moderate_base.tiff")))
 ```
 
@@ -389,7 +389,7 @@ linear interaction model and RCS-3. When we increased the sample size to 17,000
 Figure S9), RCS-3 was somewhat better calibrated than the linear interaction
 model with strong quadratic deviations.
 
-```{r fig-calibrationBase, cache=FALSE, echo=FALSE, fig.cap="Calibration for beneft of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction c-statistic of 0.75 and sample size of 4,250.",fig.align='center'}
+```{r fig-calibrationBase, cache=TRUE, echo=FALSE, fig.cap="Calibration for beneft of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction c-statistic of 0.75 and sample size of 4,250.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-calibration_moderate_base.tiff")))
 ```
 
@@ -422,7 +422,7 @@ events) allowed for flexible modeling approaches, a simpler constant treatment
 effect model is adequate for predicting absolute 30-day mortality benefits of
 treatment with tPA in patients with acute MI.
 
-```{r fig-gusto, cache=FALSE, echo=FALSE, fig.cap="6 Individualized absolute beneft predictions based on baseline risk when using a constant treatment efect approach, a linear interaction approach and RCS smoothing using 3 knots. Risk stratifed estimates of absolute beneft are presented within quartiles of baseline risk as reference. 95% confdence bands were generated using 10,000 bootstrap resamples, where the prediction model was reftted in each run to capture the uncertainty in baseline risk predictions. For the risk stratifcation approach, we also provide 95% confdence intervals for the baseline risk quarter-specifc average predicted risk over the 10,000 bootstrap samples.",fig.align='center'}
+```{r fig-gusto, cache=TRUE, echo=FALSE, fig.cap="6 Individualized absolute beneft predictions based on baseline risk when using a constant treatment efect approach, a linear interaction approach and RCS smoothing using 3 knots. Risk stratifed estimates of absolute beneft are presented within quartiles of baseline risk as reference. 95% confdence bands were generated using 10,000 bootstrap resamples, where the prediction model was reftted in each run to capture the uncertainty in baseline risk predictions. For the risk stratifcation approach, we also provide 95% confdence intervals for the baseline risk quarter-specifc average predicted risk over the 10,000 bootstrap samples.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Gusto.tiff")))
 ```
 

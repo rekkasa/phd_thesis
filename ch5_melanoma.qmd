@@ -1,3 +1,393 @@
 # The EORTC-DeCOG nomogram {#sec-melanoma}
 \vspace*{\fill}\par
 \pagebreak
+
+## Abstract {.unnumbered}
+
+**Purpose**: Based on recent advances in the management of patients with
+sentinel node (SN)-positive melanoma, we aimed to develop prediction models for
+recurrence, distant metastasis (DM) and overall mortality (OM).
+
+**Methods**: The derivation cohort consisted of 1080 patients with SN-positive
+melanoma from nine European Organization for Research and Treatment of Cancer
+(EORTC) centers. Prognostic factors for recurrence, DM and OM were studied
+with Cox regression analysis. Significant factors were incorporated in the
+models. Performance was assessed by discrimination (c- index) and calibration in
+cross-validation across centers. The models were externally validated using a
+prospective cohort consisting of 705 German patients with SN-positive: 473 trial
+participants of the German Dermatologic Cooperative Oncology Group study
+(DeCOG-SLT) and 232 screened patients. A nomogram was developed for graphical
+presentation.
+
+**Results**:
+The final model for recurrence and the calibrated models for DM and OM included
+ulceration, age, SN tumor burden and Breslow thickness. The models showed
+reasonable calibration. The c-index for the recurrence, DM and OM model was
+0.68, 0.70 and 0.70, respectively, and 0.70, 0.72 and 0.74, respectively, in
+external validation. The EORTC- DeCOG model identified a robust low-risk group,
+with all identified low-risk patients (approx- imately 4% of the entire
+population) having a 5-year recurrence probability of <25% and an overall 5-year
+recurrence rate of 13%. A model including information on completion lymph node
+dissection (CLND) showed only marginal improvement in model performance.
+
+**Conclusions**:
+The EORTC-DeCOG nomogram provides an adequate prognostic tool for patients with
+SN-positive melanoma, without the need for CLND. It showed consistent results
+across validation. The nomogram could be used for patient counselling and might
+aid in adjuvant therapy decision-making
+
+\vspace*{\fill}\par
+\pagebreak
+
+## Introduction {.unnumbered}
+
+The American Joint Committee on Cancer (AJCC) staging system is the most widely
+accepted approach to melanoma staging
+[@gershenwald2017melanoma;@balch2009final]. Patients are classified into
+distinct stages based on the tumor node metastasis criteria where nodal status
+is based on number of positive lymph nodes after completion lymph node
+dissection (CLND) in case of a positive sentinel node (SN) or after a
+therapeutic lymph node dissection in case of clinically apparent nodal disease.
+Recently there have been many advances in the care of patients with SN-positive
+melanoma that also affect staging, namely CLND is no longer routine practice as
+the Multicenter Selective Lymphadenectomy Trial-II (MSLT-II) and the German
+Dermatologic Cooperative Oncology Group study (DeCOG-SLT) demonstrated no
+survival benefit for CLND
+[@faries2017completion;@leiter2016complete;@leiter2018final;@leiter2019final]
+and as immune checkpoint inhibition and targeted therapy have been introduced in
+the adjuvant setting with highly encouraging results
+[@eggermont2018adjuvant;@long2017adjuvant;@weber2017adjuvant;@eggermont2016prolonged].
+Consequently the AJCC staging system is likely to be less appropriate for
+patients with SN-positive melanoma not undergoing CLND because of decreased
+discriminatory ability [@verver2018risk] as the number of positive nodes after
+sentinel lymph node biopsy (SLNB) is not an independent prognostic factor
+[@faries2017completion;@leiter2016complete] (in contrast to involved non-SNs
+retrieved after CLND [@faries2017completion]). As a result, omitting CLND could
+result in poorer risk stratification and impaired selection for adjuvant
+therapy. On the other hand, SN tumor burden has been shown to be an independent
+predictor of involved non-SNs
+[@gershenwald2008microscopic;@lee2004factors;@murali2010non], and therefore SN
+tumor burden may serve as a surrogate.
+
+The objective of the present study was to identify independent prognostic
+factors in a large European SN- positive melanoma population, using solely
+information from the primary melanoma and the SLNB, to develop a prediction
+model for recurrence, distant metastasis (DM) and overall mortality (OM),
+presented in the form of a nomogram. The resulting model could aid in adjuvant
+therapy decision-making. The prediction models were externally validated using a
+large prospective German cohort.
+
+
+## Patients and methods {.unnumbered}
+### Cohort characteristics {.unnumbered}
+#### Derivation cohort {.unnumbered}
+
+The retrospective derivation cohort consisted of 1080 patients with SN-positive
+melanoma who underwent SLNB between 1993 and 2008 in one of nine EORTC Melanoma
+Group centers that have been previously collected and described
+[@verver2018risk;@van_der_ploeg2011prognosis;@ophuis2017timing;@ophuis2016interval].
+The current study only excluded duplicate cases ($n=2$), leading to a total of
+1078 eligible SN-positive patients. The two duplicate cases concerned an error
+in that database. The applied procedures have been described previously
+[@verver2018risk].
+
+#### Validation cohort {.unnumbered}
+
+The prospective German validation cohort involved two sets of patients. The
+first set consisted of 473 patients who were included in the DeCOG-SLT
+multicenter randomised phase-3 trial comparing survival between patients with
+SN-positive melanoma who did or did not undergo CLND [@leiter2016complete]. The
+second set consisted of an additional 219 patients from a single center
+(University Hospital, Tuebingen) who were initially screened for inclusion in
+the DeCOG-SLT trial but were not included because of meeting the trial’s
+exclusion criteria (e.g. head and neck melanoma, age >75 years), unwillingness
+to participate, or no known reason. They also did or did not undergo CLND and
+were followed and prospectively registered in accordance with similar protocols.
+All patients had a tumor thickness of at least 1 mm and underwent surgery
+between 2006 and 2014. The study design, applied procedures and follow-up
+protocols have been described in detail elsewhere [@leiter2016complete]. There
+was no overlap between the derivation cohort and validation cohort.
+
+#### Outcomes {.unnumbered}
+
+Outcomes of interest were first recurrence, first DM and OM. Time to recurrence
+was calculated from date of SLNB to date of first recurrence or date of death by
+any cause. Time to first DM was calculated from date of SLNB to date of first DM
+or date of death by any cause. Time to OM was calculated from date of SLNB to
+date of death by any cause.
+
+#### Statistical analysis {.unnumbered}
+
+The checklist proposed by the AJCC was used for guidance in building a
+high-quality prediction model [@kattan2016american]. Associations between
+possible prognostic factors and recurrence were studied with Cox regression
+analysis. The following eight variables were identified as possible prognostic
+factors based on clinical experience, literature review and availability of
+sufficient data: sex, age, ulceration, location, histology, Breslow thickness,
+total number of SNs removed and total number of positive SNs. To make efficient
+use of available data, an advanced multiple imputation of missing values
+strategy (5 imputations) was applied [@van_buuren2011mice]. This was done
+separately for each derivation center to avoid using information of missingness
+in cross-validation. The possible non-linearity of continuous variables was
+modeled by logarithmic transformation. Independent prognostic factors were
+selected with multivariable backwards selection. Linear predictor values (the
+sum of truncated predictor values times their predictor effects) were scaled and
+rounded to a risk score with integer values between 0 and 100. Because
+recurrence, DM and OM are strongly related, the final recurrence prediction
+model based on data from all nine EORTC centers was used as a basis for
+predicting DM and OM, where the baseline hazard and the slope of the recurrence
+prediction model were calibrated to DM and OM [@steyerberg2009clinical]. This
+approach is beneficial as it provides a unique risk score for each individual
+that translates into probabilities of all outcomes of interest, instead of
+developing three independent prediction models. To test the validity of our
+approach, we did develop these independent models and compared them with the
+calibrated models. The absolute risk prediction of each outcome was plotted
+against the risk score. To reduce overestimation of events occurring in patients
+with extremely high scores, scores were truncated at an integer of 23,
+corresponding to the 99th percentile of score distribution. Model performance
+was assessed by examining discrimination and calibration. Discrimination was
+measured using the concordance index (c-index); the closer to 1, the better the
+discrimination, and a value of 0.5 indicates that the model is no better than a
+chance [@harrell1996multivariable]. Calibration was assessed visually by
+plotting the predicted probability against the actual observed frequency in
+quintiles of predicted outcomes. A 45 line indicates perfect calibration (when
+the predictive value of the model perfectly matches the patient’s actual risk).
+Any deviation above or below the 45 line indicates under-prediction or
+over-prediction, respectively. A nomogram was developed for graphical
+presentation of the models. To evaluate generalizability of the models across
+different centers, an internal-external cross-validation was performed in which
+the model was fitted using data from eight centers and validated in the center
+that was left out [@steyerberg2015prediction]. In addition we performed external
+validation using the prospective German cohort. We first needed to develop a
+model for recurrence where we replaced the continuous variable SN tumor burden
+with the categorical substitute used in the prospective German cohort (single
+cells, <0.5 mm, 0.5e1.0 mm, >1.0e2.0 mm, >2.0e5.0 mm and >5.0 mm). For the
+derivation cohort, single cells were defined as <0.1 mm according to the
+Rotterdam criteria [@van_akkooi2008sentinel]. Single cells in the validation
+cohort were not specifically defined, but as the Rotterdam criteria were used
+for measuring SN tumor burden, definitions are likely to correlate. The
+performance of this altered model was compared with the final recurrence model
+used for the nomogram. Subsequently the altered model was externally validated
+with the 692 patients from the prospective German cohort. To test how much the
+information on additional positive nodes retrieved after CLND would add to the
+discrimination of the prediction model, we also developed a prediction model in
+which the variable, additional positive nodes after CLND, was added. This model
+was based on 1015 patients that underwent CLND in the derivation cohort.
+
+Furthermore we calculated the model performance for recurrence, DM and OM of the
+AJCC 7th edition classification, AJCC 8th edition classification and the simple
+classification that was published previously (i.e. absent/present ulceration and
+low/high SN tumor burden) was tested [@verver2018risk]. Lastly the observed
+outcomes per group for all classifications were estimated using the Kaplan Meier
+analysis. All statistical tests were two-sided, with a P < 0.05 considered
+statistically significant. All statistical analyses were performed using SPSS
+version 22.0 (IBM, Armonk, New York, USA) and R (version 2.15, R Foundation for
+Statistical Computing, Vienna, Austria, 2011).
+
+## Results {.unnumbered}
+
+The retrospective derivation cohort consisted of 1078 and the prospective
+validation cohort of 692 patients with SN-positive. Patients in the validation
+cohort had less extensive disease in terms of Breslow thickness, number of
+positive SNs and tumor burden in the SN compared with those in the derivation
+cohort (Table 1).
+
+In the derivation cohort, recurrence at five years occurred in 496 patients
+(46.0%), DM in 437 patients (40.5%) and OM in 364 patients (33.8%). Median
+follow-up time for all survivors was 106 months (interquartile range [IQR]
+61e130 months). In the prospective validation cohort, recurrence at five years
+occurred in 267 patients (38.6%), DM in 223 patients (32.2%) and OM in 174
+patients (25.1%). Median follow-up time for all survivors was 66 months (IQR:
+48-94 months).
+
+### Models for recurrence, distant metastasis and overall mortality {.unnumbered}
+
+The final multivariable Cox model for recurrence after backwards selection
+included four independent prognostic factors: ulceration, age, Breslow
+thickness and SN tumor burden (Table 2). Logarithmic transformation of the
+continuous variables adequately represented their effects. The c-index for the
+final recurrence model was 0.68 (95% confidence interval [CI]: 0.65e0.70). In
+cross-validation, the recurrence model was reasonably calibrated across nine
+center in general, only in smaller centers there was substantial
+underestimation of the risk (Fig. S1).
+
+The association between linear predictors of recurrence and DM was of the same
+size (calibration slope: 1.01, 95% CI: 0.87-1.16). The c-index for the
+calibrated model for DM was 0.70 (95% CI: 0.67-0.72) and was reasonably
+calibrated across nine  in cross-validation (Fig. S2). The performance of
+this calibrated model, based on the baseline hazard and the slope of the
+recurrence model, was similar to that of the independently developed prediction
+model for DM (c-index: 0.70, 95% CI: 0.68-0.73)
+
+The association between linear predictors of recurrence and OM was of the same
+size (calibration slope: 1.04, 95% CI: 0.88-1.20). The c-index for the
+calibrated model for OM was 0.70 (95% CI: 0.67-0.73), and was reasonably
+calibrated across nine centers in cross-validation (Fig. S3). The performance
+of this calibrated model was similar to that of the independently developed
+prediction model for OM (c-index: 0.70, 95% CI: 0.68-0.73).
+
+A four-item risk score was developed, assigning points to each prognostic factor
+based on the magnitude of association with recurrence. A nomogram to calculate
+the score and the risk of recurrence, DM and OM is presented in Fig. 1. The
+scores were divided into four risk groups based on the 5-year probability of
+recurrence: <25% (low risk; score 6-9; 4.1% of the population); 25-50%
+(intermediate risk; score 10e15; 52.9% of the population); 50-75% (high risk;
+score 16-19; 33.2% of the population); and >75% (very high risk; score 20e23;
+10.0% of the population). The observed outcomes for recurrence, DM and OM per
+risk group are shown in Table 3.
+
+### External validation {.unnumbered}
+
+For external validation purposes, an altered recurrence model was developed
+using the categorized SN tumor burden variable used in the prospective German
+cohort (Table S1). This altered model showed similar performance compared with
+the final recurrence model (c- index 0.68, 95% CI: 0.65-0.70). In external
+validation, the c-index for the altered recurrence model was 0.70 (95% CI:tumor
+0.67-0.74), for DM 0.72 (95% CI: 0.68-0.75) and for OM 0.74 (95% CI: 0.71-0.78).
+The calibration plots indicate good calibration, though there may be slight
+underestimation for higher-risk patients in the recurrence and OM models (Fig.
+S4).
+
+### Additional prognostic value of CLND {.unnumbered}
+
+An extended model for recurrence was created by adding the variable, number of
+additional positive nodes after CLND, to the final recurrence model. This
+extended model for recurrence had a c-index of 0.69 (95% CI: 0.67e0.72). The
+calibrated extended models for DM and OM showed c-indices of 0.72 (95% CI:
+0.69e0.74) and 0.72 (95% CI: 0.69e0.75), respectively.
+
+### Simple classification {.unnumbered}
+
+A simplified version of the model stratifies patients into four groups based on
+ulceration and SN tumor burden: 1) absent ulceration and $\leq$1.0 mm; 2)
+absent ulceration and >1.0 mm; 3) present ulceration and $\leq$1.0 mm and 4)
+present ulceration and >1.0 mm. The c-indices for this classification in
+predicting recurrence, DM and OM were 0.63 (95% CI: 0.61e0.65), 0.64 (95% CI:
+0.62e0.67) and 0.64 (95% CI: 0.61e0.67), respectively. The observed outcomes for
+recurrence, DM and OM per risk group are shown in Table 3.
+
+### The American Joint Committee on Cancer (AJCC) classifications {.unnumbered}
+
+Patients were classified based on the 7th AJCC classification into IIIA
+$\leq$1.0 mm, IIIA >1.0 mm, IIIB and IIIC and based on the 8th edition into IIIA
+$\leq$1.0 mm, IIIA >1.0 mm, IIIB, IIIC and IIID. The c-indices for predicting
+recurrence, DM and OM for the 7th AJCC edition were 0.61 (95% CI: 0.59-0.63),
+0.62 (95% CI: 0.60-0.65) and 0.62 (95% CI: 0.59-0.65), respectively, and for the
+8th AJCC edition 0.62 (95% CI: 0.59-0.64), 0.63 (95% CI: 0.60-0.65) and 0.63
+(95% CI: 0.61-0.66), respectively. The observed outcomes for recurrence, DM and
+OM for both AJCC classifications are shown in Table 3. A cross-table comparing
+the patients staged in accordance with the AJCC classifications and the risk
+groups based on the EORTC-DeCOG model is illustrated in Table 4. An overview
+of c-indices for all the different models is presented in Table 5.
+
+## Discussion {.unnumbered}
+
+The present study developed and validated a nomogram to predict five-year
+recurrence, DM and OM in patients with SN-positive melanoma, by solely using
+information from the primary melanoma and SLNB. The resulting patient-specific
+probabilities could be used to tailor adjuvant therapeutic strategies for
+patients with SN-positive melanoma, without the prerequisite to undergo CLND
+and thereby avoiding potential significant morbidity. The greatest contemporary
+value of our prognostic nomogram is the possibility of identifying patients at
+sufficiently low risk for recurrence, DM and OM in whom adjuvant therapy could
+be omitted.
+
+Although the FDA and EMA pragmatically approved adjuvant therapy for all
+stage-III patients, it is still under debate which patients should not be
+considered candidates. Patients with stage IIIA $\leq$1.0 mm (AJCC 7th edition)
+were considered low risk in most adjuvant therapy trials and were therefore not
+included (one even excluded all IIIA patients)
+[@eggermont2018adjuvant;@long2017adjuvant;@weber2017adjuvant;@yokota2019adjuvant;@hauschild2018longer].
+The current study indicates that when the AJCC 8th edition criteria are used for
+defining IIIA $\leq$1.0 mm instead of the 7th edition, it results in improved
+selection of low- risk patients in terms of predicted prognosis (e.g. 5-year
+recurrence probability of 27% versus 32%, respectively). A recent study also
+showed that including SN tumor burden to the 8th AJCC staging system has crucial
+prognostic relevance [@satzger2019melanoma]. Of note our EORTC-DeCOG model is able to identify an
+even more robust low-risk group, as all identified low-risk patients (which
+approximately concerned 4% of the entire population after imputation) had a
+5-year recurrence probability of <25% and an overall 5-year observed recurrence
+rate of 13%. However, identifying more robust low-risk groups comes at the cost
+of fewer patients being assigned low risk (see Table 4). Nonetheless a major
+advantage of our EORTC-DeCOG model is that it provides a more continuous type of
+predicted probabilities. As a result it is possible to derive risk groups based
+on outcome probabilities and/or risk scores (e.g. low risk; scores 6e9;
+recurrence probability of <25%) which is in contrast to the AJCC classifications
+where exact patient/ tumor characteristics define the risk groups (e.g. IIIA
+$\leq$1.0 mm: T1a/b-T2a + N1a-N2a with $\leq$1.0 mm SN tumor burden). In the
+current study we choose to derive risk groups based on the recurrence
+probability, as this seems the most relevant outcome in the context of selecting
+patients for adjuvant therapy; other cut-off values and/or outcomes are
+possible. In conclusion, the EORTC-DeCOG model not only outperforms the AJCC
+classifications in terms of overall model discrim- ination (see Table 5), but
+also seems to be able to identify a more robust low-risk group in whom it may be
+justified to forego adjuvant therapy.
+
+The previously published simplified model, based on ulceration and SN tumor
+burden, harbored the least performance, though still reasonable, and showed
+similar predicted prognosis for the low-risk group as the 7th AJCC edition.
+Whether to implement a more complex model versus a less robust model is a
+balance between performance and simplicity. In our opinion, the simple model
+could serve as an easy user-friendly prognostic tool for daily clinical practice
+and to generally inform patients, but for more adequate risk estimates and
+decisions upon (adjuvant) treatment, we advocate using the comprehensive
+EORTC-DeCOG model. Noteworthy, besides the common prognostic factors (i.e.
+ulceration, Breslow thickness and SN tumor burden), the current study also
+identified increasing age as an independent prognostic factor for recurrence, DM
+and OM. This finding is supported by other studies reporting on the significance
+of the patient's age [@kretschmer2011age].
+
+Stratifying for ulceration and SN tumour burden only was previously demonstrated
+to yield similar discriminatory ability for melanoma-specific mortality as
+stratifying for AJCC sub-stages which included information on nodal status
+after CLND [@verver2018risk]. The additional value of non-SN status retrieved after CLND
+was also tested in the current study, by developing an extended model. This
+model showed only marginal improvement in performance (e.g. c-index for the
+recurrence model increased from 0.68 to 0.69), thereby indicating that omitting
+CLND has very limited consequences for prognostication if SN tumor burden is
+taken into account.
+
+This study has several limitations. First is the retrospective design of the
+derivation cohort, which has inherent biases. However, the models proved to be
+successful in external validation. Performance was comparable between the
+derivation and prospective validation cohort, even though the latter cohort
+included patients with relatively better prognosis (e.g. less extensive disease)
+and largely represents a clinical trial population. Adjuvant interferon-$\alpha$
+therapy was intended in approximately 60% of the patients included in the
+DeCOG-SLT trial, which is another possible limitation [@leiter2016complete]. It
+could have potentially influenced outcomes, especially in patients with
+ulcerated melanomas as ulceration seems to be a predictive factor for IFN
+sensitivity [@eggermont2012long;@eggermont2016long]. Furthermore, it is unknown
+how many patients in the validation cohort received effective novel therapy
+after recurrence. Because patients were included from 2006 through 2014, it is
+likely some patients did. As patients in the derivation cohort were included
+from 1993 through 2008, novel therapies probably had limited effect. To date, no
+novel biomarker has been validated that suffices to predict long-term clinical
+benefits and subsequently could be incorporated in the models, despite efforts
+in this drection (e.g. PD-L1) [@nishino2017monitoring]. In addition, other
+prognostic factors such as mitotic rate or microsatellites could not be
+incorporated in the present models because of insufficient data. Another
+limitation is the inadequate representation of patients with SN-positive with a
+head and neck melanoma in both cohorts. For the validation cohort this is
+largely explained as it was an exclusion criterion in the DeCOG-SLT trial, and
+for the derivation cohort this might be partially explained by the historical
+concerns of poor safety, accuracy and prognostication. Similar numbers (~5%)
+have been reported in other European cohorts
+[@roulin2007prognostic;@richtig2020does], while particularly American cohorts
+have reported higher numbers (>10%)
+[@faries2017completion;@klemen2019completion]. With the introduction of adjuvant
+therapies, the number of performed SLNBs in head and neck melanomas is likely to
+increase.
+
+Considering the advances in the management of patients with SN-positive
+melanoma, it becomes highly relevant to have a prediction model that provides
+precise patient-specific probabilities based on solely factors from the primary
+melanoma and the SLNB. The EORTC-DeCOG nomogram is the first that meets these
+demands, and as a result it could be used for patient counselling and assist in
+trial design. In addition it might aid in adjuvant therapy decision-making. To
+facilitate its use, an online calculator has been developed and can be accessed
+at [https://www. evidencio.com/models/show/2010](https://www. evidencio.com/models/show/2010).
+
+```{r fig-positiveSlnb, cache=FALSE, echo=FALSE, fig.cap="Nomogram and risk distribution. The curves refer to predicted recurrence, distant metastasis or overall mortality at 5 years. The histogram refers to the risk score distribution in the cohort; each bar represents the proportion of patients in the cohort that was assigned that specific score. The histogram was divided in four risk groups based on the risk of recurrence: low risk: <25%, intermediate risk: 25e50%, high risk: 50e75% and very high risk: >75%. The nomogram incorporates four factors: ulceration, age, SN tumor burden and Breslow thickness. To calculate an individual’s probability of 5-year recurrence, distant metastasis and overall mortality, values for the prognostic factors must be determined first (for example: absent ulceration, 35 years, SN tumor burden 0.8 mm and Breslow thickness 1.0 mm). Second, for each value the corresponding points can be obtained by drawing a line from each value towards the point axis (in example: 0, 1, 4 and 5 points, respectively). Third, the points must be added up to obtain the total risk score (in example: risk score of 10). Finally, the 5-year recurrence, distant metastasis and overall mortality probability can be read by moving vertically from the x-axis (total risk score) to the predicted risk curves and corresponding probabilities on the left y-axis (in example: 26% for recurrence, 20% for distant metastasis and 16% for overall mortality). The percentage of patients in the entire population (1078) that also had a total risk score of 10 can be determined from the histogram, as well as the corresponding percentage of patients on the right y-axis (in example: 7%)."}
+knitr::include_graphics("figures/ch5-PositiveSlnb.pdf")
+```

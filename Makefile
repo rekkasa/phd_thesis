@@ -6,11 +6,15 @@ data/introduction/gusto.rda : code/ch1-GetGustoData.sh
 
 figures/hypertensionGuidelines.png :
 	wget -O figures/hypertensionGuidelines.png \
-		https://raw.githubusercontent.com/rekkasa/phd_thesis/figures/figures/hypertensionGuidelines.png
+		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/figures/hypertensionGuidelines.png
 
 figures/reviewDiagram.pdf :
 	wget -O figures/reviewDiagram.pdf \
-		https://github.com/rekkasa/phd_thesis/raw/figures/figures/reviewDiagram.pdf
+		https://github.com/rekkasa/phd_thesis/raw/large-files/figures/reviewDiagram.pdf
+
+figures/ch5-PositiveSlnb.pdf :
+	wget -O figures/ch5-PositiveSlnb.pdf \
+		https://github.com/rekkasa/phd_thesis/raw/large-files/figures/ch5-PositiveSlnb.pdf
 
 figures/ch3-Framework.pdf :
 	wget -O figures/ch3-Framework.pdf \
@@ -315,7 +319,8 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/ch4-rmse_moderate_auc.tiff \
 	figures/ch4-discrimination_moderate_base.tiff \
 	figures/ch4-calibration_moderate_base.tiff \
-	figures/ch4-Gusto.tiff
+	figures/ch4-Gusto.tiff \
+	figures/ch5-PositiveSlnb.pdf
 	bash -c "quarto render";
 
 
