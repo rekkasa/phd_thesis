@@ -1,1 +1,362 @@
 # COVID Outcome Prediction in the Emergency Department {#sec-covid}
+\vspace*{\fill}\par
+\pagebreak
+
+## Abstract {.unnumbered}
+
+**Objectives**: Develop simple and valid models for predicting mortality and need for
+intensive care unit (ICU) admission in patients who present at the emergency
+department (ED) with suspected COVID-19. 
+
+**Design**: Retrospective. 
+
+**Setting**: Secondary care in four large Dutch hospitals.
+
+**Participants**:
+Patients who presented at the ED and were admitted to hospital with suspected
+COVID-19. We used 5831 first-wave patients who presented between March and
+August 2020 for model development and 3252 second-wave patients who presented
+between September and December 2020 for model validation. Outcome measures We
+developed separate logistic regression models for in-hospital death and for need
+for ICU admission, both within 28 days after hospital admission. Based on prior
+literature, we considered quickly and objectively obtainable patient
+characteristics, vital parameters and blood test values as predictors. We
+assessed model performance by the area under the receiver operating
+characteristic curve (AUC) and by calibration plots.
+
+**Results**:
+Of 5831 first-wave patients, 629 (10.8%) died within 28 days after admission.
+ICU admission was fully recorded for 2633 first-wave patients in 2 hospitals,
+with 214 (8.1%) ICU admissions within 28 days. A simple model—COVID outcome
+prediction in the emergency department (COPE)—with age, respiratory rate, C
+reactive protein, lactate dehydrogenase, albumin and urea captured most of the
+ability to predict death. COPE was well calibrated and showed good
+discrimination for mortality in second-wave patients (AUC in four hospitals:
+0.82 (95% CI 0.78 to 0.86); 0.82 (95% CI 0.74 to 0.90); 0.79 (95% CI 0.70 to
+0.88); 0.83 (95% CI 0.79 to 0.86)). COPE was also able to identify patients at
+high risk of needing ICU admission in second-wave patients (AUC in two
+hospitals: 0.84 (95% CI 0.78 to 0.90); 0.81 (95% CI 0.66 to 0.95)).
+
+**Conclusions**:
+COPE is a simple tool that is well able to predict mortality and need for ICU
+admission in patients who present to the ED with suspected COVID-19 and may help
+patients and doctors in decision making.
+
+\vspace*{\fill}\par
+\pagebreak
+
+## Background {.unnumbered}
+
+The COVID-19 pandemic is putting extraordinary pressure on emergency departments
+(EDs), clinical wards and intensive care units (ICUs). Clinical prediction
+models for COVID-19 outcomes have the potential to support decision making about
+hospital admission. Existing models that predict mortality for non-trauma
+patients presenting to the ED are unlikely to be well calibrated and optimally
+discriminating for patients with COVID19 [@brink2019prediction]. Most currently
+available models specifically developed for patients with COVID-19 that were
+assessed with the prediction model risk of bias assessment tool contain a high
+risk of bias [@wynants2020prediction;@sperrin2020prediction;@moons2019probast]. The most common reasons were non-representative selection of
+control patients, exclusion of patients in whom the event of interest was not
+observed by the end of the study, high risk of model overfitting and vague
+reporting. Additionally, the description of the study population or intended use
+of the models was often missing, and calibration of the model predictions was
+rarely assessed.
+
+The recently proposed 4C Mortality Score is probably at low risk of bias, but
+was derived from a selected population of patients admitted to UK hospitals who
+were seriously ill (mortality rate of 32.2%). Predictors included the number of
+comorbidities and the Glasgow Coma Scale, items that are not easily and
+unambiguously obtained for patients with suspected COVID-19 at EDs everywhere
+[@knight2020risk;@docherty2020features]. Similarly, the promising risk scores
+Veterans Health Administration COVID-19 (VACO) and COVID-GRAM—predicting 30-day
+mortality in positively tested patients and critical illness in hospitalised
+patients, respectively—require knowledge on pre-existing comorbidities
+[@liang2020development;@king2020development]. The COVID-GRAM model also requires
+chest radiography results.
+
+We aimed to develop and validate a simple and valid model for predicting
+mortality and the need for ICU in all patients who are suspected to have
+COVID-19 when presenting at the ED. To facilitate implementation in clinical
+practice, we only included quickly and objectively obtainable patient
+characteristics, vital parameters and blood test values.
+
+## Methods {.unnumbered}
+
+### Population {.unnumbered}
+
+Nineteen large Dutch hospitals were requested to supply anonymised retrospective
+data on the cohorts of patients with COVID-19 who were admitted to their
+hospital. Of those hospitals, Catharina Hospital Eindhoven, Zuyderland Medical
+Center Heerlen, Isala Clinics Zwolle, Erasmus University Medical Center
+Rotterdam and Antonius Hospital Sneek supplied these data. The data from
+Antonius Hospital Sneek were not used in the analyses, because of large
+proportions of missing predictor values.
+
+For model development, we used the data of patients who presented at the ED and
+were admitted to the hospital with suspected COVID-19 in the first wave of the
+pandemic, that is, from March up to and including August 2020. Patients being
+transferred to other hospitals were excluded since information on outcomes was
+missing. For model validation, we used data of patients who presented at the ED
+and were admitted to the hospital with suspected COVID-19 in the second wave of
+the pandemic, that is, from September up to and including December 2020.
+Potential multiple hospital admissions of the same patient were considered as
+independent hospital admissions.
+
+### Outcomes {.unnumbered}
+
+The outcomes of interest were: (1) in-hospital death or transfer to a hospice
+within 28 days after hospital admission and (2) admission to ICU within 28 days
+after hospital admission.
+
+### Predictors {.unnumbered}
+
+Based on prior literature, we included patient characteristics (sex, age, body
+mass index), vital parameters (oxygen saturation, systolic blood pressure, heart
+rate (HR), respiratory rate (RR), body temperature) and blood test values (C
+reactive protein (CRP), lactic dehydrogenase (LDH), D-Dimer, leucocytes,
+lymphocytes, monocytes, neutrophils, eosinophils, Mean Corpuscular Volume (MCV),
+albumin, bicarbonate, sodium, creatinine, urea), all measured at ED admission,
+as potential predictors [@wynants2020prediction]. Furthermore, we included the
+month of admission to capture potential changes in outcomes over time. In case
+of multiple measurements for the same patient, we used the first measurement
+after presentation at the ED. We used multivariate imputation by chained
+equations (R-packages mice) for multiple imputation of missing predictor values
+[@r_core_team2020project;@van_buuren2011mice]. Multiple imputation in the
+validation data was undertaken separately from multiple imputation in the
+development data to ensure fully independent model validation.
+
+### Model development {.unnumbered}
+
+Logistic regression was used to analyse associations between predictors and
+outcomes. We decided on including non-linear transformations of potential
+predictors on the basis of a full model with a restricted cubic spline (three
+knots; two regression coefficients) for each continuous
+predictor[@stone1985additive;@harrell2015regression]. Based on Wald statistics,
+we selected the most promising predictors into a parsimonious model for easy use
+in clinical practice. To prevent overfitting, we used bootstrap
+validation—including the same variable selection strategy to mimic our modelling
+strategy—to estimate a uniform shrinkage factor [@harrell2015regression]. The
+regression coefficients of the final model were multiplied by this shrinkage
+factor, and the model intercept was adjusted to ensure overall calibration of
+the model. We used the R-package rms (Regression Modelling Strategies) for
+regression analyses [@r_core_team2020project;@harrell2017package].
+
+### Model validation {.unnumbered}
+
+Model performance was assessed with temporal validation in second wave patients,
+in each of the four separate hospitals. We assessed discriminative ability with
+the area under the receiver operating characteristic curve (AUC) and calibration
+with calibration plots of five equally sized groups of predicted risk,
+calibration intercepts and calibration slopes. The model-based concordance (mbc)
+was used to understand the impact of potential differences in casemix
+heterogeneity between the development and validation data on discriminative
+ability [@van_klaveren2016new].
+
+### Patient and public involvement {.unnumbered}
+
+Patients were not directly involved in the design of this study. The outcome of
+interest and the potential predictors were selected up front by a group of
+hospital physicians caring for patients with COVID-19 (ED, internal medicine,
+pulmonary medicine, ICU). Since we retrospectively collected data, patients were
+not burdened by our study. In future research, we will convene multistakeholder
+panels of approximately 12 members including patients with COVID-19, relatives,
+hospitals physicians caring for patients with COVID-19, palliative care
+physicians and ethicists, with the aim to develop a full understanding of how
+the models may best support patients and clinicians in making critical
+patient-centred decisions.
+
+\begin{landscape}
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrrrr}
+\toprule
+                                       & &  \% missing & All patients &   Discharged or dead &  In hospital & ICU admission \\
+\midrule
+\textbf{A. Development data}           &            &    & n = 2633     & n = 2387        & n = 32     & n = 214 \\
+Male sex                               &            & 0  & 57\%   & 56\%   & 64\%   & 64\% \\
+Age (years)                            &            & 0  & 70 (58, 80)   & 69 (56, 78)   & 71 (62, 79)   & 78 (70, 84) \\
+BMI (kg/m²)                            &            & 58 & 26 (23, 30)   & 26 (23, 30)   & 25 (23, 29)   & 26 (23, 30)   \\
+HR (bpm)                               &            & 39 & 90 (78, 103)  & 90 (78, 103)  & 87 (76, 99)   & 93 (80, 107) \\
+SBP (mmHg)                             &            & 42 & 133 (118, 150)  & 133 (119, 151)  & 136 (115, 152)  & 131 (114, 145) \\
+RR (/min)                              &            & 42 & 19 (16, 23)   & 19 (16, 23)   & 20 (17, 24)   & 23 (19, 28)  \\
+Saturation (\%)                        &            & 41 & 95.8 (94 , 97.5) & 96 (94.3, 97.8) & 95.4 (93.6, 97)   & 94.1 (91.9, 96) \\
+Temperature (°C)                       &            & 40 & 37.3 (36.7, 38.1) & 37.3 (36.7, 38)   & 37.5 (37 , 38.1) & 37.4 (36.7, 38.1 )\\
+CRP (mg/L)                             &            & 7  & 48 (10, 118)  & 43 (8, 110) & 85 (34, 160)  & 91 (41, 180)  \\
+D dimer (µg/L)                         &            & 64 & 1100 (527, 2545) & 1028 (504, 2300) & 1950 (719, 8110) & 2100 (949, 4772) \\
+LDH (U/L)                              &            & 18 & 244 (200, 322)  & 237 (197, 302)  & 300 (234, 422)  & 338 (253, 492)  \\
+Leucocytes (x10\textasciicircum{}9/L)  &            & 7  & 9.1 (6.7 , 12.7) & 9.1 (6.7, 12.6) & 9.4 (6.5, 12.5) & 9.2 (6.4, 14)   \\
+Lymphocytes (x10\textasciicircum{}9/L) &            & 16 & 1.04 (0.66, 1.6)  & 1.1 (0.7 , 1.7)  & 0.8 (0.54, 1.3)  & 0.8 (0.51, 1.3)  \\
+Albumin (g/L)                          &            & 15 & 39 (36, 42)   & 40 (36, 43)   & 37 (34, 41)   & 36 (33, 39) \\
+Bicarbonate (mmol/L)                   &            & 45 & 23.6 (21 , 26)   & 24 (22  , 26)   & 23 (21, 26)   & 22 (20, 25)   \\
+Creatinine (µmol/L)                    &            & 8  & 84 (66, 111)  & 82 (65, 107)  & 89 (66, 111)  & 102 (75, 153) \\
+Eosinophils (x10\textasciicircum{}9/L) &            & 26 & 0.03 (0, 0.1)  & 0.03 (0.01, 0.1)  & 0.03 (0, 0.1)  & 0.01 (0, 0.1)  \\
+MCV (fL)                               &            & 7  & 90 (87, 94)   & 90 (86, 94)   & 90 (88, 94)   & 91 (87, 96)   \\
+Monocytes (x10\textasciicircum{}9/L)   &            & 30 & 0.67 (0.44, 0.95) & 0.68 (0.45, 0.95) & 0.59 (0.33, 0.83) & 0.61 (0.33, 0.94) \\
+Neutrophils (x10\textasciicircum{}9/L) &            & 16 & 5.6 (2.2, 9)    & 5.6 (2.2, 8.9)  & 7 (4, 10.3) & 5.5 (1.8 , 9.1)  \\
+Sodium (mmol/L)                        &            & 9  & 138 (135, 140)  & 138 (135, 140)  & 137 (133, 141)  & 137 (134, 140)  \\
+Urea (mmol/L)                          &            & 9  & 6.5 (4.6 , 9.7)  & 6.2 (4.5, 9)    & 7.4 (5.1, 11)   & 9.6 (6.6, 15) \\
+\end{tabular}}
+\end{table}
+
+\pagebreak
+
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrrrr}
+\toprule
+\textit{(Continued)}                   &             &  \% missing & All patients &   Discharged or dead &  In hospital & ICU admission \\
+\midrule
+\textbf{B. Validation data}            &           & & n = 1466          & n = 1356           & n = 24      & n = 86 \\
+Male sex                               &            & 0  & 56\%   & 56\%   & 46\%   & 61\%  \\
+Age (years)                            &            & 0  & 71 (58, 80)   & 69 (55, 79)   & 72 (58, 82)   & 79 (73, 85)   \\
+BMI (kg/m²)                            &            & 59 & 26 (23, 30)   & 26 (23, 30)   & 26 (24, 30)   & 25 (22, 29)   \\
+HR (bpm)                               &            & 40 & 90 (78, 105)  & 90 (78, 104)  & 84 (75, 106)  & 92 (78, 105)  \\
+SBP (mmHg)                             &            & 43 & 134 (119, 151)  & 135 (120, 152)  & 134 (122, 149)  & 129 (110, 141)  \\
+RR (/min)                              &            & 43 & 20 (16, 24)   & 20 (16, 24)   & 20 (17, 26)   & 23 (19, 27)   \\
+Saturation (\%)                        &            & 40 & 95.7 (94 , 97.5) & 96 (94  , 97.7) & 95.5 (94  , 97)   & 94.8 (92.3, 96.5) \\
+Temperature (°C)                       &            & 42 & 37.3 (36.7, 38.1) & 37.3 (36.7, 38.1) & 37.3 (36.8, 38.1) & 37.2 (36.4, 38)   \\
+CRP (mg/L)                             &            & 9  & 57 (16, 124)  & 54 (15, 120)  & 76 (21, 169)  & 80 (33, 159)  \\
+D dimer (µg/L)                         &            & 76 & 1060 (531, 2170) & 1013 (490, 2012) & 1080 (640, 2570) & 1495 (870, 3724) \\
+LDH (U/L)                              &            & 22 & 247 (203, 334)  & 242 (200, 317)  & 281 (226, 390)  & 315 (238, 489)  \\
+Leucocytes (x10\textasciicircum{}9/L)  &            & 10 & 9.4 (6.6 , 12.9) & 9.4 (6.6, 12.9) & 9.6 (7, 13.2) & 9.5 (6.8, 13.3) \\
+Lymphocytes (x10\textasciicircum{}9/L) &            & 20 & 0.98 (0.62, 1.5)  & 1 (0.64, 1.5)  & 1.1 (0.72, 1.53) & 0.71 (0.48, 1.2)  \\
+Albumin (g/L)                          &            & 20 & 39 (35, 42)   & 39 (35, 42)   & 36 (32, 39)   & 36 (32, 40)   \\
+Bicarbonate (mmol/L)                   &            & 50 & 23.5 (21, 26)   & 23.6 (21, 26)   & 22.8 (20, 27)   & 22.8 (20, 25)   \\
+Creatinine (µmol/L)                    &            & 10 & 84 (66, 116)  & 83 (65, 111)  & 80 (58, 118)  & 103 (74, 158)  \\
+Eosinophils (x10\textasciicircum{}9/L) &            & 27 & 0.03 (0.01, 0.1)  & 0.03 (0.01, 0.1)  & 0.03 (0.01, 0.09) & 0.03 (0, 0.04) \\
+MCV (fL)                               &            & 10 & 90 (87, 94)   & 90 (87, 94)   & 92 (88, 95)   & 91 (88, 96)   \\
+Monocytes (x10\textasciicircum{}9/L)   &            & 30 & 0.67 (0.43, 0.98) & 0.67 (0.44, 0.98) & 0.57 (0.38, 1)    & 0.58 (0.36, 0.97) \\
+Neutrophils (x10\textasciicircum{}9/L) &            & 21 & 5.8 (2.4, 9.4)  & 5.8 (2.4, 9.4)  & 6.6 (3.3, 9.1)  & 5.6 (2.2, 9.4)  \\
+Sodium (mmol/L)                        &            & 11 & 137 (134, 139)  & 137 (134, 139)  & 136 (133, 139)  & 137 (133, 140)  \\
+Urea (mmol/L)                          &            & 11 & 6.9 (4.9 , 10.4) & 6.6 (4.7, 9.8)  & 7.3 (5.3, 11.8) & 10.3 (7.4 , 17)  
+\end{tabular}}
+\end{table}
+
+\pagebreak
+
+
+\end{landscape}
+
+\begin{landscape}
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrrrr}
+\toprule
+                                       & &  \% missing & All patients &   Discharged or dead &  In hospital & ICU admission \\
+\midrule
+\textbf{A. Development data}           &            &    & n = 2633     & n = 2387        & n = 32     & n = 214 \\
+Male sex                               &            & 0  & 58\%   & 57\%   & 63\%   & 68 \% \\
+Age (years)                            &            & 0  & 71 (58, 80)  & 71 (57, 80)  & 80 (71, 85) & 68 (59, 74) \\
+BMI (kg/m²)                            &            & 48 & 26 (23, 30)  & 26 (23, 30)  & 25 (22, 29) & 27 (24, 31) \\
+HR (bpm)                               &            & 14 & 88 (77,100)  & 88 (77, 100) & 87 (77, 98) & 91 (79, 104)\\
+SBP (mmHg)                             &            & 20 & 131 (116, 149)  & 131 (116 , 149)  & 140 (122 , 159)  & 129 (114 , 145)  \\
+RR (/min)                              &            & 15 & 19 (15, 23)   & 19 (15, 23)   & 18 (16 , 22)   & 23 (18 , 27)   \\
+Saturation (\%)                        &            & 10 & 95.(94, 97).3 & 95.(94, 97).4 & 96 (95, 97).5 & 95 (93.1, 96).7 \\
+Temperature (°C)                       &            & 11 & 37.2 (36.7, 37.9) & 37.2 (36.7, 37.9) & 37.4 (36.7, 37.8) & 37.4 (36.7, 38.2) \\
+CRP (mg/L)                             &            & 4  & (11, 120)  & 47 (10, 110)  & 82 (41, 175)  & 88 (20, 178) \\
+D dimer (µg/L)                         &            & 79 & 1100 (463, 2700) & 1040 (460, 2453) & 3400 (2000, 5400) & 2000 (590, 4900) \\
+LDH (U/L)                              &            & 11 & 239 (197, 317)  & 234 (194, 306)  & 270 (216, 324)  & 318 (234, 444)  \\
+Leucocytes (x10\textasciicircum{}9/L)  &            & 4  & 9.5 (6.7, 13.2) & 9.4 (6.8, 13.1) & 12 (9.2, 16.1) & 10.3 (6.3, 14.7) \\
+Lymphocytes (x10\textasciicircum{}9/L) &            & 11 & 1 (0.67, 1.6)  & 1 (0.7, 1.6) & 0.74 (0.55, 1.3)  & 1.1 (0.7, 1.5)  \\
+Albumin (g/L)                          &            & 8  & 40 (36, 43)   & 40 (36, 43)   & 37 (34, 41)   & 38 (35, 42)   \\
+Bicarbonate (mmol/L)                   &            & 66 & 23 (21, 25)   & 23 (21, 25)   & 24 (22, 26)   & 21 (19, 24)   \\
+Creatinine (µmol/L)                    &            & 5  & 85 (67, 113)  & 84 (67, 112)  & 85 (64, 113)  & 93 (73, 125)  \\
+Eosinophils (x10\textasciicircum{}9/L) &            & 27 & 0.1 (0.03, 0.1)  & 0.1 (0.03, 0.11) & 0.03 (0.03, 0.1) & 0.1 (0.03, 0.1)  \\
+MCV (fL)                               &            & 5  & 91 (87, 95)   & 91 (87, 95)   & 92 (90, 97)   & 91 (88, 95)   \\
+Monocytes (x10\textasciicircum{}9/L)   &            & 41 & 0.72 (0.47, 1) & 0.73 (0.48, 1) & 0.71 (0.56, 1.02) & 0.64 (0.39, 1)    \\
+Neutrophils (x10\textasciicircum{}9/L) &            & 11 & 7.2 (4.8, 10.5) & 7.1 (4.8, 10.4) & 9.8 (6.6, 14.5) & 7.7 (5, 11.1) \\
+Sodium (mmol/L)                        &            & 5  & 137 (134, 140)  & 137 (134, 140)  & 138 (134, 140)  & 137 (134, 139) \\
+Urea (mmol/L)                          &            & 5  & 6.6 (4.7, 9.9)  & 6.6 (4.6, 9.8)  & 8.4 (6.3, 11.9) & 7.1 (5.1, 11)
+\end{tabular}}
+\end{table}
+
+\pagebreak
+
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrrrr}
+\toprule
+\textit{(Continued)}                   &             &  \% missing & All patients &   Discharged or dead &  In hospital & ICU admission \\
+\midrule
+\textbf{B. Validation data}            &           & & n = 1466          & n = 1356           & n = 24      & n = 86 \\
+Male sex                               &            & 0  & 58\%   & 58 \%   & 38\%   & 71\% \\
+Age (years)                            &            & 0  & 71 (57, 80)  & 71 (56, 80)   & 80 (69, 85) & 70 (62, 76) \\
+BMI (kg/m²)                            &            & 40 & 26 (23, 30) & 26 (23, 30)   & 25 (22, 31)   & 28 (24, 30) \\
+HR (bpm)                               &            & 16 & 89 (77, 103)  & 89 (77, 103)  & 78 (73, 99)   & 89 (78, 103)  \\
+SBP (mmHg)                             &            & 21 & 134 (119, 151)  & 134 (119, 151)  & 132 (111, 149)  & 141 (124, 157)  \\
+RR (/min)                              &            & 17 & 19 (16, 23)   & 19 (16, 23)   & 19 (16, 22)   & 23 (19, 28)   \\
+Saturation (\%)                        &            & 9  & 95.7 (94, 97.3) & 95.9 (94, 97.5) & 96.2 (94.5, 97)   & 93.8 (91.3, 95.7) \\
+Temperature (°C)                       &            & 13 & 37.2 (36.7, 37.9) & 37.2 (36.7, 37.9) & 37.2 (36.7, 37.7) & 37.4 (37, 38)   \\
+CRP (mg/L)                             &            & 5  & 49 (14, 115)  & 47 (13, 110)  & 77 (25, 135)  & 114 (40, 206)  \\
+D dimer (µg/L)                         &            & 95 & 460 (210, 1275) & 440 (210, 1350) & 770 (770, 770)  & 913 (890, 937)  \\
+LDH (U/L)                              &            & 13 & 238 (196, 314)  & 234 (195, 307)  & 254 (217, 288)  & 360 (234, 531)  \\
+Leucocytes (x10\textasciicircum{}9/L)  &            & 6  & 9.7 (6.8, 13.2) & 9.7 (6.8, 13.2) & 12 (7.3, 15)   & 8.9 (6.7, 13.1) \\
+Lymphocytes (x10\textasciicircum{}9/L) &            & 12 & 1 (0.65, 1.5)  & 1 (0.66 , 1.5)  & 1.1 (0.8, 1.33) & 0.8 (0.6, 1.55) \\
+Albumin (g/L)                          &            & 9  & 40 (37, 42)   & 40 (37, 42)   & 37 (35, 38)   & 39 (36, 42)   \\
+Bicarbonate (mmol/L)                   &            & 65 & 23 (21, 25)   & 23 (21, 25)   & 23 (21, 26)   & 22 (19, 25)   \\
+Creatinine (µmol/L)                    &            & 6  & 86 (68, 119)  & 85 (68, 117)  & 80 (58, 122)  & 96 (77, 138)  \\
+Eosinophils (x10\textasciicircum{}9/L) &            & 20 & 0.07 (0.03, 0.1)  & 0.07 (0.03, 0.11) & 0.05 (0.03, 0.1)  & 0.05 (0.03, 0.1)  \\
+MCV (fL)                               &            & 6  & 91 (88, 95)   & 91 (88, 95)   & 94 (90, 97)   & 91 (87, 95)   \\
+Monocytes (x10\textasciicircum{}9/L)   &            & 33 & 0.7 (0.47, 1)    & 0.7 (0.48, 1)    & 0.68 (0.48, 1.03) & 0.61 (0.4, 1)    \\
+Neutrophils (x10\textasciicircum{}9/L) &            & 13 & 7.4 (4.8 , 11)   & 7.3 (4.7, 11)   & 9 (5.5, 13.1) & 7.4 (5  , 10.8) \\
+Sodium (mmol/L)                        &            & 6  & 137 (134, 139)  & 137 (134, 139)  & 136 (133, 138)  & 135 (132, 138)  \\
+Urea (mmol/L)                          &            & 7  & 6.7 (4.9 , 10)   & 6.6 (4.8, 9.9)  & 8 (4.7, 12.8) & 7.8 (5.9, 12.2)
+\end{tabular}}
+\end{table}
+
+\pagebreak
+
+
+\end{landscape}
+
+
+\begin{landscape}
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{llrrrrrrrrrrrrr}
+\toprule
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{3}{c}{\textbf{Univariable}} & \multicolumn{3}{c}{\textbf{Full model}} & \multicolumn{3}{c}{\textbf{Selected model}} & \multicolumn{1}{c}{\textbf{COPE}} \\
+\cmidrule(rl){3-5} \cmidrule(rl){6-8} \cmidrule(rl){9-11} \cmidrule(rl){12-12}
+Predictor                              & Contrast                    & OR          & 95\% CI &      Wald & OR         & 95\% CI & Wald & OR             & 95\% CI & Wald & OR   \\
+\midrule
+Month                                  & $\geq$ April vs $\leq$April & 2.57        & 2.16 to 3.05 & 114  & 1.99       & 1.61 to 2.47 & 39   & 2.06           & 1.68 to 2.52 & 49   & 1.96 \\
+Sex                                    & male vs female             & 1.37         & 1.15 to 1.63 & 13   & 1.12       & 0.9 to 1.39 & 1    &                 &         &      &      &      \\
+Age (years)                            & 80 vs 58                   & 3.07        & 2.63 to 3.58 & 201  & 3.16       & 2.56 to 3.91 & 113  & 2.95            & 2.42 to 3.6  & 112  & 2.74 \\
+BMI (kg/m)                            & 35 vs 25                   & 1.07         & 0.89 to 1.28 & 1    & 1.09    & 0.9 to 1.34 & 1    &                  &         &      &      &      \\
+HR (bpm)                               & 103 vs 78                  & 1.16        & 1.05 to 1.29 & 8    & 1.19       & 0.97 to 1.45 & 3    &                &         &      &      &      \\
+SBP (mmHg)                             & 150 vs 118                 & 0.76        & 0.65 to 0.89 & 12   & 0.86       & 0.73 to 1.01 & 3    &                &         &      &      &      \\
+RR (/min)                              & 23 vs 16                   & 1.98        & 1.77 to 2.21 & 150  & 1.63       & 1.34 to 1.99 & 24   & 1.91           & 1.63 to 2.23 & 64   & 1.82 \\
+Saturation (\%)                        & 97.5 vs 94                 & 0.61        & 0.52 to 0.72 & 37   & 0.77       & 0.65 to 0.9  & 10   &                &         &      &      &      \\
+Temperature (C)                       & 38 vs 37                   & 1.16         & 1.02 to 1.32 & 5    & 1.05       & 0.87 to 1.27 & 0    &                &         &      &      &      \\
+CRP (mg/L)                             & 118 vs 10                  & 2.76        & 2.35 to 3.25 & 149  & 1.54       & 1.22 to 1.93 & 14   & 1.57           & 1.27 to 1.93 & 18   & 1.52 \\
+LDH (U/L)                              & 322 vs 200                 & 2.17        & 1.99 to 2.36 & 309  & 1.83       & 1.62 to 2.06 & 99   & 1.85           & 1.66 to 2.05 & 127  & 1.77 \\
+Leucocytes (x10\textasciicircum{}9/L)  & 12.7 vs 6.7                & 1.01        & 0.92 to 1.11 & 0    & 0.88       & 0.75 to 1.02 & 3    &                &         &      &      &      \\
+Lymphocytes (x10\textasciicircum{}9/L) & 1.6 vs 0.66                & 0.67        & 0.6 to 0.75 & 48   & 1.03        & 0.9 to 1.19 & 0    &                 &         &      &      &      \\
+Albumin (g/L)                          & 42 vs 36                   & 0.58        & 0.53 to 0.62 & 191  & 0.8        & 0.71 to 0.9  & 14   & 0.77           & 0.69 to 0.86 & 21   & 0.78 \\
+Bicarbonate (mmol/L)                   & 25.9 vs 21.4               & 0.71        & 0.65 to 0.78 & 54   & 0.81       & 0.71 to 0.92 & 10   &                &         &      &      &      \\
+Creatinine (Ámol/L)                    & 111 vs 66                  & 1.58        & 1.46 to 1.71 & 133  & 0.85       & 0.72 to 1    & 4    &                &         &      &      &      \\
+Eosinophils (x10\textasciicircum{}9/L) & 0.1 vs 0.004               & 0.77        & 0.64 to 0.93 & 7    & 1.08       & 0.9 to 1.3  & 1    &                 &         &      &      &      \\
+MCV (fL)                               & 94 vs 87                   & 1.18        & 1.08 to 1.29 & 14   & 1.1        & 0.99 to 1.23 & 3    &                &         &      &      &      \\
+Monocytes (x10\textasciicircum{}9/L)   & 0.95 vs 0.44               & 0.84        & 0.74 to 0.96 & 7    & 1.08       & 0.87 to 1.35 & 1    &                &         &      &      &      \\
+Neutrophils (x10\textasciicircum{}9/L) & 9 vs 2.2                   & 0.97        & 0.88 to 1.07 & 0    & 0.94       & 0.82 to 1.08 & 1    &                &         &      &      &      \\
+Sodium (mmol/L)                        & 140 vs 135                 & 0.98        & 0.96 to 1.01 & 1    & 1.03       & 0.98 to 1.09 & 1    &                &         &      &      &      \\
+Urea (mmol/L)                          & 9.7 vs 4.6                 & 2.48        & 2.24 to 2.76 & 291  & 1.79       & 1.43 to 2.24 & 26   & 1.61           & 1.42 to 1.83 & 53   & 1.56
+\end{tabular}}
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{llrrrrrrrrrrrrr}
+\toprule
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{3}{c}{\textbf{Univariable}} & \multicolumn{3}{c}{\textbf{Multivariable}} \\
+\cmidrule(rl){3-5} \cmidrule(rl){6-8}
+Predictor                    & Contrast                   & OR          & 95\% CI & Wald & OR            & 95\% CI &      Wald\\
+\midrule
+Month                        & $\geq$April vs $\leq$April & 2.06        & 1.51 to 2.81 & 21   & 1.63          & 1.16 to 2.28 & 8    \\
+Age (years)                  & 80 vs 58                   & 1.96        & 1.47 to 2.62 & 21   & 1.76          & 1.32 to 2.35 & 15   \\
+RR (/min)                    & 23 vs 16                   & 1.76        & 1.48 to 2.09 & 40   & 1.71          & 1.4 to 2.09 & 27   \\
+CRP (mg/L)                   & 118 vs 10                  & 1.88        & 1.44 to 2.44 & 22   & 1.3           & 0.95 to 1.77 & 3    \\
+LDH (U/L)                    & 322 vs 200                 & 1.73        & 1.52 to 1.98 & 66   & 1.44          & 1.25 to 1.67 & 24   \\
+Albumin (g/L)                & 42 vs 36                   & 0.75        & 0.64 to 0.88 & 13   & 0.95          & 0.78 to 1.17 & 0    \\
+Urea (mmol/L)                & 9.7 vs 4.6                 & 1.29        & 1.08 to 1.54 & 8    & 1.36          & 1.1 to 1.66 & 8    \\
+Adjusted for:                &                            &             &         &      &               &         &      \\
+Max{[}Age-70, 0{]} (years) * & 80 vs 58                   & 0.2         & 0.13 to 0.3  & 57   & 0.17          & 0.11 to 0.27 & 65   \\
+\end{tabular}}
+\end{table}
+\end{landscape}
