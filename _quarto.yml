@@ -23,6 +23,7 @@ csl: nature.csl
 format:
   pdf:
     documentclass: book
+    classoption: [10pt]
     include-in-header:
       - preamble.tex
     toc-depth: 1

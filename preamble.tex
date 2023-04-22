@@ -5,11 +5,22 @@
 \usepackage{color}
 \usepackage{framed}
 \usepackage{lmodern}
+\usepackage{array}
 \usepackage[most]{tcolorbox}
 \let\paragraph\oldparagraph
 \let\subparagraph\oldsubparagraph
 \usepackage[compact]{titlesec}
 \usepackage{pdflscape}
+
+\usepackage{fancyhdr, blindtext}
+\newcommand{\changefont}{%
+    \fontsize{7}{8}\selectfont
+}
+\fancyhf{}
+\fancyhead[LE,RO]{\changefont \slshape \rightmark} %section
+\fancyhead[RE,LO]{\changefont \slshape \leftmark} %chapter
+\fancyfoot[C]{\thepage} %footer
+\pagestyle{fancy}
 
 
 \newcommand\Chapter[2]{

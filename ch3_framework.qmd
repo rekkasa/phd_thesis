@@ -165,6 +165,34 @@ Patient characteristics are available in ***Supplementary Tables 20-22***. Adequ
 numbers of patients were included in all strata of predicted acute MI risk
 (***Supplementary Table 23***).
 
+
+\begin{table}[p]
+\resizebox{\textwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+\multicolumn{1}{c}{} & \multicolumn{3}{c}{Thiazides or thiazide-like diuretics} & \multicolumn{3}{c}{Ace inhibitors} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} \\
+Outcome & Patients & Person years & Outcomes & Patients & Person years & Outcomes \\
+\midrule
+\textbf{CCAE} & & & & & &          \\
+Acute MI & 355,826 & 204,593 & 405 & 930,369 & 584,167 & 1,813    \\
+Hosp. with HF & 355,528 & 204,451 & 389 & 930,629 & 584,541 & 1,492    \\
+Stroke & 354,446 & 203,792 & 425 & 923,604 & 579,736 & 1,636    \\
+\textbf{MDCD} & & & & & &          \\
+Acute MI & 54,835 & 21,440 & 76 & 106,492 & 51,481 & 440      \\
+Hosp. with HF & 54,354 & 21,290 & 212 & 105,005 & 50,878 & 835      \\
+Stroke & 54,259 & 21,179 & 149 & 104,410 & 50,334 & 562      \\
+\textbf{MDCR} & & & & & &          \\
+Acute MI & 37,882 & 24,642 & 161 & 105,852 & 74,990 & 732      \\
+Hosp. with HF & 37,617 & 24,509 & 277 & 105,134 & 74,654 & 1,196    \\
+Stroke & 37,248 & 24,267 & 261 & 102,502 & 72,705 & 977 \\
+\bottomrule
+\end{tabular}}
+\caption{Number of patients, person years and events for the three efficacy
+outcomes of the study across the three databases after excluding patients with
+prior outcomes.}
+\label{tab:ch3-patients}
+\end{table}
+
 ### Step 3: Prediction {.unnumbered}
 
 We internally developed separate prediction models for 2-year acute MI risk in
@@ -187,6 +215,29 @@ covariates with the largest coefficients in each database.
 
 The models had moderate discriminative ability (internally validated) in CCAE
 and MDCD and lower discriminative ability in MDCR (***Table 2***).
+
+\begin{table}[]
+\resizebox{\textwidth}{!}{\begin{tabular}{lrrr}
+\toprule
+Population & CCAE & MDCD & MDCR \\
+\midrule
+Matched & 0.73 (0.71, 0.74) & 0.76 (0.73, 0.79) & 0.65 (0.62, 0.68) \\
+Treatment & 0.73 (0.71, 0.75) & 0.82 (0.77, 0.86) & 0.66 (0.62, 0.70) \\
+Comparator & 0.70 (0.67, 0.71) & 0.74 (0.71, 0.76) & 0.66 (0.64, 0.68) \\
+Entire population & 0.71 (0.70, 0.72) & 0.76 (0.74, 0.78) & 0.66 (0.64, 0.68) \\
+\bottomrule
+\end{tabular}}
+\caption{Discriminative ability (c-statistic) of the derived prediction models
+for acute MI in the matched set (development set), the treatment cohort, the
+comparator cohort, and the entire population in CCAE, MDCD, and MDCR. Values in
+parentheses are cross-validated 95% confidence intervals. Matched population is
+the propensity score matched subset in each database on which the prediction
+models were developed. Treatment population is the set of patients receiving
+thiazide or thiazide-like diuretics in each database, while comparator
+population is the set of patients receiving ACE inhibitors. Finally, entire
+population refers to the combined set of treatment and comparator patients.}
+\label{tab:ch3-discrimination}
+\end{table}
 
 ### Step 4: Estimation {.unnumbered}
 
@@ -252,6 +303,23 @@ inhibitors for all outcomes, except for hospitalization with heart failure in
 CCAE and stroke in MDCD (***Table 3***). The hazard ratios are in line with, but not
 equal to, those reported in the LEGEND-HTN study, mainly because of restricting
 time at risk to two years.
+
+\begin{table}[]
+\resizebox{\textwidth}{!}{\begin{tabular}{lrrr}
+\toprule
+Population & CCAE & MDCD & MDCR \\
+\midrule
+Matched & 0.73 (0.71, 0.74) & 0.76 (0.73, 0.79) & 0.65 (0.62, 0.68) \\
+Treatment & 0.73 (0.71, 0.75) & 0.82 (0.77, 0.86) & 0.66 (0.62, 0.70) \\
+Comparator & 0.70 (0.67, 0.71) & 0.74 (0.71, 0.76) & 0.66 (0.64, 0.68) \\
+Entire population & 0.71 (0.70, 0.72) & 0.76 (0.74, 0.78) & 0.66 (0.64, 0.68) \\
+\bottomrule
+\end{tabular}}
+\caption{Hazard ratio estimates for the overall treatment effect of thiazide or
+thiazide-like diuretics compared to ACE inhibitors. Values in brackets are 95\%
+confindence intervals.}
+\label{tab:ch3-overall}
+\end{table}
 
 For the primary outcomes (acute MI, hospitalization with heart failure and
 stroke) relative treatment effect estimates of thiazide or thiazide-like
