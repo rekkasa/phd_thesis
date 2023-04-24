@@ -53,6 +53,15 @@ data/framework/mappedOverallRelativeResults.rds : code/GetRawData.R
 data/framework/mappedOverallAbsoluteResults.rds : code/GetRawData.R
 	$< mappedOverallAbsoluteResults.rds framework
 
+data/framework/negativeControls_ccae.rds : code/GetRawData.R
+	$< negativeControls_ccae.rds framework
+
+data/framework/negativeControls_mdcd.rds : code/GetRawData.R
+	$< negativeControls_mdcd.rds framework
+
+data/framework/negativeControls_mdcr.rds : code/GetRawData.R
+	$< negativeControls_mdcr.rds framework
+
 data/simulation/analysisIds.csv :
 	wget -O data/simulation/analysisIds.csv \
 		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/data/simulation/analysisIds.csv
@@ -181,6 +190,18 @@ figures/ch3-CovariateBalance.tiff : code/ch3-CovariateBalancePlot.R \
 figures/ch3-NegativeControlsOverall.tiff : code/ch3-NegativeControlsOverallPlot.R \
 	data/framework/mappedOverallResultsNegativeControls.rds
 	$<
+
+figures/ch3-NegativeControlsRiskStratified_ccae.tiff : code/ch3-NegativeControlsRiskStratifiedPlot.R \
+	data/framework/negativeControls_ccae.rds
+	$< ccae
+
+figures/ch3-NegativeControlsRiskStratified_mdcd.tiff : code/ch3-NegativeControlsRiskStratifiedPlot.R \
+	data/framework/negativeControls_mdcd.rds
+	$< mdcd
+
+figures/ch3-NegativeControlsRiskStratified_mdcr.tiff : code/ch3-NegativeControlsRiskStratifiedPlot.R \
+	data/framework/negativeControls_mdcr.rds
+	$< mdcr
 
 figures/ch3-RelativeResultsMain.tiff : code/ch3-CombinedRelativeMain.R \
 	data/framework/map_exposures.rds \
