@@ -8,17 +8,8 @@ figures/hypertensionGuidelines.png :
 	wget -O figures/hypertensionGuidelines.png \
 		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/figures/hypertensionGuidelines.png
 
-figures/reviewDiagram.pdf :
-	wget -O figures/reviewDiagram.pdf \
-		https://github.com/rekkasa/phd_thesis/raw/large-files/figures/reviewDiagram.pdf
-
-figures/ch5-PositiveSlnb.pdf :
-	wget -O figures/ch5-PositiveSlnb.pdf \
-		https://github.com/rekkasa/phd_thesis/raw/large-files/figures/ch5-PositiveSlnb.pdf
-
-figures/ch3-Framework.pdf :
-	wget -O figures/ch3-Framework.pdf \
-		https://github.com/rekkasa/phd_thesis/raw/large-files/figures/ch3-Framework.pdf
+figures/%.pdf :
+	wget -O $@ https://github.com/rekkasa/phd_thesis/raw/large-files/$@
 
 data/framework/map_exposures.rds : code/GetRawData.R
 	$< map_exposures.rds framework
@@ -320,6 +311,7 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	ch7_osteoporosis.qmd \
 	ch8_discussion.qmd \
 	references.bib \
+	ch3_appendix.qmd \
 	data/introduction/gusto.rda \
 	figures/hypertensionGuidelines.png \
 	figures/PowerPlot.tiff \
@@ -335,6 +327,17 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/ch3-AbsoluteResultsMain.tiff \
 	figures/ch3-RelativeResultsSafety.tiff \
 	figures/ch3-AbsoluteResultsSafety.tiff \
+	figures/ch3-SupplementaryFigure1.pdf \
+	figures/ch3-SupplementaryFigure2.pdf \
+	figures/ch3-SupplementaryFigure3.pdf \
+	figures/ch3-SupplementaryFigure4.pdf \
+	figures/ch3-SupplementaryFigure5.pdf \
+	figures/ch3-SupplementaryFigure6.pdf \
+	figures/ch3-SupplementaryFigure7.pdf \
+	figures/ch3-SupplementaryFigure8.pdf \
+	figures/ch3-SupplementaryFigure9.pdf \
+	figures/ch3-SupplementaryFigure10.pdf \
+	figures/ch3-SupplementaryFigure11.pdf \
 	figures/ch4-rmse_moderate_base.tiff \
 	figures/ch4-rmse_moderate_sample_size.tiff \
 	figures/ch4-rmse_moderate_auc.tiff \

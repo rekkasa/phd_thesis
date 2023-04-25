@@ -16,6 +16,8 @@ book:
     - ch7_osteoporosis.qmd
     - ch8_discussion.qmd
     - references.qmd
+  appendices:
+    - ch3_appendix.qmd
 
 bibliography: references.bib
 csl: nature.csl
