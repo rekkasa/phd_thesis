@@ -374,7 +374,7 @@ especially with non-monotonic deviations and null or moderate treatment-related
 harms (Supplement, Figure S7).
 
 ```{r fig-discriminationBase, cache=TRUE, echo=FALSE, fig.cap="Discrimination for beneft of the considered methods across 500 replications calculated in simulated samples of size 4,250 using the c-statistic for beneft. The c-statistic for beneft represents the probability that from two randomly chosen matched patient pairs with unequal observed beneft, the pair with greater observed beneft also has a higher predicted beneft. True prediction c-statistic of 0.75.",fig.align='center'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-discrimination_moderate_base.tiff")))
+knitr::include_graphics("figures/ch4-discrimination_moderate_base.pdf")
 ```
 
 In terms of calibration for benefit, the constant effects model outperformed all
@@ -390,7 +390,7 @@ Figure S9), RCS-3 was somewhat better calibrated than the linear interaction
 model with strong quadratic deviations.
 
 ```{r fig-calibrationBase, cache=TRUE, echo=FALSE, fig.cap="Calibration for beneft of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction c-statistic of 0.75 and sample size of 4,250.",fig.align='center'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-calibration_moderate_base.tiff")))
+knitr::include_graphics("figures/ch4-calibration_moderate_base.pdf")
 ```
 
 Our main conclusions remained unchanged in the sensitivity analyses where

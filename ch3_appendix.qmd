@@ -2,48 +2,117 @@
 \vspace*{\fill}\par
 \pagebreak
 
+\begin{landscape}
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{CCAE} & \multicolumn{3}{c}{MDCD} & \multicolumn{3}{c}{MDCR} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} \cmidrule(rl){8-10}
+Characteristic & THZ & ACE & Std. diff & THZ & ACE & Std. diff & THZ & ACE & Std. diff \\
+\midrule
+Age in   years & 48.7 & 48.7 & 0.00 & 44.6 & 44.4 & 0.01 & 74.3 & 74.1 & 0.03 \\
+Sex:   female & 44.5\% & 0.442 & 0.01 & 58.6\% & 58.5\% & 0.00 & 55.1\% & 55.6\% & -0.01 \\
+\textbf{Medical   history (General)} &  &  &  &  &  &  &  &  &  \\
+Chronic obstructive lung disease & 1.5\% & 1.4\% & 0.01 & 10.1\% & 9.4\% & 0.03 & 6.9\% & 6.7\% & 0.01 \\
+Crohn's disease & 0.2\% & 0.2\% & 0.00 & 0.3\% & 0.3\% & 0.00 & 0.2\% & 0.2\% & 0.00 \\
+Depressive disorder & 3.6\% & 3.5\% & 0.01 & 10.9\% & 10.6\% & 0.01 & 2.9\% & 2.9\% & 0.00 \\
+Diabetes mellitus & 0.1\% & 0.2\% & -0.03 & 0.2\% & 0.4\% & -0.04 & 0.0\% & 0.0\% & -0.01 \\
+Gastroesophageal reflux disease & 5.5\% & 5.3\% & 0.01 & 9.4\% & 9.1\% & 0.01 & 7.7\% & 7.4\% & 0.01 \\
+Gastrointestinal hemorrhage & 0.4\% & 0.4\% & 0.00 & 0.9\% & 0.9\% & 0.00 & 1.2\% & 1.2\% & 0.00 \\
+Human immunodeficiency virus infection & 0.2\% & 0.2\% & 0.00 & 1.1\% & 1.1\% & 0.00 & 0.0\% & 0.1\% & -0.01 \\
+Hyperlipidemia & 21.1\% & 21.5\% & -0.01 & 20.6\% & 20.8\% & -0.01 & 27.0\% & 26.8\% & 0.00 \\
+Obesity & 8.0\% & 7.9\% & 0.00 & 17.8\% & 17.6\% & 0.01 & 2.9\% & 2.8\% & 0.00 \\
+Osteoarthritis & 1.9\% & 1.8\% & 0.01 & 6.1\% & 5.8\% & 0.01 & 6.2\% & 5.9\% & 0.01 \\
+Pneumonia & 0.4\% & 0.3\% & 0.01 & 1.7\% & 1.6\% & 0.00 & 0.3\% & 0.3\% & 0.00 \\
+Psoriasis & 0.9\% & 0.8\% & 0.00 & 0.8\% & 0.7\% & 0.01 & 0.8\% & 0.9\% & -0.01 \\
+Rheumatoid arthritis & 0.8\% & 0.7\% & 0.01 & 1.3\% & 1.3\% & 0.00 & 1.5\% & 1.5\% & 0.00 \\
+Ulcerative colitis & 0.2\% & 0.2\% & 0.00 & 0.2\% & 0.2\% & 0.00 & 0.3\% & 0.3\% & 0.00 \\
+Urinary tract infectious disease & 5.3\% & 5.0\% & 0.01 & 10.5\% & 10.2\% & 0.01 & 8.3\% & 8.0\% & 0.01 \\
+Viral hepatitis C & 0.1\% & 0.1\% & 0.00 & 1.8\% & 1.8\% & 0.00 & 0.1\% & 0.1\% & 0.00 \\
+\textbf{Medical   history (Cardiovascular disease)} &  &  &  &  &  &  &  &  &  \\
+Atrial fibrillation & 0.3\% & 0.3\% & 0.00 & 0.9\% & 0.8\% & 0.01 & 3.1\% & 2.9\% & 0.02 \\
+Cerebrovascular disease & 0.4\% & 0.4\% & 0.00 & 0.9\% & 0.9\% & 0.00 & 2.4\% & 2.4\% & 0.00 \\
+Coronary arteriosclerosis & 0.8\% & 0.9\% & -0.01 & 1.4\% & 1.3\% & 0.01 & 4.6\% & 4.4\% & 0.01 \\
+Heart disease & 0.2\% & 0.2\% & 0.00 & 0.6\% & 0.6\% & 0.00 & 0.6\% & 0.6\% & 0.00 \\
+Heart failure & 0.1\% & 0.1\% & 0.00 & 0.8\% & 0.7\% & 0.01 & 0.2\% & 0.2\% & 0.00 \\
+Ischemic heart disease & 0.0\% & 0.0\% & 0.00 & 0.0\% & 0.0\% & 0.00 & 0.1\% & 0.1\% & -0.01 \\
+Pulmonary embolism & 0.1\% & 0.1\% & 0.00 & 0.3\% & 0.3\% & 0.01 & 0.1\% & 0.1\% & 0.00 \\
+Venous thrombosis & 0.1\% & 0.1\% & 0.00 & 0.2\% & 0.2\% & 0.01 & 0.3\% & 0.3\% & 0.00 \\
+\bottomrule
+\end{tabular}}
+\caption{Baseline characteristics of patients in CCAE, MDCD, and MDCR after
+stratification on the propensity scores. THZ: new users of thiazide or
+thiazide-like diuretics. ACE: new users of ACE inhibitors.}
+\label{tab-ch3-supp-table1}
+\end{table}
+\end{landscape}
 
-```{r fig-ch3supp1, cache=FALSE, echo=FALSE, fig.cap="Systematic error in risk groups of CCAE. Effect size estimates for the negative controls (true hazard ratio = 1) within strata of predicted acute MI risk. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size, alpha = 0.05). RG-1 represents patients in CCAE whose acute MI predicted risk is below 1%; RG-2 represents patients whose acute MI predicted risk is between 1% and 1.5%; RG-3 represents patients whose acute MI predicted risk is larger than 1.5%. A well-calibrated estimator should have the true effect size (HR = 1) within the 95 percent confidence interval 95 percent of times.",fig.align='center'}
+\begin{table}
+\resizebox{\columnwidth}{!}{\begin{tabular}{llrrrrrr}
+\toprule
+ &  & \multicolumn{3}{c}{Thiazide or thiazide-like diuretics} & \multicolumn{3}{c}{ACE inhibitors} \\
+\cmidrule(rl){3-5} \cmidrule(rl){6-8}
+Database & Risk group & Patients & Person years & Outcomes & Patients & Person years & Outcomes \\
+\midrule
+\multirow{3}{*}{CCAE} & RG-1 & 347,892 & 200,792 & 368 & 874,820 & 550,857 & 1,500 \\
+ & RG-2 & 5,576 & 2,760 & 23 & 37,950 & 23,408 & 169 \\
+ & RG-3 & 2,358 & 1,042 & 14 & 17,599 & 9,902 & 144 \\
+\multirow{3}{*}{MDCD} & RG-1 & 39,144 & 14,584 & 22 & 61,229 & 28,408 & 109 \\
+ & RG-2 & 7,798 & 3,371 & 13 & 19,066 & 9,823 & 78 \\
+ & RG-3 & 7,893 & 3,484 & 41 & 26,197 & 13,250 & 253 \\
+\multirow{3}{*}{MDCR} & RG-1 & 9,635 & 6,861 & 19 & 22,407 & 16,157 & 55 \\
+ & RG-2 & 14,944 & 9,985 & 48 & 40,296 & 29,365 & 216 \\
+ & RG-3 & 13,303 & 7,796 & 94 & 43,149 & 29,468 & 461 \\
+\bottomrule
+\end{tabular}}
+\caption{Number of patients, person years, and events in risk strata of acute MI
+across all databases. RG-1 represents patients at acute MI risk below 1\%, RG-2
+represents patients at acute Mi risk between 1\% and 1.5\%, and RG-3 represents
+patients at acute MI risk larger than 1.5\%.}
+\label{tab-ch3-supp-table2}
+\end{table}
+
+```{r fig-ch3-supp1, cache=FALSE, echo=FALSE, fig.cap="Systematic error in risk groups of CCAE. Effect size estimates for the negative controls (true hazard ratio = 1) within strata of predicted acute MI risk. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size, alpha = 0.05). RG-1 represents patients in CCAE whose acute MI predicted risk is below 1%; RG-2 represents patients whose acute MI predicted risk is between 1% and 1.5%; RG-3 represents patients whose acute MI predicted risk is larger than 1.5%. A well-calibrated estimator should have the true effect size (HR = 1) within the 95 percent confidence interval 95 percent of times.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure1.pdf")
 ```
 
-```{r fig-ch3supp2, cache=FALSE, echo=FALSE, fig.cap="Systematic error in risk groups of MDCD. Effect size estimates for the negative controls (true hazard ratio = 1) within strata of predicted acute MI risk in MDCD. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size, alpha = 0.05). RG-1 represents patients in MDCD whose acute MI predicted risk is below 1%; RG-2 represents patients whose acute MI predicted risk is between 1% and 1.5%; RG-3 represents patients whose acute MI predicted risk is larger than 1.5%. A well-calibrated estimator should have the true effect size within the 95 percent confidence interval 95 percent of times.",fig.align='center'}
+```{r fig-ch3-supp2, cache=FALSE, echo=FALSE, fig.cap="Systematic error in risk groups of MDCD. Effect size estimates for the negative controls (true hazard ratio = 1) within strata of predicted acute MI risk in MDCD. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size, alpha = 0.05). RG-1 represents patients in MDCD whose acute MI predicted risk is below 1%; RG-2 represents patients whose acute MI predicted risk is between 1% and 1.5%; RG-3 represents patients whose acute MI predicted risk is larger than 1.5%. A well-calibrated estimator should have the true effect size within the 95 percent confidence interval 95 percent of times.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure2.pdf")
 ```
 
-```{r fig-ch3supp3, cache=FALSE, echo=FALSE, fig.cap="Systematic error in risk groups of MDCR. Effect size estimates for the negative controls (true hazard ratio = 1) within strata of predicted acute MI risk in MDCD. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size, alpha = 0.05). RG-1 represents patients in MDCD whose acute MI predicted risk is below 1%; RG-2 represents patients whose acute MI predicted risk is between 1% and 1.5%; RG-3 represents patients whose acute MI predicted risk is larger than 1.5%. A well-calibrated estimator should have the true effect size within the 95 percent confidence interval 95 percent of times.",fig.align='center'}
+```{r fig-ch3-supp3, cache=FALSE, echo=FALSE, fig.cap="Systematic error in risk groups of MDCR. Effect size estimates for the negative controls (true hazard ratio = 1) within strata of predicted acute MI risk in MDCD. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size, alpha = 0.05). RG-1 represents patients in MDCD whose acute MI predicted risk is below 1%; RG-2 represents patients whose acute MI predicted risk is between 1% and 1.5%; RG-3 represents patients whose acute MI predicted risk is larger than 1.5%. A well-calibrated estimator should have the true effect size within the 95 percent confidence interval 95 percent of times.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure3.pdf")
 ```
 
-```{r fig-ch3supp4, cache=FALSE, echo=FALSE, fig.cap="Relative treatment effects for the main outcomes in patients without cardiovascular disease. Treatment effect heterogeneity in the subset of patients without cardiovascular disease for acute myocardial infarction, hospitalization with heart failure, and stroke on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents %>% the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors.",fig.align='center'}
+```{r fig-ch3-supp4, cache=FALSE, echo=FALSE, fig.cap="Relative treatment effects for the main outcomes in patients without cardiovascular disease. Treatment effect heterogeneity in the subset of patients without cardiovascular disease for acute myocardial infarction, hospitalization with heart failure, and stroke on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents %>% the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure4.pdf")
 ```
 
-```{r fig-ch3supp5, cache=FALSE, echo=FALSE, fig.cap="Relative treatment effects for the safety outcomes in patients without cardiovascular disease. Treatment effect heterogeneity in the subset of patients without cardiovascular disease for acute renal failure, angioedema, cough, gastrointestinal bleeding, hyperkalemia, hypokalemia, hyponatremia, hypotension, and kidney disease on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors.",fig.align='center'}
+```{r fig-ch3-supp5, cache=FALSE, echo=FALSE, fig.cap="Relative treatment effects for the safety outcomes in patients without cardiovascular disease. Treatment effect heterogeneity in the subset of patients without cardiovascular disease for acute renal failure, angioedema, cough, gastrointestinal bleeding, hyperkalemia, hypokalemia, hyponatremia, hypotension, and kidney disease on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure5.pdf")
 ```
 
-```{r fig-ch3supp6, cache=FALSE, echo=FALSE, fig.cap="Absolute treatment effects for the main outcomes in patients without cardiovascular disease. Treatment effect heterogeneity in the subset of patients without cardiovascular disease acute myocardial infarction, hospitalization with heart failure, and stroke on the absolute scale of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Absolute treatment effects estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors.",fig.align='center'}
+```{r fig-ch3-supp6, cache=FALSE, echo=FALSE, fig.cap="Absolute treatment effects for the main outcomes in patients without cardiovascular disease. Treatment effect heterogeneity in the subset of patients without cardiovascular disease acute myocardial infarction, hospitalization with heart failure, and stroke on the absolute scale of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Absolute treatment effects estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure6.pdf")
 ```
 
-```{r fig-ch3supp7, cache=FALSE, echo=FALSE, fig.cap="Absolute treatment effects for the safety outcomes in patients without cardiovascular disease. Treatment effect heterogeneity in the subset of patients without cardiovascular disease for acute renal failure, angioedema, cough, gastrointestinal bleeding, hyperkalemia, hypokalemia, hyponatremia, hypotension, and kidney disease on the absolute scale of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Absolute treatment effects estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors.",fig.align='center'}
+```{r fig-ch3-supp7, cache=FALSE, echo=FALSE, fig.cap="Absolute treatment effects for the safety outcomes in patients without cardiovascular disease. Treatment effect heterogeneity in the subset of patients without cardiovascular disease for acute renal failure, angioedema, cough, gastrointestinal bleeding, hyperkalemia, hypokalemia, hyponatremia, hypotension, and kidney disease on the absolute scale of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Absolute treatment effects estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure7.pdf")
 ```
 
 
-```{r fig-ch3supp8, cache=FALSE, echo=FALSE, fig.cap="Relative treatment effects for the main outcomes in patients with cardiovascular disease. Treatment effect heterogeneity in the subset of patients with cardiovascular disease for acute myocardial infarction, hospitalization with heart failure, and stroke on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the subgroup of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors. Hazard ratios estimated in CCAE and MDCD are represented by blue and green circles, respectively. The bars represent 95% confidence intervals. Results in MDCR are not presented because the majority of the patients were at risk above 1.5% for acute MI.",fig.align='center'}
+```{r fig-ch3-supp8, cache=FALSE, echo=FALSE, fig.cap="Relative treatment effects for the main outcomes in patients with cardiovascular disease. Treatment effect heterogeneity in the subset of patients with cardiovascular disease for acute myocardial infarction, hospitalization with heart failure, and stroke on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the subgroup of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors. Hazard ratios estimated in CCAE and MDCD are represented by blue and green circles, respectively. The bars represent 95% confidence intervals. Results in MDCR are not presented because the majority of the patients were at risk above 1.5% for acute MI.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure8.pdf")
 ```
 
-```{r fig-ch3supp9, cache=FALSE, echo=FALSE, fig.cap="Relative treatment effects for the safety outcomes in patients with cardiovascular disease. Treatment effect heterogeneity in the subset of patients with cardiovascular disease for acute renal failure, angioedema, cough, gastrointestinal bleeding, hyperkalemia, hypokalemia, hyponatremia, hypotension, and kidney disease on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE and MDCD are represented by blue and green circles, respectively. The bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors. Results in MDCR are not presented because the majority of the patients were at risk above 1.5% for acute MI.",fig.align='center'}
+```{r fig-ch3-supp9, cache=FALSE, echo=FALSE, fig.cap="Relative treatment effects for the safety outcomes in patients with cardiovascular disease. Treatment effect heterogeneity in the subset of patients with cardiovascular disease for acute renal failure, angioedema, cough, gastrointestinal bleeding, hyperkalemia, hypokalemia, hyponatremia, hypotension, and kidney disease on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE and MDCD are represented by blue and green circles, respectively. The bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors. Results in MDCR are not presented because the majority of the patients were at risk above 1.5% for acute MI.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure9.pdf")
 ```
 
-```{r fig-ch3supp10, cache=FALSE, echo=FALSE, fig.cap="Absolute treatment effects for the main outcomes in patients with cardiovascular disease. Treatment effect heterogeneity in the subset of patients with cardiovascular disease for the main outcomes of interest on the absolute scale of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1% RG-2 represents the group of patients with acute MI risk between 1% and 1.5% RG-3 represents the group of patients with acute MI risk larger than 1.5% Absolute treatment effects estimated in CCAE and MDCD are represented by blue and green circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors. Results in MDCR are not presented because the majority of the patients were at risk above 1.5% for acute MI.",fig.align='center'}
+```{r fig-ch3-supp10, cache=FALSE, echo=FALSE, fig.cap="Absolute treatment effects for the main outcomes in patients with cardiovascular disease. Treatment effect heterogeneity in the subset of patients with cardiovascular disease for the main outcomes of interest on the absolute scale of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1% RG-2 represents the group of patients with acute MI risk between 1% and 1.5% RG-3 represents the group of patients with acute MI risk larger than 1.5% Absolute treatment effects estimated in CCAE and MDCD are represented by blue and green circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors. Results in MDCR are not presented because the majority of the patients were at risk above 1.5% for acute MI.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure10.pdf")
 ```
 
-```{r fig-ch3supp11, cache=FALSE, echo=FALSE, fig.cap=". Absolute treatment effects for the safety outcomes in patients with cardiovascular disease. Treatment effect heterogeneity in the subset of patients with cardiovascular disease for acute renal failure, angioedema, cough, gastrointestinal bleeding, hyperkalemia, hypokalemia, hyponatremia, hypotension, and kidney disease on the absolute scale of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Absolute treatment effects estimated in CCAE and MDCD are represented by blue and green circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors. Results in MDCR are not presented because the majority of the patients were at risk above 1.5% for acute MI.",fig.align='center'}
+```{r fig-ch3-supp11, cache=FALSE, echo=FALSE, fig.cap=". Absolute treatment effects for the safety outcomes in patients with cardiovascular disease. Treatment effect heterogeneity in the subset of patients with cardiovascular disease for acute renal failure, angioedema, cough, gastrointestinal bleeding, hyperkalemia, hypokalemia, hyponatremia, hypotension, and kidney disease on the absolute scale of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Absolute treatment effects estimated in CCAE and MDCD are represented by blue and green circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors. Results in MDCR are not presented because the majority of the patients were at risk above 1.5% for acute MI.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure11.pdf")
 ```

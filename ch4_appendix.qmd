@@ -1,0 +1,34 @@
+# Estimating individualized treatment effects from randomized controlled trials: A simulation study to compare risk-based approaches {#sec-simulation}
+\chaptermark{Individualized treatment effects}
+\vspace*{\fill}\par
+\pagebreak
+
+```{r fig-ch4-supp1, cache=TRUE, echo=FALSE, fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. The scenario with the true constant relative treatment effect (first panel) had a true prediction AUC of 0.75 and sample size of 4,250.",fig.align='center'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_base.tiff")))
+```
+
+
+```{r fig-ch4-supp2, cache=TRUE, echo=FALSE, fig.cap=" Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. Sample size is 17,000.",fig.align='center'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_sample_size.tiff")))
+```
+
+```{r fig-ch4-supp3, cache=TRUE, echo=FALSE, fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. AUC is 0.85.",fig.align='center'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_auc.tiff")))
+```
+
+
+```{r fig-ch4-supp4, cache=FALSE, echo=FALSE, fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center'}
+knitr::include_graphics("figures/ch4-discrimination_moderate_sample_size.pdf")
+```
+
+```{r fig-ch4-supp5, cache=FALSE, echo=FALSE, fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center'}
+knitr::include_graphics("figures/ch4-discrimination_moderate_auc.pdf")
+```
+
+```{r fig-ch4-supp6, cache=FALSE, echo=FALSE, fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center'}
+knitr::include_graphics("figures/ch4-calibration_moderate_sample_size.pdf")
+```
+
+```{r fig-ch4-supp7, cache=FALSE, echo=FALSE, fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center'}
+knitr::include_graphics("figures/ch4-calibration_moderate_auc.pdf")
+```

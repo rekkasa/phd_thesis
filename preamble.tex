@@ -11,14 +11,15 @@
 \let\subparagraph\oldsubparagraph
 \usepackage[compact]{titlesec}
 \usepackage{pdflscape}
+\usepackage{multirow}
 
 \usepackage{fancyhdr, blindtext}
 \newcommand{\changefont}{%
     \fontsize{7}{8}\selectfont
 }
 \fancyhf{}
-\fancyhead[LE,RO]{\changefont \slshape \rightmark} %section
-\fancyhead[RE,LO]{\changefont \slshape \leftmark} %chapter
+\fancyhead[LE]{\changefont \slshape \rightmark} %section
+\fancyhead[RO]{\changefont \slshape \leftmark} %chapter
 \fancyfoot[C]{\thepage} %footer
 \pagestyle{fancy}
 

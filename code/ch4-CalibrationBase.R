@@ -72,15 +72,84 @@ names(scenarios) <- NULL
 
 plotList <- plotResult(scenarios, processed, titles, metric = metric, limits = c(0, 6, 1))
 
-res <- gridExtra::grid.arrange(
+# res <- gridExtra::grid.arrange(
+#   plotList[[1]] +
+#     theme(
+#       plot.title = element_text(),
+#       axis.title = element_blank(),
+#       legend.direction = "horizontal",
+#       legend.position = c(.473, .898),
+#       legend.title = element_text(size = 10.3),
+#       legend.text = element_text(size = 9.8),
+#       legend.box.background = ggplot2::element_blank(),
+#       legend.background = ggplot2::element_rect(fill = "#F0F2F3"),
+#       panel.grid.minor = element_blank()
+#       # axis.text.x = element_blank()
+#     ),
+#   plotList[[2]] +
+#     theme(
+#       plot.title = element_text(),
+#       axis.title = element_blank(),
+#       legend.position = "none",
+#       panel.grid.minor = element_blank()
+#       # axis.text.x = element_blank()
+#     ),
+#   plotList[[3]] +
+#     theme(
+#       plot.title = element_text(),
+#       axis.title = element_blank(),
+#       panel.grid.minor = element_blank(),
+#       legend.position = "none"
+#     ),
+#   plotList[[4]] +
+#     theme(
+#       plot.title = element_text(),
+#       axis.title = element_blank(),
+#       panel.grid.minor = element_blank(),
+#       legend.position = "none"
+#     ),
+#   heights = c(1, 1.05),
+#   nrow = 2,
+#   ncol = 2,
+#   left = grid::textGrob(
+#     expression(
+#       paste(
+#         "Calibration for benefit (x",
+#         10^-2,
+#         ")"
+#       )
+#     ),
+#     rot = 90
+#   ),
+#   bottom = grid::textGrob(
+#     "Method",
+#     just = "center",
+#     gp = grid::gpar(fontsize = 10)
+#   )
+# )
+
+fileName <- paste0(
+  "ch4-",
+  paste(
+    metric,
+    args_base,
+    args_value,
+    sep = "_"
+  ),
+  ".pdf"
+)
+
+pdf(file.path("figures", fileName), width = 9.8, height = 6.8, bg = "#F1F3F8") # Open a new pdf file
+gridExtra::grid.arrange(
   plotList[[1]] +
     theme(
       plot.title = element_text(),
       axis.title = element_blank(),
+      axis.text = ggplot2::element_text(size = 11),
       legend.direction = "horizontal",
-      legend.position = c(.473, .898),
-      legend.title = element_text(size = 8.3),
-      legend.text = element_text(size = 7.8),
+      legend.position = c(.484, .898),
+      legend.title = element_text(size = 11),
+      legend.text = element_text(size = 11),
       legend.box.background = ggplot2::element_blank(),
       legend.background = ggplot2::element_rect(fill = "#F0F2F3"),
       panel.grid.minor = element_blank()
@@ -88,6 +157,7 @@ res <- gridExtra::grid.arrange(
     ),
   plotList[[2]] +
     theme(
+      axis.text = ggplot2::element_text(size = 11),
       plot.title = element_text(),
       axis.title = element_blank(),
       legend.position = "none",
@@ -96,6 +166,7 @@ res <- gridExtra::grid.arrange(
     ),
   plotList[[3]] +
     theme(
+      axis.text = ggplot2::element_text(size = 11),
       plot.title = element_text(),
       axis.title = element_blank(),
       panel.grid.minor = element_blank(),
@@ -103,6 +174,7 @@ res <- gridExtra::grid.arrange(
     ),
   plotList[[4]] +
     theme(
+      axis.text = ggplot2::element_text(size = 11),
       plot.title = element_text(),
       axis.title = element_blank(),
       panel.grid.minor = element_blank(),
@@ -119,32 +191,23 @@ res <- gridExtra::grid.arrange(
         ")"
       )
     ),
-    rot = 90
+    rot = 90,
+    gp = grid::gpar(col = "black", fontsize = 14)
   ),
   bottom = grid::textGrob(
     "Method",
     just = "center",
-    gp = grid::gpar(fontsize = 10)
+    gp = grid::gpar(fontsize = 14)
   )
 )
+dev.off()
 
-fileName <- paste0(
-  "ch4-",
-  paste(
-    metric,
-    args_base,
-    args_value,
-    sep = "_"
-  ),
-  ".tiff"
-)
-
-ggsave(
-  file.path("figures", fileName),
-  res,
-  height = 6.5,
-  width = 8,
-  dpi = 1000,
-  compression = "lzw+p",
-  bg = "#F1F3F8"
-)
+# ggsave(
+#   file.path("figures", fileName),
+#   res,
+#   height = 9.5,
+#   width = 10,
+#   dpi = 1000,
+#   compression = "lzw+p",
+#   bg = "#F1F3F8"
+# )

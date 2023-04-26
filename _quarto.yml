@@ -18,6 +18,7 @@ book:
     - references.qmd
   appendices:
     - ch3_appendix.qmd
+    - ch4_appendix.qmd
 
 bibliography: references.bib
 csl: nature.csl

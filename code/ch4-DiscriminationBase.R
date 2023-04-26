@@ -60,52 +60,7 @@ names(scenarios) <- NULL
 
 plotList <- plotResult(scenarios, processed, titles, metric = metric, limits = c(.49, .6, .01))
 
-res <- gridExtra::grid.arrange(
-  plotList[[1]] +
-    theme(
-      plot.title = element_text(),
-      axis.title = element_blank(),
-      legend.direction = "horizontal",
-      legend.position = c(.489, .898),
-      legend.title = element_text(size = 8.3),
-      legend.text = element_text(size = 7.8),
-      legend.box.background = ggplot2::element_blank(),
-      legend.background = ggplot2::element_rect(fill = "#F0F2F3"),
-      panel.grid.minor = element_blank()
-      # axis.text.x = element_blank()
-    ),
-  plotList[[2]] +
-    theme(
-      plot.title = element_text(),
-      axis.title = element_blank(),
-      legend.position = "none",
-      panel.grid.minor = element_blank()
-      # axis.text.x = element_blank()
-    ),
-  plotList[[3]] +
-    theme(
-      plot.title = element_text(),
-      axis.title = element_blank(),
-      panel.grid.minor = element_blank(),
-      legend.position = "none"
-    ),
-  plotList[[4]] +
-    theme(
-      plot.title = element_text(),
-      axis.title = element_blank(),
-      panel.grid.minor = element_blank(),
-      legend.position = "none"
-    ),
-  heights = c(1, 1.05),
-  nrow = 2,
-  ncol = 2,
-  left = "C-statistic for benefit",
-  bottom = grid::textGrob(
-    "Method",
-    just = "center",
-    gp = grid::gpar(fontsize = 12)
-  )
-)
+
 
 fileName <- paste0(
   "ch4-",
@@ -115,14 +70,61 @@ fileName <- paste0(
     args_value,
     sep = "_"
   ),
-  ".tiff"
+  ".pdf"
 )
-ggsave(
-  file.path("figures", fileName),
-  res,
-  height = 6.5,
-  width = 8,
-  dpi = 1000,
-  compression = "lzw+p",
-  bg = "#F1F3F8"
+pdf(file.path("figures", fileName), width = 9.8, height = 6.8, bg = "#F1F3F8")
+gridExtra::grid.arrange(
+  plotList[[1]] +
+    theme(
+      plot.title = element_text(),
+      axis.title = element_blank(),
+      axis.text = ggplot2::element_text(size = 11),
+      legend.direction = "horizontal",
+      legend.position = c(.500, .898),
+      legend.title = element_text(size = 11),
+      legend.text = element_text(size = 11),
+      legend.box.background = ggplot2::element_blank(),
+      legend.background = ggplot2::element_rect(fill = "#F0F2F3"),
+      panel.grid.minor = element_blank()
+    ),
+  plotList[[2]] +
+    theme(
+      axis.text = ggplot2::element_text(size = 11),
+      plot.title = element_text(),
+      axis.title = element_blank(),
+      legend.position = "none",
+      panel.grid.minor = element_blank()
+      # axis.text.x = element_blank()
+    ),
+  plotList[[3]] +
+    theme(
+      axis.text = ggplot2::element_text(size = 11),
+      plot.title = element_text(),
+      axis.title = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "none"
+    ),
+  plotList[[4]] +
+    theme(
+      plot.title = element_text(),
+      axis.text = ggplot2::element_text(size = 11),
+      axis.title = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "none"
+    ),
+  heights = c(1, 1.05),
+  nrow = 2,
+  ncol = 2,
+  left = grid::textGrob(
+    "C-statistic for benefit",
+    rot = 90,
+    gp = grid::gpar(fontsize = 14)
+  ),
+  bottom = grid::textGrob(
+    "Method",
+    just = "center",
+    gp = grid::gpar(fontsize = 14)
+  )
 )
+
+dev.off()

@@ -772,6 +772,24 @@
       ],
       "Hash": "c5ba8f5056487403a299b91984be86ca"
     },
+    "ggthemes": {
+      "Package": "ggthemes",
+      "Version": "4.2.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "ggplot2",
+        "graphics",
+        "grid",
+        "methods",
+        "purrr",
+        "scales",
+        "stringr",
+        "tibble"
+      ],
+      "Hash": "617fb2c300f68e8b1ba21043fba88fd7"
+    },
     "glue": {
       "Package": "glue",
       "Version": "1.6.2",
