@@ -22,6 +22,7 @@ args_base <- as.character(args[1])
 args_sampleSize <- as.numeric(args[2])
 args_auc <- as.numeric(args[3])
 args_value <- as.character(args[4])
+args_sensitivity <- as.logical(args[5])
 
 library(tidyverse)
 library(glue)
@@ -40,7 +41,13 @@ source("code/ch4-CreateManuscriptPlots.R")
 source("code/ch4-PlotResult.R")
 source("code/ch4-Absolute.R")
 
-scenarioIds <- readr::read_csv("data/simulation/analysisIds.csv") %>%
+if (!args_sensitivity) {
+  scenarioIds <- readr::read_csv("data/simulation/analysisIds.csv")
+} else {
+  scenarioIds <- readr::read_csv("data/simulation/analysisIdsSensitivity.csv")
+}
+
+scenarioIds <- scenarioIds %>%
   filter(
     base == args_base,
     !(type %in% c("quadratic-moderate", "linear-moderate")),
@@ -395,9 +402,26 @@ fileName <- paste0(
     args_base,
     args_value,
     sep = "_"
-  ),
-  ".tiff"
+  )
 )
+
+if (args_sensitivity) {
+  fileName <- paste(fileName, "sensitivity", sep = "_")
+}
+
+fileName <- paste0(fileName, ".tiff")
+
+
+# fileName <- paste0(
+#   "ch4-",
+#   paste(
+#     metric,
+#     args_base,
+#     args_value,
+#     sep = "_"
+#   ),
+#   ".tiff"
+# )
 ggsave(
   file.path("figures", fileName),
   res,

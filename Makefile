@@ -267,6 +267,31 @@ data/simulation/scenario_675/settings.rds : code/GetRawData.R
 data/simulation/scenario_676/settings.rds : code/GetRawData.R
 	$< settings.rds simulation scenario_676
 
+data/simulation/scenario_677/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_677
+data/simulation/scenario_678/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_678
+data/simulation/scenario_679/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_679
+data/simulation/scenario_681/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_681
+data/simulation/scenario_682/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_682
+data/simulation/scenario_683/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_683
+data/simulation/scenario_685/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_685
+data/simulation/scenario_686/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_686
+data/simulation/scenario_687/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_687
+data/simulation/scenario_689/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_689
+data/simulation/scenario_690/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_690
+data/simulation/scenario_691/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_691
+
 # ===================================================================================================================
 # Make figures
 # ===================================================================================================================
@@ -354,7 +379,7 @@ figures/ch4-rmse_moderate_base.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_397/settings.rds \
 	data/simulation/scenario_398/settings.rds \
 	data/simulation/scenario_399/settings.rds
-	$< moderate 4250 0.75 base
+	$< moderate 4250 0.75 base FALSE
 
 figures/ch4-rmse_moderate_sample_size.tiff : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
@@ -374,7 +399,7 @@ figures/ch4-rmse_moderate_sample_size.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_421/settings.rds \
 	data/simulation/scenario_422/settings.rds \
 	data/simulation/scenario_423/settings.rds
-	$< moderate 17000 0.75 sample_size
+	$< moderate 17000 0.75 sample_size FALSE
 
 figures/ch4-rmse_moderate_auc.tiff : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
@@ -394,7 +419,7 @@ figures/ch4-rmse_moderate_auc.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_405/settings.rds \
 	data/simulation/scenario_406/settings.rds \
 	data/simulation/scenario_407/settings.rds 
-	$< moderate 4250 0.85 auc
+	$< moderate 4250 0.85 auc FALSE
 
 figures/ch4-rmse_high_base.tiff : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
@@ -414,7 +439,7 @@ figures/ch4-rmse_high_base.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_613/settings.rds \
 	data/simulation/scenario_614/settings.rds \
 	data/simulation/scenario_615/settings.rds
-	$< high 4250 0.75 base
+	$< high 4250 0.75 base FALSE
 
 figures/ch4-rmse_high_sample_size.tiff : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
@@ -434,7 +459,7 @@ figures/ch4-rmse_high_sample_size.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_637/settings.rds \
 	data/simulation/scenario_638/settings.rds \
 	data/simulation/scenario_639/settings.rds
-	$< high 17000 0.75 sample_size
+	$< high 17000 0.75 sample_size FALSE
 
 figures/ch4-rmse_high_auc.tiff : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
@@ -454,7 +479,7 @@ figures/ch4-rmse_high_auc.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_621/settings.rds \
 	data/simulation/scenario_622/settings.rds \
 	data/simulation/scenario_623/settings.rds
-	$< high 4250 0.85 auc
+	$< high 4250 0.85 auc FALSE
 
 figures/ch4-rmse_interaction_positive.pdf : code/ch4-PlotRmseInteractions.R\
 	code/ch4-CreateManuscriptPlots.R\
@@ -508,7 +533,25 @@ figures/ch4-rmse_interaction_combined.pdf : code/ch4-PlotRmseInteractions.R\
 	data/simulation/scenario_676/settings.rds
 	$< combined
 
-
+figures/ch4-rmse_moderate_base_sensitivity.tiff : code/ch4-PlotRmse.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	code/ch4-Absolute.R\
+	data/simulation/rmse.csv\
+	data/simulation/analysisIdsSensitivity.csv \
+	data/simulation/scenario_677/settings.rds \
+	data/simulation/scenario_678/settings.rds \
+	data/simulation/scenario_679/settings.rds \
+	data/simulation/scenario_681/settings.rds \
+	data/simulation/scenario_682/settings.rds \
+	data/simulation/scenario_683/settings.rds \
+	data/simulation/scenario_685/settings.rds \
+	data/simulation/scenario_686/settings.rds \
+	data/simulation/scenario_687/settings.rds \
+	data/simulation/scenario_689/settings.rds \
+	data/simulation/scenario_690/settings.rds \
+	data/simulation/scenario_691/settings.rds
+	$< moderate 4250 0.75 base TRUE 
 
 figures/ch4-discrimination_moderate_base.pdf : code/ch4-DiscriminationBase.R\
 	code/ch4-CreateManuscriptPlots.R\
