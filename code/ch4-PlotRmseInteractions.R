@@ -58,11 +58,21 @@ titles <- scenarioIds %>%
   unlist() %>%
   unique()
 
+fileName <- paste0(
+  "ch4-",
+  paste(
+    metric,
+    "interaction",
+    interactionType,
+    sep = "_"
+  ),
+  ".pdf"
+)
+
 if (interactionType != "combined") {
   titlePrefix <- paste0(
-    "**",
     LETTERS[1:3],
-    ".**"
+    ". "
   )
 } else {
   titlePrefix <- ""
@@ -143,18 +153,19 @@ if (interactionType == "combined") {
     plotList[[1]] +
       theme(
         panel.grid.minor = element_blank(),
-        plot.title = element_markdown(size = 9),
+        plot.title = element_markdown(size = 14),
         axis.title.x = ggplot2::element_blank(),
         axis.title.y = ggplot2::element_blank(),
-        axis.text.x = element_text(size = 8),
-        axis.text.y = element_text(size = 8),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
         legend.direction = "horizontal",
-        legend.title = element_text(size = 7.5),
-        legend.text = element_text(size = 7),
-        legend.position = c(.273, .97)
+        legend.title = element_text(size = 12.5),
+        legend.text = element_text(size = 12),
+        legend.position = c(.420, .938),
+        legend.background = ggplot2::element_rect(fill = "#F0F2F3")
       ),
     absolutePlots$plot[[1]] +
-      ggtitle("Simulated absolute benefit in treated patients") +
+      ggtitle("Simulated absolute benefit") +
       xlim(c(0, .5)) +
       scale_y_continuous(
         position = "right",
@@ -163,26 +174,29 @@ if (interactionType == "combined") {
       ) +
       scale_color_manual(
         name = "Constant treatment-\n related harm",
-        values = c(
-          "#26547C",
-          "#06D6A0",
-          "#EF476F"
-        )
+      values = c(
+        "#284E60",
+        "#F99B45",
+        "#63AAC0"
+      ),
       ) +
-      theme_bw() +
       theme(
-        panel.grid.minor = element_blank(),
-        axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
-        axis.text.x = element_text(size = 8),
-        axis.text.y = element_text(size = 8),
-        ggside.line = element_blank(),
-        ggside.rect = element_blank(),
-        ggside.axis.text = element_text(size = 8),
-        ggside.axis.ticks.length = unit(0, "pt"),
-        ggside.panel.scale = .07,
-        plot.title = element_markdown(size = 9),
-        legend.position = "none"
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank(),
+      # axis.text.x = element_blank(),
+      axis.text.x = element_text(size = 12),
+      axis.text.y = element_text(size = 12),
+      ggside.line = element_blank(),
+      ggside.rect = element_blank(),
+      ggside.axis.text = element_blank(),
+      ggside.axis.ticks.length = unit(0, "pt"),
+      ggside.panel.scale = .07,
+      plot.title = element_text(size = 14),
+      legend.position = "none"
       )
   )
   pp <- cowplot::plot_grid(
@@ -199,24 +213,26 @@ if (interactionType == "combined") {
         ")"
       )
     ),
-    rot = 90
+    rot = 90,
+    gp = gpar(fontsize = 14)
   )
 
   right.grob <- grid::textGrob(
     "Absolute benefit",
-    rot = 270
+    rot = 270,
+    gp = gpar(fontsize = 14)
   )
 
   bottom.left.grob <- grid::textGrob(
     "Method",
     just = "center",
-    gp = gpar(fontsize = 10)
+    gp = gpar(fontsize = 14)
   )
 
   bottom.right.grob <- grid::textGrob(
     "Baseline risk",
     just = "center",
-    gp = gpar(fontsize = 10)
+    gp = gpar(fontsize = 14)
   )
 
   bottom.grob <- grid.arrange(
@@ -225,7 +241,8 @@ if (interactionType == "combined") {
     nrow = 1,
     widths = c(2, 1)
   )
-  res <- grid.arrange(
+  pdf(file.path("figures", fileName), width = 9.8, height = 6.3, bg = "#F1F3F8")
+  grid.arrange(
     arrangeGrob(
       pp,
       left = left.grob,
@@ -233,23 +250,34 @@ if (interactionType == "combined") {
       bottom = bottom.grob
     )
   )
+  dev.off()
 } else {
   gridList <- list(
     plotList[[1]] +
       theme(
-        panel.grid.minor = element_blank(),
-        plot.title = element_markdown(size = 9),
-        axis.title.x = ggplot2::element_blank(),
-        axis.title.y = ggplot2::element_blank(),
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(size = 8),
-        legend.direction = "horizontal",
-        legend.title = element_text(size = 7.5),
-        legend.text = element_text(size = 7),
-        legend.position = c(.273, .87)
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank(),
+      # axis.text.x = element_blank(),
+      axis.text.x = element_text(size = 10),
+      axis.text.y = element_text(size = 10),
+      ggside.line = element_blank(),
+      ggside.rect = element_blank(),
+      ggside.axis.text = element_blank(),
+      ggside.axis.ticks.length = unit(0, "pt"),
+      ggside.panel.scale = .07,
+      plot.title = element_text(size = 12),
+      legend.direction = "horizontal",
+      legend.title = element_text(size = 7.5),
+      legend.text = element_text(size = 7),
+      legend.position = c(.281, .890),
+      legend.background = ggplot2::element_rect(fill = "#F0F2F3")
       ),
     absolutePlots$plot[[1]] +
-      ggtitle("Simulated absolute benefit in treated patients") +
+      ggtitle("Simulated absolute benefit") +
       xlim(c(0, .5)) +
       scale_y_continuous(
         position = "right",
@@ -259,38 +287,46 @@ if (interactionType == "combined") {
       scale_color_manual(
         name = "Constant treatment-\n related harm",
         values = c(
-          "#26547C",
-          "#06D6A0",
-          "#EF476F"
-        )
+          "#284E60",
+          "#F99B45",
+          "#63AAC0"
+        ),
       ) +
-      theme_bw() +
       theme(
-        panel.grid.minor = element_blank(),
-        plot.title = element_markdown(size = 9),
+        panel.grid.minor = ggplot2::element_blank(),
+        panel.grid.major.x = ggplot2::element_blank(),
+        plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+        panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
         axis.title.x = element_blank(),
         axis.title.y = element_blank(),
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(size = 8),
+        # axis.text.x = element_blank(),
+        axis.text.x = element_text(size = 10),
+        axis.text.y = element_text(size = 10),
         ggside.line = element_blank(),
         ggside.rect = element_blank(),
         ggside.axis.text = element_blank(),
         ggside.axis.ticks.length = unit(0, "pt"),
         ggside.panel.scale = .07,
+        plot.title = element_text(size = 12),
         legend.position = "none"
       ),
     plotList[[2]] +
       theme(
-        panel.grid.minor = element_blank(),
-        plot.title = element_markdown(size = 9),
-        axis.title = element_blank(),
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(size = 8),
+        panel.grid.minor = ggplot2::element_blank(),
+        panel.grid.major.x = ggplot2::element_blank(),
+        plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+        panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        # axis.text.x = element_blank(),
+        axis.text.x = element_text(size = 10),
+        axis.text.y = element_text(size = 10),
         ggside.line = element_blank(),
         ggside.rect = element_blank(),
         ggside.axis.text = element_blank(),
         ggside.axis.ticks.length = unit(0, "pt"),
         ggside.panel.scale = .07,
+        plot.title = element_text(size = 12),
         legend.position = "none"
       ),
     absolutePlots$plot[[2]] +
@@ -304,32 +340,46 @@ if (interactionType == "combined") {
       scale_color_manual(
         name = "Constant treatment-\n related harm",
         values = c(
-          "#26547C",
-          "#06D6A0",
-          "#EF476F"
-        )
+          "#284E60",
+          "#F99B45",
+          "#63AAC0"
+        ),
       ) +
-      theme_bw() +
       theme(
-        panel.grid.minor = element_blank(),
+        panel.grid.minor = ggplot2::element_blank(),
+        panel.grid.major.x = ggplot2::element_blank(),
+        plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+        panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
         axis.title.x = element_blank(),
         axis.title.y = element_blank(),
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(size = 8),
+        # axis.text.x = element_blank(),
+        axis.text.x = element_text(size = 10),
+        axis.text.y = element_text(size = 10),
         ggside.line = element_blank(),
         ggside.rect = element_blank(),
         ggside.axis.text = element_blank(),
         ggside.axis.ticks.length = unit(0, "pt"),
         ggside.panel.scale = .07,
-        plot.title = element_markdown(size = 9, color = "white"),
+        plot.title = element_text(size = 12, color = "#F1F3F8"),
         legend.position = "none"
       ),
     plotList[[3]] +
       theme(
-        panel.grid.minor = element_blank(),
-        plot.title = element_markdown(size = 9),
-        axis.title = element_blank(),
-        axis.text.x = element_text(size = 8),
+        panel.grid.minor = ggplot2::element_blank(),
+        panel.grid.major.x = ggplot2::element_blank(),
+        plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+        panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        # axis.text.x = element_blank(),
+        axis.text.x = element_text(size = 10),
+        axis.text.y = element_text(size = 10),
+        ggside.line = element_blank(),
+        ggside.rect = element_blank(),
+        ggside.axis.text = element_blank(),
+        ggside.axis.ticks.length = unit(0, "pt"),
+        ggside.panel.scale = .07,
+        plot.title = element_text(size = 12),
         legend.position = "none"
       ),
     absolutePlots$plot[[3]] +
@@ -343,26 +393,29 @@ if (interactionType == "combined") {
       scale_color_manual(
         name = "Constant treatment-\n related harm",
         values = c(
-          "#26547C",
-          "#06D6A0",
-          "#EF476F"
-        )
+          "#284E60",
+          "#F99B45",
+          "#63AAC0"
+        ),
       ) +
-      theme_bw() +
-      theme(
-        panel.grid.minor = element_blank(),
-        axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
-        axis.text.y = element_text(size = 8),
-        axis.text.x = element_text(size = 8),
-        ggside.line = element_blank(),
-        ggside.rect = element_blank(),
-        ggside.axis.text = element_blank(),
-        ggside.axis.ticks.length = unit(0, "pt"),
-        ggside.panel.scale = .07,
-        plot.title = element_markdown(size = 9, color = "white"),
-        legend.position = "none"
-      )
+    theme(
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.x = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "#F1F3F8", color = NA),
+      panel.background = ggplot2::element_rect(fill = "#F0F2F3", color = "black", linetype = 1),
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank(),
+      # axis.text.x = element_blank(),
+      axis.text.x = element_text(size = 10),
+      axis.text.y = element_text(size = 10),
+      ggside.line = element_blank(),
+      ggside.rect = element_blank(),
+      ggside.axis.text = element_blank(),
+      ggside.axis.ticks.length = unit(0, "pt"),
+      ggside.panel.scale = .07,
+        plot.title = element_text(size = 12, color = "#F1F3F8"),
+      legend.position = "none"
+    )
   )
   pp <- cowplot::plot_grid(
     gridList[[1]],
@@ -402,13 +455,15 @@ if (interactionType == "combined") {
     gp = gpar(fontsize = 10)
   )
 
+
   bottom.grob <- grid.arrange(
     bottom.left.grob,
     bottom.right.grob,
     nrow = 1,
     widths = c(2, 1)
   )
-  res <- grid.arrange(
+  pdf(file.path("figures", fileName), width = 9.8, height = 7.8, bg = "#F1F3F8")
+  grid.arrange(
     arrangeGrob(
       pp,
       left = left.grob,
@@ -416,24 +471,25 @@ if (interactionType == "combined") {
       bottom = bottom.grob
     )
   )
+  dev.off()
 }
 
 
-fileName <- paste0(
-  "ch4-",
-  paste(
-    metric,
-    "interaction",
-    interactionType,
-    sep = "_"
-  ),
-  ".tiff"
-)
-ggplot2::ggsave(
-  file.path("figures", fileName),
-  plot = res,
-  dpi = 1200,
-  width = 10,
-  height = 8,
-  compression = "lzw"
-)
+# fileName <- paste0(
+#   "ch4-",
+#   paste(
+#     metric,
+#     "interaction",
+#     interactionType,
+#     sep = "_"
+#   ),
+#   ".tiff"
+# )
+# ggplot2::ggsave(
+#   file.path("figures", fileName),
+#   plot = res,
+#   dpi = 1200,
+#   width = 10,
+#   height = 8,
+#   compression = "lzw"
+# )

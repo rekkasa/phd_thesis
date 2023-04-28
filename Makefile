@@ -456,7 +456,7 @@ figures/ch4-rmse_high_auc.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_623/settings.rds
 	$< high 4250 0.85 auc
 
-figures/ch4-rmse_interaction_positive.tiff : code/ch4-PlotRmseInteractions.R\
+figures/ch4-rmse_interaction_positive.pdf : code/ch4-PlotRmseInteractions.R\
 	code/ch4-CreateManuscriptPlots.R\
 	code/ch4-PlotResult.R\
 	code/ch4-Absolute.R\
@@ -475,6 +475,39 @@ figures/ch4-rmse_interaction_positive.tiff : code/ch4-PlotRmseInteractions.R\
 	data/simulation/scenario_659/settings.rds \
 	data/simulation/scenario_660/settings.rds
 	$< positive
+
+figures/ch4-rmse_interaction_negative.pdf : code/ch4-PlotRmseInteractions.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	code/ch4-Absolute.R\
+	data/simulation/rmse.csv\
+	data/simulation/analysisIdsInteractions.csv \
+	data/simulation/scenario_661/settings.rds \
+	data/simulation/scenario_662/settings.rds \
+	data/simulation/scenario_663/settings.rds \
+	data/simulation/scenario_664/settings.rds \
+	data/simulation/scenario_665/settings.rds \
+	data/simulation/scenario_666/settings.rds \
+	data/simulation/scenario_667/settings.rds \
+	data/simulation/scenario_668/settings.rds \
+	data/simulation/scenario_669/settings.rds \
+	data/simulation/scenario_670/settings.rds \
+	data/simulation/scenario_671/settings.rds \
+	data/simulation/scenario_672/settings.rds
+	$< negative
+
+figures/ch4-rmse_interaction_combined.pdf : code/ch4-PlotRmseInteractions.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	code/ch4-Absolute.R\
+	data/simulation/rmse.csv\
+	data/simulation/analysisIdsInteractions.csv \
+	data/simulation/scenario_673/settings.rds \
+	data/simulation/scenario_674/settings.rds \
+	data/simulation/scenario_675/settings.rds \
+	data/simulation/scenario_676/settings.rds
+	$< combined
+
 
 
 figures/ch4-discrimination_moderate_base.pdf : code/ch4-DiscriminationBase.R\
@@ -592,6 +625,9 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/ch4-discrimination_moderate_auc.pdf \
 	figures/ch4-calibration_moderate_sample_size.pdf \
 	figures/ch4-calibration_moderate_auc.pdf \
+	figures/ch4-rmse_interaction_positive.pdf \
+	figures/ch4-rmse_interaction_negative.pdf \
+	figures/ch4-rmse_interaction_combined.pdf \
 	figures/ch5-PositiveSlnb.pdf
 	bash -c "quarto render";
 
