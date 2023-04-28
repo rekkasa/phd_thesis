@@ -409,8 +409,11 @@ if (args_sensitivity) {
   fileName <- paste(fileName, "sensitivity", sep = "_")
 }
 
-fileName <- paste0(fileName, ".tiff")
+fileName <- paste0(fileName, ".pdf")
 
+pdf(file.path("figures", fileName), width = 9.8, height = 7.8, bg = "#F1F3F8")
+grid.arrange(arrangeGrob(pp, left = left.grob, right = right.grob, bottom = bottom.grob))
+dev.off()
 
 # fileName <- paste0(
 #   "ch4-",
@@ -422,12 +425,12 @@ fileName <- paste0(fileName, ".tiff")
 #   ),
 #   ".tiff"
 # )
-ggsave(
-  file.path("figures", fileName),
-  res,
-  height = 6.5,
-  width = 7.5,
-  dpi = 1000,
-  compression = "lzw+p",
-  bg = "#F1F3F8"
-)
+# ggsave(
+#   file.path("figures", fileName),
+#   res,
+#   height = 6.5,
+#   width = 7.5,
+#   dpi = 1000,
+#   compression = "lzw+p",
+#   bg = "#F1F3F8"
+# )

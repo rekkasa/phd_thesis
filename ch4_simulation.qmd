@@ -315,7 +315,7 @@ differences between approaches were similar to the base-case scenario
 (Supplement, Figure S10).
 
 ```{r fig-rmseBase, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications was calculated from a simulated super-population of size 500,000. The scenario with true constant relative treatment effect (panel A) had a true prediction c-statistic of 0.75 and sample size of 4250. The RMSE is also presented for strong linear (panel B), strong quadratic (panel C), and non-monotonic (panel D) deviations from constant relative treatment efects. Panels on the right side present the true relations between baseline risk (x-axis) and absolute treatment beneft (y-axis). The 2.5, 25, 50, 75, and 97.5 percentiles of the risk distribution are expressed by the boxplot on the top. The 2.5, 25, 50, 75, and 97.5 percentiles of the true beneft distributions are expressed by the boxplots on the side of the right-handside panel.",fig.align='center'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-rmse_moderate_base.tiff")))
+knitr::include_graphics(here::here("figures/ch4-rmse_moderate_base.pdf"))
 ```
 
 The adaptive approach had limited loss of performance in terms of the median
@@ -337,7 +337,7 @@ Due to the large sample size, the RMSE of the adaptive approach was even more
 similar to the best-performing method, and the constant relative treatment
 effect model was less often wrongly selected (Supplement, Figure S4).
 ```{r fig-rmseSampleSize, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples of size 17,000 rather than 4,250 in @fig-rmseBase. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-rmse_moderate_sample_size.tiff")))
+knitr::include_graphics(here::here("figures/ch4-rmse_moderate_sample_size.pdf"))
 ```
 
 Similarly, when we increased the c-statistic of the true prediction model to
@@ -352,7 +352,7 @@ treatment-related harms, respectively), leading to increased variability of the
 RMSE (Supplement, Figure S5).
 
 ```{r fig-rmseAuc, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples 4,250. True prediction c-statistic of 0.85. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-rmse_moderate_auc.tiff")))
+knitr::include_graphics(here::here("figures/ch4-rmse_moderate_auc.pdf"))
 ```
 
 With a true constant relative treatment effect, discrimination for benefit was

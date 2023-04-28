@@ -292,6 +292,55 @@ data/simulation/scenario_690/settings.rds : code/GetRawData.R
 data/simulation/scenario_691/settings.rds : code/GetRawData.R
 	$< settings.rds simulation scenario_691
 
+data/simulation/scenario_693/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_693
+data/simulation/scenario_694/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_694
+data/simulation/scenario_695/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_695
+data/simulation/scenario_697/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_697
+data/simulation/scenario_698/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_698
+data/simulation/scenario_699/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_699
+data/simulation/scenario_701/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_701
+data/simulation/scenario_702/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_702
+data/simulation/scenario_703/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_703
+data/simulation/scenario_705/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_705
+data/simulation/scenario_706/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_706
+data/simulation/scenario_707/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_707
+
+data/simulation/scenario_709/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_709
+data/simulation/scenario_710/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_710
+data/simulation/scenario_711/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_711
+data/simulation/scenario_713/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_713
+data/simulation/scenario_714/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_714
+data/simulation/scenario_715/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_715
+data/simulation/scenario_717/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_717
+data/simulation/scenario_718/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_718
+data/simulation/scenario_719/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_719
+data/simulation/scenario_721/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_721
+data/simulation/scenario_722/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_722
+data/simulation/scenario_723/settings.rds : code/GetRawData.R
+	$< settings.rds simulation scenario_723
 # ===================================================================================================================
 # Make figures
 # ===================================================================================================================
@@ -361,7 +410,7 @@ figures/ch3-AbsoluteResultsSafety.tiff : code/ch3-CombinedAbsoluteSafety.R \
 	data/framework/mappedOverallAbsoluteResults.rds 
 	$< acute_myocardial_infarction main
 
-figures/ch4-rmse_moderate_base.tiff : code/ch4-PlotRmse.R\
+figures/ch4-rmse_moderate_base.pdf : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
 	code/ch4-PlotResult.R\
 	code/ch4-Absolute.R\
@@ -381,7 +430,7 @@ figures/ch4-rmse_moderate_base.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_399/settings.rds
 	$< moderate 4250 0.75 base FALSE
 
-figures/ch4-rmse_moderate_sample_size.tiff : code/ch4-PlotRmse.R\
+figures/ch4-rmse_moderate_sample_size.pdf : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
 	code/ch4-PlotResult.R\
 	code/ch4-Absolute.R\
@@ -401,7 +450,7 @@ figures/ch4-rmse_moderate_sample_size.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_423/settings.rds
 	$< moderate 17000 0.75 sample_size FALSE
 
-figures/ch4-rmse_moderate_auc.tiff : code/ch4-PlotRmse.R\
+figures/ch4-rmse_moderate_auc.pdf : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
 	code/ch4-PlotResult.R\
 	code/ch4-Absolute.R\
@@ -421,7 +470,7 @@ figures/ch4-rmse_moderate_auc.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_407/settings.rds 
 	$< moderate 4250 0.85 auc FALSE
 
-figures/ch4-rmse_high_base.tiff : code/ch4-PlotRmse.R\
+figures/ch4-rmse_high_base.pdf : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
 	code/ch4-PlotResult.R\
 	code/ch4-Absolute.R\
@@ -441,7 +490,7 @@ figures/ch4-rmse_high_base.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_615/settings.rds
 	$< high 4250 0.75 base FALSE
 
-figures/ch4-rmse_high_sample_size.tiff : code/ch4-PlotRmse.R\
+figures/ch4-rmse_high_sample_size.pdf : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
 	code/ch4-PlotResult.R\
 	code/ch4-Absolute.R\
@@ -461,7 +510,7 @@ figures/ch4-rmse_high_sample_size.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_639/settings.rds
 	$< high 17000 0.75 sample_size FALSE
 
-figures/ch4-rmse_high_auc.tiff : code/ch4-PlotRmse.R\
+figures/ch4-rmse_high_auc.pdf : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
 	code/ch4-PlotResult.R\
 	code/ch4-Absolute.R\
@@ -533,7 +582,7 @@ figures/ch4-rmse_interaction_combined.pdf : code/ch4-PlotRmseInteractions.R\
 	data/simulation/scenario_676/settings.rds
 	$< combined
 
-figures/ch4-rmse_moderate_base_sensitivity.tiff : code/ch4-PlotRmse.R\
+figures/ch4-rmse_moderate_base_sensitivity.pdf : code/ch4-PlotRmse.R\
 	code/ch4-CreateManuscriptPlots.R\
 	code/ch4-PlotResult.R\
 	code/ch4-Absolute.R\
@@ -552,6 +601,46 @@ figures/ch4-rmse_moderate_base_sensitivity.tiff : code/ch4-PlotRmse.R\
 	data/simulation/scenario_690/settings.rds \
 	data/simulation/scenario_691/settings.rds
 	$< moderate 4250 0.75 base TRUE 
+
+figures/ch4-rmse_moderate_sample_size_sensitivity.pdf : code/ch4-PlotRmse.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	code/ch4-Absolute.R\
+	data/simulation/rmse.csv\
+	data/simulation/analysisIdsSensitivity.csv \
+	data/simulation/scenario_693/settings.rds \
+	data/simulation/scenario_694/settings.rds \
+	data/simulation/scenario_695/settings.rds \
+	data/simulation/scenario_697/settings.rds \
+	data/simulation/scenario_698/settings.rds \
+	data/simulation/scenario_699/settings.rds \
+	data/simulation/scenario_701/settings.rds \
+	data/simulation/scenario_702/settings.rds \
+	data/simulation/scenario_703/settings.rds \
+	data/simulation/scenario_705/settings.rds \
+	data/simulation/scenario_706/settings.rds \
+	data/simulation/scenario_707/settings.rds
+	$< moderate 17000 0.75 sample_size TRUE 
+
+figures/ch4-rmse_moderate_auc_sensitivity.pdf : code/ch4-PlotRmse.R\
+	code/ch4-CreateManuscriptPlots.R\
+	code/ch4-PlotResult.R\
+	code/ch4-Absolute.R\
+	data/simulation/rmse.csv\
+	data/simulation/analysisIdsSensitivity.csv \
+	data/simulation/scenario_709/settings.rds \
+	data/simulation/scenario_710/settings.rds \
+	data/simulation/scenario_711/settings.rds \
+	data/simulation/scenario_713/settings.rds \
+	data/simulation/scenario_714/settings.rds \
+	data/simulation/scenario_715/settings.rds \
+	data/simulation/scenario_717/settings.rds \
+	data/simulation/scenario_718/settings.rds \
+	data/simulation/scenario_719/settings.rds \
+	data/simulation/scenario_721/settings.rds \
+	data/simulation/scenario_722/settings.rds \
+	data/simulation/scenario_723/settings.rds
+	$< moderate 4250 0.85 auc TRUE 
 
 figures/ch4-discrimination_moderate_base.pdf : code/ch4-DiscriminationBase.R\
 	code/ch4-CreateManuscriptPlots.R\
@@ -655,9 +744,9 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/ch3-SupplementaryFigure9.pdf \
 	figures/ch3-SupplementaryFigure10.pdf \
 	figures/ch3-SupplementaryFigure11.pdf \
-	figures/ch4-rmse_moderate_base.tiff \
-	figures/ch4-rmse_moderate_sample_size.tiff \
-	figures/ch4-rmse_moderate_auc.tiff \
+	figures/ch4-rmse_moderate_base.pdf \
+	figures/ch4-rmse_moderate_sample_size.pdf \
+	figures/ch4-rmse_moderate_auc.pdf \
 	figures/ch4-discrimination_moderate_base.pdf \
 	figures/ch4-calibration_moderate_base.pdf \
 	figures/ch4-Gusto.tiff \
@@ -671,6 +760,9 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/ch4-rmse_interaction_positive.pdf \
 	figures/ch4-rmse_interaction_negative.pdf \
 	figures/ch4-rmse_interaction_combined.pdf \
+	figures/ch4-rmse_moderate_base_sensitivity.pdf \
+	figures/ch4-rmse_moderate_sample_size_sensitivity.pdf \
+	figures/ch4-rmse_moderate_auc_sensitivity.pdf \
 	figures/ch5-PositiveSlnb.pdf
 	bash -c "quarto render";
 

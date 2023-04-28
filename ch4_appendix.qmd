@@ -8,6 +8,7 @@ library(tidyverse)
 library(knitr)
 library(here)
 library(rms)
+library(kableExtra)
 
 d <- function(x, decimals = 2) {
   sprintf(paste0("%1.", decimals, "f"), x) 
@@ -191,16 +192,16 @@ $t_1,\dots,t_k$ are the selected knots [@harrell2017regression].
 
 
 ## Adaptive model selection frequencies {.unnumbered}
-```{r fig-ch4-supp1, cache=TRUE, echo=FALSE, fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. The scenario with the true constant relative treatment effect (first panel) had a true prediction AUC of 0.75 and sample size of 4,250.",fig.align='center', fig.pos="H"}
+```{r fig-ch4-supp1, cache=TRUE, echo=FALSE, fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. The scenario with the true constant relative treatment effect (first panel) had a true prediction AUC of 0.75 and sample size of 4,250.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_base.tiff")))
 ```
 
 
-```{r fig-ch4-supp2, cache=TRUE, echo=FALSE, fig.cap=" Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. Sample size is 17,000.",fig.align='center', fig.pos="H"}
+```{r fig-ch4-supp2, cache=TRUE, echo=FALSE, fig.cap=" Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. Sample size is 17,000.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_sample_size.tiff")))
 ```
 
-```{r fig-ch4-supp3, cache=TRUE, echo=FALSE, fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. AUC is 0.85.",fig.align='center', fig.pos="H"}
+```{r fig-ch4-supp3, cache=TRUE, echo=FALSE, fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. AUC is 0.85.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_auc.tiff")))
 ```
 
@@ -281,3 +282,202 @@ knitr::include_graphics("figures/ch4-rmse_interaction_negative.pdf")
 ```{r fig-ch4-supp10, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in a simulated sample of size 500,000 where treatment-covariate interactions 2 favoring treatment and 2 favoring the control were considered.",fig.align='center'}
 knitr::include_graphics("figures/ch4-rmse_interaction_combined.pdf")
 ```
+
+## Correlated covariates {.unnumbered}
+
+We analyzed the sensitivity of our results to correlation between baseline
+characteristics by incuding additional simulation scenarios. We sampled
+covariates $W_1,\dots,W_8\sim N(0, \Sigma)$. We generated four continuous
+baseline covariates $X_1=W_1,\dots,X_4=W_4$ and four binary covariates with 20\%
+prevalence $X_5=I(W_5>z_{0.8}), X_8=I(W_8>z_{0.8})$, where $I$ is the indicator
+function. We selected the covariance matrix $\Sigma$ such that
+$\text{cor}(X_i,X_j)=0.5$, for any $i\neq j$. More precisely, we set $\Sigma$ as
+can be seen below:
+
+\begin{equation*}
+\Sigma = 
+\begin{pmatrix}
+1       & 0.5   & 0.5   & 0.5   & 0.708 & 0.708 & 0.708 & 0.708 \\
+0.5     & 1     & 0.5   & 0.5   & 0.708 & 0.708 & 0.708 & 0.708 \\
+0.5     & 0.5   & 1     & 0.5   & 0.708 & 0.708 & 0.708 & 0.708 \\
+0.5     & 0.5   & 0.5   & 1     & 0.708 & 0.708 & 0.708 & 0.708 \\
+0.708   & 0.708 & 0.708 & 0.708 & 1     & 0.745 & 0.745 & 0.745 \\
+0.708   & 0.708 & 0.708 & 0.708 & 0.745 & 1     & 0.745 & 0.745 \\
+0.708   & 0.708 & 0.708 & 0.708 & 0.745 & 0.745 & 1     & 0.745 \\
+0.708   & 0.708 & 0.708 & 0.708 & 0.745 & 0.745 & 0.745 & 1
+\end{pmatrix}
+\end{equation*}
+
+In order to ensure that the simulated datasets were comparable to the original
+main simulation scenarios, i.e. control arm event rate of 20\% and true risk
+model c-statistic (AUC) equal to the target, we needed to adjust the
+coefficients of the true risk model. The exact settings of the simlation
+scenarios for the sensitivity analyses can be found in Table ***ONLINE TABLE***.
+
+We found no noticeable differences between methods for individualizing treatment
+benefit predictions compared to the results of the simulation scenarios where
+baseline covariates were assumed to be statistically independent (Figures
+[-@fig-ch4-supp11] to [-@fig-ch4-supp13]).
+
+```{r fig-ch4-supp11, cache=FALSE, echo=FALSE, fig.cap="RMSE of the sensitivity analyses assuming correlated baseline covariates. All considered methods were derived using simulated samples of size 4,250 and true prediction c-statistic of 0.75.",fig.align='center'}
+knitr::include_graphics(here::here("figures/ch4-rmse_moderate_base_sensitivity.pdf"))
+```
+
+```{r fig-ch4-supp12, cache=FALSE, echo=FALSE, fig.cap="RMSE of the sensitivity analyses assuming correlated baseline covariates. All considered methods were derived using simulated samples of size 17,000 and true prediction c-statistic of 0.75.",fig.align='center'}
+knitr::include_graphics(here::here("figures/ch4-rmse_moderate_sample_size_sensitivity.pdf"))
+```
+
+```{r fig-ch4-supp13, cache=FALSE, echo=FALSE, fig.cap="RMSE of the sensitivity analyses assuming correlated baseline covariates. All considered methods were derived using simulated samples of size 4,250 and true prediction c-statistic of 0.85",fig.align='center'}
+knitr::include_graphics(here::here("figures/ch4-rmse_moderate_auc_sensitivity.pdf"))
+```
+
+## Empirical illustration {.unnumbered}
+
+For predicting baseline risk of 30-day mortality we fitted a logistic regression
+model with age, Killip class (*Killip*), systolic blood pressure (*sysbp*),
+pulse rate (*pulse*), prior myocardial infarction (*pmi*), location of
+myocardial infarction (*miloc*) and treatment as the covariates. Baseline
+predictions were made setting treatment to 0.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+load(here::here("data/introduction/gusto.rda"))
+gusto <- gusto %>%
+  tibble() %>%
+  filter(!is.na(tpa))
+
+gusto <- gusto %>%
+  tibble() %>%
+  filter(tx != "SK+tPA") %>%
+  rename(
+    "outcome" = "day30",
+    "treatment" = "tpa"
+  )
+
+treatmentArms <- gusto %>%
+  group_by(treatment) %>%
+  summarise(n = n())
+
+prediction <- glm(
+   outcome ~ treatment + age + Killip + pmin(sysbp, 120) + lsp(pulse, 50) + pmi + miloc,
+   data = gusto,
+   family = "binomial",
+   maxit = 99
+)
+
+predictionCoefficients <- coef(prediction)
+predictionCoefficients <- predictionCoefficients[c(1, 3:12, 2)]
+```
+
+
+\begin{equation*}
+P(outcome=1|X=x) = \text{expit}(lp(x)),
+(\#eq:gusto1)
+\end{equation*}
+where 
+\begin{equation*}
+\begin{aligned}
+lp(x)=& \beta_0 + \beta_1 \text{age} + \beta_2 I(\text{Killip}=II) + \beta_3I(\text{Killip}=III) +\\
+&\beta_4 I(\text{Killip}=IV) + \beta_5min(\text{sysbp}, 120) + \beta_6 \text{pulse}+\\
+&\beta_7 max(\text{pulse - 50, 0}) + \beta_8 I(\text{pmi}=yes)+\\
+&\beta_9 I(\text{miloc}=Anterior) + \beta_9 I(\text{miloc}=Other) +\\
+&\gamma\times\text{treatment}
+\end{aligned}
+(\#eq:gusto2)
+\end{equation*}
+
+and $expit(x) = \frac{e^x}{1+e^x}$
+
+```{r, echo=FALSE}
+predictionSummary <- summary(prediction)
+# predictionSummaryCoef <- tibble(predictionSummary$coefficients) %>%
+#   rownames_to_column("Variable")
+
+predictionCoefficientsTable <- predictionSummary$coefficients %>%
+  as.data.frame() %>%
+  mutate(
+    rownames = c(
+      "Intercept",
+      "Age",
+      "Killip class = II",
+      "Killip class = III",
+      "Killip class = IV",
+      "Systolic blood pressure",
+      "Pulse rate (1)",
+      "Pulse rate (2)",
+      "Previous MI (yes)",
+      "MI location (Other)",
+      "MI location (Anterior)",
+      "Treatment"
+    )
+  ) %>%
+  rownames_to_column("Variable") %>%
+  select(-Variable) %>%
+  select(rownames, everything())
+  
+colnames(predictionCoefficientsTable) <- c(
+  "Variable",
+  "Estimate",
+  "stderror",
+  "zvalue",
+  "pvalue"
+)
+  
+kableExtra::kbl(
+  predictionCoefficientsTable,
+  format = "latex",
+  escape = FALSE,
+  longtable = TRUE,
+  align = c("l", rep("r", 4)),
+  booktabs = TRUE,
+  caption = "Coefficients of the prediction model for 30-day mortality, based on the data from GUSTO-I trial.",
+  digits = 3,
+  linesep = "",
+  format.args = list(
+    big.mar      = ",",
+    decimal.mark = "."
+  )
+) %>%
+  kableExtra::kable_styling(font_size = 7)
+```
+
+## Bootstrap confidence intervals {.unnumbered}
+
+Bootstrap confidence intervals in Figure 6 of the main manuscript were derived
+using the following approach:
+
+1. Draw with replacement a sample $D^*$ from the original dataset $D$ of the
+same size as $D$.
+
+2. Fit a logistic regression model $m^*$ in $D^*$ to predict 30-day mortality
+using the same covariates as the initial model $m$ estimated in $D$.
+
+3. Using the linear predictor $\hat{lp}^*$ of model $m^*$, fit models for
+constant relative treatment effect, linear interaction of the linear predictor
+with treatment, and interaction of treatment with a restricted cubic splines
+transformation of the linear predictor in $D^*$, as described in the *Methods*
+section.
+
+4. Based on $m^*$, use predicted risks to stratify $D^*$ into risk quarters and
+estimate absolute treatment effects within risk strata.
+
+5. Repeat steps 1 through 4 for a total of $b=10000$ times.
+
+6. Derive the confidence band for each continuous method (not risk
+stratification) as follows:
+    a. Split the range $(0, 0.25]$ of baseline risk values into 499 equal-length
+    intervals of the form $(p_0,p_1],\dots,(p_{498}, p_{499}]$.
+    b. For a specific point $p_k,k=1\dots,499$ and each method $i$, use the 2.5
+    and 97.5 percentiles of the $b$ absolute benefit estimates to define the
+    confidence interval $(q_{0.025}^{i,p_k},q_{0.975}^{i,p_k})$.
+7. Derive two sets of confidence intervals for the risk stratification approach
+as follows:
+    a. *Treatment effect:* For each risk quarter identified by the original
+    model $m$ developed on $D$, the confidence interval for the mean absolute
+    treatment effect is derived from the 2.5 and 97.5 percentiles of the mean
+    absolute treatment effects estimated within each risk quarter across the $b$
+    bootstrap samples.
+    b. *Mean predicted risk:* For each risk quarter identified by the original
+    model $m$, the confidence interval for the quarter-specific mean predicted
+    risk is derived from the 2.5 and 97.5 percentiles of the mean predicted
+    risks estimated within each risk quarter across the $b$ bootstrap samples.
+
