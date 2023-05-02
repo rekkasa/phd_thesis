@@ -191,34 +191,6 @@ analysis of effect heterogeneity in the treatment of hypertension, while a more
 thorough application in the treatment of osteoporosis was presented in
 @sec-osteoporosis.
 
-\begin{blackbox}[label={frameworkBox},sidebyside,breakable]{Standardized framework}
-\begin{minipage}[b]{\linewidth}
-\textbf{Framework steps}
-\begin{enumerate}
-\item \textit{Definition of the research aim}
-\item\textit{Identification of the relevant databases}
-\item\textit{Development of prediction model(s) for the outcome(s) of interest}
-\item\textit{Estimation of relative and absolute treatment effects within strata of predicted outcome risk}
-\item\textit{Presentation of the results}
-\end{enumerate}
-\end{minipage}
-
-\tcblower
-
-\begin{minipage}[b]{\linewidth}
-\textbf{Demonstration}
-\begin{enumerate}
-\item Compare the effect of thiazide or thiazide-like diuretics to the effect of ACE inhibitors in patients with established hypertension with respect to 12 outcomes (acute myocardial infarction; hospitalization with heart failure; ischemic or hemorrhagic stroke; acute renal failure; kidney disease; cough; hyperkalemia; hypokalemia; gastrointestinal bleeding; hyponatremia; hypotension; angioedema).
-\item IBM MarketScan Commercial Claims and Encounters, IBM MarketScan Multi-State Medicaid, and IBM MarketScan Medicare Supplemental Beneficiaries.
-\item In each database, develop prediction models for acute myocardial infarction on the 1:1 propensity score-matched subset of the pooled thiazide or thiazide-like diuretics and ACE inhibitor treatment arms.
-\item In each database, stratify the population in patients below 1\%, between 1\% and 1.5\% and above 1.5\% acute myocardial infarction risk. Within risk groups estimate relative treatment effects from proportional hazards models and absolute treatment effects from the difference of Kaplan-Meier estimates on day 730 after treatment initiation. Adjust for propensity scores for all estimates.
-\item Overall treatment effects favoring ACE inhibitors were mainly driven by patients with predicted acute myocardial risk above 1.5\%.
-\end{enumerate}
-\end{minipage}
-
-\end{blackbox}
-
-
 For the definition of the research aim we need to clearly define the set of
 characteristics required to qualify patients for any of the following sets: the
 treatment set (i.e. the patients within a database receiving the treatment under
@@ -250,6 +222,32 @@ distribution and contrast it to the theoretical one. Once all the results have
 been generated and evaluated for their validity, risk stratified forest plots of
 treatment effects on both the relative and the absolute scale can be generated
 in all available databases.
+
+\begin{blackbox}[label={frameworkBox},sidebyside,breakable]{Standardized framework}
+\begin{minipage}[b]{\linewidth}
+\textbf{Framework steps}
+\begin{enumerate}
+\item \textit{Definition of the research aim}
+\item\textit{Identification of the relevant databases}
+\item\textit{Development of prediction model(s) for the outcome(s) of interest}
+\item\textit{Estimation of relative and absolute treatment effects within strata of predicted outcome risk}
+\item\textit{Presentation of the results}
+\end{enumerate}
+\end{minipage}
+
+\tcblower
+
+\begin{minipage}[b]{\linewidth}
+\textbf{Demonstration}
+\begin{enumerate}
+\item Compare the effect of thiazide or thiazide-like diuretics to the effect of ACE inhibitors in patients with established hypertension with respect to 12 outcomes (acute myocardial infarction; hospitalization with heart failure; ischemic or hemorrhagic stroke; acute renal failure; kidney disease; cough; hyperkalemia; hypokalemia; gastrointestinal bleeding; hyponatremia; hypotension; angioedema).
+\item IBM MarketScan Commercial Claims and Encounters, IBM MarketScan Multi-State Medicaid, and IBM MarketScan Medicare Supplemental Beneficiaries.
+\item In each database, develop prediction models for acute myocardial infarction on the 1:1 propensity score-matched subset of the pooled thiazide or thiazide-like diuretics and ACE inhibitor treatment arms.
+\item In each database, stratify the population in patients below 1\%, between 1\% and 1.5\% and above 1.5\% acute myocardial infarction risk. Within risk groups estimate relative treatment effects from proportional hazards models and absolute treatment effects from the difference of Kaplan-Meier estimates on day 730 after treatment initiation. Adjust for propensity scores for all estimates.
+\item Overall treatment effects favoring ACE inhibitors were mainly driven by patients with predicted acute myocardial risk above 1.5\%.
+\end{enumerate}
+\end{minipage}
+\end{blackbox}
 
 The Predictive Approaches to Treatment effect Heterogeneity (PATH) statement
 aimed to provide guidance on the conduct of predictive analyses of treatment

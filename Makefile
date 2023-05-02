@@ -405,6 +405,7 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	references.bib \
 	ch3_appendix.qmd \
 	ch4_appendix.qmd \
+	summary.qmd \
 	data/introduction/gusto.rda \
 	figures/hypertensionGuidelines.png \
 	figures/PowerPlot.tiff \
@@ -450,7 +451,10 @@ _book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
 	figures/ch4-rmse_moderate_base_sensitivity.pdf \
 	figures/ch4-rmse_moderate_sample_size_sensitivity.pdf \
 	figures/ch4-rmse_moderate_auc_sensitivity.pdf \
-	figures/ch5-PositiveSlnb.pdf
+	figures/ch5-PositiveSlnb.pdf \
+	figures/ch6-Figure1.pdf \
+	figures/ch6-Figure2.pdf \
+	figures/ch6-Figure3.pdf
 	bash -c "quarto render";
 
 

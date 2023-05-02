@@ -1,0 +1,86 @@
+# Summary {.unnumbered}
+
+In this thesis we focus on baseline risk and its utilization for guiding
+medical decision making. Development of risk prediction models, i.e.
+mathematical functions relating the presence of the outcome of interest to a set
+of measured predictors (covariates), is crucial for personalizing outcome risk
+and, consequently, individualizing treatment decisions. To this end we develop
+risk prediction models for several outcomes of interest in the fields of cancer
+research and COVID-19.
+
+Overall results from randomized controlled trials or large observational studies
+often do not apply to individual patients and mainly represent a summary of
+heterogeneous individual treatment effects. If variation of these individual
+effects is large, then reliance on overall estimates may result in sub-optimal
+decisions. Evaluation of treatment effect heterogeneity has been a focal point
+of methods research in recent years. To this end we systematically review the
+literature on predictive approaches for the evaluation of treatment effect
+heterogeneity. In addition, we develop methods for risk-based assessment of
+treatment effect heterogeneity, capitalizing on the strong relationship between
+baseline risk and treatment effect.
+
+In @sec-review we present the results of a literature review using a broad
+search strategy, complemented by suggestions from a technical expert panel. We
+classify the identified approaches into three categories (risk-based, treatment
+effect modeling, and optimal treatment regime methods). Risk-based methods use
+only prognostic factors to define patient subgroups, relying on the mathematical
+dependency of the absolute risk difference on baseline risk. Treatment effect
+modeling methods use both prognostic factors and treatment effect modifiers to
+explore characteristics that interact with the effects of therapy on a relative
+scale. Finally, optimal treatment regime methods focus primarily on treatment
+effect modifiers to classify the trial population into those who benefit from
+treatment and those who do not.
+
+In @sec-framework we present a standardized framework for the evaluation of
+treatment effect heterogeneity using a risk-based approach. The proposed
+framework consists of five steps: 1) definition of the research aim, i.e., the
+population, the treatment, the comparator and the outcome(s) of interest; 2)
+identification of relevant databases; 3) development of a prediction model for
+the outcome(s) of interest; 4) estimation of relative and absolute treatment
+effect within strata of predicted risk, after adjusting for observed
+confounding; 5) presentation of the results. We demonstrate the application  our
+framework by evaluating heterogeneity of the effect of thiazide or thiazide-like
+diuretics versus angiotensin-converting enzyme inhibitors on three efficacy and
+nine safety outcomes across three observational databases. We show that
+patients at low risk of acute myocardial infarction receive negligible absolute
+benefits for all three efficacy outcomes, though they are more pronounced in the
+highest risk group, especially for acute myocardial infarction.
+
+In @sec-simulation we present the results of an extensive simulation study for
+the comparison of easily applicable risk-based methods for the prediction of
+individualized treatment effects in the setting of randomized controlled trials.
+More specifically, we compare models with a constant relative treatment effect,
+models including a linear interaction of treatment with the prognostic index of
+baseline risk, and models including an interaction of treatment with restricted
+cubic spline transformation of the prognostic index. We also consider an
+adaptive approach using Akaike's information criterion for automatically
+selecting among the previous methods. We show that the linear-interaction model
+has optimal or close-to-optimal performance across many simulation scenarios
+with moderate sample size. The restricted cubic splines model requires strong
+non-linear deviations from a constant treatment effect larger sample size. We
+also demonstrate the application of these methods in actual data using the
+dataset of the GUSTO-I trial.
+
+In @sec-melanoma we develop prediction models for recurrence, distant metastasis
+and overall mortality to be used for the management of patients with sentinel
+node-positive melanoma. For model development we use data of patients from nine
+European Organization for Research and Treatment of Cancer centers. We use Cox
+regression analysis for the prediction of all outcomes of interest. We
+externally validate in a prospective cohort sentinel node-positive melanoma
+patients, showing consistency of results. Finally, we develop a nomogram for
+graphical presentation of our derived prediction models.
+
+In @sec-covid we develop simple and valid models for predicting mortality and
+need for intensive care unit admission in patients presenting at the emergency
+department with suspected COVID-19. We use first-wave patients from March till
+August 2020 for model development and second-wave patients from September till
+December 2020 for model validation. We develop separate logistic regression
+models for in-hospital death and for need for admission to the intensive care
+unit, both within 28 days after hospital admission. We develop a simple model
+with age, respiratory rate, C-reactive protein, lactate dehydrogenase, and urea
+for the prediction of in-hospital death. For the prediction of admission to the
+intensive care unit we recalibrate the mortality prediction model including a
+linear spline with a knot at age 70 to account for the decreasing chance of
+admission to the intensive care unit for older patients. Our prediction model
+displays good discrimination and calibration the development dataset, while it
+also maintains good performance in our temporal validation analysis.
