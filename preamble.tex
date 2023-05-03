@@ -16,6 +16,14 @@
 \usepackage{bm}
 \usepackage[paperheight=24cm,paperwidth=17cm,top=1in,bottom=1in]{geometry}
 
+\usepackage{tocloft}
+\renewcommand{\cftchapfont}{\footnotesize}
+\renewcommand\cftchappagefont{\normalfont}
+\setlength{\cftbeforechapskip}{3pt}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+
 \setlength{\parskip}{0.1cm}
 \setlength{\parindent}{0cm}
 \linespread{1.1}
@@ -31,11 +39,15 @@
 \fancyfoot[C]{\thepage} %footer
 \pagestyle{fancy}
 
-
-\newcommand\Chapter[2]{
-  \chapter[#1: {\itshape#2}]{#1\\\medskip\smaller\itshape#2}
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
 }
 
+
+\assignpagestyle{\chapter}{empty}
 
 \titleformat{\chapter}[display]
   {\bfseries\Large}

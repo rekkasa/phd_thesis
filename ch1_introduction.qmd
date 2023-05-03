@@ -1,10 +1,12 @@
-# Introduction
+# Introduction {.unnumbered}
+
+\blfootnote{Chapter based on ...}
 
 ```{=tex}
 \vspace*{\fill}\par
 \pagebreak
 ```
-## Prediction of outcome risk
+## Prediction of outcome risk {.unnumbered}
 
 A patient's baseline risk---her or his probability of experiencing an outcome of
 interest---is a crucial component of medical decision making. For example, in
@@ -32,7 +34,7 @@ for making truly informed clinical decisions [@kravitz2004evidence]. Predicting
 more individualized responses to treatment is the challenge of this thesis.
 
 
-## Prediction of treatment effect
+## Prediction of treatment effect {.unnumbered}
 
 In order to provide the most optimal medical care, doctors are advised to align
 their clinical practice with the results of well-conducted clinical trials, or
@@ -82,7 +84,7 @@ analyses attempts to mitigate these issues [@guyatt1993users;@sun2014how;@rothwe
 grid::grid.raster(tiff::readTIFF(here::here("figures/PowerPlot.tiff")))
 ```
 
-## Prediction of treatment effect using outcome risk
+## Prediction of treatment effect using outcome risk {.unnumbered}
 
 Baseline risk is an important determinant of treatment effect
 [@kent2010assessing;@kent2018personalized]. It sets an upper bound on the
@@ -128,7 +130,7 @@ aforementioned conditions are not met [@klaveren2018proposed].
 grid::grid.raster(tiff::readTIFF(here::here("figures/ScalePlot.tiff")))
 ```
 
-## Observational data
+## Observational data {.unnumbered}
 
 Healthcare data is routinely collected by general practitioners, hospitals,
 insurance companies, and many other private or public bodies and is becoming
@@ -214,7 +216,7 @@ libraries for developing risk prediction models and for correcting for
 confounding are available and---capitalizing on OMOP-CDM---can be easily applied
 across databases with millions of patients.
 
-## Aims
+## Aims {.unnumbered}
 
 The overall aim of this thesis is to explore the use of baseline risk prediction
 models as the basis for medical decision making. We will study and apply methods
