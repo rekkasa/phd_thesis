@@ -1,4 +1,6 @@
-# COVID outcome prediction in the emergency department (COPE): using retrospective Dutch hospital data to develop simple and valid models for predicting mortality and need for intensive care unit admission in patients who present at the emergency department with suspected COVID-19 {#sec-covid}
+# COVID outcome prediction in the emergency department (COPE) {#sec-covid}
+
+\blfootnote{Chapter based on \textit{van Klaveren D, Rekkas A, Alsma J, et alCOVID outcome prediction in the emergency department (COPE): using retrospective Dutch hospital data to develop simple and valid models for predicting mortality and need for intensive care unit admission in patients who present at the emergency department with suspected COVID-19BMJ Open 2021;11:e051468. doi: 10.1136/bmjopen-2021-051468}}
 
 \chaptermark{COVID Outcome Prediction in the emergency department}
 \vspace*{\fill}\par
@@ -140,7 +142,7 @@ strategy—to estimate a uniform shrinkage factor [@harrell2015regression]. The
 regression coefficients of the final model were multiplied by this shrinkage
 factor, and the model intercept was adjusted to ensure overall calibration of
 the model. We used the R-package rms (Regression Modelling Strategies) for
-regression analyses [@r_core_team2020project;@harrell2017package].
+regression analyses [@r_core_team2020project;@harrell2017rms].
 
 ### Model validation {.unnumbered}
 
@@ -221,7 +223,7 @@ Based on a full model with restricted cubic splines of all potential variables,
 we decided to transform all biomarkers and RR with the natural logarithm, while
 keeping all other predictor effects linear. Some strong univariable associations
 with death—for example of logarithmically transformed lymphocytes and creatinine
-(Table \ref{table:ch6-tabl3}; Wald statistics 48 and 133, respectively)—were
+(Table \ref{table:ch6-table3}; Wald statistics 48 and 133, respectively)—were
 very weak in multivariable analysis (Table \ref{table:ch6-table3}; Wald
 statistics 0 and 4, respectively). The predictive ability of the resulting full
 multivariable regression model was mainly driven by age, LDH, urea, RR, CRP,

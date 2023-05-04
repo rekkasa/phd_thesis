@@ -1,4 +1,4 @@
-# A standardized framework for risk-based assessment of treatment effect heterogeneity in observational healthcare databases {#sec-framework-appendix}
+# A standardized framework for risk-based assessment of treatment effect heterogeneity {#sec-framework-appendix}
 \vspace*{\fill}\par
 \pagebreak
 

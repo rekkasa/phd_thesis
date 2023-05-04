@@ -1,6 +1,5 @@
 # Introduction {.unnumbered}
 
-\blfootnote{Chapter based on ...}
 
 ```{=tex}
 \vspace*{\fill}\par

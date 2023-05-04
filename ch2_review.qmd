@@ -1,4 +1,6 @@
 # Literature review {#sec-review}
+\blfootnote{Chapter based on \textit{Rekkas, A., Paulus, J.K., Raman, G. et al. Predictive approaches to heterogeneous treatment effects: a scoping review. BMC Med Res Methodol 20, 264 (2020). https://doi.org/10.1186/s12874-020-01145-1
+}}
 
 \vspace*{\fill}\par
 \pagebreak
@@ -104,7 +106,7 @@ the benefits of therapy.
 Due to the absence of medical subject headings (MeSH) for HTE, we used a
 relatively broad search strategy to maximize sensitivity. For the time period
 1/1/2000 through 8/9/2018, we searched Medline and Cochrane Central using the
-text word search strategy from Table \ref{tab:searchStrategy}. We also retrieved
+text word search strategy from Table \ref{table:searchStrategy}. We also retrieved
 seminal articles suggested by a technical expert panel (TEP). The TEP was
 comprised of 16 experts who represented various perspectives on predictive HTE
 analyses, including expertise in HTE, prediction modeling, clinical trials, and
@@ -140,7 +142,7 @@ available in the PATH Statement [@kent2019predictive1;@kent2019predictive2].
 \bottomrule
 \end{tabular}
 \caption{Search strategy for the study.}
-\label{tab:searchStrategy}
+\label{table:searchStrategy}
 \end{table}
 
 We sought papers that developed or evaluated methods for predictive HTE in the
@@ -640,7 +642,7 @@ treatment assigned based on predicted absolute benefits and the treatment
 threshold. The model’s clinical relevance is derived by comparing its net
 benefit to the one of a treat-all policy.
 
-Van Klaveren et al. [@klaveren2018proposed2] defined a measure of discrimination
+Van Klaveren et al. [@klaveren2018proposed] defined a measure of discrimination
 for treatment effect modeling. A model’s ability to discriminate between
 patients with higher or lower benefits is challenging, since treatment benefits
 are unobservable in the individual patient (since only one of two counterfactual

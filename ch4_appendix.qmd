@@ -1,4 +1,4 @@
-# Estimating individualized treatment effects from randomized controlled trials: A simulation study to compare risk-based approaches {#sec-simulation-appendix}
+# Estimating individualized treatment effects from randomized controlled trials {#sec-simulation-appendix}
 \chaptermark{Individualized treatment effects}
 \vspace*{\fill}\par
 \pagebreak
