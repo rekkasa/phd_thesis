@@ -1,8 +1,8 @@
 project:
   type: book
 book:
-  title: "Baseline risk in medical decision making"
-  subtitle: "From outcome prediction to the assessment of treatment effect heterogeneity"
+  title: "Beyond the average"
+  subtitle: "Risk-based approaches to medical decision making"
   author: "Alexandros Rekkas"
   date: "3/19/2023"
   chapters:
