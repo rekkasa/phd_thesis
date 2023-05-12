@@ -391,7 +391,7 @@ figures/ch4-calibration_moderate_auc.pdf : code/ch4-CalibrationBase.R\
 # ===================================================================================================================
 # Make thesis
 # ===================================================================================================================
-_book/Baseline-risk-in-medical-decision-making.pdf : _quarto.yml \
+_book/Beyond-the-average.pdf : _quarto.yml \
 	preamble.tex \
 	index.qmd \
 	ch1_introduction.qmd \

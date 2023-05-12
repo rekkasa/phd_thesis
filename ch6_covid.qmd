@@ -142,7 +142,7 @@ strategy—to estimate a uniform shrinkage factor [@harrell2015regression]. The
 regression coefficients of the final model were multiplied by this shrinkage
 factor, and the model intercept was adjusted to ensure overall calibration of
 the model. We used the R-package rms (Regression Modelling Strategies) for
-regression analyses [@r_core_team2020project;@harrell2017rms].
+regression analyses [@r_core_team2020project;@jr2023rms].
 
 ### Model validation {.unnumbered}
 

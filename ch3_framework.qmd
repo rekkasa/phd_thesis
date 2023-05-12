@@ -41,16 +41,17 @@ benefit-harm trade-off between alternative treatments.
 Treatment effects often vary substantially across individual patients, causing
 overall effect estimates to be inaccurate for a significant proportion of the
 patients at hand [@rothwell1995can;@kravitz2004evidence]. Understanding this
-heterogeneity of treatment effects (HTE) has been crucial for both personalized
-(or precision) medicine and comparative effectiveness research, giving rise to a
+heterogeneity of treatment effects has been crucial for both personalized (or
+precision) medicine and comparative effectiveness research, giving rise to a
 wide range of approaches for its discovery, evaluation and application in
-clinical practice. A common approach to evaluating HTE in clinical trials is
-through subgroup analyses. However, as these analyses are rarely adequately
-powered, they can lead to false conclusions of absence of HTE or exaggerate its
-presence [@hayward2006multivariable;@kent2018personalized]. In addition,
-patients differ in multiple characteristics simultaneously, resulting in much
-richer HTE compared to the heterogeneity explored with regular
-one-variable-at-a-time subgroup analyses.
+clinical practice. A common approach to evaluating heterogeneity of treatment
+effect in clinical trials is through subgroup analyses. However, as these
+analyses are rarely adequately powered, they can lead to false conclusions of
+absence of heterogeneiy of treatment effect or exaggerate its presence
+[@hayward2006multivariable;@kent2018personalized]. In addition, patients differ
+in multiple characteristics simultaneously, resulting in much richer
+heterogeneit of treatment effect compared to the heterogeneity explored with
+regular one-variable-at-a-time subgroup analyses.
 
 Baseline risk is a summary score inherently related to treatment effect that can
 be used to represent the variability in patient characteristics
@@ -64,14 +65,14 @@ than low-risk patients [@sussman2015improving].
 
 The recently proposed Predictive Approaches to Treatment effect Heterogeneity
 (PATH) statement provides systematic guidance on the application of risk-based
-methods for the assessment of HTE in randomized controlled trial (RCT) data
-[@kent2019predictive1;@kent2019predictive2]. After risk-stratifying patients
-using an existing or an internally derived prediction model, risk
-stratum-specific estimates of relative and absolute treatment effect are
-evaluated. Several methods for predictive HTE analysis have been adapted for use
-in observational data, but risk-based methods are still not readily available
-and have been highlighted as an important future research need
-[@kent2019predictive2].
+methods for the assessment of heterogeneity of treatment effect in randomized
+controlled trial (RCT) data [@kent2019predictive1;@kent2019predictive2]. After
+risk-stratifying patients using an existing or an internally derived prediction
+model, risk stratum-specific estimates of relative and absolute treatment effect
+are evaluated. Several methods for predictive analysis heterogeneity of
+treatment effect have been adapted for use in observational data, but risk-based
+methods are still not readily available and have been highlighted as an
+important future research need [@kent2019predictive2].
 
 The Observational Health Data Science and Informatics (OHDSI) collaborative has
 established a global network of data partners and researchers that aim to bring
@@ -487,35 +488,36 @@ interest, while also capturing key patient characteristics. They contain readily
 available data on patient sub-populations of interest on which no RCT has
 focused before either due to logistical or ethical reasons. However,
 observational databases can be susceptible to biases, poorly measured outcomes
-and missingness, which may obscure true HTE or falsely indicate it when there is
-none [@varadhan2013framework]. Therefore, inferences on both overall treatment
-effect estimates and HTE need to rely on strong—often unverifiable—assumptions,
-despite the advancements and guidance on best practices. When evaluating
-treatment effect heterogeneity using a risk-based approach these issues may be
-compounded, mainly because of the risk of conflating confounding and effect
-modification. Well-designed observational studies on average replicate RCT
-results, even though often differences in magnitude may occur
-[@anglemyer2014healthcare]. Our framework is in line with the recently suggested
-paradigm of high-throughput observational studies using consistent and
-standardized methods for improving reproducibility in observational research
-[@schuemie2018improving]. However, more empirical research comparing analyses of
-observational data and RCTs is required to assess the conditions under which
-different approaches for evaluating treatment effect heterogeneity provide
-credible results. Our software package can help support this research.
+and missingness, which may obscure true heterogeneity of treatment effect or
+falsely indicate it when there is none [@varadhan2013framework]. Therefore,
+inferences on both overall treatment effect estimates and heterogeneity of
+treatment effect need to rely on strong—often unverifiable—assumptions, despite
+the advancements and guidance on best practices. When evaluating treatment
+effect heterogeneity using a risk-based approach these issues may be compounded,
+mainly because of the risk of conflating confounding and effect modification.
+Well-designed observational studies on average replicate RCT results, even
+though often differences in magnitude may occur [@anglemyer2014healthcare]. Our
+framework is in line with the recently suggested paradigm of high-throughput
+observational studies using consistent and standardized methods for improving
+reproducibility in observational research [@schuemie2018improving]. However,
+more empirical research comparing analyses of observational data and RCTs is
+required to assess the conditions under which different approaches for
+evaluating treatment effect heterogeneity provide credible results. Our software
+package can help support this research.
 
-Our framework highlights the scale dependency of HTE and how it relates to
-baseline risk. Treatment effect is mathematically determined by baseline risk,
-if we assume a constant non-zero effect size [@dahabreh2016using]. Patients with
-low baseline risk can only experience minimal benefits, before their risk is
-reduced to zero. In contrast, high risk patients can potentially have much
-larger absolute benefits. This becomes evident when evaluating the safety of
-thiazide or thiazide-like diuretics on angioedema and cough, both adverse events
-linked to treatment with ACE inhibitors. For angioedema, the substantial
-relative risk increase with ACE inhibitors only translated in a small risk
-increase on the absolute scale due to the limited baseline angioedema risk.
-Conversely, despite the small relative cough risk increase of ACE inhibitors,
-the large baseline cough risk resulted in larger absolute risk differences,
-compared to the other considered outcomes.
+Our framework highlights the scale dependency of heterogeneity of treatment
+effect and how it relates to baseline risk. Treatment effect is mathematically
+determined by baseline risk, if we assume a constant non-zero effect size
+[@dahabreh2016using]. Patients with low baseline risk can only experience
+minimal benefits, before their risk is reduced to zero. In contrast, high risk
+patients can potentially have much larger absolute benefits. This becomes
+evident when evaluating the safety of thiazide or thiazide-like diuretics on
+angioedema and cough, both adverse events linked to treatment with ACE
+inhibitors. For angioedema, the substantial relative risk increase with ACE
+inhibitors only translated in a small risk increase on the absolute scale due to
+the limited baseline angioedema risk. Conversely, despite the small relative
+cough risk increase of ACE inhibitors, the large baseline cough risk resulted in
+larger absolute risk differences, compared to the other considered outcomes.
 
 For patients with comorbidities the Guidelines of the American College of
 Cardiology often recommend initiation of treatment with ACE inhibitors, e.g. for

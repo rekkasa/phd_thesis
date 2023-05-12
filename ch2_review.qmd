@@ -57,61 +57,69 @@ the outcome of interest (both primary and safety), it can be unclear to whom the
 overall average benefit-harm trade-offs actually apply---even among those
 included in the trial [@rothwell1995can;@kent2007limitations]. Precision
 medicine aims to target the appropriate treatment to the appropriate patients.
-As such, analysis of heterogeneity of treatment effect (HTE), i.e. non-random
+As such, analysis of heterogeneity of treatment effect, i.e. non-random
 variation in the direction or magnitude of a treatment effect for subgroups
 within a population [@varadhan2013framework], is the cornerstone of precision
 medicine; its goal is to predict the optimal treatments at the individual level,
 accounting for an individual’s risk for harm and benefit outcomes.
 
-In this scoping review [@daudt2013enhancing], we aim to identify and categorize the
-variety of regression-based approaches for predictive heterogeneity of treatment
-effects analysis. Predictive approaches to HTE analyses are those that provide
-individualized predictions of potential outcomes in a particular patient with
-one intervention versus an alternative or, alternatively, that can predict which
-of 2 or more treatments will be better for a particular patient, taking into
-account multiple relevant patient characteristics. We distinguish these analyses
-from the typical onevariable-at-a-time subgroup analyses that appear in forest
-plots of most major trial reports, and from other HTE analyses which explore or
-confirm hypotheses regarding whether a specific covariate or biomarker modifies
-the effects of therapy. To guide future work on individualizing treatment
-decisions, we aimed to summarize the methodological literature on regression
-modeling approaches to predictive HTE analysis.
+In this scoping review [@daudt2013enhancing], we aim to identify and categorize
+the variety of regression-based approaches for predictive heterogeneity of
+treatment effects analysis. Predictive approaches to analyses of heterogeneity
+of treatment effect are those that provide individualized predictions of
+potential outcomes in a particular patient with one intervention versus an
+alternative or, alternatively, that can predict which of 2 or more treatments
+will be better for a particular patient, taking into account multiple relevant
+patient characteristics. We distinguish these analyses from the typical
+onevariable-at-a-time subgroup analyses that appear in forest plots of most
+major trial reports, and from other analyses of heterogeneity of treatment
+effect which explore or confirm hypotheses regarding whether a specific
+covariate or biomarker modifies the effects of therapy. To guide future work on
+individualizing treatment decisions, we aimed to summarize the methodological
+literature on regression modeling approaches to predictive analysis of
+heterogeneity of treatment effect.
 
 ## Methods {.unnumbered}
+
 The terminology in this scoping review hews closely to that in the PATH
 Statement and PATH Statement Explanation and Elaboration articles, and we refer
-readers to these papers for details. Generally, we use the term HTE to refer to
-a scale-dependent property. This is in distinction to other writers that have
-reserved the term HTE to refer specifically to heterogeneity on a relative scale
-(***REF: 10***). Thus, when outcome risk varies across subgroups of patients, HTE
-must exist on some scale. If relative risk is constant, then there is HTE on the
-clinically important absolute scale. Nevertheless, since this review focuses on
-regression methods which are typically performed on the odds or hazard ratio
-scales, when we use the terms “effect modifier” and “effect modification” and
-“statistical interaction”, we are generally referring to effect modification on
-a relative scale (e.g. hazard ratio or odds ratio), unless we otherwise
-specify—although we recognize that these too are scale dependent concepts
+readers to these papers for details. Generally, we use the term heterogeneity of
+treatment effect to refer to a scale-dependent property. This is in distinction
+to other writers that have reserved the term heterogeneity of treatment effect
+to refer specifically to heterogeneity on a relative scale (***REF: 10***).
+Thus, when outcome risk varies across subgroups of patients, heterogeneity of
+treatment effect must exist on some scale. If relative risk is constant, then
+there is heterogeneity of treatment effect on the clinically important absolute
+scale. Nevertheless, since this review focuses on regression methods which are
+typically performed on the odds or hazard ratio scales, when we use the terms
+“effect modifier” and “effect modification” and “statistical interaction”, we
+are generally referring to effect modification on a relative scale (e.g. hazard
+ratio or odds ratio), unless we otherwise specify—although we recognize that
+these too are scale dependent concepts
 [@rothman2008modern;@kent2019predictive1;@kent2019predictive2;@dahabreh2016using;@kent2018personalized].
 Additionally, we note that we generally eschew the term “individual treatment
 effects”, since person level effects cannot be observed or measured in parallel
 arm clinical trials (owing to the fundamental problem of causal inference, only
 one counterfactual outcome can be observed in a given patient). Nevertheless,
-the common goal of the different methods of predictive approaches to HTE we
-describe herein is to provide "*individualized*" treatment effect estimates from
-groupbased data, since medical decisions are generally made at the individual
-person level [@dahabreh2016using]. These treatment effects are estimated
-conditional on many covariates, which are felt to be relevant for determining
-the benefits of therapy.
+the common goal of the different methods of predictive approaches to
+heterogeneity of treatment effect we describe herein is to provide
+"*individualized*" treatment effect estimates from groupbased data, since
+medical decisions are generally made at the individual person level
+[@dahabreh2016using]. These treatment effects are estimated conditional on many
+covariates, which are felt to be relevant for determining the benefits of
+therapy.
 
-Due to the absence of medical subject headings (MeSH) for HTE, we used a
-relatively broad search strategy to maximize sensitivity. For the time period
-1/1/2000 through 8/9/2018, we searched Medline and Cochrane Central using the
-text word search strategy from Table \ref{table:searchStrategy}. We also retrieved
-seminal articles suggested by a technical expert panel (TEP). The TEP was
-comprised of 16 experts who represented various perspectives on predictive HTE
-analyses, including expertise in HTE, prediction modeling, clinical trials, and
-guideline development as well as a patient advocate. More details on the TEP are
-available in the PATH Statement [@kent2019predictive1;@kent2019predictive2].
+Due to the absence of medical subject headings (MeSH) for heterogeneity of
+treatment effect, we used a relatively broad search strategy to maximize
+sensitivity. For the time period 1/1/2000 through 8/9/2018, we searched Medline
+and Cochrane Central using the text word search strategy from Table
+\ref{table:searchStrategy}. We also retrieved seminal articles suggested by a
+technical expert panel (TEP). The TEP was comprised of 16 experts who
+represented various perspectives on predictive analyses of heterogeneity of
+treatment effect, including treatment effect heterogeneity, prediction modeling,
+clinical trials, and guideline development as well as a patient advocate. More
+details on the TEP are available in the PATH Statement
+[@kent2019predictive1;@kent2019predictive2].
 
 \begin{table}[h]
 \centering
@@ -145,25 +153,27 @@ available in the PATH Statement [@kent2019predictive1;@kent2019predictive2].
 \label{table:searchStrategy}
 \end{table}
 
-We sought papers that developed or evaluated methods for predictive HTE in the
-setting of parallel arm RCT designs or simulated RCT. Abstracts were screened to
-identify papers that developed or evaluated a regression-based method for
-predictive HTE on actual or simulated parallel arm RCT data. Papers describing a
+We sought papers that developed or evaluated methods for predictive
+heterogeneity of treatment effect in the setting of parallel arm RCT designs or
+simulated RCT. Abstracts were screened to identify papers that developed or
+evaluated a regression-based method for predictive treatment effect
+heterogeneity on actual or simulated parallel arm RCT data. Papers describing a
 generic approach that could be applied using either regression or non-regression
 methods, or papers comparing regression to non-regression methods were also
 included. Similarly, papers comparing generic one-variable-at-a-time approaches
-to predictive HTE methods were also included. Finally, papers suggested by the
-TEP that fell outside the search window were considered for inclusion.
+to predictive heterogeneity of treatment effect methods were also included.
+Finally, papers suggested by the TEP that fell outside the search window were
+considered for inclusion.
 
 We excluded papers solely related to cross-over, single-arm, and observational
 study designs. We also excluded papers that were primarily applications of
 existing methods, such as those that primarily aim to estimate a treatment
 effect of interest in a specific patient population, rather than papers with the
-primary aim of developing or evaluating methods of predictive HTE. We also
+primary aim of developing or evaluating methods of predictive heterogeneity of treatment effect analysis. We also
 excluded papers using only non-regression-based methods. Similarly, methods
 papers about ONLY non-predictive subgroup analysis, i.e. one-variable-at-a-time
 or conventional subgroups, were omitted. We excluded papers on trial enrichment
-or adaptive trial designs along with those that use predictive HTE approaches in
+or adaptive trial designs along with those that use predictive heterogeneity of treatment effect approaches in
 the design. We also excluded papers primarily aiming at characterization or
 identification of heterogeneity in response rather than trying to predict
 responses for individual patients or subsets of patients; e.g. group based
@@ -192,9 +202,9 @@ knitr::include_graphics("figures/reviewDiagram.pdf")
 
 ### Categorization methods {.unnumbered}
 
-We could classify all regression-based methods to predictive HTE into 3 broad
-categories based on whether and how they incorporated prognostic variables and
-relative treatment effect modifiers:
+We could classify all regression-based methods to predictive heterogeneity of
+treatment effect into 3 broad categories based on whether and how they
+incorporated prognostic variables and relative treatment effect modifiers:
 
 - Risk-based methods exploit the mathematical dependency of treatment benefit on
 a patient’s baseline risk for the outcome under study
@@ -213,9 +223,10 @@ expected treatment benefits (***Table 2, eq. 4***).
 (covariate by treatment interactions) for the definition of a treatment
 assignment rule dividing the trial population into those who benefit from
 treatment and those who do not (***Table 2, eq. 5***). Contrary to previous
-methods, baseline risk or the magnitude of absolute
+methods, baseline risk or the magnitude of absolute treatment benefit are not of
+primary concern.
 
-```{r reviewResults, cache=TRUE, echo=FALSE, fig.cap="Results of the review.", fig.show="hold", out.width = '100%'}
+```{r reviewResults, cache=TRUE, echo=FALSE, fig.cap="Results of the review.", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/reviewFigure.tiff")))
 ```
 
@@ -228,7 +239,7 @@ when modeling treatment effects [@steyerberg2019clinical]. That is due to the
 unavailability of counterfactual outcomes under the alternative treatment,
 providing a substantial challenge to the assessment of model fit. Methods
 included in the review concerning model evaluation in the setting of predictive
-HTE (4 papers) were assigned to a separate category as they are relevant to all
+heterogeneity of treatment effect (4 papers) were assigned to a separate category as they are relevant to all
 identified approaches.
 
 \begin{blackbox}[label={equations},breakable]{Equations corresponding to treatment effect hetergoenetiy assessment methods.}
@@ -306,66 +317,71 @@ constant relative effect. Both Hayward et al. [@hayward2006multivariable] and
 Iwashyna et al. [@iwashyna2015implications] demonstrated that these methods are
 useful in the presence of treatment-related harms to identify patients who do
 not benefit (or receive net harm) from a treatment that is beneficial on
-average. In a range of plausible scenarios evaluating HTE when considering
-binary endpoints, simulations showed that studies were generally underpowered to
-detect covariate-by-treatment interactions, but adequately powered to detect
-risk-by-treatment interactions, even when a moderately performing prediction
-model was used to stratify patients. Hence, risk stratification methods can
-detect patient subgroups that have net harm even when conventional methods
-conclude consistency of effects across all major subgroups.
+average. In a range of plausible scenarios evaluating heterogeneity of treatment
+effect when considering binary endpoints, simulations showed that studies were
+generally underpowered to detect covariate-by-treatment interactions, but
+adequately powered to detect risk-by-treatment interactions, even when a
+moderately performing prediction model was used to stratify patients. Hence,
+risk stratification methods can detect patient subgroups that have net harm even
+when conventional methods conclude consistency of effects across all major
+subgroups.
 
-Kent et al. [@kent2010assessing] proposed a framework for HTE analysis in RCT
-data that recommended published trials routinely report the distribution of
-baseline risk in the overall study population and in the separate treatment arms
-using a risk prediction tool. Primarily binary or time-to-event outcomes were
-considered. Researchers should demonstrate how relative and absolute risk
-reduction vary by baseline risk and test for HTE with interaction tests.
-Externally validated prediction models should be used, when available.
+Kent et al. [@kent2010assessing] proposed a framework for the analysis of
+heterogeneity of treatment effect in RCT data that recommended published trials
+routinely report the distribution of baseline risk in the overall study
+population and in the separate treatment arms using a risk prediction tool.
+Primarily binary or time-to-event outcomes were considered. Researchers should
+demonstrate how relative and absolute risk reduction vary by baseline risk and
+test for heterogeneity of treatment effect with interaction tests. Externally
+validated prediction models should be used, when available.
 
 In the absence of an adequate prediction model when performing a risk-based
-assessment of HTE, an internal risk model from the data at hand can be derived.
-Burke et al. [@burke2014using] demonstrated that developing the risk model on
-the control arm of the trial may result in overfitting and, thus, exaggerate the
-presence of HTE. In extensive simulations, internally developed prediction
-models blinded to treatment assignment led to unbiased treatment effect
-estimates in strata of predicted risk. Using this approach to re-analyze 32
-large RCT, Kent et al. [@kent2016risk] demonstrated that variation in the
-outcome risk within an RCT is very common, in the presence of adequately
-performing prediction models, which in turn leads to substantial HTE on the
-clinically important scale of absolute risk difference. Several trials from this
-analysis had clinically relevant results
+assessment of heterogeneity of treatment effect, an internal risk model from the
+data at hand can be derived. Burke et al. [@burke2014using] demonstrated that
+developing the risk model on the control arm of the trial may result in
+overfitting and, thus, exaggerate the presence of heterogeneity of treatment
+effect. In extensive simulations, internally developed prediction models blinded
+to treatment assignment led to unbiased treatment effect estimates in strata of
+predicted risk. Using this approach to re-analyze 32 large RCT, Kent et al.
+[@kent2016risk] demonstrated that variation in the outcome risk within an RCT is
+very common, in the presence of adequately performing prediction models, which
+in turn leads to substantial heterogeneity of treatment effect on the clinically
+important scale of absolute risk difference. Several trials from this analysis
+had clinically relevant results
 [@kozminski2014baseline;@sussman2015improving;@upshaw2016multistate].
 
 Similar to Burke et al. [@burke2014using], Abadie et al. [@abadie2018endogenous]
-presented evidence of large biases in risk stratified assessment of HTE in two
-randomized experiments rising from the development of a prediction model solely
-from the control arm. They focused on financial outcomes that are primarily
-continuous. As a remedy, they considered both a leave-one-out approach, where
-individualized risk predictions are obtained from a model derived by excluding
-the particular individual, and a repeated split sample approach, where the
-original sample is repeatedly split into a sample for the development of the
-prediction model and a sample for treatment effect estimation within risk
-strata. These approaches were found to substantially reduce bias in a simulation
-study. Finally, Groenwold et al. [@groenwold2016explicit] found in simulations
-that the inclusion of a constant relative treatment effect in the development of
-a prediction model better calibrates predictions to the untreated population.
-However, this approach may not be optimal for risk-based assessment of HTE,
+presented evidence of large biases in risk stratified assessment of
+heterogeneity of treatment effect in two randomized experiments rising from the
+development of a prediction model solely from the control arm. They focused on
+financial outcomes that are primarily continuous. As a remedy, they considered
+both a leave-one-out approach, where individualized risk predictions are
+obtained from a model derived by excluding the particular individual, and a
+repeated split sample approach, where the original sample is repeatedly split
+into a sample for the development of the prediction model and a sample for
+treatment effect estimation within risk strata. These approaches were found to
+substantially reduce bias in a simulation study. Finally, Groenwold et al.
+[@groenwold2016explicit] found in simulations that the inclusion of a constant
+relative treatment effect in the development of a prediction model better
+calibrates predictions to the untreated population. However, this approach may
+not be optimal for risk-based assessment of treatment effect heterogeneity,
 where accurate ranking of risk predictions is of primary importance for the
 calibration of treatment benefit predictions.
 
-Follmann and Proschan [@follmann1999multivariate] proposed a one-step likelihood ratio test
-procedure based on a proportional interactions model to decide whether treatment
-interacts with a linear combination of baseline covariates. Their proportional
-interactions model assumes that the effects of prognostic factors in the
-treatment arm are equal to their effects in the control arm multiplied by a
-constant, the proportionality factor. Testing for an interaction along the
-linear predictor amounts to testing that the proportionality factor is equal to
-1. If high risk patients benefit more from treatment (on the relative scale) and
-disease severity is determined by a variety of prognostic factors, the proposed
-test results in greater power to detect HTE on the relative scale compared to
-multiplicity-corrected subgroup analyses. Even though the proposed test requires
-a continuous response, it can be readily implemented in large clinical trials
-with binary or time-toevent endpoints.
+Follmann and Proschan [@follmann1999multivariate] proposed a one-step likelihood
+ratio test procedure based on a proportional interactions model to decide
+whether treatment interacts with a linear combination of baseline covariates.
+Their proportional interactions model assumes that the effects of prognostic
+factors in the treatment arm are equal to their effects in the control arm
+multiplied by a constant, the proportionality factor. Testing for an interaction
+along the linear predictor amounts to testing that the proportionality factor is
+equal to 1. If high risk patients benefit more from treatment (on the relative
+scale) and disease severity is determined by a variety of prognostic factors,
+the proposed test results in greater power to detect heterogeneity of treatment
+effect on the relative scale compared to multiplicity-corrected subgroup
+analyses. Even though the proposed test requires a continuous response, it can
+be readily implemented in large clinical trials with binary or time-toevent
+endpoints.
 
 Kovalchik et al. [@kovalchik2013assessing] expanded upon the previous approach
 by exploring misspecification of the proportional interactions model, when
@@ -385,15 +401,15 @@ for the familywise error rate.
 
 Using data from the SYNTAX trial [@serruys2009percutaneous] Van Klaveren et al.
 [@van_klaveren2015estimates] considered models of increasing complexity for the
-prediction of HTE using data from the SYNTAX trial. They compared different Cox
-regression models for the prediction of treatment benefit: 1) a model without
-any risk factors; 2) a model with risk factors and a constant relative treatment
-effect; 3) a model with treatment, a prognostic index and their interaction; and
-4) a model including treatment interactions with all available prognostic
-factors, fitted both with conventional and with penalized ridge regression.
-Benefit predictions at the individual level were highly dependent on the
-modeling strategy, with treatment interactions improving treatment
-recommendations under certain circumstances.
+prediction of heterogeneous treatment effects using data from the SYNTAX trial.
+They compared different Cox regression models for the prediction of treatment
+benefit: 1) a model without any risk factors; 2) a model with risk factors and a
+constant relative treatment effect; 3) a model with treatment, a prognostic
+index and their interaction; and 4) a model including treatment interactions
+with all available prognostic factors, fitted both with conventional and with
+penalized ridge regression. Benefit predictions at the individual level were
+highly dependent on the modeling strategy, with treatment interactions improving
+treatment recommendations under certain circumstances.
 
 Basu et al. [@basu2017benefit] developed and validated risk models for
 predicting the absolute benefit (reduction of time to CVD events) and harm
@@ -670,29 +686,31 @@ methodology.
 ## Discussion {.unnumbered}
 
 We identified 36 methodological papers in recent literature that describe
-predictive regression approaches to HTE analysis in RCT data. These
-methodological papers aimed to develop models for predicting individual
-treatment benefit and could be categorized as follows: 1) risk modeling (n =
-11), in which RCT patients were stratified or grouped solely on the basis of
-prognostic models; 2) effect modeling (n = 9), in which patients are grouped or
-stratified by models combining prognostic factors with factors that modify
-treatment effects on the relative scale (effect modifiers); 3) optimal treatment
-regimes (n = 12), which seek to classify patients into those who benefit and
-those who do not, primarily on the basis of effect modifiers. Papers on the
-evaluation of different predictive approaches to HTE (n = 4) were assigned to a
-separate category. Of note, we also found literature on the evaluation of
-biomarkers for treatment selection, which did not meet inclusion criteria
+predictive regression approaches to the analysis of heterogeneity of treatment
+effect in RCT data. These methodological papers aimed to develop models for
+predicting individual treatment benefit and could be categorized as follows: 1)
+risk modeling (n = 11), in which RCT patients were stratified or grouped solely
+on the basis of prognostic models; 2) effect modeling (n = 9), in which patients
+are grouped or stratified by models combining prognostic factors with factors
+that modify treatment effects on the relative scale (effect modifiers); 3)
+optimal treatment regimes (n = 12), which seek to classify patients into those
+who benefit and those who do not, primarily on the basis of effect modifiers.
+Papers on the evaluation of different predictive approaches to heterogeneity of
+treatment effect (n = 4) were assigned to a separate category. Of note, we also
+found literature on the evaluation of biomarkers for treatment selection, which
+did not meet inclusion criteria
 [@janes2011measuring;@janes2015fundamental;@huang2012assessing;@polley2013statistical].
 
 Risk-based approaches use baseline risk determined by a multivariate equation to
-define the reference class of a patient as the basis for predicting HTE. Two
-distinct approaches were identified: 1) risk magnification assumes constant
-relative treatment effect across all patient subgroups, while 2) risk
-stratification analyzes treatment effects within strata of predicted risk. This
-approach is straightforward to implement, and may provide adequate assessment of
-HTE in the absence of strong prior evidence for potential effect modification.
-The approach might better be labeled ‘benefit magnification’, since benefit
-increases by higher baseline risk and a constant relative risk.
+define the reference class of a patient as the basis for predicting
+heterogeneity of treatment effect. Two distinct approaches were identified: 1)
+risk magnification assumes constant relative treatment effect across all patient
+subgroups, while 2) risk stratification analyzes treatment effects within strata
+of predicted risk. This approach is straightforward to implement, and may
+provide adequate assessment of treatment effect heterogeneity in the absence of
+strong prior evidence for potential effect modification. The approach might
+better be labeled ‘benefit magnification’, since benefit increases by higher
+baseline risk and a constant relative risk.
 
 Treatment effect modeling methods focus on predicting the absolute benefit of
 treatment through the inclusion of treatment-covariate interactions alongside
@@ -728,17 +746,17 @@ for incorporation of patient values and preferences for shared decision making
 which prediction methods do.
 
 While there is an abundance of proposed methodological approaches, examples of
-clinical application of HTE prediction models remain quite rare. This may
-reflect the fact that all these approaches confront the same fundamental
-challenges. These challenges include the unobservability of individual treatment
-response, the curse of dimensionality from the large number of covariates, the
-lack of prior knowledge about the causal molecular mechanisms underlying
-variation in treatment effects and the relationship of these mechanism to
-observable variables, and the very low power in which to explore interactions.
-Because of these challenges there might be very serious constraints on the
-usefulness of these methods as a class; while some methods may be shown to have
-theoretical advantages, the practical import of these theoretical advantages may
-not be ascertainable.
+clinical application of prediction models for treatment effect heterogeneity
+remain quite rare. This may reflect the fact that all these approaches confront
+the same fundamental challenges. These challenges include the unobservability of
+individual treatment response, the curse of dimensionality from the large number
+of covariates, the lack of prior knowledge about the causal molecular mechanisms
+underlying variation in treatment effects and the relationship of these
+mechanism to observable variables, and the very low power in which to explore
+interactions. Because of these challenges there might be very serious
+constraints on the usefulness of these methods as a class; while some methods
+may be shown to have theoretical advantages, the practical import of these
+theoretical advantages may not be ascertainable.
 
 The methods we identified here generally approach the aforementioned challenges
 from opposite ends. Relatively rigid methods, such as risk magnification (in
@@ -762,8 +780,9 @@ model.
 
 We identify several limitations to our study. Because no MeSH identifying these
 methods exists, we anticipate that our search approach likely missed some
-studies. In addition, a recently growing literature of other nonregression based
-methods that assess predictive HTE in observational databases
+studies. In addition, a recently growing literature of other non-regression
+based methods that assess predictive approaches to the assessment of treatment
+effect heterogeneity in observational databases
 [@athey2019generalized;@powers2018some;@louizos2017causal] would have been
 excluded. Finally, our review is descriptive and did not compare the approaches
 for their ability to predict individualized treatment effects or to identify
@@ -774,16 +793,17 @@ future research can be described. Optimal approaches to the reduction of
 overfitting through penalization need to be determined, along with optimal
 measures to evaluate models intended to predict treatment effect. General
 principles to judge the adequacy of sample sizes for predictive analytic
-approaches to HTE are required to complement the previous objectives. Also,
-methods that simultaneously predict multiple risk dimensions regarding both
-primary outcome risks and treatment-related harms need to be explored. The
-current regression-based collection of methods could be expanded by a review of
-non-regression approaches. Methods targeted at the observational setting need
-also to be considered. Additionally, a set of empirical and simulation studies
-should be performed to evaluate and compare the identified methods under
-settings representative of real world trials. The growing availability of
-publicly available randomized clinical trials should support this methodological
-research [@navar2016use;@ross2016clinical;@ross2018overview].
+approaches to heterogeneity of treatment effect are required to complement the
+previous objectives. Also, methods that simultaneously predict multiple risk
+dimensions regarding both primary outcome risks and treatment-related harms need
+to be explored. The current regression-based collection of methods could be
+expanded by a review of non-regression approaches. Methods targeted at the
+observational setting need also to be considered. Additionally, a set of
+empirical and simulation studies should be performed to evaluate and compare the
+identified methods under settings representative of real world trials. The
+growing availability of publicly available randomized clinical trials should
+support this methodological research
+[@navar2016use;@ross2016clinical;@ross2018overview].
 
 In conclusion, we identified a large number of methodological approaches for the
 assessment of heterogeneity of treatment effects in RCTs developed in the past

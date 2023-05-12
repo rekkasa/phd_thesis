@@ -37,7 +37,7 @@ predictions.
 
 ## Introduction {.unnumbered}
 
-Predictive approaches to heterogeneity of treatment effects (HTE) aim at the
+Predictive approaches to heterogeneity of treatment effects aim at the
 development of models predicting either individualized effects or which of two
 (or more) treatments is better for an individual with regard to a specific
 outcome of interest [@varadhan2013framework]. These predictive approaches
@@ -165,12 +165,13 @@ for all treated patients, such that $P(Y(1)=1|X=x) = \text{expit}(lp_1) +
 
 The sample size for the base scenarios was set to 4,250 (80\% power for the
 detection of a marginal OR of 0.8 with the standard alpha of 5\%). We evaluated
-the effect of smaller or larger sample sizes of 1,063 and 17,000,
-respectively. We also evaluated the effect of risk model discriminative ability,
-adjusting the baseline covariate coefficients, such that the AUC of the
-regression model in the control arm was 0.65 and 0.85, respectively. These settings resulted in a simulation study of 648 scenarios covering the
-HTE observed in 32 large trials as well as many other potential variations of
-risk-based treatment effect (Supplement, Sections 2 and 3) [@kent2016risk].
+the effect of smaller or larger sample sizes of 1,063 and 17,000, respectively.
+We also evaluated the effect of risk model discriminative ability, adjusting the
+baseline covariate coefficients, such that the AUC of the regression model in
+the control arm was 0.65 and 0.85, respectively. These settings resulted in a
+simulation study of 648 scenarios covering the heterogeneity of treatment
+effects observed in 32 large trials as well as many other potential variations
+of risk-based treatment effect (Supplement, Sections 2 and 3) [@kent2016risk].
 
 We analyzed the sensitivity of the results to correlation between baseline
 characteristics. We first sampled 8 continuous variables 
@@ -201,14 +202,16 @@ the risk difference between distinct treatment assignments. We use the term
 absolute treatment benefit to distinguish from relative treatment benefit that
 relies on the ratio of predicted risk under different treatment assignments.
 
-A stratified HTE method has been suggested as an alternative to traditional
-subgroup analyses [@kent2019predictive1;@kent2019predictive2]. Patients are
-stratified into equally-sized risk strata—in this case based on risk quartiles.
-Absolute treatment effects, within risk strata, expressed as absolute risk
-differences, are estimated by the difference in event rate between control and
-treatment arm patients. We considered this approach as a reference, expecting it
-to perform worse than the other candidates, as its objective is to provide an
-illustration of HTE rather than to optimize individualized benefit predictions.
+A stratified heterogeneity of treatment effect method has been suggested as an
+alternative to traditional subgroup analyses
+[@kent2019predictive1;@kent2019predictive2]. Patients are stratified into
+equally-sized risk strata—in this case based on risk quartiles. Absolute
+treatment effects, within risk strata, expressed as absolute risk differences,
+are estimated by the difference in event rate between control and treatment arm
+patients. We considered this approach as a reference, expecting it to perform
+worse than the other candidates, as its objective is to provide an illustration
+of treatment effect heterogeneity rather than to optimize individualized benefit
+predictions.
 
 Second, we fitted a logistic regression model which assumes constant relative
 treatment effect (constant odds ratio), that is, 
@@ -460,9 +463,9 @@ higher RMSE, increased variability of discrimination for benefit and worse
 calibration of benefit predictions. Even with larger sample sizes and strong
 quadratic or non-monotonic deviations, these more flexible methods did not
 outperform the simpler RCS-3 approach. Higher flexibility may only be helpful
-under more extreme patterns of HTE compared to the quadratic deviations
-considered here. Considering interactions in RCS-3 models as the most complex
-approach often may be reasonable.
+under more extreme patterns of treatment effect heterogeneity compared to the
+quadratic deviations considered here. Considering interactions in RCS-3 models
+as the most complex approach often may be reasonable.
 
 Our results can also be interpreted in terms of bias-variance trade-off. The
 increasingly complex models considered allow for more degrees of freedom which,
