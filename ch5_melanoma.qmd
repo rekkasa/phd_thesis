@@ -262,8 +262,8 @@ calibrated extended models for DM and OM showed c-indices of 0.72 (95% CI:
 ### Simple classification {.unnumbered}
 
 A simplified version of the model stratifies patients into four groups based on
-ulceration and SN tumor burden: 1) absent ulceration and $\leq$1.0 mm; 2)
-absent ulceration and >1.0 mm; 3) present ulceration and $\leq$1.0 mm and 4)
+ulceration and SN tumor burden: 1) absent ulceration and $\leq$ 1.0 mm; 2)
+absent ulceration and >1.0 mm; 3) present ulceration and $\leq$ 1.0 mm and 4)
 present ulceration and >1.0 mm. The c-indices for this classification in
 predicting recurrence, DM and OM were 0.63 (95% CI: 0.61e0.65), 0.64 (95% CI:
 0.62e0.67) and 0.64 (95% CI: 0.61e0.67), respectively. The observed outcomes for
@@ -272,8 +272,8 @@ recurrence, DM and OM per risk group are shown in Table 3.
 ### The American Joint Committee on Cancer (AJCC) classifications {.unnumbered}
 
 Patients were classified based on the 7th AJCC classification into IIIA
-$\leq$1.0 mm, IIIA >1.0 mm, IIIB and IIIC and based on the 8th edition into IIIA
-$\leq$1.0 mm, IIIA >1.0 mm, IIIB, IIIC and IIID. The c-indices for predicting
+$\leq$ 1.0 mm, IIIA >1.0 mm, IIIB and IIIC and based on the 8th edition into IIIA
+$\leq$ 1.0 mm, IIIA >1.0 mm, IIIB, IIIC and IIID. The c-indices for predicting
 recurrence, DM and OM for the 7th AJCC edition were 0.61 (95% CI: 0.59-0.63),
 0.62 (95% CI: 0.60-0.65) and 0.62 (95% CI: 0.59-0.65), respectively, and for the
 8th AJCC edition 0.62 (95% CI: 0.59-0.64), 0.63 (95% CI: 0.60-0.65) and 0.63
@@ -297,12 +297,12 @@ be omitted.
 
 Although the FDA and EMA pragmatically approved adjuvant therapy for all
 stage-III patients, it is still under debate which patients should not be
-considered candidates. Patients with stage IIIA $\leq$1.0 mm (AJCC 7th edition)
+considered candidates. Patients with stage IIIA $\leq$ 1.0 mm (AJCC 7th edition)
 were considered low risk in most adjuvant therapy trials and were therefore not
 included (one even excluded all IIIA patients)
 [@eggermont2018adjuvant;@long2017adjuvant;@weber2017adjuvant;@yokota2019adjuvant;@hauschild2018longer].
 The current study indicates that when the AJCC 8th edition criteria are used for
-defining IIIA $\leq$1.0 mm instead of the 7th edition, it results in improved
+defining IIIA $\leq$ 1.0 mm instead of the 7th edition, it results in improved
 selection of low- risk patients in terms of predicted prognosis (e.g. 5-year
 recurrence probability of 27% versus 32%, respectively). A recent study also
 showed that including SN tumor burden to the 8th AJCC staging system has crucial
@@ -314,10 +314,10 @@ rate of 13%. However, identifying more robust low-risk groups comes at the cost
 of fewer patients being assigned low risk (see Table 4). Nonetheless a major
 advantage of our EORTC-DeCOG model is that it provides a more continuous type of
 predicted probabilities. As a result it is possible to derive risk groups based
-on outcome probabilities and/or risk scores (e.g. low risk; scores 6e9;
+on outcome probabilities and/or risk scores (e.g. low risk; scores 6--9;
 recurrence probability of <25%) which is in contrast to the AJCC classifications
 where exact patient/ tumor characteristics define the risk groups (e.g. IIIA
-$\leq$1.0 mm: T1a/b-T2a + N1a-N2a with $\leq$1.0 mm SN tumor burden). In the
+$\leq$ 1.0 mm: T1a/b-T2a + N1a-N2a with $\leq$ 1.0 mm SN tumor burden). In the
 current study we choose to derive risk groups based on the recurrence
 probability, as this seems the most relevant outcome in the context of selecting
 patients for adjuvant therapy; other cut-off values and/or outcomes are

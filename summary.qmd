@@ -4,20 +4,24 @@ In this thesis we focus on baseline risk and its utilization for guiding
 medical decision making. Development of risk prediction models, i.e.
 mathematical functions relating the presence of the outcome of interest to a set
 of measured predictors (covariates), is crucial for personalizing outcome risk
-and, consequently, individualizing treatment decisions. To this end we develop
-risk prediction models for several outcomes of interest in the fields of cancer
-research and COVID-19.
+and, consequently, individualizing treatment decisions. 
 
 Overall results from randomized controlled trials or large observational studies
 often do not apply to individual patients and mainly represent a summary of
 heterogeneous individual treatment effects. If variation of these individual
 effects is large, then reliance on overall estimates may result in sub-optimal
 decisions. Evaluation of treatment effect heterogeneity has been a focal point
-of methods research in recent years. To this end we systematically review the
+of methods research in recent years. To this end, we systematically reviewed the
 literature on predictive approaches for the evaluation of treatment effect
-heterogeneity. In addition, we develop methods for risk-based assessment of
-treatment effect heterogeneity, capitalizing on the strong relationship between
-baseline risk and treatment effect.
+heterogeneity.
+
+Baseline risk is an important determinant of treatment effect and, therefore,
+can be directly used to predict individualized treatment benefits. Consequently,
+we developed and compared methods for risk-based assessment of treatment effect
+heterogeneity both on the randomized controlled trial and the observational
+setting. Finally, in applications we used risk-based methods to better guide
+medical decisions in the fields of melanoma, COVID-19, and osteoporosis
+treatment.
 
 In @sec-review we present the results of a literature review using a broad
 search strategy, complemented by suggestions from a technical expert panel. We
@@ -61,13 +65,15 @@ non-linear deviations from a constant treatment effect larger sample size. We
 also demonstrate the application of these methods in actual data using the
 dataset of the GUSTO-I trial.
 
-In @sec-melanoma we develop prediction models for recurrence, distant metastasis
-and overall mortality to be used for the management of patients with sentinel
-node-positive melanoma. For model development we use data of patients from nine
-European Organization for Research and Treatment of Cancer centers. We use Cox
-regression analysis for the prediction of all outcomes of interest. We
-externally validate in a prospective cohort sentinel node-positive melanoma
-patients, showing consistency of results. Finally, we develop a nomogram for
+In @sec-melanoma we developed prediction models for the management of patients
+with sentinel node-positive melanoma. We first developed a model for recurrence,
+which we then re-calibrated for the prediction of distant metastasis and overall
+mortality, allowing for the prediction of all three outcomes from the same model
+with adequate accuracy (AUC of 0.68, 0.70, and 0.70 for recurrence, distant
+metastasis, and overall mortality, respectively). An important addition of these
+models is that they do not require information on positive lymph nodes after
+completion lymph node dissection, which is no longer routine practice for
+sentinel node-positive melanoma patients. Finally, we provided a nomogram for
 graphical presentation of our derived prediction models.
 
 In @sec-covid we develop simple and valid models for predicting mortality and
@@ -79,8 +85,24 @@ models for in-hospital death and for need for admission to the intensive care
 unit, both within 28 days after hospital admission. We develop a simple model
 with age, respiratory rate, C-reactive protein, lactate dehydrogenase, and urea
 for the prediction of in-hospital death. For the prediction of admission to the
-intensive care unit we recalibrate the mortality prediction model including a
+intensive care unit we re-calibrate the mortality prediction model including a
 linear spline with a knot at age 70 to account for the decreasing chance of
 admission to the intensive care unit for older patients. Our prediction model
 displays good discrimination and calibration the development dataset, while it
 also maintains good performance in our temporal validation analysis.
+
+In conclusion, we separated methodological approaches to the assessment of
+heterogeneity of treatment effect in randomized controlled trials into three
+categories, these are, risk-based approaches, treatment effect modeling
+approaches, and optimal treatment regime approaches. We successfully developed
+and implemented a risk-based framework for the assessment of heterogeneity of
+treatment effect in the observational setting. We showed, through extensive
+simulations, that regression models with a linear interaction of baseline risk
+with treatment provide a viable option for the prediction of personalized
+treatment benefits with smaller sample sizes or moderately performing risk
+prediction models. We showed that prediction models developed in chapters
+@sec-melanoma and @sec-covid can be used to aid medical decisions in a timely
+manner. Finally, the implementation of our standardized framework for risk-based
+assessment of heterogeneity of treatment effect in the field of osteoporosis
+uncovered the potential of our methodology, while it also demonstrated its
+limitations due to the observational nature of the data.
