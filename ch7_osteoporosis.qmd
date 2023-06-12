@@ -1,1 +1,409 @@
-# Osteoporosis project {#sec-osteoporosis}
+# Treatment heterogeneity in the study of the comparative effectiveness of teriparatide vs bisphosphonates in routine practice conditions: a multi-database cohort study {#sec-osteoporosis}
+
+\chaptermark{Teriparatide vs bisphosphonates}
+\vspace*{\fill}\par
+\pagebreak
+
+## Abstract {.unnumbered}
+**Objectives**: To study the comparative effectiveness of teriparatide (TP) vs oral bisphosphonates (BP) to reduce hip, major osteoporotic and vertebral fracture risk. In addition, we stratified by predicted hip fracture risk to assess treatment effect heterogeneity. 
+
+**Materials and Methods**: We conducted a network cohort study using data from four
+US-based databases, namely IBM MarketScan® Commercial Claims and Encounters
+(CCAE), IBM MarketScan® Medicare Supplemental Beneficiaries (MDCR),
+Optum®De-Identified Clinformatics Data Mart Database – Date of Death (OPTUM-DOD)
+and Optum® de-identified Electronic Health Record Dataset (OPTUM-EHR), all
+mapped to the OMOP common data model. We included all women aged >50, who
+initiated TP or BP and had no history of anti-osteoporotic treatment in the
+prior year. Propensity scores were used for 1:4 matching to minimise confounding
+by indication. Models to predict hip fracture risk were developed and validated
+separately in each of the four databases. Finally, 147 negative control outcomes
+(NCO) were included to calibrate for residual confounding. Cox regression was
+used to estimate calibrated hazard ratios (HR) and Kaplan-Meier estimated
+differences 3 years after treatment initiation to estimate absolute effects. We
+provide meta-analytic estimates for the overall analysis and for patients below
+and above 3% hip fracture risk.
+
+**Results**: A total of 35,869 and 133,437 users of TP and BP contributing 75,649
+and 280,091 person years, respectively, were included from all four databases.
+NCO analyses showed evidence of residual confounding, hence we report
+empirically calibrated estimates: Overall meta-analytic HR were 0.87 (0.74 to
+1.02; 95% CI), 1.10 (1.02 to 1.18) and 1.10 (1.00 to 1.21; 95% CI) for hip
+fracture, major osteoporotic fracture and vertebral fracture respectively.
+Meta-analytic HR for patients below 3% hip fracture risk were 1.00 (0.85 to
+1.18; 95% CI), 1.24 (1.10 to 1.39; 95% CI), and 1.24 (1.07 to 1.43;95% CI),
+respectively. In patients at hip fracture risk above 3% the respective estimates
+were 0.83 (0.64 to 1.07; 95% CI), 0.86 (0.73 to 1.01; 95% CI), and 1.04 (0.86 to
+1.26; 95% CI).
+
+**Conclusions**: Overall, we found negligible differences in comparative fracture
+prevention effectiveness of TP vs BP. However, our study suggests relevant
+treatment effect heterogeneity, with a tendency towards favouring TP in patients
+with high anticipated hip fracture risk.
+
+\vspace*{\fill}\par
+\pagebreak
+
+## Introduction {.unnumbered}
+
+Osteoporosis is a chronic condition characterised by decreased bone density and
+increased risk for fragility fractures that affects almost 30% of women aged ≥50
+years (**REF 1**). In 2017, over 2.7 million incident fragility fractures
+occurred in the 5 largest EU countries and Sweden, with hip fractures accounting
+for 19.6% of fractures but up to 57% of total costs (**REF 2**). By 2030, annual
+fractures are expected to rise by almost 23%, with related costs increasing by
+27%(**REF 2**). Fracture prevention is thus the key focus of anti-osteoporotic
+therapy. Several pharmacological agents are available, with the choice of
+anti-osteoporotic agent largely depending on fracture history and anticipated
+fracture risk. Oral bisphosphonates (BP) are first-line treatments for
+postmenopausal women with increased fracture risk, considering their favourable
+cost-effectiveness and safety profile. Anabolic agents are therefore spared for
+people who do not respond to BP or who are at very high fracture risk.
+Teriparatide (TP), a parathyroid-hormone analogue administered as daily
+injections, was the first anabolic agent approved by the FDA for the treatment
+of severe postmenopausal osteoporosis.
+
+Clinical trials have shown that teriparatide is efficacious to substantially
+reduce vertebral fractures compared to placebo (**REF 3**) and risedronate
+(**REF 4**). However, its efficacy on low-incident osteoporotic fractures,
+especially hip fractures, is less well established. Previous randomised trials
+assessing hip fracture comprised only few events, thus not providing sufficient
+power for comparative effectiveness analyses. A recent meta-analysis indicates a
+significant 80% reduction in risk for hip fracture with teriparatide compared to
+placebo and a non-significant 46% risk reduction when compared to active
+controls (**REF 5**).
+
+Clinical effectiveness in routine practice may differ from findings in clinical
+trials due to many reasons including poor compliance (**REF 6**), and treatment
+benefit may largely depend on patient’s underlying fracture risks. We therefore
+leveraged multinational large real-world data from electronic medical records
+and health claims to study the comparative effectiveness of teriparatide vs
+bisphosphonates in actual practice conditions. Additionally, we used novel
+methods (**REF 7**) to test for treatment heterogeneity according to baseline
+fracture risk.
+
+## Methods {.unnumbrered}
+
+### Study population {.unnumbered}
+
+We performed a new user cohort study to estimate the effectiveness of TP
+compared to BP in patients with osteoporosis (**REF 6**). New users were defined
+based on no history of anti-osteoporosis drugs use in the 365 days prior to
+treatment initiation with TP or an BP. We included female participants above the
+age of 50 with established osteoporosis defined by a history of hip, wrist,
+spine or shoulder/humerus fracture prior to treatment initiation. We excluded
+patients with less than 1 year of data available before treatment start. More
+information on cohort definitions are available in section 1 of the supplement
+and in supplementary Tables S1-S10.
+
+## Study design {.unnumbered}
+
+Our primary effectiveness outcome was hip fracture, as this is typically the
+fracture outcome most reliably recorded in the proposed datasets. Vertebral
+fracture and a composite major osteoporotic fracture, defined as hip, vertebral
+or wrist/forearm/proximal humerus fracture, were our secondary effectiveness
+outcomes Patients were followed for a maximum of three years (1095 days) after
+treatment initiation. Continuous exposure to the treatments under study was
+achieved by imposing a maximum of 30 days between prescriptions. In cases where
+this was not the case, patients were censored upon treatment discontinuation,
+that is, 30 days after their last prescription. We also censored patient
+follow-up in cases of drop out from the database, death or at the time when
+anti-osteoporotic treatment was switched.
+
+## Data sources {.unnumbered}
+
+We ran our analyses on four US observational databases mapped to OMOP-CDM
+version. More specifically:
+
+* IBM MarketScan Commercial Database (CCAE) includes health insurance claims
+across the continuum of care (e.g. inpatient, outpatient, outpatient pharmacy,
+carve-out behavioral healthcare) as well as enrollment data from large employers
+and health plans across the United States who provide private healthcare
+coverage for more than 155 million employees, their spouses, and dependents.
+This administrative claims database includes a variety of fee- for-service,
+preferred provider organizations, and capitated health plans.
+
+* IBM® MarketScan® Medicare Supplemental Database (MDCR) represents the health
+services of approximately 10 million retirees in the United States with Medicare
+supplemental coverage through employer-sponsored plans. This database contains
+primarily fee-for-service plans and includes health insurance claims across the
+continuum of care (e.g. inpatient, outpatient and outpatient pharmacy).
+
+* Optum De-Identified Clinformatics® Data Mart Database - Date of Death
+(Optum-DOD) is derived from a database of administrative health claims for
+members of large commercial and Medicare Advantage health plans. The database
+includes approximately 17-19 million annual covered lives, for a total of over
+65 million unique lives over a 12 year period (1/2007 through 12/2019). The
+population is geographically diverse, spanning all 50 states.
+
+* Optum de-identified Electronic Health Record Dataset (Optum-EHR) is derived from
+dozens of healthcare provider organizations in the United States, that include
+more than 700 Hospitals and 7000 Clinics; treating more than 102 million
+patients receiving care in the United States.
+
+## Statistical analyses {.unnumbered}
+### Comparative effectiveness {.unnumbered}
+
+We derived overall treatment effect estimates of TP compared to BP regarding the
+three outcomes of interest using Cox proportional hazards models with treatment
+as the sole covariate. We adjusted for observed confounding by fitting the Cox
+regression models on the propensity score matched (1:4) subset of the study
+population. Hazard ratios (HR) derived in different databases were summarized
+using random effects meta-analysis (**REF**).
+
+We developed separate large-scale propensity score models within each database
+using LASSO logistic regression with a predefined set of measured covariates
+(**REF 8**). We qualitatively assessed the ability of the estimated propensity
+scores to adjust for observed confounding using the following diagnostics.
+First, we evaluated the overlap between TP and BP treated patients by plotting
+the distributions of the preference scores, that is, a transformation of the
+propensity score that adjusts for prevalence differences between treatment arms.
+A common rule of thumb requires the majority of the patients to lie between 0.3
+and 0.7 for both treatment arms to assume that patients are comparable
+(**REF**). Second, we evaluated covariate balance before and after propensity
+score adjustment by plotting the absolute standardized differences (SMD) of all
+measured covariates before and after matching on the propensity scores. A
+commonly used rule of thumb requires SMD to be less than 0.1 in order to assume
+adequate covariate balance after propensity score adjustment.
+
+### Residual confounding {.unnumbered}
+
+Residual study bias from unmeasured confounding can still be present in
+observational studies, which may not be visible with standard diagnostics.
+Negative control outcome (NCO) analyses are a popular approach for assessing the
+presence of residual confounding (**REF 12**). Negative controls are
+treatment-outcome pairs where a null treatment effect has been established.
+Using the effect estimates in a set of 126 NCO experiments, i.e. outcomes that
+are not caused by TP or BP, we derived an empirical approximation to the null
+distribution. We used this approximation to calibrate all estimated hazard
+ratios and their 95% confidence intervals for the three outcomes of interest
+(**REF 13, 14)**.
+
+### Treatment effect heterogeneity {.unnumbered}
+
+We assessed heterogeneity of treatment effects across patient groups with
+varying baseline risk using the recently proposed framework for assessment of
+treatment effect heterogeneity in observational data. We implemented the method
+as follows for our study: we first derived individualized risk predictions for
+the three fracture outcomes. We built the prediction models using LASSO logistic
+regression on the propensity score matched (1:10) subpopulation of the pooled
+treatment arms. We then considered the same large set of candidate covariates as
+for the development of the propensity score models.
+
+For each outcome we used the derived prediction models for hip fracture risk to
+stratify the patients into two risk groups: patients below 3% and patients above
+3% three-year hip fracture risk. Within each of these risk groups we developed a
+new propensity score model. Our analyses were performed on the propensity score
+matched (1:4) subset of the risk subgroup subset. We derived relative effect
+estimates using Cox proportional hazards models only with treatment as a
+predictor. Absolute effect estimates were calculated based on the difference of
+the Kaplan-Meier estimates, on day 1095 after treatment initiation. In the
+supplement (Supplementary Figures 3-5) we present a second approach where the
+population is stratified using existing guidelines based on age-dependent
+10-year major osteoporotic fracture risk (**REF 11**).
+
+## Results {.unnumbered}
+
+After propensity score matching, a total of 35,869 TP users contributed 75,849
+person-years, with 846 fractures observed. This compared to 133,437 matched BP
+users, 280,901 person-years, and 3,409 fractures. Before propensity score
+matching, TP users were more likely to have a diagnosis of osteoarthritis,
+rheumatoid arthritis, depressive disorder, and gastroesophageal reflux disease
+compared to BP users (Supplementary Tables 10-13). After propensity score
+matching these imbalances disappeared (Table 1). In all databases adequate
+equipoise of the preference score distributions was achieved (Figure 1), with
+all baseline covariates (>35,000 in each database) well balanced after matching
+(Figure 2). This indicates that we were able account for observed confounding
+present in all databases. However, NCO analyses suggested the presence of
+substantial residual confounding, with matched TP users showing a higher risk of
+multiple causally unrelated (negative control) outcomes, as shown in Figure 3.
+This suggests that propensity score matching did not fully account for
+confounding by indication, as TP users appear less healthy than matched BP users
+in terms of many unrelated comorbidities.
+
+After propensity score matching, a total of 35,869 TP users contributed 75,849
+person-years, with 846 fractures observed. This compared to 133,437 matched BP
+users, 280,901 person-years, and 3,409 fractures. Before propensity score
+matching, TP users were more likely to have a diagnosis of osteoarthritis,
+rheumatoid arthritis, depressive disorder, and gastroesophageal reflux disease
+compared to BP users (Supplementary Tables 10-13). After propensity score
+matching these imbalances disappeared (Table 1). In all databases adequate
+equipoise of the preference score distributions was achieved (Figure 1), with
+all baseline covariates (>35,000 in each database) well balanced after matching
+(Figure 2). This indicates that we were able account for observed confounding
+present in all databases. However, NCO analyses suggested the presence of
+substantial residual confounding, with matched TP users showing a higher risk of
+multiple causally unrelated (negative control) outcomes, as shown in Figure 3.
+This suggests that propensity score matching did not fully account for
+confounding by indication, as TP users appear less healthy than matched BP users
+in terms of many unrelated comorbidities.
+
+We estimated meta-analytic HR of 1.06 (0.92 to 1.22; 95% CI), 1.30 (1.18 to
+1.44; 95%CI), and 1.30 (1.14 to 1.49; 95% CI) for hip fracture, major
+osteoporotic fracture, and vertebral fracture, respectively, in the lower hip
+fracture risk group across the four databases. Using the results of the NCO
+analyses, we recalibrated these estimates to 1.00 (0.85 to 1.76; 95% CI), 1.24
+(1.10 to 1.39; 95% CI), and 1.24 (1.07 to 1.43; 95% CI) for hip fracture, major
+osteoporotic fracture, and vertebral fracture, respectively. As for patients at
+higher hip fracture risk, corresponding meta-analytic HRs were 0.91 (0.75 to
+1.11; 95% CI), 0.92 (0.76 to 1.10; 95% CI) , and 1.11 (0.93 to 1.34; 95% CI),
+respectively, which were recalibrated to 0.83 (0.64 to 1.07; 95% CI), 0.86 (0.73
+to 1.01; 95% CI), and 1.04  (0.86 to 1.26; 95% CI), respectively. This
+difference in effect indicated an interaction between hip fracture risk and the
+comparative effectiveness of TP vs BP treatment, with a potential better
+protection in higher fracture risk. Risk stratified negative control analyses,
+again, showed evidence of residual confounding (Supplementary Figure 2).
+
+The stronger relative treatment effects with increasing three-year hip fracture
+risk found in MDCR and Optum-DOD translated to increasing benefits on the
+absolute scale. Absolute treatment effect estimates (risk differences) increased
+from -0.03% (-0.68 to 0.62%; 95% CI) to 1.55% (0.19% to 2.91%; 95% CI) and from
+0.19% (-0.23% to 0.62%; 95% CI) to 1.71% (0.37% to 3.06%; 95% CI) in MDCR and
+Optum-DOD respectively. No similar differences on the absolute scale were
+observed in Optum-EHR. The majority of the patients in CCAE were below 3%
+three-year hip fracture risk, therefore, we only present results for the lower
+risk group. We found negligible difference between TP and BP on the absolute
+scale in CCAE for patients below 3% three-year hip fracture risk, which further
+supports the similarity of the compared treatments for lower risk patients. For
+patients below 3% three-year hip fracture risk, we actually found absolute risk
+increase with TP in CCAE and Optum-EHR, with absolute effect estimates of -0.98%
+(-1.61% to -0.36%; 95% CI) and -1.09% (-1.71% to -0.46%; 95% CI), respectively.
+For patients above 3% three-year hip fracture risk we found absolute benefits
+with TP treatment in Optum-EHR (3.20% with 95% CI from 1.07% to 5.33%). Finally,
+we found vertebral fracture risk increase with TP treatment in patients below 3%
+three-year hip fracture risk of -0.67% (-1.15% to -0.19%; 95% CI) and 1.11%
+(-1.69% to -0.53%; 95% CI) in CCAE and Optum-HER, respectively. We found
+negligible differences for vertebral fracture risk between treatments in
+patients above 3% three-year hip fracture risk.
+
+
+## Discussion {.unumbered}
+### Key findings {.unumbered}
+
+Overall, we found negligible differences in comparative fracture prevention
+effectiveness of TP vs BP. However, we demonstrated relevant treatment
+heterogeneity, with a tendency towards improved anti-fracture effectiveness with
+teriparatide among patients with higher hip fracture risk. Negative control
+outcome analyses suggested the presence of unresolved confounding. We used
+empirical calibration to correct for unresolved confounding, which moved our
+treatment effect estimates closer to those observed in previous randomised
+controlled trials and systematic reviews.
+
+### Effectiveness and treatment heterogeneity{.unumbered}
+
+This is the first large-scale observational study assessing treatment
+heterogeneity in the effectiveness of TP and BP for hip fracture prevention in
+postmenopausal women. Previous randomised trials assessing the efficacy of TP
+for preventing hip fractures included only few events, and thus didn’t allow for
+stratification based on fracture risk. According to the Postmenopausal
+Osteoporosis Guideline issued by the American Association of Clinical
+Endocrinologists/American College of Endocrinology 2020, TP should be considered
+as initial therapy for patients at very high fracture risk, or individuals who
+are unable to use oral anti-fracture therapy (**REF 16**). Thus, TP is typically
+reserved for patients suffering from severe osteoporosis due to higher treatment
+costs compared to BP. However, with TP becoming available as a generic drug,
+costs for treatment are dropping, potentially affecting cost-effectiveness
+estimates and future related guidelines. Results from our study suggest that TP
+treatment could indeed be more effective for patients with higher hip fracture
+risk. However, this will need to be evaluated further in future studies as the
+observed risk reduction was not significant in our study.
+
+### Findings in the light of residual confounding {.unumbered}
+
+Unlike randomized controlled trials, treatment allocation is not random in
+observational data. While preference score distributions showed a substantial
+overlap, patients receiving TP or BP likely differed in their baseline fracture
+risk. Our negative control outcome analyses showed that these differences were
+not completely balanced after PS matching, and unmeasured confounding remained.
+
+Similar to our study, previous studies also found residual confounding when
+comparing oral BPs users with patients initiating parenteral anti-osteoporosis
+treatments (**REF 17**). Users of parenteral treatments had more contact with
+the healthcare system and higher comorbidity burden compared to BP users, and
+these differences could not be removed completely by PS weighting. This
+highlights the complexity of comparing parenteral and oral anti-osteoporosis
+therapies.
+
+We used empirical calibration to correct for unresolved confounding, which
+subsequently moved our treatment effect estimates closer to those observed in
+previous trials: the Vero trial reported a reduced risk for clinical fractures
+associated with TP used compared to risedronate in post-menopausal women with
+severe osteoporosis (HR 0.48 [0.32–0.74]). While our study shows a lot of
+uncertainty and differences between databases, estimates from calibrated
+meta-analyses for major osteoporotic fractures are closer to trial estimates in
+patients with high hip fracture risk (HR 0.86 [0.73 to 1.01]), compared to
+people with low fracture risk. Moreover, our results from calibrated
+meta-analyses for hip fracture risk (HR 0.87 [0.74 to 1.02]) are comparable to
+findings from a recent meta-analysis, which reported a non-significant 46% risk
+reduction for hip fractures (OR 0.44 (0.22-0.87) compared to active controls
+(mostly oral BP in 10/20 studies) (**REF 5**).
+
+### Study strengths and limitations {.unumbered}
+
+This study has multiple strengths and limitations. Using multiple large claims
+databases, enough outcome events were identified during follow-up to ensure
+statistical power, with Minimum Detectable Rate Ratios (MDRR) between 1.2 and
+1.4 for hip fracture across databases. While hip fracture is a comparatively
+rare outcome, it is unambiguously defined and reliably recorded in routinely
+collected data. Major osteoporosis fracture was studied allowing for a direct
+comparison to results from RCT.
+
+While our study used sophisticated prediction models to stratify for fracture
+risk, clinical measures such as bone mineral density typically used for fracture
+risk assessment was not available in our data and could therefore not be
+considered. Results from previous non-controlled, observational studies found
+reduced rates of hip fractures in patients with high vs. low teriparatide
+adherence (**REF 18**) and for longer treatment (>12 months) compared to the
+first 6 months after teriparatide initiation (**REF 19**). Our study did not
+consider adherence, but only censored follow up in case of treatment cessation
+or a large treatment gap, and median follow-up for our study was only 6 months.
+
+### Conclusions {.unumbered}
+
+Our study found relevant treatment heterogeneity, with a tendency towards
+favouring teriparatide in patients with high anticipated hip fracture risk.
+While we approximated trial findings, our study seems to systematically
+underestimate the effectiveness of teriparatide likely due to unresolved
+confounding.
+
+
+\begin{landscape}
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{CCAE} & \multicolumn{3}{c}{MDCR} & \multicolumn{3}{c}{OPTUM-DOD} & \multicolumn{3}{c}{OPTUM-EHR} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} \cmidrule(rl){8-10} \cmidrule(rl){11-13}
+ & TP (\%) & BP (\%) & Std. diff & TP (\%) & BP (\%) & Std. diff & TP (\%) & BP (\%) & Std. diff & TP (\%) & BP (\%) & Std. diff \\
+\midrule
+\textbf{Medical history: General} &  &  &  &  &  &  &  &  &  &  &  &  \\
+Attention deficit hyperactivity disorder & 1.2 & 1.2 & 0 & 0.3 & 0.2 & 0.02 & 0.8 & 0.9 & -0.01 & 0.6 & 0.6 & 0 \\
+Chronic obstructive lung disease & 10.8 & 10.9 & -0.01 & 23.9 & 25.3 & -0.03 & 22 & 23.2 & -0.03 & 16.6 & 17.1 & -0.01 \\
+Crohn's disease & 1.8 & 1.8 & 0 & 1.3 & 1.2 & 0.01 & 1.3 & 1.4 & -0.01 & 1.2 & 1.1 & 0.01 \\
+Depressive disorder & 16 & 17.1 & -0.03 & 14.3 & 15.5 & -0.03 & 20.4 & 22.1 & -0.04 & 21.2 & 21.7 & -0.01 \\
+Diabetes mellitus & 0.2 & 0.3 & -0.01 & 0.1 & 0.1 & 0 & 0.3 & 0.4 & -0.02 & 1.4 & 1.4 & 0.01 \\
+Gastroesophageal reflux disease & 26.4 & 27.5 & -0.02 & 31.8 & 34.5 & -0.06 & 31 & 32.9 & -0.04 & 30 & 29.9 & 0 \\
+Gastrointestinal hemorrhage & 3.3 & 3.4 & -0.01 & 6.7 & 7.1 & -0.01 & 5.6 & 5.7 & -0.01 & 3.5 & 3.6 & 0 \\
+Human immunodeficiency virus infection & 0.2 & 0.2 & -0.01 & 0 & 0 & -0.02 & 0.2 & 0.2 & 0.01 & 0.1 & 0.2 & -0.02 \\
+Hyperlipidemia & 39.7 & 40.6 & -0.02 & 46.4 & 48.8 & -0.05 & 54.4 & 55.7 & -0.03 & 43.4 & 42 & 0.03 \\
+Obesity & 6.8 & 7.5 & -0.03 & 5.6 & 6.1 & -0.02 & 11.5 & 12.3 & -0.02 & 10.1 & 10.2 & 0 \\
+Osteoarthritis & 14.3 & 14.5 & -0.01 & 25.3 & 26.9 & -0.04 & 29 & 30.1 & -0.02 & 23.2 & 23.1 & 0 \\
+Pneumonia & 1.6 & 1.9 & -0.02 & 2.4 & 2.4 & 0 & 4.5 & 4.9 & -0.02 & 5 & 5.3 & -0.01 \\
+Psoriasis & 2.6 & 2.6 & 0 & 2.6 & 3 & -0.03 & 2.6 & 2.8 & -0.02 & 1.6 & 1.7 & -0.01 \\
+Rheumatoid arthritis & 9.8 & 10.2 & -0.01 & 11.1 & 11.4 & -0.01 & 13 & 13.5 & -0.01 & 10.2 & 10.7 & -0.01 \\
+Ulcerative colitis & 1.7 & 1.6 & 0.01 & 1.8 & 1.7 & 0 & 1.7 & 1.6 & 0.01 & 1.1 & 1.1 & 0 \\
+Urinary tract infectious disease & 31.9 & 32.7 & -0.02 & 36.2 & 38.2 & -0.04 & 39 & 40.9 & -0.04 & 24.7 & 24.8 & 0 \\
+\textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  &  &  &  &  &  &  \\
+Atrial fibrillation & 3 & 3.1 & 0 & 14.6 & 15.1 & -0.01 & 9.5 & 10.1 & -0.02 & 9.6 & 9.8 & -0.01 \\
+Cerebrovascular disease & 1.8 & 1.8 & 0 & 7.8 & 8.1 & -0.01 & 5 & 5.3 & -0.01 & 2.6 & 2.7 & -0.01 \\
+Coronary arteriosclerosis & 5.4 & 5.4 & 0 & 17.8 & 18.3 & -0.01 & 10.2 & 10.7 & -0.02 & 8 & 7.9 & 0 \\
+Heart disease & 1.8 & 1.6 & 0.01 & 4 & 4.3 & -0.02 & 4.3 & 4.4 & -0.01 & 4.1 & 4.1 & 0 \\
+Heart failure & 1.1 & 1.1 & 0 & 2.7 & 3 & -0.02 & 4.9 & 5.3 & -0.02 & 3.5 & 3.7 & -0.01 \\
+Ischemic heart disease & 0.2 & 0.2 & 0 & 0.6 & 0.7 & -0.01 & 0.4 & 0.4 & -0.01 & 0.3 & 0.2 & 0.02 \\
+Pulmonary embolism & 0.4 & 0.4 & 0 & 0.5 & 0.6 & -0.01 & 1 & 1.1 & -0.01 & 1.3 & 1.4 & -0.01 \\
+Venous thrombosis & 1 & 1.2 & -0.01 & 1.5 & 1.9 & -0.03 & 1.2 & 1.4 & -0.01 & 0.8 & 0.9 & -0.01 \\
+\textbf{Medical history: Neoplasms} &  &  &  &  &  &  &  &  &  &  &  &  \\
+Malignant lymphoma & 0.5 & 0.5 & 0 & 0.8 & 1 & -0.02 & 0.3 & 0.5 & -0.03 & 0.5 & 0.6 & -0.01 \\
+Malignant neoplastic disease & 0.4 & 0.4 & 0 & 0.6 & 0.6 & -0.01 & 0.3 & 0.5 & -0.02 & 0.7 & 0.8 & -0.01 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+\end{landscape}
