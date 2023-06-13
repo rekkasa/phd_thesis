@@ -47,53 +47,54 @@ with high anticipated hip fracture risk.
 
 Osteoporosis is a chronic condition characterised by decreased bone density and
 increased risk for fragility fractures that affects almost 30% of women aged ≥50
-years (**REF 1**). In 2017, over 2.7 million incident fragility fractures
-occurred in the 5 largest EU countries and Sweden, with hip fractures accounting
-for 19.6% of fractures but up to 57% of total costs (**REF 2**). By 2030, annual
-fractures are expected to rise by almost 23%, with related costs increasing by
-27%(**REF 2**). Fracture prevention is thus the key focus of anti-osteoporotic
-therapy. Several pharmacological agents are available, with the choice of
-anti-osteoporotic agent largely depending on fracture history and anticipated
-fracture risk. Oral bisphosphonates (BP) are first-line treatments for
-postmenopausal women with increased fracture risk, considering their favourable
-cost-effectiveness and safety profile. Anabolic agents are therefore spared for
-people who do not respond to BP or who are at very high fracture risk.
-Teriparatide (TP), a parathyroid-hormone analogue administered as daily
-injections, was the first anabolic agent approved by the FDA for the treatment
-of severe postmenopausal osteoporosis.
+years [@wright2016impact]. In 2017, over 2.7 million incident fragility
+fractures occurred in the 5 largest EU countries and Sweden, with hip fractures
+accounting for 19.6% of fractures but up to 57% of total costs
+[@borgstr_om2020fragility]. By 2030, annual fractures are expected to rise by
+almost 23%, with related costs increasing by 27% [@borgstr_om2020fragility].
+Fracture prevention is thus the key focus of anti-osteoporotic therapy. Several
+pharmacological agents are available, with the choice of anti-osteoporotic agent
+largely depending on fracture history and anticipated fracture risk. Oral
+bisphosphonates (BP) are first-line treatments for postmenopausal women with
+increased fracture risk, considering their favourable cost-effectiveness and
+safety profile. Anabolic agents are therefore spared for people who do not
+respond to BP or who are at very high fracture risk. Teriparatide (TP), a
+parathyroid-hormone analogue administered as daily injections, was the first
+anabolic agent approved by the FDA for the treatment of severe postmenopausal
+osteoporosis.
 
 Clinical trials have shown that teriparatide is efficacious to substantially
-reduce vertebral fractures compared to placebo (**REF 3**) and risedronate
-(**REF 4**). However, its efficacy on low-incident osteoporotic fractures,
-especially hip fractures, is less well established. Previous randomised trials
-assessing hip fracture comprised only few events, thus not providing sufficient
-power for comparative effectiveness analyses. A recent meta-analysis indicates a
-significant 80% reduction in risk for hip fracture with teriparatide compared to
-placebo and a non-significant 46% risk reduction when compared to active
-controls (**REF 5**).
+reduce vertebral fractures compared to placebo [@neer2001effect] and risedronate
+[@kendler2018effects]. However, its efficacy on low-incident osteoporotic
+fractures, especially hip fractures, is less well established. Previous
+randomised trials assessing hip fracture comprised only few events, thus not
+providing sufficient power for comparative effectiveness analyses. A recent
+meta-analysis indicates a significant 80% reduction in risk for hip fracture
+with teriparatide compared to placebo and a non-significant 46% risk reduction
+when compared to active controls [@d_iez_p_erez2019effects].
 
 Clinical effectiveness in routine practice may differ from findings in clinical
-trials due to many reasons including poor compliance (**REF 6**), and treatment
-benefit may largely depend on patient’s underlying fracture risks. We therefore
-leveraged multinational large real-world data from electronic medical records
-and health claims to study the comparative effectiveness of teriparatide vs
-bisphosphonates in actual practice conditions. Additionally, we used novel
-methods (**REF 7**) to test for treatment heterogeneity according to baseline
-fracture risk.
+trials due to many reasons including poor compliance [@reyes2017one], and
+treatment benefit may largely depend on patient’s underlying fracture risks. We
+therefore leveraged multinational large real-world data from electronic medical
+records and health claims to study the comparative effectiveness of teriparatide
+vs bisphosphonates in actual practice conditions. Additionally, we used novel
+methods [@rekkas2020predictive] to test for treatment heterogeneity according to
+baseline fracture risk.
 
 ## Methods {.unnumbrered}
 
 ### Study population {.unnumbered}
 
 We performed a new user cohort study to estimate the effectiveness of TP
-compared to BP in patients with osteoporosis (**REF 6**). New users were defined
-based on no history of anti-osteoporosis drugs use in the 365 days prior to
-treatment initiation with TP or an BP. We included female participants above the
-age of 50 with established osteoporosis defined by a history of hip, wrist,
+compared to BP in patients with osteoporosis [@reyes2017one]. New users were
+defined based on no history of anti-osteoporosis drugs use in the 365 days prior
+to treatment initiation with TP or an BP. We included female participants above
+the age of 50 with established osteoporosis defined by a history of hip, wrist,
 spine or shoulder/humerus fracture prior to treatment initiation. We excluded
 patients with less than 1 year of data available before treatment start. More
 information on cohort definitions are available in section 1 of the supplement
-and in supplementary Tables S1-S10.
+and in **supplementary Tables S1-S10**.
 
 ## Study design {.unnumbered}
 
@@ -152,42 +153,46 @@ using random effects meta-analysis (**REF**).
 
 We developed separate large-scale propensity score models within each database
 using LASSO logistic regression with a predefined set of measured covariates
-(**REF 8**). We qualitatively assessed the ability of the estimated propensity
-scores to adjust for observed confounding using the following diagnostics.
-First, we evaluated the overlap between TP and BP treated patients by plotting
-the distributions of the preference scores, that is, a transformation of the
-propensity score that adjusts for prevalence differences between treatment arms.
-A common rule of thumb requires the majority of the patients to lie between 0.3
-and 0.7 for both treatment arms to assume that patients are comparable
-(**REF**). Second, we evaluated covariate balance before and after propensity
-score adjustment by plotting the absolute standardized differences (SMD) of all
-measured covariates before and after matching on the propensity scores. A
-commonly used rule of thumb requires SMD to be less than 0.1 in order to assume
-adequate covariate balance after propensity score adjustment.
+[@tian2018evaluating]. We qualitatively assessed the ability of the estimated
+propensity scores to adjust for observed confounding using the following
+diagnostics. First, we evaluated the overlap between TP and BP treated patients
+by plotting the distributions of the preference scores, that is, a
+transformation of the propensity score that adjusts for prevalence differences
+between treatment arms. A common rule of thumb requires the majority of the
+patients to lie between 0.3 and 0.7 for both treatment arms to assume that
+patients are comparable [@walker2013tool]. Second, we evaluated covariate
+balance before and after propensity score adjustment by plotting the absolute
+standardized differences (SMD) of all measured covariates before and after
+matching on the propensity scores. A commonly used rule of thumb requires SMD to
+be less than 0.1 in order to assume adequate covariate balance after propensity
+score adjustment
+[@nguyen2017double;@normand2001validating;@austin2011introduction].
 
 ### Residual confounding {.unnumbered}
 
 Residual study bias from unmeasured confounding can still be present in
 observational studies, which may not be visible with standard diagnostics.
 Negative control outcome (NCO) analyses are a popular approach for assessing the
-presence of residual confounding (**REF 12**). Negative controls are
+presence of residual confounding [@lipsitch2010negative]. Negative controls are
 treatment-outcome pairs where a null treatment effect has been established.
 Using the effect estimates in a set of 126 NCO experiments, i.e. outcomes that
 are not caused by TP or BP, we derived an empirical approximation to the null
 distribution. We used this approximation to calibrate all estimated hazard
 ratios and their 95% confidence intervals for the three outcomes of interest
-(**REF 13, 14)**.
+[@schuemie2014interpreting;@schuemie2016robust].
 
 ### Treatment effect heterogeneity {.unnumbered}
 
 We assessed heterogeneity of treatment effects across patient groups with
 varying baseline risk using the recently proposed framework for assessment of
-treatment effect heterogeneity in observational data. We implemented the method
-as follows for our study: we first derived individualized risk predictions for
-the three fracture outcomes. We built the prediction models using LASSO logistic
-regression on the propensity score matched (1:10) subpopulation of the pooled
-treatment arms. We then considered the same large set of candidate covariates as
-for the development of the propensity score models.
+treatment effect heterogeneity in observational data
+[@kent2019predictive1;@kent2019predictive2;@rekkas2023standardized]. We
+implemented the method as follows for our study: we first derived individualized
+risk predictions for the three fracture outcomes. We built the prediction models
+using LASSO logistic regression on the propensity score matched (1:10)
+subpopulation of the pooled treatment arms. We then considered the same large
+set of candidate covariates as for the development of the propensity score
+models.
 
 For each outcome we used the derived prediction models for hip fracture risk to
 stratify the patients into two risk groups: patients below 3% and patients above
@@ -199,7 +204,7 @@ predictor. Absolute effect estimates were calculated based on the difference of
 the Kaplan-Meier estimates, on day 1095 after treatment initiation. In the
 supplement (Supplementary Figures 3-5) we present a second approach where the
 population is stratified using existing guidelines based on age-dependent
-10-year major osteoporotic fracture risk (**REF 11**).
+10-year major osteoporotic fracture risk [@kanis2019algorithm].
 
 ## Results {.unnumbered}
 
@@ -298,10 +303,10 @@ stratification based on fracture risk. According to the Postmenopausal
 Osteoporosis Guideline issued by the American Association of Clinical
 Endocrinologists/American College of Endocrinology 2020, TP should be considered
 as initial therapy for patients at very high fracture risk, or individuals who
-are unable to use oral anti-fracture therapy (**REF 16**). Thus, TP is typically
-reserved for patients suffering from severe osteoporosis due to higher treatment
-costs compared to BP. However, with TP becoming available as a generic drug,
-costs for treatment are dropping, potentially affecting cost-effectiveness
+are unable to use oral anti-fracture therapy [@burn2020deep]. Thus, TP is
+typically reserved for patients suffering from severe osteoporosis due to higher
+treatment costs compared to BP. However, with TP becoming available as a generic
+drug, costs for treatment are dropping, potentially affecting cost-effectiveness
 estimates and future related guidelines. Results from our study suggest that TP
 treatment could indeed be more effective for patients with higher hip fracture
 risk. However, this will need to be evaluated further in future studies as the
@@ -317,9 +322,9 @@ not completely balanced after PS matching, and unmeasured confounding remained.
 
 Similar to our study, previous studies also found residual confounding when
 comparing oral BPs users with patients initiating parenteral anti-osteoporosis
-treatments (**REF 17**). Users of parenteral treatments had more contact with
-the healthcare system and higher comorbidity burden compared to BP users, and
-these differences could not be removed completely by PS weighting. This
+treatments [@mcgrath2020using]. Users of parenteral treatments had more contact
+with the healthcare system and higher comorbidity burden compared to BP users,
+and these differences could not be removed completely by PS weighting. This
 highlights the complexity of comparing parenteral and oral anti-osteoporosis
 therapies.
 
@@ -335,7 +340,7 @@ people with low fracture risk. Moreover, our results from calibrated
 meta-analyses for hip fracture risk (HR 0.87 [0.74 to 1.02]) are comparable to
 findings from a recent meta-analysis, which reported a non-significant 46% risk
 reduction for hip fractures (OR 0.44 (0.22-0.87) compared to active controls
-(mostly oral BP in 10/20 studies) (**REF 5**).
+(mostly oral BP in 10/20 studies) [@d_iez_p_erez2019effects].
 
 ### Study strengths and limitations {.unumbered}
 
@@ -352,10 +357,11 @@ risk, clinical measures such as bone mineral density typically used for fracture
 risk assessment was not available in our data and could therefore not be
 considered. Results from previous non-controlled, observational studies found
 reduced rates of hip fractures in patients with high vs. low teriparatide
-adherence (**REF 18**) and for longer treatment (>12 months) compared to the
-first 6 months after teriparatide initiation (**REF 19**). Our study did not
-consider adherence, but only censored follow up in case of treatment cessation
-or a large treatment gap, and median follow-up for our study was only 6 months.
+adherence [@burge2017hip] and for longer treatment (>12 months) compared to the
+first 6 months after teriparatide initiation [@silverman2019reduction]. Our
+study did not consider adherence, but only censored follow up in case of
+treatment cessation or a large treatment gap, and median follow-up for our study
+was only 6 months.
 
 ### Conclusions {.unumbered}
 
@@ -427,7 +433,7 @@ Treatment & Database & Patients & Follow-up time (years) & Events (n) \\
 \end{table}
 
 \begin{table}[]
-\resizebox{\columnwidth}{!}{\begin{tabular}{lrrr}
+\resizebox{\columnwidth}{!}{\begin{tabular}{llrr}
 \toprule
 Outcome & Database & Uncalibrated HR & Calibrated HR \\
 \midrule
@@ -449,3 +455,28 @@ Outcome & Database & Uncalibrated HR & Calibrated HR \\
 \bottomrule
 \end{tabular}}
 \end{table}
+
+```{r fig-ch7-psDensity, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallPsDensity_itt_att_1095_custom.tiff")))
+```
+
+```{r fig-ch7-balance, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallCovariateBalance_itt_att_1095_custom.tiff")))
+```
+
+```{r fig-ch7-ncPlot, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallNcPlot_itt_att_1095_custom.tiff")))
+```
+
+
+```{r fig-ch7-metaOverall, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaOverall_itt_att_1095_custom.tiff")))
+```
+
+```{r fig-ch7-metaRiskStratified, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_itt_att_1095_custom.tiff")))
+```
+
+```{r fig-ch7-absolute, cache=FALSE, echo=TRUE, fig.cap="test", fig.show="hold", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_custom.tiff")))
+```

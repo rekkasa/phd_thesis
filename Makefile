@@ -27,6 +27,9 @@ $(simulation_files) : code/GetRawData.R
 figures/%.pdf :
 	wget -O $@ https://github.com/rekkasa/phd_thesis/raw/large-files/$@
 
+figures/%.tiff :
+	wget -O $@ https://github.com/rekkasa/phd_thesis/raw/large-files/$@
+
 figures/hypertensionGuidelines.png :
 	wget -O figures/hypertensionGuidelines.png \
 		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/figures/hypertensionGuidelines.png
@@ -454,7 +457,13 @@ _book/Beyond-the-average-treatment-effect.pdf : _quarto.yml \
 	figures/ch5-PositiveSlnb.pdf \
 	figures/ch6-Figure1.pdf \
 	figures/ch6-Figure2.pdf \
-	figures/ch6-Figure3.pdf
+	figures/ch6-Figure3.pdf \
+	figures/ch7-overallPsDensity_itt_att_1095_custom.tiff \
+	figures/ch7-overallCovariateBalance_itt_att_1095_custom.tiff \
+	figures/ch7-overallNcPlot_itt_att_1095_custom.tiff \
+	figures/ch7-plotMetaOverall_itt_att_1095_custom.tiff \
+	figures/ch7-plotMetaRiskStratified_itt_att_1095_custom.tiff \
+	figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_custom.tiff
 	bash -c "quarto render";
 
 
