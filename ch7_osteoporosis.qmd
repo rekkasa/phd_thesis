@@ -407,3 +407,45 @@ Malignant neoplastic disease & 0.4 & 0.4 & 0 & 0.6 & 0.6 & -0.01 & 0.3 & 0.5 & -
 \end{tabular}}
 \end{table}
 \end{landscape}
+
+
+\begin{table}[]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrr}
+\toprule
+Treatment & Database & Patients & Follow-up time (years) & Events (n) \\
+\midrule
+\multirow{4}{*}{Teriparatide} & CCAE & 8,258 & 14,661 & 82 \\
+ & MDCR & 6,378 & 12,575 & 228 \\
+ & OPTUM-DOD & 8,958 & 18,809 & 246 \\
+ & OPTUM-EHR & 12,275 & 29,804 & 290 \\
+\multirow{4}{*}{Oral bisphosphonates} & CCAE & 31,194 & 55,126 & 275 \\
+ & MDCR & 23,281 & 45,855 & 1,023 \\
+ & OPTUM-DOD & 34,298 & 71,578 & 1,141 \\
+ & OPTUM-EHR & 44,664 & 107,532 & 970 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrr}
+\toprule
+Outcome & Database & Uncalibrated HR & Calibrated HR \\
+\midrule
+\multirow{5}{*}{Hip fracture} & CCAE & 1.12 (0.87, 1.43) & 1.02 (0.76, 1.38) \\
+ & MDCR & 0.81 (0.70, 0.93) & 0.76 (0.61, 0.94) \\
+ & OPTUM-DOD & 0.82 (0.71, 0.94) & 1.12 (1.01, 1.23) \\
+ & OPTUM-EHR & 1.08 (0.95, 1.23) & 1.04 (0.83, 1.31) \\
+ & \textbf{Meta-analysis} & 0.94 (0.79, 1.12) & 0.87 (0.74, 1.02) \\
+\multirow{5}{*}{Major osteoporotic fracture} & CCAE & 1.18 (0.97, 1.44) & 1.12 (0.88, 1.41) \\
+ & MDCR & 1.02 (0.89, 1.18) & 1.00 (0.87, 1.15) \\
+ & OPTUM-DOD & 1.19 (1.07, 1.31) & 1.12 (1.01, 1.23) \\
+ & OPTUM-EHR & 1.10 (0.98, 1.23) & 1.09 (0.91, 1.30) \\
+ & \textbf{Meta-analysis} & 1.15   (1.04, 1.27) & 1.10  (1.02, 1.18) \\
+\multirow{5}{*}{Vertebral fracture} & CCAE & 1.37 (1.12, 1.67) & 1.25 (0.96, 1.62) \\
+ & MDCR & 1.01 (0.87, 1.17) & 0.95 (0.76, 1.18) \\
+ & OPTUM-DOD & 1.18 (1.04, 1.34) & 1.11 (0.98, 1.27) \\
+ & OPTUM-EHR & 1.19 (1.06, 1.32) & 1.14 (0.92, 1.42) \\
+ & \textbf{Meta-analysis} & 1.17 (1.05, 1.31) & 1.10  (1.00, 1.21) \\
+\bottomrule
+\end{tabular}}
+\end{table}
