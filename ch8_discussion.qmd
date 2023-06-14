@@ -426,6 +426,26 @@ validity in subsequent periods is required and, if found necessary, the model
 should be updated. Recent work has shown promising results with the application
 of a model updating framework [@levy2022development].
 
+Finally, we applied the framework developed in [@sec-framework] to assess
+heterogeneity of treatment effect with teriparatide compared to oral
+bisphsophonates to for the treatment of osteoporosis with regard to three
+outcomes of interest--namely hip fracture, major osteoporotic fracture, and
+vetebral fracture. Capitalizing on the OMOP-CDM we were able to include hundreds
+of thousands of patients, resulting in one of the first large-scale
+observational studies exploring this problem. Overall treatment effect estimates
+showed negligible differences between teriparatide and oral bisphosphonates and
+failed to reproduce results from previous randomized controlled trials. Prior
+clinical trials for evaluating the effectiveness of teriparatide included
+patients with severe osteoporosis whereas our study included all female patients
+above the age of 50. In addition, since teriparatide is a newer harder to
+administer treatment (daily injections) it is reserved for patients with more
+severe forms of osteoporosis, often not responding to oral bisphosphonates. For
+those reasons the presence of residual confounding cannot be excluded, as was
+confirmed by our negative control analyses. Limiting the analyses to patients at
+high hip fracture risk and re-calibrating using a large set of negative controls
+moved our hazard ratio estimates closer to the ones derived in earlier clinical
+trials.
+
 ## Future research
 
 A review of the fast-growing literature in the observational setting using the

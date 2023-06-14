@@ -198,22 +198,22 @@ Malignant tumor of lung & 0.1 & 0.1 & 0 & 0.1 & 0.1 & 0 \\
 \end{landscape}
 
 
-```{r fig-ch7-supp1, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+```{r fig-ch7-supp1, cache=TRUE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-followup.tiff")))
 ```
 
-```{r fig-ch3-supp2, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+```{r fig-ch3-supp2, cache=TRUE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
 knitr::include_graphics("figures/ch7-riskStratifiedNcPlot_itt_att_1095_custom.pdf")
 ```
 
-```{r fig-ch3-supp3, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+```{r fig-ch3-supp3, cache=TRUE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
 knitr::include_graphics("figures/ch7-riskStratifiedNcPlot_itt_att_1095_gl.pdf")
 ```
 
-```{r fig-ch3-supp4, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+```{r fig-ch3-supp4, cache=TRUE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_itt_att_1095_gl.tiff")))
 ```
 
-```{r fig-ch3-supp5, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+```{r fig-ch3-supp5, cache=TRUE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_gl.tiff")))
 ```
