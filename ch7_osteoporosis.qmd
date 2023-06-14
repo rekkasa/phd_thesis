@@ -477,6 +477,6 @@ grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaOverall_itt_att
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_itt_att_1095_custom.tiff")))
 ```
 
-```{r fig-ch7-absolute, cache=FALSE, echo=TRUE, fig.cap="test", fig.show="hold", out.width = '100%'}
+```{r fig-ch7-absolute, cache=TRUE, echo=TRUE, fig.cap="test", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_custom.tiff")))
 ```

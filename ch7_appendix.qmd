@@ -1,0 +1,219 @@
+# Treatment heterogeneity in the study of the comparative effectiveness of teriparatide vs bisphosphonates in routine practice conditions: a multi-database cohort study {#sec-osteoporosis-appendix}
+
+\pagebreak
+
+## Patient characteristics
+
+\begin{landscape}
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} 
+Characteristic & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff \\
+\midrule
+\textbf{Medical history: General} &  &  &  &  &  &  \\
+Attention deficit   hyperactivity disorder & 1.2 & 0.5 & 0.08 & 1.2 & 1.2 & 0 \\
+Chronic obstructive lung   disease & 11.3 & 6.3 & 0.18 & 10.8 & 10.9 & -0.01 \\
+Crohn's disease & 1.8 & 0.7 & 0.09 & 1.8 & 1.8 & 0 \\
+Depressive disorder & 16.6 & 9 & 0.23 & 16 & 17.1 & -0.03 \\
+Diabetes mellitus & 0.2 & 0.1 & 0.02 & 0.2 & 0.3 & -0.01 \\
+Gastroesophageal reflux   disease & 27.6 & 14.8 & 0.32 & 26.4 & 27.5 & -0.02 \\
+Gastrointestinal   hemorrhage & 3.3 & 1.8 & 0.1 & 3.3 & 3.4 & -0.01 \\
+Human immunodeficiency   virus infection & 0.2 & 0.1 & 0.02 & 0.2 & 0.2 & -0.01 \\
+Hyperlipidemia & 41.1 & 35.8 & 0.11 & 39.7 & 40.6 & -0.02 \\
+Hypertensive disorder & 0.5 & 0.3 & 0.03 & 0.5 & 0.5 & 0 \\
+Obesity & 7.1 & 4.3 & 0.12 & 6.8 & 7.5 & -0.03 \\
+Osteoarthritis & 14.9 & 8.3 & 0.21 & 14.3 & 14.5 & -0.01 \\
+Pneumonia & 1.8 & 0.7 & 0.1 & 1.6 & 1.9 & -0.02 \\
+Psoriasis & 2.7 & 1.6 & 0.08 & 2.6 & 2.6 & 0 \\
+Rheumatoid arthritis & 10.1 & 5.1 & 0.19 & 9.8 & 10.2 & -0.01 \\
+Schizophrenia & 0.1 & 0.1 & 0.01 & 0.1 & 0.1 & 0 \\
+Ulcerative colitis & 1.8 & 0.8 & 0.08 & 1.7 & 1.6 & 0.01 \\
+Urinary tract infectious   disease & 33.5 & 21.8 & 0.26 & 31.9 & 32.7 & -0.02 \\
+Viral hepatitis C & 0.8 & 0.3 & 0.06 & 0.8 & 0.7 & 0.01 \\
+\textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  \\
+Atrial fibrillation & 3.1 & 1.6 & 0.1 & 3 & 3.1 & 0 \\
+Cerebrovascular disease & 1.9 & 1.1 & 0.07 & 1.8 & 1.8 & 0 \\
+Coronary   arteriosclerosis & 5.6 & 3.4 & 0.11 & 5.4 & 5.4 & 0 \\
+Heart disease & 1.8 & 0.8 & 0.09 & 1.8 & 1.6 & 0.01 \\
+Heart failure & 1.1 & 0.4 & 0.09 & 1.1 & 1.1 & 0 \\
+Ischemic heart disease & 0.2 & 0.1 & 0.02 & 0.2 & 0.2 & 0 \\
+Pulmonary embolism & 0.4 & 0.1 & 0.05 & 0.4 & 0.4 & 0 \\
+Venous thrombosis & 1.2 & 0.5 & 0.07 & 1 & 1.2 & -0.01 \\
+\textbf{Medical history: Neoplasms} &  &  &  &  &  &  \\
+Malignant lymphoma & 0.5 & 0.3 & 0.02 & 0.5 & 0.5 & 0 \\
+Malignant neoplastic   disease & 0.4 & 0.3 & 0.02 & 0.4 & 0.4 & 0 \\
+\bottomrule
+\end{tabular}}
+\caption{CCAE}
+\end{table}
+
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} 
+Characteristic & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff \\
+\midrule
+\textbf{Medical history: General} &  &  &  &  &  &  \\
+Attention deficit hyperactivity disorder & 0.3 & 0.1 & 0.04 & 0.3 & 0.2 & 0.02 \\
+Chronic obstructive lung disease & 25.6 & 14.4 & 0.28 & 23.9 & 25.3 & -0.03 \\
+Crohn's disease & 1.3 & 0.4 & 0.09 & 1.3 & 1.2 & 0.01 \\
+Depressive disorder & 14.8 & 6.5 & 0.27 & 14.3 & 15.5 & -0.03 \\
+Diabetes mellitus & 0.1 & 0 & 0.01 & 0.1 & 0.1 & 0 \\
+Gastroesophageal reflux disease & 33.8 & 14.8 & 0.45 & 31.8 & 34.5 & -0.06 \\
+Gastrointestinal hemorrhage & 7.3 & 3.3 & 0.18 & 6.7 & 7.1 & -0.01 \\
+Human immunodeficiency virus infection & 0 & 0 & -0.01 & 0 & 0 & -0.02 \\
+Hyperlipidemia & 47.5 & 33.5 & 0.29 & 46.4 & 48.8 & -0.05 \\
+Obesity & 5.6 & 3.1 & 0.12 & 5.6 & 6.1 & -0.02 \\
+Osteoarthritis & 27.1 & 14.7 & 0.31 & 25.3 & 26.9 & -0.04 \\
+Pneumonia & 2.5 & 0.8 & 0.13 & 2.4 & 2.4 & 0 \\
+Psoriasis & 2.6 & 1.4 & 0.09 & 2.6 & 3 & -0.03 \\
+Rheumatoid arthritis & 11.6 & 5.2 & 0.23 & 11.1 & 11.4 & -0.01 \\
+Schizophrenia & 0.1 & 0.1 & 0.01 & 0.1 & 0.1 & 0 \\
+Ulcerative colitis & 1.9 & 0.7 & 0.11 & 1.8 & 1.7 & 0 \\
+Urinary tract infectious disease & 38.1 & 20.5 & 0.39 & 36.2 & 38.2 & -0.04 \\
+Viral hepatitis C & 0.3 & 0.1 & 0.04 & 0.4 & 0.3 & 0 \\
+\textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  \\
+Atrial fibrillation & 15.4 & 9.3 & 0.19 & 14.6 & 15.1 & -0.01 \\
+Cerebrovascular disease & 8.4 & 4 & 0.18 & 7.8 & 8.1 & -0.01 \\
+Coronary arteriosclerosis & 19.1 & 11 & 0.23 & 17.8 & 18.3 & -0.01 \\
+Heart disease & 4.4 & 1.8 & 0.15 & 4 & 4.3 & -0.02 \\
+Heart failure & 2.8 & 1.2 & 0.12 & 2.7 & 3 & -0.02 \\
+Ischemic heart disease & 0.7 & 0.4 & 0.04 & 0.6 & 0.7 & -0.01 \\
+Pulmonary embolism & 0.6 & 0.2 & 0.06 & 0.5 & 0.6 & -0.01 \\
+Venous thrombosis & 1.7 & 0.9 & 0.08 & 1.5 & 1.9 & -0.03 \\
+\textbf{Medical history: Neoplasms} &  &  &  &  &  &  \\
+Malignant lymphoma & 0.7 & 0.6 & 0.02 & 0.8 & 1 & -0.02 \\
+Malignant neoplastic disease & 0.7 & 0.4 & 0.04 & 0.6 & 0.6 & -0.01 \\
+\bottomrule
+\end{tabular}}
+\caption{MDCR}
+\end{table}
+
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} 
+Characteristic & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff \\
+\midrule
+\textbf{Medical history: General} &  &  &  &  &  &  \\
+Attention deficit   hyperactivity disorder & 0.8 & 0.3 & 0.07 & 0.8 & 0.9 & -0.01 \\
+Chronic obstructive lung   disease & 22.6 & 15.3 & 0.19 & 22 & 23.2 & -0.03 \\
+Crohn's disease & 1.4 & 0.6 & 0.08 & 1.3 & 1.4 & -0.01 \\
+Depressive disorder & 21.8 & 11.5 & 0.28 & 20.4 & 22.1 & -0.04 \\
+Diabetes mellitus & 0.3 & 0.3 & 0.01 & 0.3 & 0.4 & -0.02 \\
+Gastroesophageal reflux   disease & 33.2 & 17.6 & 0.36 & 31 & 32.9 & -0.04 \\
+Gastrointestinal   hemorrhage & 6 & 3 & 0.14 & 5.6 & 5.7 & -0.01 \\
+Human immunodeficiency   virus infection & 0.2 & 0.1 & 0.02 & 0.2 & 0.2 & 0.01 \\
+Hyperlipidemia & 56.2 & 53 & 0.06 & 54.4 & 55.7 & -0.03 \\
+Obesity & 11.3 & 9.1 & 0.07 & 11.5 & 12.3 & -0.02 \\
+Osteoarthritis & 30.6 & 20.5 & 0.23 & 29 & 30.1 & -0.02 \\
+Pneumonia & 4.5 & 2.9 & 0.08 & 4.5 & 4.9 & -0.02 \\
+Psoriasis & 2.8 & 1.7 & 0.07 & 2.6 & 2.8 & -0.02 \\
+Rheumatoid arthritis & 13.7 & 6.5 & 0.24 & 13 & 13.5 & -0.01 \\
+Schizophrenia & 0.3 & 0.3 & 0 & 0.3 & 0.3 & 0 \\
+Ulcerative colitis & 1.8 & 0.8 & 0.09 & 1.7 & 1.6 & 0.01 \\
+Urinary tract infectious   disease & 41.1 & 27.6 & 0.29 & 39 & 40.9 & -0.04 \\
+Viral hepatitis C & 1.1 & 0.5 & 0.06 & 1.1 & 1.1 & 0 \\
+\textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  \\
+Atrial fibrillation & 10.2 & 7 & 0.11 & 9.5 & 10.1 & -0.02 \\
+Cerebrovascular disease & 5.4 & 3.4 & 0.1 & 5 & 5.3 & -0.01 \\
+Coronary   arteriosclerosis & 11 & 6.6 & 0.16 & 10.2 & 10.7 & -0.02 \\
+Heart disease & 4.6 & 2.6 & 0.11 & 4.3 & 4.4 & -0.01 \\
+Heart failure & 4.8 & 3.1 & 0.09 & 4.9 & 5.3 & -0.02 \\
+Ischemic heart disease & 0.4 & 0.3 & 0.03 & 0.4 & 0.4 & -0.01 \\
+Pulmonary embolism & 1 & 0.6 & 0.04 & 1 & 1.1 & -0.01 \\
+Venous thrombosis & 1.4 & 0.7 & 0.07 & 1.2 & 1.4 & -0.01 \\
+\textbf{Medical history: Neoplasms} &  &  &  &  &  &  \\
+Malignant lymphoma & 0.3 & 0.3 & 0 & 0.3 & 0.5 & -0.03 \\
+Malignant neoplastic   disease & 0.4 & 0.3 & 0.02 & 0.3 & 0.5 & -0.02 \\
+\bottomrule
+\end{tabular}}
+\caption{Optum-DOD}
+\end{table}
+
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} 
+Characteristic & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff \\
+\midrule
+\textbf{Medical history: General} &  &  &  &  &  &  \\
+Acute respiratory   disease & 0.1 & 0.1 & 0 & 0.1 & 0.1 & 0.01 \\
+Attention deficit   hyperactivity disorder & 0.6 & 0.4 & 0.03 & 0.6 & 0.6 & 0 \\
+Chronic obstructive lung   disease & 16.9 & 14 & 0.08 & 16.6 & 17.1 & -0.01 \\
+Crohn's disease & 1.3 & 0.7 & 0.06 & 1.2 & 1.1 & 0.01 \\
+Depressive disorder & 22 & 17 & 0.13 & 21.2 & 21.7 & -0.01 \\
+Diabetes mellitus & 1.5 & 1.3 & 0.02 & 1.4 & 1.4 & 0.01 \\
+Gastroesophageal reflux   disease & 31.4 & 24.9 & 0.15 & 30 & 29.9 & 0 \\
+Gastrointestinal   hemorrhage & 3.7 & 2.6 & 0.06 & 3.5 & 3.6 & 0 \\
+Human immunodeficiency   virus infection & 0.1 & 0.1 & -0.01 & 0.1 & 0.2 & -0.02 \\
+Hyperlipidemia & 44.6 & 50.8 & -0.12 & 43.4 & 42 & 0.03 \\
+Hypertensive disorder & 3.5 & 3.3 & 0.01 & 3.4 & 3.4 & 0 \\
+Obesity & 10.3 & 9.9 & 0.01 & 10.1 & 10.2 & 0 \\
+Osteoarthritis & 24.2 & 20.3 & 0.09 & 23.2 & 23.1 & 0 \\
+Pneumonia & 5.2 & 3.5 & 0.08 & 5 & 5.3 & -0.01 \\
+Psoriasis & 1.7 & 1.6 & 0 & 1.6 & 1.7 & -0.01 \\
+Rheumatoid arthritis & 10.7 & 5.9 & 0.17 & 10.2 & 10.7 & -0.01 \\
+Schizophrenia & 0.1 & 0.3 & -0.04 & 0.1 & 0.2 & -0.02 \\
+Ulcerative colitis & 1.1 & 0.7 & 0.04 & 1.1 & 1.1 & 0 \\
+Urinary tract infectious   disease & 26.1 & 22.1 & 0.09 & 24.7 & 24.8 & 0 \\
+Viral hepatitis C & 0.9 & 0.7 & 0.03 & 0.9 & 1 & -0.01 \\
+\bottomrule
+\end{tabular}}
+\caption{Optum-EHR}
+\end{table}
+
+\begin{table}[p]
+\ContinuedFloat
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} 
+Characteristic & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff \\
+\midrule
+\textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  \\
+Atrial fibrillation & 9.8 & 8.2 & 0.06 & 9.6 & 9.8 & -0.01 \\
+Cerebrovascular disease & 2.8 & 2.4 & 0.02 & 2.6 & 2.7 & -0.01 \\
+Coronary   arteriosclerosis & 8.4 & 7.2 & 0.05 & 8 & 7.9 & 0 \\
+Heart disease & 4.4 & 3.7 & 0.03 & 4.1 & 4.1 & 0 \\
+Heart failure & 3.7 & 2.8 & 0.05 & 3.5 & 3.7 & -0.01 \\
+Ischemic heart disease & 0.3 & 0.2 & 0.03 & 0.3 & 0.2 & 0.02 \\
+Pulmonary embolism & 1.4 & 0.8 & 0.05 & 1.3 & 1.4 & -0.01 \\
+Venous thrombosis & 0.9 & 0.6 & 0.04 & 0.8 & 0.9 & -0.01 \\
+\textbf{Medical history: Neoplasms} &  &  &  &  &  &  \\
+Malignant lymphoma & 0.5 & 0.5 & 0 & 0.5 & 0.6 & -0.01 \\
+Malignant neoplastic   disease & 0.7 & 0.7 & 0 & 0.7 & 0.8 & -0.01 \\
+Malignant tumor of colon & 0.1 & 0.1 & 0 & 0.1 & 0.1 & 0 \\
+Malignant tumor of lung & 0.1 & 0.1 & 0 & 0.1 & 0.1 & 0 \\
+\bottomrule
+\end{tabular}}
+\caption{Optum-EHR (continued)}
+\end{table}
+
+\end{landscape}
+
+
+```{r fig-ch7-supp1, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-followup.tiff")))
+```
+
+```{r fig-ch3-supp2, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+knitr::include_graphics("figures/ch7-riskStratifiedNcPlot_itt_att_1095_custom.pdf")
+```
+
+```{r fig-ch3-supp3, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+knitr::include_graphics("figures/ch7-riskStratifiedNcPlot_itt_att_1095_gl.pdf")
+```
+
+```{r fig-ch3-supp4, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_itt_att_1095_gl.tiff")))
+```
+
+```{r fig-ch3-supp5, cache=FALSE, echo=FALSE, fig.cap="Caption...",fig.align='center'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_gl.tiff")))
+```

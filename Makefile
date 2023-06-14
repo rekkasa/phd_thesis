@@ -408,6 +408,7 @@ _book/Beyond-the-average-treatment-effect.pdf : _quarto.yml \
 	references.bib \
 	ch3_appendix.qmd \
 	ch4_appendix.qmd \
+	ch7_appendix.qmd \
 	summary.qmd \
 	data/introduction/gusto.rda \
 	figures/hypertensionGuidelines.png \
@@ -463,7 +464,12 @@ _book/Beyond-the-average-treatment-effect.pdf : _quarto.yml \
 	figures/ch7-overallNcPlot_itt_att_1095_custom.tiff \
 	figures/ch7-plotMetaOverall_itt_att_1095_custom.tiff \
 	figures/ch7-plotMetaRiskStratified_itt_att_1095_custom.tiff \
-	figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_custom.tiff
+	figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_custom.tiff \
+	figures/ch7-followup.tiff \
+	figures/ch7-riskStratifiedNcPlot_itt_att_1095_custom.pdf \
+	figures/ch7-riskStratifiedNcPlot_itt_att_1095_gl.pdf \
+	figures/ch7-plotMetaRiskStratified_itt_att_1095_gl.tiff \
+	figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_gl.tiff
 	bash -c "quarto render";
 
 

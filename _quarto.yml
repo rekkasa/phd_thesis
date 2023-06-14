@@ -19,6 +19,7 @@ book:
   appendices:
     - ch3_appendix.qmd
     - ch4_appendix.qmd
+    - ch7_appendix.qmd
     - summary.qmd
 
 bibliography: references.bib
