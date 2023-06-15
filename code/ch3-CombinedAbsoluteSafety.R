@@ -136,7 +136,7 @@ for (i in seq_along(levels(absolute$estOutcome))) {
     # scale_y +
     xlab("Risk group") +
     geom_hline(
-      aes(yintercept = 1),
+      aes(yintercept = 0),
       linetype = 2
     ) +
   scale_color_manual(

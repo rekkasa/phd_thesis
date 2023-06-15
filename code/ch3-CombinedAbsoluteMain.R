@@ -126,7 +126,8 @@ absolutePlot <- ggplot(
   xlab("Risk subgroup") +
   facet_wrap(~estOutcome, scales = "free") +
   geom_hline(
-    aes(yintercept = 0)
+    aes(yintercept = 0),
+    linetype = 2
   ) +
   scale_color_manual(
     values = c(

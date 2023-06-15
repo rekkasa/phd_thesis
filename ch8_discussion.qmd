@@ -373,14 +373,15 @@ risk of recurrence, distant metastasis, and overall mortality for positive
 sentinel node (SN) melanoma patients. We initially fitted a Cox regression model
 for recurrence using four baseline covariates. Models for distant metastasis and
 overall mortality were derived by recalibrating the baseline hazard and the
-slope of the recurrence prediction model. As the MSLT-II trial (**REF**) found
-no survival benefit for completion lymph node dissection the number of involved
-non-SNs will often not be available when risk stratifying positive SN melanoma
-patients. In our prediction model we found minor performance drop when using SN
-tumor burden as a surrogate. In addition, the developed prediction models were
-better able to discriminate high from low risk patients compared to the American
-Joint Committee on Cancer staging system, thus identifying a more robust
-low-risk group in whom it may be justified to forego adjuvant therapy.
+slope of the recurrence prediction model. As the MSLT-II trial
+[@faries2017completion] found no survival benefit for completion lymph node
+dissection the number of involved non-SNs will often not be available when risk
+stratifying positive SN melanoma patients. In our prediction model we found
+minor performance drop when using SN tumor burden as a surrogate. In addition,
+the developed prediction models were better able to discriminate high from low
+risk patients compared to the American Joint Committee on Cancer staging system,
+thus identifying a more robust low-risk group in whom it may be justified to
+forego adjuvant therapy.
 
 We developed models for the prediction of 28-day mortality and admission to the
 intensive care unit (ICU) in patients presenting at the emergency department
@@ -388,9 +389,9 @@ with suspected COVID-19. The prediction models were developed in patients from
 four hospitals in the Netherlands during the first COVID-19 wave (March through
 August 2020) and temporally validated on patients of the second wave (September
 through December 2020). The proposed models were based on quickly and
-objectively obtainable predictors (**REFS**). Prediction of ICU admission risk
-is challenging as it depends on national, regional or hospital practices, as
-well ICU bed availability. In addition, as was already pointed out in
+objectively obtainable predictors. Prediction of ICU admission risk is
+challenging as it depends on national, regional or hospital practices, as well
+ICU bed availability. In addition, as was already pointed out in
 @sec-covid, patients admitted to the ICU tended to be younger than the patients
 being discharged due to decisions not to admit frail patients. For the
 development of our prediction model for ICU admission, the strong correlation
@@ -415,36 +416,36 @@ adopted a leave-one-center-out validation approach for the COPE prediction model
 of @sec-covid [@steyerberg2016prediction].
 
 Prediction models for COVID-19 are not easily transportable to settings outside
-the ones they were actually developed [@van_klaveren2022prognostic].
-Response to COVID-19 has been characterized with large geographical and temporal
-disparities (**REF**), as have the severity and progression of disease.
-Therefore, our developed prediction model of @sec-covid could be
-safely applied to aid medical decision making in the Netherlands during the
-earlier stages of the pandemic. However, its generalizability to other
-healthcare systems needs to be explored. In addition, evaluation of its temporal
-validity in subsequent periods is required and, if found necessary, the model
-should be updated. Recent work has shown promising results with the application
-of a model updating framework [@levy2022development].
+the ones they were actually developed [@van_klaveren2022prognostic]. Response to
+COVID-19 has been characterized with large geographical and temporal disparities
+[@van_klaveren2022prognostic], as have the severity and progression of disease.
+Therefore, our developed prediction model of @sec-covid could be safely applied
+to aid medical decision making in the Netherlands during the earlier stages of
+the pandemic. However, its generalizability to other healthcare systems needs to
+be explored. In addition, evaluation of its temporal validity in subsequent
+periods is required and, if found necessary, the model should be updated. Recent
+work has shown promising results with the application of a model updating
+framework [@levy2022development].
 
-Finally, we applied the framework developed in [@sec-framework] to assess
-heterogeneity of treatment effect with teriparatide compared to oral
-bisphsophonates to for the treatment of osteoporosis with regard to three
-outcomes of interest--namely hip fracture, major osteoporotic fracture, and
-vetebral fracture. Capitalizing on the OMOP-CDM we were able to include hundreds
-of thousands of patients, resulting in one of the first large-scale
-observational studies exploring this problem. Overall treatment effect estimates
-showed negligible differences between teriparatide and oral bisphosphonates and
-failed to reproduce results from previous randomized controlled trials. Prior
-clinical trials for evaluating the effectiveness of teriparatide included
-patients with severe osteoporosis whereas our study included all female patients
-above the age of 50. In addition, since teriparatide is a newer harder to
-administer treatment (daily injections) it is reserved for patients with more
-severe forms of osteoporosis, often not responding to oral bisphosphonates. For
-those reasons the presence of residual confounding cannot be excluded, as was
-confirmed by our negative control analyses. Limiting the analyses to patients at
-high hip fracture risk and re-calibrating using a large set of negative controls
-moved our hazard ratio estimates closer to the ones derived in earlier clinical
-trials.
+Finally, we applied the framework presented in [@sec-framework] to assess
+heterogeneity of the effect of treatment with teriparatide compared to oral
+bisphsophonates in patients with osteoporosis with regard to three outcomes of
+interest---namely hip fracture, major osteoporotic fracture, and vetebral
+fracture. Capitalizing on the OMOP-CDM we were able to include hundreds of
+thousands of patients, resulting in one of the first large-scale observational
+studies exploring this problem. Overall treatment effect estimates showed
+negligible differences between teriparatide and oral bisphosphonates and failed
+to reproduce results from previous randomized controlled trials. Prior clinical
+trials for evaluating the effectiveness of teriparatide included patients with
+severe osteoporosis whereas our study included all female patients above the age
+of 50. In addition, since teriparatide is a newer harder to administer treatment
+(daily injections) it is reserved for patients with more severe forms of
+osteoporosis, often not responding to oral bisphosphonates. For those reasons
+the presence of residual confounding cannot be excluded, as was confirmed by our
+negative control analyses. Limiting the analyses to patients at high hip
+fracture risk and performing recalibration using a large set of negative
+controls moved our hazard ratio estimates closer to the ones derived in earlier
+clinical trials.
 
 ## Future research
 

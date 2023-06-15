@@ -23,7 +23,7 @@ book:
     - summary.qmd
 
 bibliography: references.bib
-csl: nature.csl
+csl: american-medical-association-alphabetical.csl
 
 format:
   pdf:
@@ -32,3 +32,5 @@ format:
     include-in-header:
       - preamble.tex
     toc-depth: 1
+    cite-method: citeproc
+  docx: default

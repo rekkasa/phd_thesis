@@ -1,5 +1,4 @@
-# Estimating individualized treatment effects from randomized controlled trials {#sec-simulation}
-
+# Estimating individualized treatment effects from clinical trial data {#sec-simulation}
 \blfootnote{Chapter based on \textit{Rekkas, A., Rijnbeek, P.R., Kent, D.M. et al. Estimating individualized treatment effects from randomized controlled trials: a simulation study to compare risk-based approaches. BMC Med Res Methodol 23, 74 (2023). https://doi.org/10.1186/s12874-023-01889-6}}
 
 \chaptermark{Individualized treatment effects}

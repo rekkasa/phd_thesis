@@ -1,4 +1,5 @@
-# A standardized framework for risk-based assessment of treatment effect heterogeneity {#sec-framework-appendix}
+# A framework for risk-based assessment of treatment effect heterogeneity {#sec-framework-appendix}
+
 \vspace*{\fill}\par
 \pagebreak
 
@@ -43,7 +44,7 @@ Venous thrombosis & 0.1\% & 0.1\% & 0.00 & 0.2\% & 0.2\% & 0.01 & 0.3\% & 0.3\% 
 \caption{Baseline characteristics of patients in CCAE, MDCD, and MDCR after
 stratification on the propensity scores. THZ: new users of thiazide or
 thiazide-like diuretics. ACE: new users of ACE inhibitors.}
-\label{tab-ch3-supp-table1}
+\label{table:ch3-supp-table1}
 \end{table}
 \end{landscape}
 

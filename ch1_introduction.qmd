@@ -95,9 +95,10 @@ benefit much more (@fig-riskBenefit). Consequently, baseline risk can be used as
 a subgrouping variable for assessing heterogeneity of treatment effect. For many
 populations of patients for whom we aim to estimate treatment effects,
 well-performing models for predicting baseline risk already exist and can be
-used to stratify the patients into subgroups (**REFS**). If no such models
-exist, the researcher can develop one in the dataset that is used for treatment
-effect estimation
+used to stratify the patients into subgroups
+[@conroy2003estimation;@lindstr_om2003diabetes]. If no such models exist, the
+researcher can develop one in the dataset that is used for treatment effect
+estimation
 [@kent2010assessing;@burke2014using;@kent2019predictive1;@kent2019predictive2;@abadie2018endogenous].
 
 ```{r fig-riskBenefit, cache=TRUE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", out.width = '100%'}

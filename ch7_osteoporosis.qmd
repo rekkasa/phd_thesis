@@ -1,4 +1,4 @@
-# Treatment heterogeneity in the study of the comparative effectiveness of teriparatide vs bisphosphonates in routine practice conditions: a multi-database cohort study {#sec-osteoporosis}
+# Teriparatide vs bisphosphonates: A treatment effect heterogeneity study {#sec-osteoporosis}
 
 \chaptermark{Teriparatide vs bisphosphonates}
 \vspace*{\fill}\par
@@ -149,7 +149,7 @@ three outcomes of interest using Cox proportional hazards models with treatment
 as the sole covariate. We adjusted for observed confounding by fitting the Cox
 regression models on the propensity score matched (1:4) subset of the study
 population. Hazard ratios (HR) derived in different databases were summarized
-using random effects meta-analysis (**REF**).
+using random effects meta-analysis [@borenstein2010basic].
 
 We developed separate large-scale propensity score models within each database
 using LASSO logistic regression with a predefined set of measured covariates
@@ -456,27 +456,27 @@ Outcome & Database & Uncalibrated HR & Calibrated HR \\
 \end{tabular}}
 \end{table}
 
-```{r fig-ch7-psDensity, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+```{r fig-ch7-psDensity, cache=TRUE, echo=FALSE, warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallPsDensity_itt_att_1095_custom.tiff")))
 ```
 
-```{r fig-ch7-balance, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+```{r fig-ch7-balance, cache=TRUE, echo=FALSE, warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallCovariateBalance_itt_att_1095_custom.tiff")))
 ```
 
-```{r fig-ch7-ncPlot, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+```{r fig-ch7-ncPlot, cache=TRUE, echo=FALSE,warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallNcPlot_itt_att_1095_custom.tiff")))
 ```
 
 
-```{r fig-ch7-metaOverall, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+```{r fig-ch7-metaOverall, cache=TRUE, echo=FALSE,warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaOverall_itt_att_1095_custom.tiff")))
 ```
 
-```{r fig-ch7-metaRiskStratified, cache=TRUE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
+```{r fig-ch7-metaRiskStratified, cache=TRUE,warning=FALSE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_itt_att_1095_custom.tiff")))
 ```
 
-```{r fig-ch7-absolute, cache=TRUE, echo=TRUE, fig.cap="test", fig.show="hold", out.width = '100%'}
+```{r fig-ch7-absolute, cache=TRUE, echo=FALSE,warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_custom.tiff")))
 ```

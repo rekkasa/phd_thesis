@@ -86,7 +86,7 @@ Statement and PATH Statement Explanation and Elaboration articles, and we refer
 readers to these papers for details. Generally, we use the term heterogeneity of
 treatment effect to refer to a scale-dependent property. This is in distinction
 to other writers that have reserved the term heterogeneity of treatment effect
-to refer specifically to heterogeneity on a relative scale (***REF: 10***).
+to refer specifically to heterogeneity on a relative scale [@Harrell_2018].
 Thus, when outcome risk varies across subgroups of patients, heterogeneity of
 treatment effect must exist on some scale. If relative risk is constant, then
 there is heterogeneity of treatment effect on the clinically important absolute
@@ -226,22 +226,6 @@ treatment and those who do not (***Table 2, eq. 5***). Contrary to previous
 methods, baseline risk or the magnitude of absolute treatment benefit are not of
 primary concern.
 
-```{r reviewResults, cache=TRUE, echo=FALSE, fig.cap="Results of the review.", out.width = '100%'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/reviewFigure.tiff")))
-```
-
-Although risk-based methods emerged earlier (***Fig. 2***), methodology papers
-on treatment effect modeling (9 papers) and optimal treatment regimes (12
-papers) are more frequently published since 2010 than papers on risk-based
-methods (8 papers). Even though extensive literature exists on model evaluation
-when it comes to prediction modeling, the same task can be quite challenging
-when modeling treatment effects [@steyerberg2019clinical]. That is due to the
-unavailability of counterfactual outcomes under the alternative treatment,
-providing a substantial challenge to the assessment of model fit. Methods
-included in the review concerning model evaluation in the setting of predictive
-heterogeneity of treatment effect (4 papers) were assigned to a separate category as they are relevant to all
-identified approaches.
-
 \begin{blackbox}[label={equations},breakable]{Equations corresponding to treatment effect hetergoenetiy assessment methods.}
 \textbf{Risk modeling}
 
@@ -289,6 +273,23 @@ T_{\text{optimal}} = \text{argmax}_TE\Big\{ E\{ y\mid x_1,\dots,x_p,T(x_1,\dots,
 \end{equation*}
 
 \end{blackbox}
+
+
+```{r reviewResults, cache=TRUE, echo=FALSE, fig.cap="Results of the review.", out.width = '100%', fig.show="hold"}
+grid::grid.raster(tiff::readTIFF(here::here("figures/reviewFigure.tiff")))
+```
+
+Although risk-based methods emerged earlier (***Fig. 2***), methodology papers
+on treatment effect modeling (9 papers) and optimal treatment regimes (12
+papers) are more frequently published since 2010 than papers on risk-based
+methods (8 papers). Even though extensive literature exists on model evaluation
+when it comes to prediction modeling, the same task can be quite challenging
+when modeling treatment effects [@steyerberg2019clinical]. That is due to the
+unavailability of counterfactual outcomes under the alternative treatment,
+providing a substantial challenge to the assessment of model fit. Methods
+included in the review concerning model evaluation in the setting of predictive
+heterogeneity of treatment effect (4 papers) were assigned to a separate category as they are relevant to all
+identified approaches.
 
 ### Risk-based methods {.unnumbered}
 
