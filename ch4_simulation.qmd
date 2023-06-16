@@ -551,3 +551,11 @@ relative treatment effect and/or substantial treatment-related harms are
 anticipated. Increasing the complexity of the RCS models by increasing the
 number of knots does not improve benefit prediction. Using AIC for model
 selection is attractive with larger sample size.
+
+## Acknowledgements {.unnumbered}
+
+This work has been performed in the European Health Data and Evidence Network
+(EHDEN) project. This project has received funding from the Innovative Medicines
+Initiative 2 Joint Undertaking (JU) under grant agreement No 806968. The JU
+receives support from the European Union’s Horizon 2020 research and innovation
+program and EFPIA.

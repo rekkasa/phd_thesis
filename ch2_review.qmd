@@ -211,18 +211,19 @@ a patient’s baseline risk for the outcome under study
 [@varadhan2013framework;@daudt2013enhancing]. Even though relative treatment
 effect may vary across different levels of baseline risk, relative treatment
 effect modification by each covariate is not considered, i.e. no covariate by
-treatment interaction terms are considered (***Table 2, eqs. 1–3***).
+treatment interaction terms are considered (Box \ref{equations} equations
+\ref{eq:1} to \ref{eq:3}).
 
 - Treatment effect modeling methods use both the main effects of risk factors and
 covariate-by -treatment interaction terms (on the relative scale) to estimate
 individualized benefits. They can be used either for making individualized
 absolute benefit predictions or for defining patient subgroups with similar
-expected treatment benefits (***Table 2, eq. 4***).
+expected treatment benefits (Box \ref{equations} equation \ref{eq:4}).
 
 - Optimal treatment regime methods focus primarily on treatment effect modifiers
 (covariate by treatment interactions) for the definition of a treatment
 assignment rule dividing the trial population into those who benefit from
-treatment and those who do not (***Table 2, eq. 5***). Contrary to previous
+treatment and those who do not (Box \ref{equations} equation \ref{eq:5}). Contrary to previous
 methods, baseline risk or the magnitude of absolute treatment benefit are not of
 primary concern.
 
@@ -231,26 +232,24 @@ primary concern.
 
 A multivariate regression model $f$ that predicts the risk of an outcome $y$
 based on the predictors $x_1,\dots,x_p$ is identified or developed:
-\begin{equation*}
-\text{risk}(x_1,\dots,x_p)=E\{y\mid x_1,\dots,x_p\} = f(\alpha+\beta_1x_1+\dots\beta_px_p)
-\end{equation*}
+\begin{equation}
+\text{risk}(x_1,\dots,x_p)=E\{y\mid x_1,\dots,x_p\} = f(\alpha+\beta_1x_1+\dots\beta_px_p) \label{eq:1}
+\end{equation}
 The expected outcome of a patient with measured predictors $x_1,\dots x_p$ receiving
 treatment $T$ (where $T=1$, when patient is treated and $0$ otherwise) based on
 the linear predictor $\text{lp}(x_1,\dots,x_p)=\alpha +\beta_1x_1+\dots+\beta_px_p$
 from a previously derived risk model can be described as:
 
 \begin{equation}
-\label{eq:riskModeling}
-E\{y\mid x_1,\dots,x_p\} = f(lp + \gamma_0T+\gamma_1T\times lp)
+E\{y\mid x_1,\dots,x_p\} = f(lp + \gamma_0T+\gamma_1T\times lp) \label{eq:2}
 \end{equation}
 
 When the assumption of constant relative treatment effect across the entire risk
-distribution is made (risk magnification) equation \ref{eq:riskModeling} takes
-the form:
+distribution is made (risk magnification) equation \eqref{eq:2} takes the form:
 
-\begin{equation*}
-E\{y\mid x_1,\dots,x_p\} = f(lp + \gamma_0T)
-\end{equation*}
+\begin{equation}
+E\{y\mid x_1,\dots,x_p\} = f(lp + \gamma_0T) \label{eq:3}
+\end{equation}
 
 \textbf{Treatment effect modeling}
 
@@ -258,9 +257,9 @@ The expected outcome of a patient with measured predictors $x_1,\dots,x_p$
 receiving treatment $T$ can be derived from a model containing predictor main
 effects and potenetial treatment interaction terms:
 
-\begin{equation*}
-E\{y\mid x_1,\dots,x_p\} = f(\alpha + \beta_1x_1+\dots+\beta_px_p+\gamma_0T+\gamma_1Tx_1+\dots+\gamma_pTx_p)
-\end{equation*}
+\begin{equation}
+E\{y\mid x_1,\dots,x_p\} = f(\alpha + \beta_1x_1+\dots+\beta_px_p+\gamma_0T+\gamma_1Tx_1+\dots+\gamma_pTx_p) \label{eq:4}
+\end{equation}
 
 \textbf{Optimal treatment regime}
 
@@ -268,9 +267,9 @@ A treatment regime $T(x_1,\dots, x_p)$ is a binary treatment assignment rule
 based on measured predictors. The optimal treatment regime maximizes the overall
 expected outcome across the entire target population:
 
-\begin{equation*}
-T_{\text{optimal}} = \text{argmax}_TE\Big\{ E\{ y\mid x_1,\dots,x_p,T(x_1,\dots,x_p) \} \Big\}
-\end{equation*}
+\begin{equation}
+T_{\text{optimal}} = \text{argmax}_TE\Big\{ E\{ y\mid x_1,\dots,x_p,T(x_1,\dots,x_p) \} \Big\} \label{eq:5}
+\end{equation}
 
 \end{blackbox}
 
@@ -818,3 +817,12 @@ documented an exuberance of new methods, we do note a marked dearth of
 comparative studies in the literature. Future research could shed light on
 advantages and drawbacks of methods in terms of predictive performance in
 different settings.
+
+## Acknowledgements {.unnumbered}
+
+We acknowledge support from the Innovative Medicines Initiative (IMI) and
+helpful comments from Victor Talisa, Data Scientist from the University of
+Pittsburgh. The design, data collection, analysis, interpretation, and writing
+for this work were supported by a Patient Centered Outcomes Research Institute
+(PCORI) contract, the Predictive Analytics Resource Center
+[SA.Tufts.PARC.OSCO.2018.01.25].

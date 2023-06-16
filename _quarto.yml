@@ -33,4 +33,3 @@ format:
       - preamble.tex
     toc-depth: 1
     cite-method: citeproc
-  docx: default

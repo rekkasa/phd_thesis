@@ -710,3 +710,13 @@ In conclusion, COPE, a simple tool based on six quickly and objectively
 obtainable predictors in the ED, is well able to predict mortality and need for
 ICU admission for patients who present to the ED with suspected COVID19. COPE
 may support patients and doctors in decision making.
+
+## Acknowledgements {.unnumbered}
+
+We thank Noreen van der Linden and the Dutch Network of Acute Care (LNAZ) for
+support with collecting the data. g This work was supported by ZonMw (project
+number 10430 01 201 0019: Clinical prediction models for COVID-19: development,
+international validation and use) and the Patient-Centred Outcomes Research
+Institute (PCORI grant number ME-1606–35555: How Well Do Clinical Prediction
+Models (CPMs) Validate? A Large-Scale Evaluation of Cardiovascular Clinical
+Prediction Models).

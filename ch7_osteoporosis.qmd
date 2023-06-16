@@ -175,7 +175,7 @@ observational studies, which may not be visible with standard diagnostics.
 Negative control outcome (NCO) analyses are a popular approach for assessing the
 presence of residual confounding [@lipsitch2010negative]. Negative controls are
 treatment-outcome pairs where a null treatment effect has been established.
-Using the effect estimates in a set of 126 NCO experiments, i.e. outcomes that
+Using the effect estimates in a set of 147 NCO experiments, i.e. outcomes that
 are not caused by TP or BP, we derived an empirical approximation to the null
 distribution. We used this approximation to calibrate all estimated hazard
 ratios and their 95% confidence intervals for the three outcomes of interest
@@ -210,78 +210,191 @@ population is stratified using existing guidelines based on age-dependent
 
 After propensity score matching, a total of 35,869 TP users contributed 75,849
 person-years, with 846 fractures observed. This compared to 133,437 matched BP
-users, 280,901 person-years, and 3,409 fractures. Before propensity score
-matching, TP users were more likely to have a diagnosis of osteoarthritis,
-rheumatoid arthritis, depressive disorder, and gastroesophageal reflux disease
-compared to BP users (Supplementary Tables 10-13). After propensity score
-matching these imbalances disappeared (Table 1). In all databases adequate
-equipoise of the preference score distributions was achieved (Figure 1), with
-all baseline covariates (>35,000 in each database) well balanced after matching
-(Figure 2). This indicates that we were able account for observed confounding
-present in all databases. However, NCO analyses suggested the presence of
-substantial residual confounding, with matched TP users showing a higher risk of
-multiple causally unrelated (negative control) outcomes, as shown in Figure 3.
-This suggests that propensity score matching did not fully account for
-confounding by indication, as TP users appear less healthy than matched BP users
-in terms of many unrelated comorbidities.
+users, 280,901 person-years, and 3,409 fractures (Table \ref{table:ch7-populations}).
+Before matching, TP users were more likely to have a diagnosis of
+osteoarthritis, rheumatoid arthritis, depressive disorder, and gastroesophageal
+reflux disease compared to BP users (Supplementary Tables 10-13). After matching,
+these imbalances disappeared (Table \ref{table:ch7-table1}).
 
-After propensity score matching, a total of 35,869 TP users contributed 75,849
-person-years, with 846 fractures observed. This compared to 133,437 matched BP
-users, 280,901 person-years, and 3,409 fractures. Before propensity score
-matching, TP users were more likely to have a diagnosis of osteoarthritis,
-rheumatoid arthritis, depressive disorder, and gastroesophageal reflux disease
-compared to BP users (Supplementary Tables 10-13). After propensity score
-matching these imbalances disappeared (Table 1). In all databases adequate
-equipoise of the preference score distributions was achieved (Figure 1), with
-all baseline covariates (>35,000 in each database) well balanced after matching
-(Figure 2). This indicates that we were able account for observed confounding
-present in all databases. However, NCO analyses suggested the presence of
-substantial residual confounding, with matched TP users showing a higher risk of
-multiple causally unrelated (negative control) outcomes, as shown in Figure 3.
-This suggests that propensity score matching did not fully account for
-confounding by indication, as TP users appear less healthy than matched BP users
-in terms of many unrelated comorbidities.
+\begin{table}[]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrr}
+\toprule
+Treatment & Database & Patients & Follow-up time (years) & Events (n) \\
+\midrule
+\multirow{4}{*}{Teriparatide} & CCAE & 8,258 & 14,661 & 82 \\
+ & MDCR & 6,378 & 12,575 & 228 \\
+ & OPTUM-DOD & 8,958 & 18,809 & 246 \\
+ & OPTUM-EHR & 12,275 & 29,804 & 290 \\
+\multirow{4}{*}{Oral bisphosphonates} & CCAE & 31,194 & 55,126 & 275 \\
+ & MDCR & 23,281 & 45,855 & 1,023 \\
+ & OPTUM-DOD & 34,298 & 71,578 & 1,141 \\
+ & OPTUM-EHR & 44,664 & 107,532 & 970 \\
+\bottomrule
+\end{tabular}}
+\caption{Population size, follow-up time and number of hip fractures of patients receiving teriparatide or bisphosphonates across the four databases after propensity score matching.}
+\label{table:ch7-populations}
+\end{table}
+
+\begin{landscape}
+\begin{table}[p]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{CCAE} & \multicolumn{3}{c}{MDCR} & \multicolumn{3}{c}{OPTUM-DOD} & \multicolumn{3}{c}{OPTUM-EHR} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} \cmidrule(rl){8-10} \cmidrule(rl){11-13}
+ & TP (\%) & BP (\%) & Std. diff & TP (\%) & BP (\%) & Std. diff & TP (\%) & BP (\%) & Std. diff & TP (\%) & BP (\%) & Std. diff \\
+\midrule
+\textbf{Medical history: General} &  &  &  &  &  &  &  &  &  &  &  &  \\
+Attention deficit hyperactivity disorder & 1.2 & 1.2 & 0 & 0.3 & 0.2 & 0.02 & 0.8 & 0.9 & -0.01 & 0.6 & 0.6 & 0 \\
+Chronic obstructive lung disease & 10.8 & 10.9 & -0.01 & 23.9 & 25.3 & -0.03 & 22 & 23.2 & -0.03 & 16.6 & 17.1 & -0.01 \\
+Crohn's disease & 1.8 & 1.8 & 0 & 1.3 & 1.2 & 0.01 & 1.3 & 1.4 & -0.01 & 1.2 & 1.1 & 0.01 \\
+Depressive disorder & 16 & 17.1 & -0.03 & 14.3 & 15.5 & -0.03 & 20.4 & 22.1 & -0.04 & 21.2 & 21.7 & -0.01 \\
+Diabetes mellitus & 0.2 & 0.3 & -0.01 & 0.1 & 0.1 & 0 & 0.3 & 0.4 & -0.02 & 1.4 & 1.4 & 0.01 \\
+Gastroesophageal reflux disease & 26.4 & 27.5 & -0.02 & 31.8 & 34.5 & -0.06 & 31 & 32.9 & -0.04 & 30 & 29.9 & 0 \\
+Gastrointestinal hemorrhage & 3.3 & 3.4 & -0.01 & 6.7 & 7.1 & -0.01 & 5.6 & 5.7 & -0.01 & 3.5 & 3.6 & 0 \\
+Human immunodeficiency virus infection & 0.2 & 0.2 & -0.01 & 0 & 0 & -0.02 & 0.2 & 0.2 & 0.01 & 0.1 & 0.2 & -0.02 \\
+Hyperlipidemia & 39.7 & 40.6 & -0.02 & 46.4 & 48.8 & -0.05 & 54.4 & 55.7 & -0.03 & 43.4 & 42 & 0.03 \\
+Obesity & 6.8 & 7.5 & -0.03 & 5.6 & 6.1 & -0.02 & 11.5 & 12.3 & -0.02 & 10.1 & 10.2 & 0 \\
+Osteoarthritis & 14.3 & 14.5 & -0.01 & 25.3 & 26.9 & -0.04 & 29 & 30.1 & -0.02 & 23.2 & 23.1 & 0 \\
+Pneumonia & 1.6 & 1.9 & -0.02 & 2.4 & 2.4 & 0 & 4.5 & 4.9 & -0.02 & 5 & 5.3 & -0.01 \\
+Psoriasis & 2.6 & 2.6 & 0 & 2.6 & 3 & -0.03 & 2.6 & 2.8 & -0.02 & 1.6 & 1.7 & -0.01 \\
+Rheumatoid arthritis & 9.8 & 10.2 & -0.01 & 11.1 & 11.4 & -0.01 & 13 & 13.5 & -0.01 & 10.2 & 10.7 & -0.01 \\
+Ulcerative colitis & 1.7 & 1.6 & 0.01 & 1.8 & 1.7 & 0 & 1.7 & 1.6 & 0.01 & 1.1 & 1.1 & 0 \\
+Urinary tract infectious disease & 31.9 & 32.7 & -0.02 & 36.2 & 38.2 & -0.04 & 39 & 40.9 & -0.04 & 24.7 & 24.8 & 0 \\
+\textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  &  &  &  &  &  &  \\
+Atrial fibrillation & 3 & 3.1 & 0 & 14.6 & 15.1 & -0.01 & 9.5 & 10.1 & -0.02 & 9.6 & 9.8 & -0.01 \\
+Cerebrovascular disease & 1.8 & 1.8 & 0 & 7.8 & 8.1 & -0.01 & 5 & 5.3 & -0.01 & 2.6 & 2.7 & -0.01 \\
+Coronary arteriosclerosis & 5.4 & 5.4 & 0 & 17.8 & 18.3 & -0.01 & 10.2 & 10.7 & -0.02 & 8 & 7.9 & 0 \\
+Heart disease & 1.8 & 1.6 & 0.01 & 4 & 4.3 & -0.02 & 4.3 & 4.4 & -0.01 & 4.1 & 4.1 & 0 \\
+Heart failure & 1.1 & 1.1 & 0 & 2.7 & 3 & -0.02 & 4.9 & 5.3 & -0.02 & 3.5 & 3.7 & -0.01 \\
+Ischemic heart disease & 0.2 & 0.2 & 0 & 0.6 & 0.7 & -0.01 & 0.4 & 0.4 & -0.01 & 0.3 & 0.2 & 0.02 \\
+Pulmonary embolism & 0.4 & 0.4 & 0 & 0.5 & 0.6 & -0.01 & 1 & 1.1 & -0.01 & 1.3 & 1.4 & -0.01 \\
+Venous thrombosis & 1 & 1.2 & -0.01 & 1.5 & 1.9 & -0.03 & 1.2 & 1.4 & -0.01 & 0.8 & 0.9 & -0.01 \\
+\textbf{Medical history: Neoplasms} &  &  &  &  &  &  &  &  &  &  &  &  \\
+Malignant lymphoma & 0.5 & 0.5 & 0 & 0.8 & 1 & -0.02 & 0.3 & 0.5 & -0.03 & 0.5 & 0.6 & -0.01 \\
+Malignant neoplastic disease & 0.4 & 0.4 & 0 & 0.6 & 0.6 & -0.01 & 0.3 & 0.5 & -0.02 & 0.7 & 0.8 & -0.01 \\
+\bottomrule
+\end{tabular}}
+\caption{Characteristics of patients receiving teriparatide or bisphosphonates after matching on the propensity score.}
+\label{table:ch7-table1}
+\end{table}
+\end{landscape}
+
+
+In all databases adequate equipoise of the preference
+score distributions was achieved (@fig-ch7-psDensity), with all baseline
+covariates well balanced after matching (@fig-ch7-balance). Indicating adequate
+adjustment for observed confounding. However, NCO analyses suggested the
+presence of substantial residual confounding, with matched TP users showing a
+higher risk of multiple causally unrelated (negative control) outcomes, as shown
+in @fig-ch7-ncPlot. This suggests that propensity score matching did not fully
+account for confounding by indication, as TP users appear less healthy than
+matched BP users in terms of many unrelated comorbidities.
+
+
+
+```{r fig-ch7-psDensity, cache=TRUE, echo=FALSE, warning=FALSE, fig.cap="Preference score distribution across the four databases. The preference score is a transformation of the propensity score that adjusts for prevalence differences between populations. Higher overlap of the preference score distributions indicates that patients in the target and the comparator cohorts are more similar in terms of the predicted probability of receiving treatment (teriparatide).", fig.show="hold", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallPsDensity_itt_att_1095_custom.tiff")))
+```
+
+```{r fig-ch7-balance, cache=TRUE, echo=FALSE, warning=FALSE, fig.cap="Patient characteristic balance for teriparatide and oral bisphosphonates before and after propensity score matching across the four databases. Each point represents the standardized difference of means for a single covariate before (x-axis) and after (y-axis) matching. A commonly used rule of thumb suggests that standardized mean differences above 0.1 after propensity score adjustment indicate insufficient covariate balance.",  out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallCovariateBalance_itt_att_1095_custom.tiff")))
+```
+
+```{r fig-ch7-ncPlot, cache=TRUE, echo=FALSE,warning=FALSE, fig.cap="Effect size estimates for the negative controls (true hazard ratio of 1) across the four databases. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size; alpha = 0.05). A well calibrated estimator should include the true effect size within the 95% confidence interval, 95% of the time.", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallNcPlot_itt_att_1095_custom.tiff")))
+```
+
+The estimated meta-analytic hazard ratios (HR) showed negligible overall
+difference for hip fracture (meta-analytic HR was 0.94 (95% CI from 0.79 to
+1.10) and an overall trend towards an increased risk of major osteoporotic and
+vertebral fracture amongst TP users with meta-analytic HR of 1.15 (1.02 to 1.18;
+95% CI) and 1.17 (1.05 to 1.31; 95% CI), respectively (@fig-ch7-metaOverall).
+Empirical calibration corrected these estimates accounting for the information
+resulting from NCO analyses. The resulting meta-analytic calibrated HR were 0.87
+(0.74 to 1.02; 95% CI), 1.10 (1.02 to 1.18; 95% CI), and 1.10 (1.00 to 1.21; 95%
+CI) for hip fracture, major osteoporotic fracture, and vertebral fracture
+respectively across the four considered databases (Table
+\ref{table:ch7-hazardRatios}).
+
+```{r fig-ch7-metaOverall, cache=TRUE, echo=FALSE,warning=FALSE, fig.cap="Hazard ratio estimates of the effect of treatment with teriparatide compared to bisphosphonates for the three outcomes of interest (hip fracture, major osteoporotic fracture, and vertebral fracture). Estimates are calibrated for unobserved confounding using estimates on 147 negative control outcomes. We plot in red the meta-analytic estimate across the four databases for each of the three outcomes of interest.", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaOverall_itt_att_1095_custom.tiff")))
+```
+
+\begin{table}[]
+\resizebox{\columnwidth}{!}{\begin{tabular}{llrr}
+\toprule
+Outcome & Database & Uncalibrated HR & Calibrated HR \\
+\midrule
+\multirow{5}{*}{Hip fracture} & CCAE & 1.12 (0.87, 1.43) & 1.02 (0.76, 1.38) \\
+ & MDCR & 0.81 (0.70, 0.93) & 0.76 (0.61, 0.94) \\
+ & OPTUM-DOD & 0.82 (0.71, 0.94) & 1.12 (1.01, 1.23) \\
+ & OPTUM-EHR & 1.08 (0.95, 1.23) & 1.04 (0.83, 1.31) \\
+ & \textbf{Meta-analysis} & \textbf{0.94 (0.79, 1.12)} & \textbf{0.87 (0.74, 1.02)} \\
+\multirow{5}{*}{Major osteoporotic fracture} & CCAE & 1.18 (0.97, 1.44) & 1.12 (0.88, 1.41) \\
+ & MDCR & 1.02 (0.89, 1.18) & 1.00 (0.87, 1.15) \\
+ & OPTUM-DOD & 1.19 (1.07, 1.31) & 1.12 (1.01, 1.23) \\
+ & OPTUM-EHR & 1.10 (0.98, 1.23) & 1.09 (0.91, 1.30) \\
+ & \textbf{Meta-analysis} & \textbf{1.15 (1.04, 1.27)} & \textbf{1.10 (1.02, 1.18)} \\
+\multirow{5}{*}{Vertebral fracture} & CCAE & 1.37 (1.12, 1.67) & 1.25 (0.96, 1.62) \\
+ & MDCR & 1.01 (0.87, 1.17) & 0.95 (0.76, 1.18) \\
+ & OPTUM-DOD & 1.18 (1.04, 1.34) & 1.11 (0.98, 1.27) \\
+ & OPTUM-EHR & 1.19 (1.06, 1.32) & 1.14 (0.92, 1.42) \\
+ & \textbf{Meta-analysis} & \textbf{1.17 (1.05, 1.31)} & \textbf{1.10  (1.00, 1.21)} \\
+\bottomrule
+\end{tabular}}
+\caption{Uncalibrated and calibrated hazard ratio estimates for each of the outcomes of interest across the four considered databases.}
+\label{table:ch7-hazardRatios}
+\end{table}
 
 We estimated meta-analytic HR of 1.06 (0.92 to 1.22; 95% CI), 1.30 (1.18 to
 1.44; 95%CI), and 1.30 (1.14 to 1.49; 95% CI) for hip fracture, major
 osteoporotic fracture, and vertebral fracture, respectively, in the lower hip
-fracture risk group across the four databases. Using the results of the NCO
-analyses, we recalibrated these estimates to 1.00 (0.85 to 1.76; 95% CI), 1.24
-(1.10 to 1.39; 95% CI), and 1.24 (1.07 to 1.43; 95% CI) for hip fracture, major
-osteoporotic fracture, and vertebral fracture, respectively. As for patients at
-higher hip fracture risk, corresponding meta-analytic HRs were 0.91 (0.75 to
-1.11; 95% CI), 0.92 (0.76 to 1.10; 95% CI) , and 1.11 (0.93 to 1.34; 95% CI),
-respectively, which were recalibrated to 0.83 (0.64 to 1.07; 95% CI), 0.86 (0.73
-to 1.01; 95% CI), and 1.04  (0.86 to 1.26; 95% CI), respectively. This
-difference in effect indicated an interaction between hip fracture risk and the
-comparative effectiveness of TP vs BP treatment, with a potential better
-protection in higher fracture risk. Risk stratified negative control analyses,
-again, showed evidence of residual confounding (Supplementary Figure 2).
+fracture risk group across the four databases (@fig-ch7-metaRiskStratified).
+Using the results of the NCO analyses, we recalibrated these estimates to 1.00
+(0.85 to 1.76; 95% CI), 1.24 (1.10 to 1.39; 95% CI), and 1.24 (1.07 to 1.43; 95%
+CI) for hip fracture, major osteoporotic fracture, and vertebral fracture,
+respectively. As for patients at higher hip fracture risk, corresponding
+meta-analytic HRs were 0.91 (0.75 to 1.11; 95% CI), 0.92 (0.76 to 1.10; 95% CI)
+, and 1.11 (0.93 to 1.34; 95% CI), respectively, which were recalibrated to 0.83
+(0.64 to 1.07; 95% CI), 0.86 (0.73 to 1.01; 95% CI), and 1.04  (0.86 to 1.26;
+95% CI), respectively. This difference in effect indicated an interaction
+between hip fracture risk and the comparative effectiveness of TP vs BP
+treatment, with a potential better protection in higher fracture risk. Risk
+stratified negative control analyses, again, showed evidence of residual
+confounding (Supplementary Figure 2).
+
+```{r fig-ch7-metaRiskStratified, cache=TRUE,warning=FALSE, echo=FALSE, fig.cap="Hazard ratio estimates of the effect of treatment with teriparatide compared to oral bisphosphonates for the three outcomes of interest (hip fracture, major osteoporotic fracture, and vertebral fracture) stratified on baseline hip fracture risk. Estimates are calibrated for unobserved confounding using estimates on 147 negative control outcomes. We plot in red the meta-analytic estimate across the four databases for each of the outcomes of interest. We also plot in yellow the hazard ratio estimated in VERO clinical trial.", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_itt_att_1095_custom.tiff")))
+```
 
 The stronger relative treatment effects with increasing three-year hip fracture
 risk found in MDCR and Optum-DOD translated to increasing benefits on the
-absolute scale. Absolute treatment effect estimates (risk differences) increased
-from -0.03% (-0.68 to 0.62%; 95% CI) to 1.55% (0.19% to 2.91%; 95% CI) and from
-0.19% (-0.23% to 0.62%; 95% CI) to 1.71% (0.37% to 3.06%; 95% CI) in MDCR and
-Optum-DOD respectively. No similar differences on the absolute scale were
-observed in Optum-EHR. The majority of the patients in CCAE were below 3%
-three-year hip fracture risk, therefore, we only present results for the lower
-risk group. We found negligible difference between TP and BP on the absolute
-scale in CCAE for patients below 3% three-year hip fracture risk, which further
-supports the similarity of the compared treatments for lower risk patients. For
-patients below 3% three-year hip fracture risk, we actually found absolute risk
-increase with TP in CCAE and Optum-EHR, with absolute effect estimates of -0.98%
-(-1.61% to -0.36%; 95% CI) and -1.09% (-1.71% to -0.46%; 95% CI), respectively.
-For patients above 3% three-year hip fracture risk we found absolute benefits
-with TP treatment in Optum-EHR (3.20% with 95% CI from 1.07% to 5.33%). Finally,
-we found vertebral fracture risk increase with TP treatment in patients below 3%
-three-year hip fracture risk of -0.67% (-1.15% to -0.19%; 95% CI) and 1.11%
-(-1.69% to -0.53%; 95% CI) in CCAE and Optum-HER, respectively. We found
-negligible differences for vertebral fracture risk between treatments in
-patients above 3% three-year hip fracture risk.
+absolute scale (@fig-ch7-absolute). Absolute treatment effect estimates (risk
+differences) increased from -0.03% (-0.68 to 0.62%; 95% CI) to 1.55% (0.19% to
+2.91%; 95% CI) and from 0.19% (-0.23% to 0.62%; 95% CI) to 1.71% (0.37% to
+3.06%; 95% CI) in MDCR and Optum-DOD respectively. No similar differences on the
+absolute scale were observed in Optum-EHR. The majority of the patients in CCAE
+were below 3% three-year hip fracture risk, therefore, we only present results
+for the lower risk group. We found negligible difference between TP and BP on
+the absolute scale in CCAE for patients below 3% three-year hip fracture risk,
+which further supports the similarity of the compared treatments for lower risk
+patients. For patients below 3% three-year hip fracture risk, we actually found
+absolute risk increase with TP in CCAE and Optum-EHR, with absolute effect
+estimates of -0.98% (-1.61% to -0.36%; 95% CI) and -1.09% (-1.71% to -0.46%; 95%
+CI), respectively. For patients above 3% three-year hip fracture risk we found
+absolute benefits with TP treatment in Optum-EHR (3.20% with 95% CI from 1.07%
+to 5.33%). Finally, we found vertebral fracture risk increase with TP treatment
+in patients below 3% three-year hip fracture risk of -0.67% (-1.15% to -0.19%;
+95% CI) and 1.11% (-1.69% to -0.53%; 95% CI) in CCAE and Optum-HER,
+respectively. We found negligible differences for vertebral fracture risk
+between treatments in patients above 3% three-year hip fracture risk.
 
+```{r fig-ch7-absolute, cache=TRUE, echo=FALSE,warning=FALSE, fig.cap="Treatment effect estimates on the absolute scale for the three outcomes of interest stratified on baseline hip fracture risk.", out.width = '100%'}
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_custom.tiff")))
+```
 
 ## Discussion {.unumbered}
+
 ### Key findings {.unumbered}
 
 Overall, we found negligible differences in comparative fracture prevention
@@ -372,111 +485,9 @@ underestimate the effectiveness of teriparatide likely due to unresolved
 confounding.
 
 
-\begin{landscape}
-\begin{table}[p]
-\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrr}
-\toprule
- & \multicolumn{3}{c}{CCAE} & \multicolumn{3}{c}{MDCR} & \multicolumn{3}{c}{OPTUM-DOD} & \multicolumn{3}{c}{OPTUM-EHR} \\
-\cmidrule(rl){2-4} \cmidrule(rl){5-7} \cmidrule(rl){8-10} \cmidrule(rl){11-13}
- & TP (\%) & BP (\%) & Std. diff & TP (\%) & BP (\%) & Std. diff & TP (\%) & BP (\%) & Std. diff & TP (\%) & BP (\%) & Std. diff \\
-\midrule
-\textbf{Medical history: General} &  &  &  &  &  &  &  &  &  &  &  &  \\
-Attention deficit hyperactivity disorder & 1.2 & 1.2 & 0 & 0.3 & 0.2 & 0.02 & 0.8 & 0.9 & -0.01 & 0.6 & 0.6 & 0 \\
-Chronic obstructive lung disease & 10.8 & 10.9 & -0.01 & 23.9 & 25.3 & -0.03 & 22 & 23.2 & -0.03 & 16.6 & 17.1 & -0.01 \\
-Crohn's disease & 1.8 & 1.8 & 0 & 1.3 & 1.2 & 0.01 & 1.3 & 1.4 & -0.01 & 1.2 & 1.1 & 0.01 \\
-Depressive disorder & 16 & 17.1 & -0.03 & 14.3 & 15.5 & -0.03 & 20.4 & 22.1 & -0.04 & 21.2 & 21.7 & -0.01 \\
-Diabetes mellitus & 0.2 & 0.3 & -0.01 & 0.1 & 0.1 & 0 & 0.3 & 0.4 & -0.02 & 1.4 & 1.4 & 0.01 \\
-Gastroesophageal reflux disease & 26.4 & 27.5 & -0.02 & 31.8 & 34.5 & -0.06 & 31 & 32.9 & -0.04 & 30 & 29.9 & 0 \\
-Gastrointestinal hemorrhage & 3.3 & 3.4 & -0.01 & 6.7 & 7.1 & -0.01 & 5.6 & 5.7 & -0.01 & 3.5 & 3.6 & 0 \\
-Human immunodeficiency virus infection & 0.2 & 0.2 & -0.01 & 0 & 0 & -0.02 & 0.2 & 0.2 & 0.01 & 0.1 & 0.2 & -0.02 \\
-Hyperlipidemia & 39.7 & 40.6 & -0.02 & 46.4 & 48.8 & -0.05 & 54.4 & 55.7 & -0.03 & 43.4 & 42 & 0.03 \\
-Obesity & 6.8 & 7.5 & -0.03 & 5.6 & 6.1 & -0.02 & 11.5 & 12.3 & -0.02 & 10.1 & 10.2 & 0 \\
-Osteoarthritis & 14.3 & 14.5 & -0.01 & 25.3 & 26.9 & -0.04 & 29 & 30.1 & -0.02 & 23.2 & 23.1 & 0 \\
-Pneumonia & 1.6 & 1.9 & -0.02 & 2.4 & 2.4 & 0 & 4.5 & 4.9 & -0.02 & 5 & 5.3 & -0.01 \\
-Psoriasis & 2.6 & 2.6 & 0 & 2.6 & 3 & -0.03 & 2.6 & 2.8 & -0.02 & 1.6 & 1.7 & -0.01 \\
-Rheumatoid arthritis & 9.8 & 10.2 & -0.01 & 11.1 & 11.4 & -0.01 & 13 & 13.5 & -0.01 & 10.2 & 10.7 & -0.01 \\
-Ulcerative colitis & 1.7 & 1.6 & 0.01 & 1.8 & 1.7 & 0 & 1.7 & 1.6 & 0.01 & 1.1 & 1.1 & 0 \\
-Urinary tract infectious disease & 31.9 & 32.7 & -0.02 & 36.2 & 38.2 & -0.04 & 39 & 40.9 & -0.04 & 24.7 & 24.8 & 0 \\
-\textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  &  &  &  &  &  &  \\
-Atrial fibrillation & 3 & 3.1 & 0 & 14.6 & 15.1 & -0.01 & 9.5 & 10.1 & -0.02 & 9.6 & 9.8 & -0.01 \\
-Cerebrovascular disease & 1.8 & 1.8 & 0 & 7.8 & 8.1 & -0.01 & 5 & 5.3 & -0.01 & 2.6 & 2.7 & -0.01 \\
-Coronary arteriosclerosis & 5.4 & 5.4 & 0 & 17.8 & 18.3 & -0.01 & 10.2 & 10.7 & -0.02 & 8 & 7.9 & 0 \\
-Heart disease & 1.8 & 1.6 & 0.01 & 4 & 4.3 & -0.02 & 4.3 & 4.4 & -0.01 & 4.1 & 4.1 & 0 \\
-Heart failure & 1.1 & 1.1 & 0 & 2.7 & 3 & -0.02 & 4.9 & 5.3 & -0.02 & 3.5 & 3.7 & -0.01 \\
-Ischemic heart disease & 0.2 & 0.2 & 0 & 0.6 & 0.7 & -0.01 & 0.4 & 0.4 & -0.01 & 0.3 & 0.2 & 0.02 \\
-Pulmonary embolism & 0.4 & 0.4 & 0 & 0.5 & 0.6 & -0.01 & 1 & 1.1 & -0.01 & 1.3 & 1.4 & -0.01 \\
-Venous thrombosis & 1 & 1.2 & -0.01 & 1.5 & 1.9 & -0.03 & 1.2 & 1.4 & -0.01 & 0.8 & 0.9 & -0.01 \\
-\textbf{Medical history: Neoplasms} &  &  &  &  &  &  &  &  &  &  &  &  \\
-Malignant lymphoma & 0.5 & 0.5 & 0 & 0.8 & 1 & -0.02 & 0.3 & 0.5 & -0.03 & 0.5 & 0.6 & -0.01 \\
-Malignant neoplastic disease & 0.4 & 0.4 & 0 & 0.6 & 0.6 & -0.01 & 0.3 & 0.5 & -0.02 & 0.7 & 0.8 & -0.01 \\
-\bottomrule
-\end{tabular}}
-\end{table}
-\end{landscape}
 
 
-\begin{table}[]
-\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrr}
-\toprule
-Treatment & Database & Patients & Follow-up time (years) & Events (n) \\
-\midrule
-\multirow{4}{*}{Teriparatide} & CCAE & 8,258 & 14,661 & 82 \\
- & MDCR & 6,378 & 12,575 & 228 \\
- & OPTUM-DOD & 8,958 & 18,809 & 246 \\
- & OPTUM-EHR & 12,275 & 29,804 & 290 \\
-\multirow{4}{*}{Oral bisphosphonates} & CCAE & 31,194 & 55,126 & 275 \\
- & MDCR & 23,281 & 45,855 & 1,023 \\
- & OPTUM-DOD & 34,298 & 71,578 & 1,141 \\
- & OPTUM-EHR & 44,664 & 107,532 & 970 \\
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\begin{table}[]
-\resizebox{\columnwidth}{!}{\begin{tabular}{llrr}
-\toprule
-Outcome & Database & Uncalibrated HR & Calibrated HR \\
-\midrule
-\multirow{5}{*}{Hip fracture} & CCAE & 1.12 (0.87, 1.43) & 1.02 (0.76, 1.38) \\
- & MDCR & 0.81 (0.70, 0.93) & 0.76 (0.61, 0.94) \\
- & OPTUM-DOD & 0.82 (0.71, 0.94) & 1.12 (1.01, 1.23) \\
- & OPTUM-EHR & 1.08 (0.95, 1.23) & 1.04 (0.83, 1.31) \\
- & \textbf{Meta-analysis} & 0.94 (0.79, 1.12) & 0.87 (0.74, 1.02) \\
-\multirow{5}{*}{Major osteoporotic fracture} & CCAE & 1.18 (0.97, 1.44) & 1.12 (0.88, 1.41) \\
- & MDCR & 1.02 (0.89, 1.18) & 1.00 (0.87, 1.15) \\
- & OPTUM-DOD & 1.19 (1.07, 1.31) & 1.12 (1.01, 1.23) \\
- & OPTUM-EHR & 1.10 (0.98, 1.23) & 1.09 (0.91, 1.30) \\
- & \textbf{Meta-analysis} & 1.15   (1.04, 1.27) & 1.10  (1.02, 1.18) \\
-\multirow{5}{*}{Vertebral fracture} & CCAE & 1.37 (1.12, 1.67) & 1.25 (0.96, 1.62) \\
- & MDCR & 1.01 (0.87, 1.17) & 0.95 (0.76, 1.18) \\
- & OPTUM-DOD & 1.18 (1.04, 1.34) & 1.11 (0.98, 1.27) \\
- & OPTUM-EHR & 1.19 (1.06, 1.32) & 1.14 (0.92, 1.42) \\
- & \textbf{Meta-analysis} & 1.17 (1.05, 1.31) & 1.10  (1.00, 1.21) \\
-\bottomrule
-\end{tabular}}
-\end{table}
-
-```{r fig-ch7-psDensity, cache=TRUE, echo=FALSE, warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallPsDensity_itt_att_1095_custom.tiff")))
-```
-
-```{r fig-ch7-balance, cache=TRUE, echo=FALSE, warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallCovariateBalance_itt_att_1095_custom.tiff")))
-```
-
-```{r fig-ch7-ncPlot, cache=TRUE, echo=FALSE,warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-overallNcPlot_itt_att_1095_custom.tiff")))
-```
 
 
-```{r fig-ch7-metaOverall, cache=TRUE, echo=FALSE,warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaOverall_itt_att_1095_custom.tiff")))
-```
 
-```{r fig-ch7-metaRiskStratified, cache=TRUE,warning=FALSE, echo=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_itt_att_1095_custom.tiff")))
-```
 
-```{r fig-ch7-absolute, cache=TRUE, echo=FALSE,warning=FALSE, fig.cap="test", fig.show="hold", out.width = '100%'}
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_custom.tiff")))
-```

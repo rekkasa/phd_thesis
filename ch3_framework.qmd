@@ -298,7 +298,7 @@ adjustment. The results of the risk-stratified negative control analyses for
 each database can be found in [Figures @fig-ch3-supp1] to [-@fig-ch3-supp3] of
 [Appendix @sec-framework-appendix].
 
-```{r fig-negativeControls, cache=TRUE, echo=FALSE, fig.cap="Effect size estimates for the negative controls (true hazard ratio = 1) in a CCAE, b MDCD, and c MDCR databases. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size; alpha = 0.05). A well-calibrated estimator should include the true effect size within the 95% confidence interval, 95% of times", fig.show="hold", out.width = '100%'}
+```{r fig-negativeControls, cache=TRUE, echo=FALSE, fig.cap="Effect size estimates for the negative controls (true hazard ratio = 1) in CCAE, MDCD, and MDCR databases. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size; alpha = 0.05). A well-calibrated estimator should include the true effect size within the 95% confidence interval, 95% of times", fig.show="hold", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-NegativeControlsOverall.tiff")))
 ```
 
@@ -667,3 +667,9 @@ absolute scale, even if treatment effects remain constant on the relative scale
 across risk strata. Due to this scale-dependence of treatment effect
 heterogeneity, results should be assessed both on the relative and the absolute
 scale.
+
+## Acknowledgements {.unnumbered}
+
+This research received funding from the Innovative Medicines Initiative 2 Joint
+Undertaking (JU) under grant agreement No 80696. The JU receives support from
+the European Union’s Horizon 2020 research and innovation program and EFPIA.
