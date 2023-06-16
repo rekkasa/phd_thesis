@@ -227,6 +227,18 @@ SN tumour burden, extended &  & n = 626 & \textless 0.001 \\
 \hspace{3mm}\textgreater 1.0-2.0 mm & 200 ( 18.6 ) & 114 ( 18.2 ) &  \\
 \hspace{3mm}\textgreater 2.0-5.0 mm & 195 ( 18.1 ) & 36 ( 5.8 ) &  \\
 \hspace{3mm}\textgreater 5.0 mm & 114 ( 10.6 ) & 24 ( 3.8 ) &  \\
+\bottomrule
+\end{tabular}
+\caption{Baseline characteristics of derivation and validation cohort. Values in parentheses are percentages, unless indicated otherwise. Values for age are median (IQR). Information on positive non-SNs was retrived after CLND. For the derivation single cells were defined as metastasis \textless 0.1 mm. CLND: completion lymph node dissection; IQR: interquartile range; SN: sentinel node (continues to next page).}
+\end{table}
+
+\begin{table}[]
+\ContinuedFloat
+\begin{tabular}{lrrr}
+\toprule
+Characteristic & Derivation cohort & Validation cohort & P value \\
+ & (n =1078 ) & ( n = 692 ) &  \\
+\midrule
 SN tumour burden, simple &  & n = 626 & \textless 0.001 \\
 \hspace{3mm}\textless 1.0 mm & 569 ( 52.8 ) & 452 ( 72.2 ) &  \\
 \hspace{3mm}\textgreater 1.0 mm & 509 ( 47.2 ) & 174 ( 27.8 ) &  \\
@@ -239,8 +251,9 @@ Positive non-SNs & n = 1007 & n = 302 & 0.088 \\
 \hspace{3mm}\textgreater 1 node & 76 ( 7.5 ) & 20 ( 6.6 ) & \\
 \bottomrule
 \end{tabular}
-\caption{Baseline characteristics of derivation and validation cohort. Values in parentheses are percentages, unless indicated otherwise. Values for age are median (IQR). Information on positive non-SNs was retrived after CLND. For the derivation single cells were defined as metastasis \textless 0.1 mm. CLND: completion lymph node dissection; IQR: interquartile range; SN: sentinel node.}
+\caption{(Continued) Baseline characteristics of derivation and validation cohort. Values in parentheses are percentages, unless indicated otherwise. Values for age are median (IQR). Information on positive non-SNs was retrived after CLND. For the derivation single cells were defined as metastasis \textless 0.1 mm. CLND: completion lymph node dissection; IQR: interquartile range; SN: sentinel node.}
 \end{table}
+
 
 In the derivation cohort, recurrence at five years occurred in 496 patients
 (46.0%), DM in 437 patients (40.5%) and OM in 364 patients (33.8%). Median
@@ -260,6 +273,22 @@ final recurrence model was 0.68 (95% confidence interval [CI]: 0.65e0.70). In
 cross-validation, the recurrence model was reasonably calibrated across nine
 center in general, only in smaller centers there was substantial
 underestimation of the risk (Fig. S1).
+
+\begin{table}[]
+\begin{tabular}{lrrr}
+\toprule
+ & Hazard ratio & Lower 95 & Upper 95 \\
+\midrule
+Age & 1.28 & 1.12 & 1.45 \\
+Breslow & 1.41 & 1.23 & 1.61 \\
+SN tumour burden & 1.59 & 1.39 & 1.81 \\
+Ulceration &  &  &  \\
+\hspace{3mm}Absent & Reference &  &  \\
+\hspace{3mm}Present & 1.41 & 1.16 & 1.73 \\
+\bottomrule
+\end{tabular}
+\caption{Final model for 5-year recurrence (hazard ratio with 95\% confidence interval).}
+\end{table}
 
 The association between linear predictors of recurrence and DM was of the same
 size (calibration slope: 1.01, 95% CI: 0.87-1.16). The c-index for the
@@ -285,6 +314,7 @@ recurrence: <25% (low risk; score 6-9; 4.1% of the population); 25-50%
 score 16-19; 33.2% of the population); and >75% (very high risk; score 20e23;
 10.0% of the population). The observed outcomes for recurrence, DM and OM per
 risk group are shown in Table 3.
+
 
 ### External validation {.unnumbered}
 
@@ -316,6 +346,40 @@ predicting recurrence, DM and OM were 0.63 (95% CI: 0.61e0.65), 0.64 (95% CI:
 0.62e0.67) and 0.64 (95% CI: 0.61e0.67), respectively. The observed outcomes for
 recurrence, DM and OM per risk group are shown in Table 3.
 
+\begin{landscape}
+\begin{table}[]
+\begin{tabular}{lrrr}
+\toprule
+Risk groups & Recurrence & Distant metastasis & Overall mortality \\
+\midrule
+\multicolumn{3}{l}{EORTC -   DeCOG model} &  \\
+Low risk ( \textless 25 \% recurrence ) & 0.13 ( 0.06-0.20 ) & 0.10 ( 0.04-0.16 ) & 0.07 ( 0.02-0.13 ) \\
+Intermediate risk ( 25-50 \% recurrence ) & 0.38 ( 0.33 0.43 ) & 0.31 ( 0.26-0.36 ) & 0.25 ( 0.21-0.30 ) \\
+High risk ( 50-75 \% recurrence ) & 0.61 ( 0.56-0.66 ) & 0.55 ( 0.49-0.60 ) & 0.49 ( 0.43-0.54 ) \\
+Very high risk ( \textgreater 75 \% recurrence ) & 0.82 ( 0.73-0.88 ) & 0.78 ( 0.69 0.84 ) & 0.70 ( 0.61-0.77 ) \\
+\multicolumn{3}{l}{Simple   classification} &  \\
+Group 1 & 0.32 ( 0.26-0.36 ) & 0.26 ( 0.21-0.30 ) & 0.21 ( 0.16-0.25 ) \\
+Group 2 & 0.52 ( 0.44-0.58 ) & 0.48 ( 0.40-0.54 ) & 041 ( 0.33-0.47 ) \\
+Group 3 & 0.49 ( 0.41 0.55 ) & 0.42 ( 0.34-0.48 ) & 0.35 ( 0.28-0.42 ) \\
+Group 4 & 0.73 ( 0.67 0.77 ) & 0.69 ( 0.63-0.74 ) & 0.60 ( 0.53-0.66 ) \\
+\multicolumn{2}{l}{AJCC 7th   edition} &  &  \\
+IIIA ≤ 1.0 mm & 0.32 ( 0.26-0.37 ) & 0.25 ( 0.20-0.30 ) & 0.20 ( 0.15-0.25 ) \\
+IIIA \textgreater 1.0 mm & 0.50 ( 0.42-0.57 ) & 0.46 ( 0.38-0.53 ) & 0.40 ( 0.32-0.46 ) \\
+IIIB & 0.63 ( 0.58-0.67 ) & 0.57 ( 0.52-0.62 ) & 0.49 ( 0.44-0.53 ) \\
+IIIC & 0.60 ( 0.02-0.84 ) & 0.62 ( 0.02-0.85 ) & 0.63 ( 0.02-0.86 ) \\
+\multicolumn{2}{l}{AJCC 8th   edition} &  &  \\
+IIIA ≤ 1.0 mm & 0.27 ( 0.20-0.34 ) & 0.21 ( 0.15-0.28 ) & 0.15 ( 0.09-0.21 ) \\
+IIIA \textgreater 1.0 mm & 0.37 ( 0.23-0.49 ) & 0.34 ( 0.20-0.46 ) & 0.27 ( 0.14-0.38 ) \\
+IIIB & 0.43 ( 0.36-0.48 ) & 0.35 ( 0.29 0.41 ) & 0.30 ( 0.24-0.36 ) \\
+IIIC & 0.64 ( 0.59-0.68 ) & 0.48 ( 0.53-0.63 ) & 0.50 ( 0.45-0.55 ) \\
+IIID & 0.66 ( 0.00-0.90 ) & 0.68 ( 0.00-0.91 ) & 0.70 ( 0.00-0.92 ) \\
+\bottomrule
+\end{tabular}
+\caption{Observed outcomes per classification in the derivation cohort. Values in parentheses are 95\% confidence intervals. This table provides observed outcomes for 5-year recurrence, distant metastasis and overall mortality per risk group, e.g. when classified as low risk according to the EORTC-DeCOG model the observed 5-year recurrence was 0.13 with a 95\% confidence interval of 0.06-0.20. AJCC, American Joint Committee on Cancer; CI, confidence interval.}
+\end{table}
+\end{landscape}
+
+
 ### The American Joint Committee on Cancer (AJCC) classifications {.unnumbered}
 
 Patients were classified based on the 7th AJCC classification into IIIA
@@ -329,6 +393,31 @@ OM for both AJCC classifications are shown in Table 3. A cross-table comparing
 the patients staged in accordance with the AJCC classifications and the risk
 groups based on the EORTC-DeCOG model is illustrated in Table 4. An overview
 of c-indices for all the different models is presented in Table 5.
+
+\begin{table}[]
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+EORTC - DeCOG   classification & \multicolumn{3}{l}{AJCC 7th   classification} &  &  &  \\
+ & IIIA ≤1.0 mm & IIIA \textgreater 1.0 mm & IIIB & IIIC &  & Total \\
+\midrule
+Low risk ( score 6-9 ) & 82 & 2 & 5 & 0 &  & 89 \\
+Intermediate risk ( score 10-15 ) & 207 & 83 & 93 & 2 &  & 385 \\
+High risk ( score 16-19 ) & 15 & 89 & 230 & 1 &  & 335 \\
+Very high risk ( score 20-23 ) & 0 & 11 & 113 & 4 &  & 128 \\
+Total & 304 & 185 & 441 & 7 &  & 937 \\
+\midrule
+EORTC -   DeCOG classification & \multicolumn{3}{l}{AJCC 8th   classification} &  &  &  \\
+ & IIIA ≤1.0 mm & IIIA \textgreater 1.0 mm & IIIB & IIIC & IIID & Total \\
+\midrule
+Low risk ( score 6-9 ) & 62 & 3 & 22 & 2 & 0 & 89 \\
+Intermediate risk ( score 10-15 ) & 96 & 43 & 157 & 89 & 0 & 385 \\
+High risk ( score 16-19 ) & 0 & 10 & 71 & 253 & 1 & 335 \\
+Very high risk ( score 20-23 ) & 0 & 0 & 2 & 122 & 4 & 128 \\
+Total & 158 & 56 & 252 & 466 & 5 & 937 \\
+\bottomrule
+\end{tabular}}
+\caption{Cross-table comparing EORTC-DeCOG risk groups with the 7th and 8th AJCC classification, based on 937 complete cases. AJCC, American Joint Committee on Cancer.}
+\end{table}
 
 ## Discussion {.unnumbered}
 
