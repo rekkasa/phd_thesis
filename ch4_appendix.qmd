@@ -192,18 +192,19 @@ $t_1,\dots,t_k$ are the selected knots [@harrell2017regression].
 
 
 ## Adaptive model selection frequencies {.unnumbered}
-```{r fig-ch4-supp1, cache=TRUE, echo=FALSE, fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. The scenario with the true constant relative treatment effect (first panel) had a true prediction AUC of 0.75 and sample size of 4,250.",fig.align='center'}
+```{r fig-ch4-supp1, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. The scenario with the true constant relative treatment effect (first panel) had a true prediction AUC of 0.75 and sample size of 4,250.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_base.tiff")))
 ```
 
 
-```{r fig-ch4-supp2, cache=TRUE, echo=FALSE, fig.cap=" Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. Sample size is 17,000.",fig.align='center'}
+```{r fig-ch4-supp2, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap=" Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. Sample size is 17,000.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_sample_size.tiff")))
 ```
 
-```{r fig-ch4-supp3, cache=TRUE, echo=FALSE, fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. AUC is 0.85.",fig.align='center'}
+```{r fig-ch4-supp3, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. AUC is 0.85.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_auc.tiff")))
 ```
+
 
 ## Discrimination and calibration for benefit {.unnumbered}
 

@@ -303,21 +303,21 @@ case scenario (N = 4,250; OR = 0.8; c-statistic= 0.75; no absolute treatment
 harm) with a true constant treatment effect (median RMSE: constant treatment
 effect 0.009; linear interaction 0.014; RCS-3 0.018). The linear interaction
 model was optimal under true linear deviations (median RMSE: constant treatment
-effect 0.027; linear interaction 0.015; RCS-3 0.018; Figure 1 panels A-C) and
-even in the presence of true quadratic deviations (median RMSE: constant
-treatment effect 0.057; linear interaction 0.020; RCS-3 0.021; Figure 1 panels
-A-C) from a constant relative treatment effect. With non-monotonic deviations,
-RCS-3 slightly outperformed the linear interaction model (median RMSE: linear
-interaction 0.019; RCS-3 0.018; Figure 1 panel D). With strong treatment-related
-harms the results were very similar in most scenarios (Figure 1 panels A-C).
-Under non-monotonic deviations the optimal performance of RCS-3 was more
-pronounced (median RMSE: linear interaction 0.024; RCS-3 0.019; Figure1 panel
-D). A stronger average treatment effect (OR=0.5) resulted in higher variability
-of the true treatment effects on the absolute scale (difference in true outcome
-probabilities between treatment arms) and consequently to larger RMSE for all
-approaches. When we assumed a stronger relative treatment effect, the relative
-differences between approaches were similar to the base-case scenario
-(Supplement, Figure S10).
+effect 0.027; linear interaction 0.015; RCS-3 0.018; [@fig-rmseBase] panels A-C)
+and even in the presence of true quadratic deviations (median RMSE: constant
+treatment effect 0.057; linear interaction 0.020; RCS-3 0.021; [@fig-rmseBase]
+panels A-C) from a constant relative treatment effect. With non-monotonic
+deviations, RCS-3 slightly outperformed the linear interaction model (median
+RMSE: linear interaction 0.019; RCS-3 0.018; [@fig-rmseBase] panel D). With
+strong treatment-related harms the results were very similar in most scenarios
+([@fig-rmseBase] panels A-C). Under non-monotonic deviations the optimal
+performance of RCS-3 was more pronounced (median RMSE: linear interaction 0.024;
+RCS-3 0.019; [@fig-rmseBase] panel D). A stronger average treatment effect
+(OR=0.5) resulted in higher variability of the true treatment effects on the
+absolute scale (difference in true outcome probabilities between treatment arms)
+and consequently to larger RMSE for all approaches. When we assumed a stronger
+relative treatment effect, the relative differences between approaches were
+similar to the base-case scenario (***Supplement, Figure S10***).
 
 ```{r fig-rmseBase, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications was calculated from a simulated super-population of size 500,000. The scenario with true constant relative treatment effect (panel A) had a true prediction c-statistic of 0.75 and sample size of 4250. The RMSE is also presented for strong linear (panel B), strong quadratic (panel C), and non-monotonic (panel D) deviations from constant relative treatment efects. Panels on the right side present the true relations between baseline risk (x-axis) and absolute treatment beneft (y-axis). The 2.5, 25, 50, 75, and 97.5 percentiles of the risk distribution are expressed by the boxplot on the top. The 2.5, 25, 50, 75, and 97.5 percentiles of the true beneft distributions are expressed by the boxplots on the side of the right-handside panel.",fig.align='center'}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_base.pdf"))
@@ -329,18 +329,19 @@ best-performing approach, its RMSE was more variable in scenarios with linear
 and non-monotonic deviations, especially when also including moderate or strong
 treatment-related harms. On closer inspection, we found that this behavior was
 caused by selecting the constant treatment effect model in a substantial
-proportion of the replications (Supplement, Figure S3).
+proportion of the replications ([@fig-ch4-supp1]). 
 
-Increasing the sample size to 17,000 favored RCS-3 the most (Figure 2). The
-difference in performance with the linear interaction approach was more limited
-in settings with a constant treatment effect (median RMSE: linear interaction
-0.007; RCS-3 0.009) and with a true linear interaction (median RMSE: linear
-interaction 0.008; RCS-3 0.009) and more emphasized in settings with strong
-quadratic deviations (median RMSE: linear interaction 0.013; RCS-3 0.011) and
-non-monotonic deviations (median RMSE: linear interaction 0.014; RCS-3 0.010).
-Due to the large sample size, the RMSE of the adaptive approach was even more
-similar to the best-performing method, and the constant relative treatment
-effect model was less often wrongly selected (Supplement, Figure S4).
+Increasing the sample size to 17,000 favored RCS-3 the most
+([@fig-rmseSampleSize]). The difference in performance with the linear
+interaction approach was more limited in settings with a constant treatment
+effect (median RMSE: linear interaction 0.007; RCS-3 0.009) and with a true
+linear interaction (median RMSE: linear interaction 0.008; RCS-3 0.009) and more
+emphasized in settings with strong quadratic deviations (median RMSE: linear
+interaction 0.013; RCS-3 0.011) and non-monotonic deviations (median RMSE:
+linear interaction 0.014; RCS-3 0.010). Due to the large sample size, the RMSE
+of the adaptive approach was even more similar to the best-performing method,
+and the constant relative treatment effect model was less often wrongly selected
+([@fig-ch4-supp2]).
 ```{r fig-rmseSampleSize, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples of size 17,000 rather than 4,250 in @fig-rmseBase. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_sample_size.pdf"))
 ```
@@ -350,11 +351,11 @@ Similarly, when we increased the c-statistic of the true prediction model to
 quadratic or non-monotonic deviations and very comparable performance to the –
 optimal – linear interaction model in the case of strong linear deviations
 (median RMSE of 0.016 for RCS-3 compared to 0.014 for the linear interaction
-model; Figure 3). Similar to the base case scenario the adaptive approach
+model; [@fig-rmseAuc]). Similar to the base case scenario the adaptive approach
 wrongly selected the constant treatment effect model (23% and 25% of the
 replications in the strong linear and non-monotonic deviation scenarios without
 treatment-related harms, respectively), leading to increased variability of the
-RMSE (Supplement, Figure S5).
+RMSE ([@fig-ch4-supp3]).
 
 ```{r fig-rmseAuc, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples 4,250. True prediction c-statistic of 0.85. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_auc.pdf"))
@@ -362,21 +363,21 @@ knitr::include_graphics(here::here("figures/ch4-rmse_moderate_auc.pdf"))
 
 With a true constant relative treatment effect, discrimination for benefit was
 only slightly lower for the linear interaction model, but substantially lower
-for the non-linear RCS approaches (Figure 4; panel A). With strong linear or
-quadratic deviations from a constant relative treatment effect, all methods
-discriminated quite similarly (Figure 4 panels B-C). With non-monotonic
-deviations, the constant effect model had much lower discriminative ability
-compared to all other methods (median c-for-benefit of 0.500 for the constant
-effects model, 0.528 for the linear interaction model and 0.530 Figure 4; panel
-D). The adaptive approach was unstable in terms of discrimination for benefit,
-especially with treatment-related harms. With increasing number of RCS knots, we
-observed decreasing median values and increasing variability of the
-c-for-benefit in all scenarios. When we increased the sample size to 17,000 we
-observed similar trends, however the performance of all methods was more stable
-(Supplement, Figure S6). Finally, when we increased the true prediction
-c-statistic to 0.85 the adaptive approach was, again, more conservative,
-especially with non-monotonic deviations and null or moderate treatment-related
-harms (Supplement, Figure S7).
+for the non-linear RCS approaches ([@fig-discriminationBase]; panel A). With
+strong linear or quadratic deviations from a constant relative treatment effect,
+all methods discriminated quite similarly ([@fig-discriminationBase] panels
+B-C). With non-monotonic deviations, the constant effect model had much lower
+discriminative ability compared to all other methods (median c-for-benefit of
+0.500 for the constant effects model, 0.528 for the linear interaction model and
+0.530 [@fig-discriminationBase]; panel D). The adaptive approach was unstable in
+terms of discrimination for benefit, especially with treatment-related harms.
+With increasing number of RCS knots, we observed decreasing median values and
+increasing variability of the c-for-benefit in all scenarios. When we increased
+the sample size to 17,000 we observed similar trends, however the performance of
+all methods was more stable (***Supplement, Figure S6***). Finally, when we increased
+the true prediction c-statistic to 0.85 the adaptive approach was, again, more
+conservative, especially with non-monotonic deviations and null or moderate
+treatment-related harms (***Supplement, Figure S7***).
 
 ```{r fig-discriminationBase, cache=TRUE, echo=FALSE, fig.cap="Discrimination for beneft of the considered methods across 500 replications calculated in simulated samples of size 4,250 using the c-statistic for beneft. The c-statistic for beneft represents the probability that from two randomly chosen matched patient pairs with unequal observed beneft, the pair with greater observed beneft also has a higher predicted beneft. True prediction c-statistic of 0.75.",fig.align='center'}
 knitr::include_graphics("figures/ch4-discrimination_moderate_base.pdf")
@@ -384,23 +385,23 @@ knitr::include_graphics("figures/ch4-discrimination_moderate_base.pdf")
 
 In terms of calibration for benefit, the constant effects model outperformed all
 other models in the scenario with true constant treatment effects, but was
-miscalibrated for all deviation scenarios (Figure 5). The linear interaction
-model showed best or close to best calibration across all scenarios and was only
-outperformed by RCS-3 in the case of non-monotonic deviations and
-treatment-related harms (Figure 5 panel D). The adaptive approach was worse
-calibrated under strong linear and non-monotonic deviations compared to the
-linear interaction model and RCS-3. When we increased the sample size to 17,000
-(Supplement, Figure S8) or the true prediction c-statistic to 0.85 (Supplement,
-Figure S9), RCS-3 was somewhat better calibrated than the linear interaction
-model with strong quadratic deviations.
+miscalibrated for all deviation scenarios ([@fig-calibrationBase]). The linear
+interaction model showed best or close to best calibration across all scenarios
+and was only outperformed by RCS-3 in the case of non-monotonic deviations and
+treatment-related harms ([@fig-calibrationBase] panel D). The adaptive approach
+was worse calibrated under strong linear and non-monotonic deviations compared
+to the linear interaction model and RCS-3. When we increased the sample size to
+17,000 (***Supplement, Figure S8***) or the true prediction c-statistic to 0.85
+(***Supplement, Figure S9***), RCS-3 was somewhat better calibrated than the
+linear interaction model with strong quadratic deviations.
 
 ```{r fig-calibrationBase, cache=TRUE, echo=FALSE, fig.cap="Calibration for beneft of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction c-statistic of 0.75 and sample size of 4,250.",fig.align='center'}
 knitr::include_graphics("figures/ch4-calibration_moderate_base.pdf")
 ```
 
 Our main conclusions remained unchanged in the sensitivity analyses where
-correlations between baseline characteristics were introduced (Supplement,
-Figures S16, S17, and S18).
+correlations between baseline characteristics were introduced ([Figures
+@fig-ch4-supp11] to [-@fig-ch4-supp13]).
 
 The results from all individual scenarios can be explored online at
 [https://mi-erasmusmc.shinyapps.io/HteSimulationRCT/](https://mi-erasmusmc.shinyapps.io/HteSimulationRCT/).
@@ -418,7 +419,7 @@ Predicted absolute benefit was derived as the difference of predicted acute MI
 risk between treatment arms, if all other predictors remained unchanged. All
 considered methods provided similar fits, predicting increasing absolute
 benefits for patients with higher baseline risk predictions, and followed the
-evolution of the stratified estimates closely (Figure 6). The constant treatment
+evolution of the stratified estimates closely ([@fig-gusto]). The constant treatment
 effect model had somewhat lower AIC compared to the linear interaction model
 (AIC: versus 9,342), equal cross-validated discrimination (c-for-benefit:
 0.525), and slightly better cross-validated calibration (ICI-for benefit: 0.010

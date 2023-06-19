@@ -139,7 +139,7 @@ rounded to a risk score with integer values between 0 and 100. Because
 recurrence, DM and OM are strongly related, the final recurrence prediction
 model based on data from all nine EORTC centers was used as a basis for
 predicting DM and OM, where the baseline hazard and the slope of the recurrence
-prediction model were calibrated to DM and OM [@steyerberg2009clinical]. This
+prediction model were calibrated to DM and OM [@steyerberg2019clinical]. This
 approach is beneficial as it provides a unique risk score for each individual
 that translates into probabilities of all outcomes of interest, instead of
 developing three independent prediction models. To test the validity of our
@@ -193,9 +193,11 @@ The retrospective derivation cohort consisted of 1078 and the prospective
 validation cohort of 692 patients with SN-positive. Patients in the validation
 cohort had less extensive disease in terms of Breslow thickness, number of
 positive SNs and tumor burden in the SN compared with those in the derivation
-cohort (Table 1).
+cohort (Table \ref{table:ch5-table1}).
 
 \begin{table}[]
+\caption{Baseline characteristics of derivation and validation cohort. Values in parentheses are percentages, unless indicated otherwise. Values for age are median (IQR). Information on positive non-SNs was retrived after CLND. For the derivation single cells were defined as metastasis \textless 0.1 mm (continues to next page).}
+\label{table:ch5-table1}
 \begin{tabular}{lrrr}
 \toprule
 Characteristic & Derivation cohort & Validation cohort & P value \\
@@ -229,11 +231,12 @@ SN tumour burden, extended &  & n = 626 & \textless 0.001 \\
 \hspace{3mm}\textgreater 5.0 mm & 114 ( 10.6 ) & 24 ( 3.8 ) &  \\
 \bottomrule
 \end{tabular}
-\caption{Baseline characteristics of derivation and validation cohort. Values in parentheses are percentages, unless indicated otherwise. Values for age are median (IQR). Information on positive non-SNs was retrived after CLND. For the derivation single cells were defined as metastasis \textless 0.1 mm. CLND: completion lymph node dissection; IQR: interquartile range; SN: sentinel node (continues to next page).}
+\caption*{CLND: completion lymph node dissection; IQR: interquartile range; SN: sentinel node}
 \end{table}
 
 \begin{table}[]
 \ContinuedFloat
+\caption{Continued.}
 \begin{tabular}{lrrr}
 \toprule
 Characteristic & Derivation cohort & Validation cohort & P value \\
@@ -251,7 +254,6 @@ Positive non-SNs & n = 1007 & n = 302 & 0.088 \\
 \hspace{3mm}\textgreater 1 node & 76 ( 7.5 ) & 20 ( 6.6 ) & \\
 \bottomrule
 \end{tabular}
-\caption{(Continued) Baseline characteristics of derivation and validation cohort. Values in parentheses are percentages, unless indicated otherwise. Values for age are median (IQR). Information on positive non-SNs was retrived after CLND. For the derivation single cells were defined as metastasis \textless 0.1 mm. CLND: completion lymph node dissection; IQR: interquartile range; SN: sentinel node.}
 \end{table}
 
 
@@ -266,15 +268,17 @@ patients (25.1%). Median follow-up time for all survivors was 66 months (IQR:
 ### Models for recurrence, distant metastasis and overall mortality {.unnumbered}
 
 The final multivariable Cox model for recurrence after backwards selection
-included four independent prognostic factors: ulceration, age, Breslow
-thickness and SN tumor burden (Table 2). Logarithmic transformation of the
-continuous variables adequately represented their effects. The c-index for the
-final recurrence model was 0.68 (95% confidence interval [CI]: 0.65e0.70). In
-cross-validation, the recurrence model was reasonably calibrated across nine
-center in general, only in smaller centers there was substantial
+included four independent prognostic factors: ulceration, age, Breslow thickness
+and SN tumor burden (Table \ref{table:ch5-table2}). Logarithmic transformation
+of the continuous variables adequately represented their effects. The c-index
+for the final recurrence model was 0.68 (95% confidence interval [CI]:
+0.65-0.70). In cross-validation, the recurrence model was reasonably calibrated
+across nine center in general, only in smaller centers there was substantial
 underestimation of the risk (Fig. S1).
 
 \begin{table}[]
+\caption{Final model for 5-year recurrence (hazard ratio with 95\% confidence interval).}
+\label{table:ch5-table2}
 \begin{tabular}{lrrr}
 \toprule
  & Hazard ratio & Lower 95 & Upper 95 \\
@@ -287,7 +291,6 @@ Ulceration &  &  &  \\
 \hspace{3mm}Present & 1.41 & 1.16 & 1.73 \\
 \bottomrule
 \end{tabular}
-\caption{Final model for 5-year recurrence (hazard ratio with 95\% confidence interval).}
 \end{table}
 
 The association between linear predictors of recurrence and DM was of the same
@@ -313,7 +316,7 @@ recurrence: <25% (low risk; score 6-9; 4.1% of the population); 25-50%
 (intermediate risk; score 10e15; 52.9% of the population); 50-75% (high risk;
 score 16-19; 33.2% of the population); and >75% (very high risk; score 20e23;
 10.0% of the population). The observed outcomes for recurrence, DM and OM per
-risk group are shown in Table 3.
+risk group are shown in Table \ref{table:ch5-table3}.
 
 
 ### External validation {.unnumbered}
@@ -344,10 +347,11 @@ absent ulceration and >1.0 mm; 3) present ulceration and $\leq$ 1.0 mm and 4)
 present ulceration and >1.0 mm. The c-indices for this classification in
 predicting recurrence, DM and OM were 0.63 (95% CI: 0.61e0.65), 0.64 (95% CI:
 0.62e0.67) and 0.64 (95% CI: 0.61e0.67), respectively. The observed outcomes for
-recurrence, DM and OM per risk group are shown in Table 3.
+recurrence, DM and OM per risk group are shown in Table \ref{table:ch5-table3}.
 
 \begin{landscape}
 \begin{table}[]
+\caption{Observed outcomes per classification in the derivation cohort. Values in parentheses are 95\% confidence intervals. This table provides observed outcomes for 5-year recurrence, distant metastasis and overall mortality per risk group, e.g. when classified as low risk according to the EORTC-DeCOG model the observed 5-year recurrence was 0.13 with a 95\% confidence interval of 0.06-0.20.}
 \begin{tabular}{lrrr}
 \toprule
 Risk groups & Recurrence & Distant metastasis & Overall mortality \\
@@ -375,26 +379,29 @@ IIIC & 0.64 ( 0.59-0.68 ) & 0.48 ( 0.53-0.63 ) & 0.50 ( 0.45-0.55 ) \\
 IIID & 0.66 ( 0.00-0.90 ) & 0.68 ( 0.00-0.91 ) & 0.70 ( 0.00-0.92 ) \\
 \bottomrule
 \end{tabular}
-\caption{Observed outcomes per classification in the derivation cohort. Values in parentheses are 95\% confidence intervals. This table provides observed outcomes for 5-year recurrence, distant metastasis and overall mortality per risk group, e.g. when classified as low risk according to the EORTC-DeCOG model the observed 5-year recurrence was 0.13 with a 95\% confidence interval of 0.06-0.20. AJCC, American Joint Committee on Cancer; CI, confidence interval.}
+\label{table:ch5-table3}
+\caption*{AJCC, American Joint Committee on Cancer; CI, confidence interval.}
 \end{table}
 \end{landscape}
 
 
 ### The American Joint Committee on Cancer (AJCC) classifications {.unnumbered}
 
-Patients were classified based on the 7th AJCC classification into IIIA
-$\leq$ 1.0 mm, IIIA >1.0 mm, IIIB and IIIC and based on the 8th edition into IIIA
+Patients were classified based on the 7th AJCC classification into IIIA $\leq$
+1.0 mm, IIIA >1.0 mm, IIIB and IIIC and based on the 8th edition into IIIA
 $\leq$ 1.0 mm, IIIA >1.0 mm, IIIB, IIIC and IIID. The c-indices for predicting
 recurrence, DM and OM for the 7th AJCC edition were 0.61 (95% CI: 0.59-0.63),
 0.62 (95% CI: 0.60-0.65) and 0.62 (95% CI: 0.59-0.65), respectively, and for the
 8th AJCC edition 0.62 (95% CI: 0.59-0.64), 0.63 (95% CI: 0.60-0.65) and 0.63
 (95% CI: 0.61-0.66), respectively. The observed outcomes for recurrence, DM and
-OM for both AJCC classifications are shown in Table 3. A cross-table comparing
-the patients staged in accordance with the AJCC classifications and the risk
-groups based on the EORTC-DeCOG model is illustrated in Table 4. An overview
-of c-indices for all the different models is presented in Table 5.
+OM for both AJCC classifications are shown in Table \ref{table:ch5-table3}. A
+cross-table comparing the patients staged in accordance with the AJCC
+classifications and the risk groups based on the EORTC-DeCOG model is
+illustrated in Table \ref{table:ch5-table4}. An overview of c-indices for all
+the different models is presented in Table \ref{table:ch5-table5}.
 
 \begin{table}[]
+\caption{Cross-table comparing EORTC-DeCOG risk groups with the 7th and 8th AJCC classification, based on 937 complete cases.}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 EORTC - DeCOG   classification & \multicolumn{3}{l}{AJCC 7th   classification} &  &  &  \\
@@ -416,7 +423,28 @@ Very high risk ( score 20-23 ) & 0 & 0 & 2 & 122 & 4 & 128 \\
 Total & 158 & 56 & 252 & 466 & 5 & 937 \\
 \bottomrule
 \end{tabular}}
-\caption{Cross-table comparing EORTC-DeCOG risk groups with the 7th and 8th AJCC classification, based on 937 complete cases. AJCC, American Joint Committee on Cancer.}
+\caption*{AJCC: American Joint Committee on Cancer}
+\label{table:ch5-table4}
+\end{table}
+
+\begin{table}[]
+\caption{C-indices with 95\% confidence intervals for different prediction models. Prediction of distant metastasis is done using calibrated models.}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrr}
+\toprule
+ & Recurrence & Distant metastasis & Overall   mortality \\
+\midrule
+EORTC-DeCOG prediction model & 0.68 (0.65-0.70) & 0.70 (0.67-0.72) & 0.70 (0.67-0.73) \\
+EORTC-DeCOG altered model & & & \\
+\hspace{3mm}Derivation cohort & 0.68 (0.65-0.70) & 0.70 (0.67-0.72) & 0.70 (0.67-0.73) \\
+\hspace{3mm}External validation & 0.70 (0.67-0.74) & 0.72 (0.68-0.75) & 0.74 (0.71-0.78) \\
+EORTC-DeCOG extended model & 0.69 (0.67-0.72) & 0.72 (0.69-0.74) & 0.72 (0.69-0.75) \\
+EORTC-DeCOG simple   classification & 0.63 (0.61-0.65) & 0.64 (0.62-0.67) & 0.64 (0.61-0.67) \\
+AJCC 7th edition & 0.61 (0.59-0.63) & 0.62 (0.60-0.65) & 0.62 (0.59-0.65) \\
+AJCC 8th edition & 0.62 (0.59-0.64) & 0.63 (0.60-0.65) & 0.63 (0.61-0.66) \\
+\bottomrule
+\end{tabular}}
+\caption*{AJCC 7th edition classification is based on IIIA $\geq$ 1.00 mm, IIIA \textgreater 1.00 mm, IIIC. AJCC 8th edition classification is based on IIIA $\leq$ 1.00 mm, IIIA \textgreater 1.00 mm, IIIB, IIIC, IIID. AJCC: American Joint Committee on Cancer; SN: sentinel node.}
+\label{table:ch5-table5}
 \end{table}
 
 ## Discussion {.unnumbered}
@@ -442,24 +470,25 @@ defining IIIA $\leq$ 1.0 mm instead of the 7th edition, it results in improved
 selection of low- risk patients in terms of predicted prognosis (e.g. 5-year
 recurrence probability of 27% versus 32%, respectively). A recent study also
 showed that including SN tumor burden to the 8th AJCC staging system has crucial
-prognostic relevance [@satzger2019melanoma]. Of note our EORTC-DeCOG model is able to identify an
-even more robust low-risk group, as all identified low-risk patients (which
-approximately concerned 4% of the entire population after imputation) had a
-5-year recurrence probability of <25% and an overall 5-year observed recurrence
-rate of 13%. However, identifying more robust low-risk groups comes at the cost
-of fewer patients being assigned low risk (see Table 4). Nonetheless a major
-advantage of our EORTC-DeCOG model is that it provides a more continuous type of
-predicted probabilities. As a result it is possible to derive risk groups based
-on outcome probabilities and/or risk scores (e.g. low risk; scores 6--9;
-recurrence probability of <25%) which is in contrast to the AJCC classifications
-where exact patient/ tumor characteristics define the risk groups (e.g. IIIA
-$\leq$ 1.0 mm: T1a/b-T2a + N1a-N2a with $\leq$ 1.0 mm SN tumor burden). In the
-current study we choose to derive risk groups based on the recurrence
-probability, as this seems the most relevant outcome in the context of selecting
-patients for adjuvant therapy; other cut-off values and/or outcomes are
-possible. In conclusion, the EORTC-DeCOG model not only outperforms the AJCC
-classifications in terms of overall model discrim- ination (see Table 5), but
-also seems to be able to identify a more robust low-risk group in whom it may be
+prognostic relevance [@satzger2019melanoma]. Of note our EORTC-DeCOG model is
+able to identify an even more robust low-risk group, as all identified low-risk
+patients (which approximately concerned 4% of the entire population after
+imputation) had a 5-year recurrence probability of <25% and an overall 5-year
+observed recurrence rate of 13%. However, identifying more robust low-risk
+groups comes at the cost of fewer patients being assigned low risk (see Table
+\ref{table:ch5-table4}). Nonetheless a major advantage of our EORTC-DeCOG model
+is that it provides a more continuous type of predicted probabilities. As a
+result it is possible to derive risk groups based on outcome probabilities
+and/or risk scores (e.g. low risk; scores 6--9; recurrence probability of <25%)
+which is in contrast to the AJCC classifications where exact patient/ tumor
+characteristics define the risk groups (e.g. IIIA $\leq$ 1.0 mm: T1a/b-T2a +
+N1a-N2a with $\leq$ 1.0 mm SN tumor burden). In the current study we choose to
+derive risk groups based on the recurrence probability, as this seems the most
+relevant outcome in the context of selecting patients for adjuvant therapy;
+other cut-off values and/or outcomes are possible. In conclusion, the
+EORTC-DeCOG model not only outperforms the AJCC classifications in terms of
+overall model discrim- ination (see Table \ref{table:ch5-table5}), but also
+seems to be able to identify a more robust low-risk group in whom it may be
 justified to forego adjuvant therapy.
 
 The previously published simplified model, based on ulceration and SN tumor

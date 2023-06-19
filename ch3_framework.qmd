@@ -171,7 +171,11 @@ A.1 of [Appendix @sec-framework-appendix]. Adequate numbers of patients were
 included in all strata of predicted acute MI risk (Table A.2 of [Appendix @sec-framework-appendix]).
 
 
-\begin{table}[p]
+\begin{table}[h]
+\caption{Number of patients, person years and events for the three efficacy
+outcomes of the study across the three databases after excluding patients with
+prior outcomes.}
+\label{table:ch3-patients}
 \resizebox{\textwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 \multicolumn{1}{c}{} & \multicolumn{3}{c}{Thiazides or thiazide-like diuretics} & \multicolumn{3}{c}{Ace inhibitors} \\
@@ -192,10 +196,6 @@ Hosp. with HF & 37,617 & 24,509 & 277 & 105,134 & 74,654 & 1,196    \\
 Stroke & 37,248 & 24,267 & 261 & 102,502 & 72,705 & 977 \\
 \bottomrule
 \end{tabular}}
-\caption{Number of patients, person years and events for the three efficacy
-outcomes of the study across the three databases after excluding patients with
-prior outcomes.}
-\label{table:ch3-patients}
 \end{table}
 
 ### Step 3: Prediction {.unnumbered}
@@ -223,17 +223,7 @@ The models had moderate discriminative ability (internally validated) in CCAE
 and MDCD and lower discriminative ability in MDCR (Table
 \ref{table:ch3-discrimination}).
 
-\begin{table}[]
-\resizebox{\textwidth}{!}{\begin{tabular}{lrrr}
-\toprule
-Population & CCAE & MDCD & MDCR \\
-\midrule
-Matched & 0.73 (0.71, 0.74) & 0.76 (0.73, 0.79) & 0.65 (0.62, 0.68) \\
-Treatment & 0.73 (0.71, 0.75) & 0.82 (0.77, 0.86) & 0.66 (0.62, 0.70) \\
-Comparator & 0.70 (0.67, 0.71) & 0.74 (0.71, 0.76) & 0.66 (0.64, 0.68) \\
-Entire population & 0.71 (0.70, 0.72) & 0.76 (0.74, 0.78) & 0.66 (0.64, 0.68) \\
-\bottomrule
-\end{tabular}}
+\begin{table}[h]
 \caption{Discriminative ability (c-statistic) of the derived prediction models
 for acute MI in the matched set (development set), the treatment cohort, the
 comparator cohort, and the entire population in CCAE, MDCD, and MDCR. Values in
@@ -244,6 +234,16 @@ thiazide or thiazide-like diuretics in each database, while comparator
 population is the set of patients receiving ACE inhibitors. Finally, entire
 population refers to the combined set of treatment and comparator patients.}
 \label{table:ch3-discrimination}
+\resizebox{\textwidth}{!}{\begin{tabular}{lrrr}
+\toprule
+Population & CCAE & MDCD & MDCR \\
+\midrule
+Matched & 0.73 (0.71, 0.74) & 0.76 (0.73, 0.79) & 0.65 (0.62, 0.68) \\
+Treatment & 0.73 (0.71, 0.75) & 0.82 (0.77, 0.86) & 0.66 (0.62, 0.70) \\
+Comparator & 0.70 (0.67, 0.71) & 0.74 (0.71, 0.76) & 0.66 (0.64, 0.68) \\
+Entire population & 0.71 (0.70, 0.72) & 0.76 (0.74, 0.78) & 0.66 (0.64, 0.68) \\
+\bottomrule
+\end{tabular}}
 \end{table}
 
 ### Step 4: Estimation {.unnumbered}
@@ -311,7 +311,11 @@ CCAE and stroke in MDCD (Table \ref{table:ch3-overall}). The hazard ratios are
 in line with, but not equal to, those reported in the LEGEND-HTN study, mainly
 because of restricting time at risk to two years.
 
-\begin{table}[]
+\begin{table}[h]
+\caption{Hazard ratio estimates for the overall treatment effect of thiazide or
+thiazide-like diuretics compared to ACE inhibitors. Values in brackets are 95\%
+confindence intervals.}
+\label{table:ch3-overall}
 \resizebox{\textwidth}{!}{\begin{tabular}{lrrr}
 \toprule
 Population & CCAE & MDCD & MDCR \\
@@ -322,10 +326,6 @@ Comparator & 0.70 (0.67, 0.71) & 0.74 (0.71, 0.76) & 0.66 (0.64, 0.68) \\
 Entire population & 0.71 (0.70, 0.72) & 0.76 (0.74, 0.78) & 0.66 (0.64, 0.68) \\
 \bottomrule
 \end{tabular}}
-\caption{Hazard ratio estimates for the overall treatment effect of thiazide or
-thiazide-like diuretics compared to ACE inhibitors. Values in brackets are 95\%
-confindence intervals.}
-\label{table:ch3-overall}
 \end{table}
 
 For the primary outcomes (acute MI, hospitalization with heart failure and

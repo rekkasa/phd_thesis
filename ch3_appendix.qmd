@@ -5,6 +5,10 @@
 
 \begin{landscape}
 \begin{table}[p]
+\caption{Baseline characteristics of patients in CCAE, MDCD, and MDCR after
+stratification on the propensity scores. THZ: new users of thiazide or
+thiazide-like diuretics. ACE: new users of ACE inhibitors.}
+\label{table:ch3-supp-table1}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrr}
 \toprule
  & \multicolumn{3}{c}{CCAE} & \multicolumn{3}{c}{MDCD} & \multicolumn{3}{c}{MDCR} \\
@@ -30,6 +34,18 @@ Rheumatoid arthritis & 0.8\% & 0.7\% & 0.01 & 1.3\% & 1.3\% & 0.00 & 1.5\% & 1.5
 Ulcerative colitis & 0.2\% & 0.2\% & 0.00 & 0.2\% & 0.2\% & 0.00 & 0.3\% & 0.3\% & 0.00 \\
 Urinary tract infectious disease & 5.3\% & 5.0\% & 0.01 & 10.5\% & 10.2\% & 0.01 & 8.3\% & 8.0\% & 0.01 \\
 Viral hepatitis C & 0.1\% & 0.1\% & 0.00 & 1.8\% & 1.8\% & 0.00 & 0.1\% & 0.1\% & 0.00 \\
+\end{tabular}}
+\end{table}
+
+\begin{table}[p]
+\ContinuedFloat
+\caption{Continued.}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{CCAE} & \multicolumn{3}{c}{MDCD} & \multicolumn{3}{c}{MDCR} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} \cmidrule(rl){8-10}
+Characteristic & THZ & ACE & Std. diff & THZ & ACE & Std. diff & THZ & ACE & Std. diff \\
+\midrule
 \textbf{Medical   history (Cardiovascular disease)} &  &  &  &  &  &  &  &  &  \\
 Atrial fibrillation & 0.3\% & 0.3\% & 0.00 & 0.9\% & 0.8\% & 0.01 & 3.1\% & 2.9\% & 0.02 \\
 Cerebrovascular disease & 0.4\% & 0.4\% & 0.00 & 0.9\% & 0.9\% & 0.00 & 2.4\% & 2.4\% & 0.00 \\
@@ -41,14 +57,15 @@ Pulmonary embolism & 0.1\% & 0.1\% & 0.00 & 0.3\% & 0.3\% & 0.01 & 0.1\% & 0.1\%
 Venous thrombosis & 0.1\% & 0.1\% & 0.00 & 0.2\% & 0.2\% & 0.01 & 0.3\% & 0.3\% & 0.00 \\
 \bottomrule
 \end{tabular}}
-\caption{Baseline characteristics of patients in CCAE, MDCD, and MDCR after
-stratification on the propensity scores. THZ: new users of thiazide or
-thiazide-like diuretics. ACE: new users of ACE inhibitors.}
-\label{table:ch3-supp-table1}
 \end{table}
 \end{landscape}
 
 \begin{table}
+\caption{Number of patients, person years, and events in risk strata of acute MI
+across all databases. RG-1 represents patients at acute MI risk below 1\%, RG-2
+represents patients at acute Mi risk between 1\% and 1.5\%, and RG-3 represents
+patients at acute MI risk larger than 1.5\%.}
+\label{tab-ch3-supp-table2}
 \resizebox{\columnwidth}{!}{\begin{tabular}{llrrrrrr}
 \toprule
  &  & \multicolumn{3}{c}{Thiazide or thiazide-like diuretics} & \multicolumn{3}{c}{ACE inhibitors} \\
@@ -66,11 +83,6 @@ Database & Risk group & Patients & Person years & Outcomes & Patients & Person y
  & RG-3 & 13,303 & 7,796 & 94 & 43,149 & 29,468 & 461 \\
 \bottomrule
 \end{tabular}}
-\caption{Number of patients, person years, and events in risk strata of acute MI
-across all databases. RG-1 represents patients at acute MI risk below 1\%, RG-2
-represents patients at acute Mi risk between 1\% and 1.5\%, and RG-3 represents
-patients at acute MI risk larger than 1.5\%.}
-\label{tab-ch3-supp-table2}
 \end{table}
 
 ```{r fig-ch3-supp1, cache=TRUE, echo=FALSE, fig.cap="Systematic error in risk groups of CCAE. Effect size estimates for the negative controls (true hazard ratio = 1) within strata of predicted acute MI risk. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size, alpha = 0.05). RG-1 represents patients in CCAE whose acute MI predicted risk is below 1%; RG-2 represents patients whose acute MI predicted risk is between 1% and 1.5%; RG-3 represents patients whose acute MI predicted risk is larger than 1.5%. A well-calibrated estimator should have the true effect size (HR = 1) within the 95 percent confidence interval 95 percent of times.",fig.align='center'}

@@ -122,6 +122,8 @@ details on the TEP are available in the PATH Statement
 [@kent2019predictive1;@kent2019predictive2].
 
 \begin{table}[h]
+\caption{Search strategy for the study.}
+\label{table:searchStrategy}
 \centering
 \begin{tabular}{rl}
 \toprule
@@ -149,8 +151,6 @@ details on the TEP are available in the PATH Statement
  20 &  18 or 19\\
 \bottomrule
 \end{tabular}
-\caption{Search strategy for the study.}
-\label{table:searchStrategy}
 \end{table}
 
 We sought papers that developed or evaluated methods for predictive

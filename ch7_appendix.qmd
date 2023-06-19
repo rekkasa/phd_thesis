@@ -6,6 +6,7 @@
 
 \begin{landscape}
 \begin{table}[p]
+\caption{Characteristics of patients in CCAE receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 & \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
@@ -31,7 +32,19 @@ Rheumatoid arthritis & 10.1 & 5.1 & 0.19 & 9.8 & 10.2 & -0.01 \\
 Schizophrenia & 0.1 & 0.1 & 0.01 & 0.1 & 0.1 & 0 \\
 Ulcerative colitis & 1.8 & 0.8 & 0.08 & 1.7 & 1.6 & 0.01 \\
 Urinary tract infectious   disease & 33.5 & 21.8 & 0.26 & 31.9 & 32.7 & -0.02 \\
-Viral hepatitis C & 0.8 & 0.3 & 0.06 & 0.8 & 0.7 & 0.01 \\
+Viral hepatitis C & 0.8 & 0.3 & 0.06 & 0.8 & 0.7 & 0.01
+\end{tabular}}
+\end{table}
+
+\begin{table}[p]
+\ContinuedFloat
+\caption{Continued.}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} 
+Characteristic & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff \\
+\midrule
 \textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  \\
 Atrial fibrillation & 3.1 & 1.6 & 0.1 & 3 & 3.1 & 0 \\
 Cerebrovascular disease & 1.9 & 1.1 & 0.07 & 1.8 & 1.8 & 0 \\
@@ -46,10 +59,10 @@ Malignant lymphoma & 0.5 & 0.3 & 0.02 & 0.5 & 0.5 & 0 \\
 Malignant neoplastic   disease & 0.4 & 0.3 & 0.02 & 0.4 & 0.4 & 0 \\
 \bottomrule
 \end{tabular}}
-\caption{Characteristics of patients in CCAE receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
 \end{table}
 
 \begin{table}[p]
+\caption{Characteristics of patients in MDCR receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 & \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
@@ -75,6 +88,18 @@ Schizophrenia & 0.1 & 0.1 & 0.01 & 0.1 & 0.1 & 0 \\
 Ulcerative colitis & 1.9 & 0.7 & 0.11 & 1.8 & 1.7 & 0 \\
 Urinary tract infectious disease & 38.1 & 20.5 & 0.39 & 36.2 & 38.2 & -0.04 \\
 Viral hepatitis C & 0.3 & 0.1 & 0.04 & 0.4 & 0.3 & 0 \\
+\end{tabular}}
+\end{table}
+
+\begin{table}[p]
+\ContinuedFloat
+\caption{Continued.}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} 
+Characteristic & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff \\
+\midrule
 \textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  \\
 Atrial fibrillation & 15.4 & 9.3 & 0.19 & 14.6 & 15.1 & -0.01 \\
 Cerebrovascular disease & 8.4 & 4 & 0.18 & 7.8 & 8.1 & -0.01 \\
@@ -89,10 +114,10 @@ Malignant lymphoma & 0.7 & 0.6 & 0.02 & 0.8 & 1 & -0.02 \\
 Malignant neoplastic disease & 0.7 & 0.4 & 0.04 & 0.6 & 0.6 & -0.01 \\
 \bottomrule
 \end{tabular}}
-\caption{Characteristics of patients in MDCR receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
 \end{table}
 
 \begin{table}[p]
+\caption{Characteristics of patients in Optum-DOD receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 & \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
@@ -118,6 +143,18 @@ Schizophrenia & 0.3 & 0.3 & 0 & 0.3 & 0.3 & 0 \\
 Ulcerative colitis & 1.8 & 0.8 & 0.09 & 1.7 & 1.6 & 0.01 \\
 Urinary tract infectious   disease & 41.1 & 27.6 & 0.29 & 39 & 40.9 & -0.04 \\
 Viral hepatitis C & 1.1 & 0.5 & 0.06 & 1.1 & 1.1 & 0 \\
+\end{tabular}}
+\end{table}
+
+\begin{table}[p]
+\ContinuedFloat
+\caption{Continued.}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
+\cmidrule(rl){2-4} \cmidrule(rl){5-7} 
+Characteristic & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff & Teriparatide (\%) & Bisphosphonates (\%) & Std. diff \\
+\midrule
 \textbf{Medical history: Cardiovascular disease} &  &  &  &  &  &  \\
 Atrial fibrillation & 10.2 & 7 & 0.11 & 9.5 & 10.1 & -0.02 \\
 Cerebrovascular disease & 5.4 & 3.4 & 0.1 & 5 & 5.3 & -0.01 \\
@@ -132,10 +169,10 @@ Malignant lymphoma & 0.3 & 0.3 & 0 & 0.3 & 0.5 & -0.03 \\
 Malignant neoplastic   disease & 0.4 & 0.3 & 0.02 & 0.3 & 0.5 & -0.02 \\
 \bottomrule
 \end{tabular}}
-\caption{Characteristics of patients in Optum-DOD receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
 \end{table}
 
 \begin{table}[p]
+\caption{Characteristics of patients in Optum-EHR receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 & \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
@@ -162,13 +199,12 @@ Rheumatoid arthritis & 10.7 & 5.9 & 0.17 & 10.2 & 10.7 & -0.01 \\
 Schizophrenia & 0.1 & 0.3 & -0.04 & 0.1 & 0.2 & -0.02 \\
 Ulcerative colitis & 1.1 & 0.7 & 0.04 & 1.1 & 1.1 & 0 \\
 Urinary tract infectious   disease & 26.1 & 22.1 & 0.09 & 24.7 & 24.8 & 0 \\
-Viral hepatitis C & 0.9 & 0.7 & 0.03 & 0.9 & 1 & -0.01 \\
-\bottomrule
+Viral hepatitis C & 0.9 & 0.7 & 0.03 & 0.9 & 1 & -0.01
 \end{tabular}}
-\caption{Characteristics of patients in Optum-EHR receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
 \end{table}
 
 \begin{table}[p]
+\caption{Continued.}
 \ContinuedFloat
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
@@ -192,7 +228,6 @@ Malignant tumor of colon & 0.1 & 0.1 & 0 & 0.1 & 0.1 & 0 \\
 Malignant tumor of lung & 0.1 & 0.1 & 0 & 0.1 & 0.1 & 0 \\
 \bottomrule
 \end{tabular}}
-\caption{Characteristics of patients in Optum-EHR receiving teriparatide or bisphosphonates before and after matching on the propensity score (continued).}
 \end{table}
 
 \end{landscape}
