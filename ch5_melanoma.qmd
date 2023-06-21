@@ -28,7 +28,7 @@ ulceration, age, SN tumor burden and Breslow thickness. The models showed
 reasonable calibration. The c-index for the recurrence, DM and OM model was
 0.68, 0.70 and 0.70, respectively, and 0.70, 0.72 and 0.74, respectively, in
 external validation. The EORTC- DeCOG model identified a robust low-risk group,
-with all identified low-risk patients (approx- imately 4% of the entire
+with all identified low-risk patients (approximately 4% of the entire
 population) having a 5-year recurrence probability of <25% and an overall 5-year
 recurrence rate of 13%. A model including information on completion lymph node
 dissection (CLND) showed only marginal improvement in model performance.
@@ -164,7 +164,7 @@ that was left out [@steyerberg2015prediction]. In addition we performed external
 validation using the prospective German cohort. We first needed to develop a
 model for recurrence where we replaced the continuous variable SN tumor burden
 with the categorical substitute used in the prospective German cohort (single
-cells, <0.5 mm, 0.[H].0 mm, >1.0-2.0 mm, >2.0-5.0 mm and >5.0 mm). For the
+cells, <0.5 mm, 0.5-1.0 mm, >1.0-2.0 mm, >2.0-5.0 mm and >5.0 mm). For the
 derivation cohort, single cells were defined as <0.1 mm according to the
 Rotterdam criteria [@van_akkooi2008sentinel]. Single cells in the validation
 cohort were not specifically defined, but as the Rotterdam criteria were used
@@ -199,7 +199,7 @@ cohort (Table \ref{table:ch5-table1}).
 In the derivation cohort, recurrence at five years occurred in 496 patients
 (46.0%), DM in 437 patients (40.5%) and OM in 364 patients (33.8%). Median
 follow-up time for all survivors was 106 months (interquartile range [IQR]
-6[H]30 months). In the prospective validation cohort, recurrence at five years
+61-130 months). In the prospective validation cohort, recurrence at five years
 occurred in 267 patients (38.6%), DM in 223 patients (32.2%) and OM in 174
 patients (25.1%). Median follow-up time for all survivors was 66 months (IQR:
 48-94 months).
@@ -307,9 +307,9 @@ based on the magnitude of association with recurrence. A nomogram to calculate
 the score and the risk of recurrence, DM and OM is presented in
 @fig-positiveSlnb. The scores were divided into four risk groups based on the
 5-year probability of recurrence: <25% (low risk; score 6-9; 4.1% of the
-population); 25-50% (intermediate risk; score 1[H]5; 52.9% of the population);
+population); 25-50% (intermediate risk; score 10-15; 52.9% of the population);
 50-75% (high risk; score 16-19; 33.2% of the population); and >75% (very high
-risk; score 2[H]3; 10.0% of the population). The observed outcomes for
+risk; score 20-23; 10.0% of the population). The observed outcomes for
 recurrence, DM and OM per risk group are shown in Table \ref{table:ch5-table3}.
 
 
@@ -319,13 +319,13 @@ For external validation purposes, an altered recurrence model was developed
 using the categorized SN tumor burden variable used in the prospective German
 cohort (Table S1). This altered model showed similar performance compared with
 the final recurrence model (c- index 0.68, 95% CI: 0.65-0.70). In external
-validation, the c-index for the altered recurrence model was 0.70 (95% CI:tumor
+validation, the c-index for the altered recurrence model was 0.70 (95% CI:
 0.67-0.74), for DM 0.72 (95% CI: 0.68-0.75) and for OM 0.74 (95% CI: 0.71-0.78).
 The calibration plots indicate good calibration, though there may be slight
-underestimation for higher-risk patients in the recurrence and OM models (Figure S2 of the
-[online Supplement](https://doi.org/10.1016/j.ejca.2020.04.022)).
+underestimation for higher-risk patients in the recurrence and OM models (Figure
+S2 of the [online Supplement](https://doi.org/10.1016/j.ejca.2020.04.022)).
 
-```{r fig-positiveSlnb, cache=FALSE, echo=FALSE, fig.pos="H", fig.cap="Nomogram and risk distribution. The curves refer to predicted recurrence, distant metastasis or overall mortality at 5 years. The histogram refers to the risk score distribution in the cohort; each bar represents the proportion of patients in the cohort that was assigned that specific score. The histogram was divided in four risk groups based on the risk of recurrence: low risk: <25%, intermediate risk: 2[H]0%, high risk: 50-75% and very high risk: >75%. The nomogram incorporates four factors: ulceration, age, SN tumor burden and Breslow thickness. To calculate an individual’s probability of 5-year recurrence, distant metastasis and overall mortality, values for the prognostic factors must be determined first (for example: absent ulceration, 35 years, SN tumor burden 0.8 mm and Breslow thickness 1.0 mm). Second, for each value the corresponding points can be obtained by drawing a line from each value towards the point axis (in example: 0, 1, 4 and 5 points, respectively). Third, the points must be added up to obtain the total risk score (in example: risk score of 10). Finally, the 5-year recurrence, distant metastasis and overall mortality probability can be read by moving vertically from the x-axis (total risk score) to the predicted risk curves and corresponding probabilities on the left y-axis (in example: 26% for recurrence, 20% for distant metastasis and 16% for overall mortality). The percentage of patients in the entire population (1078) that also had a total risk score of 10 can be determined from the histogram, as well as the corresponding percentage of patients on the right y-axis (in example: 7%)."}
+```{r fig-positiveSlnb, cache=FALSE, echo=FALSE, fig.pos="H", fig.cap="Nomogram and risk distribution. The curves refer to predicted recurrence, distant metastasis or overall mortality at 5 years. The histogram refers to the risk score distribution in the cohort; each bar represents the proportion of patients in the cohort that was assigned that specific score. The histogram was divided in four risk groups based on the risk of recurrence: low risk: <25%, intermediate risk: 25-50%, high risk: 50-75% and very high risk: >75%. The nomogram incorporates four factors: ulceration, age, SN tumor burden and Breslow thickness. To calculate an individual’s probability of 5-year recurrence, distant metastasis and overall mortality, values for the prognostic factors must be determined first (for example: absent ulceration, 35 years, SN tumor burden 0.8 mm and Breslow thickness 1.0 mm). Second, for each value the corresponding points can be obtained by drawing a line from each value towards the point axis (in example: 0, 1, 4 and 5 points, respectively). Third, the points must be added up to obtain the total risk score (in example: risk score of 10). Finally, the 5-year recurrence, distant metastasis and overall mortality probability can be read by moving vertically from the x-axis (total risk score) to the predicted risk curves and corresponding probabilities on the left y-axis (in example: 26% for recurrence, 20% for distant metastasis and 16% for overall mortality). The percentage of patients in the entire population (1078) that also had a total risk score of 10 can be determined from the histogram, as well as the corresponding percentage of patients on the right y-axis (in example: 7%)."}
 knitr::include_graphics("figures/ch5-PositiveSlnb.pdf")
 ```
 
@@ -333,9 +333,9 @@ knitr::include_graphics("figures/ch5-PositiveSlnb.pdf")
 
 An extended model for recurrence was created by adding the variable, number of
 additional positive nodes after CLND, to the final recurrence model. This
-extended model for recurrence had a c-index of 0.69 (95% CI: 0.6[H].72). The
+extended model for recurrence had a c-index of 0.69 (95% CI: 0.67-0.72). The
 calibrated extended models for DM and OM showed c-indices of 0.72 (95% CI:
-0.6[H].74) and 0.72 (95% CI: 0.69-0.75), respectively.
+0.69-0.74) and 0.72 (95% CI: 0.69-0.75), respectively.
 
 ### Simple classification {.unnumbered}
 
@@ -343,8 +343,8 @@ A simplified version of the model stratifies patients into four groups based on
 ulceration and SN tumor burden: 1) absent ulceration and $\leq$ 1.0 mm; 2)
 absent ulceration and >1.0 mm; 3) present ulceration and $\leq$ 1.0 mm and 4)
 present ulceration and >1.0 mm. The c-indices for this classification in
-predicting recurrence, DM and OM were 0.63 (95% CI: 0.6[H].65), 0.64 (95% CI:
-0.6[H].67) and 0.64 (95% CI: 0.61-0.67), respectively. The observed outcomes for
+predicting recurrence, DM and OM were 0.63 (95% CI: 0.61-0.65), 0.64 (95% CI:
+0.62-0.67) and 0.64 (95% CI: 0.61-0.67), respectively. The observed outcomes for
 recurrence, DM and OM per risk group are shown in Table \ref{table:ch5-table3}.
 
 ### The American Joint Committee on Cancer (AJCC) classifications {.unnumbered}
@@ -487,9 +487,9 @@ derive risk groups based on the recurrence probability, as this seems the most
 relevant outcome in the context of selecting patients for adjuvant therapy;
 other cut-off values and/or outcomes are possible. In conclusion, the
 EORTC-DeCOG model not only outperforms the AJCC classifications in terms of
-overall model discrim- ination (see Table \ref{table:ch5-table5}), but also
-seems to be able to identify a more robust low-risk group in whom it may be
-justified to forego adjuvant therapy.
+overall model discrimination (see Table \ref{table:ch5-table5}), but also seems
+to be able to identify a more robust low-risk group in whom it may be justified
+to forego adjuvant therapy.
 
 The previously published simplified model, based on ulceration and SN tumor
 burden, harbored the least performance, though still reasonable, and showed
@@ -505,7 +505,7 @@ identified increasing age as an independent prognostic factor for recurrence, DM
 and OM. This finding is supported by other studies reporting on the significance
 of the patient's age [@kretschmer2011age].
 
-Stratifying for ulceration and SN tumour burden only was previously demonstrated
+Stratifying for ulceration and SN tumor burden only was previously demonstrated
 to yield similar discriminatory ability for melanoma-specific mortality as
 stratifying for AJCC sub-stages which included information on nodal status
 after CLND [@verver2018risk]. The additional value of non-SN status retrieved after CLND
@@ -532,7 +532,7 @@ likely some patients did. As patients in the derivation cohort were included
 from 1993 through 2008, novel therapies probably had limited effect. To date, no
 novel biomarker has been validated that suffices to predict long-term clinical
 benefits and subsequently could be incorporated in the models, despite efforts
-in this drection (e.g. PD-L1) [@nishino2017monitoring]. In addition, other
+in this direction (e.g. PD-L1) [@nishino2017monitoring]. In addition, other
 prognostic factors such as mitotic rate or microsatellites could not be
 incorporated in the present models because of insufficient data. Another
 limitation is the inadequate representation of patients with SN-positive with a

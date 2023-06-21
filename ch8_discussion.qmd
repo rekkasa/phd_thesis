@@ -100,7 +100,7 @@ in the development of the tree-based model. Conditional average treatment effect
 is then estimated as the difference between setting the treatment indicator to
 control and active treatment. Finally, they introduced the class of X-learners.
 First-stage outcome models are fitted separately in each treatment arm to impute
-coutnerfactual outcomes, thus generating an “observed” treatment effect. Any
+counterfactual outcomes, thus generating an “observed” treatment effect. Any
 regular modeling approach can then be used to estimate treatment effects.
 
 Finally, optimal treatment regime methods focus on modeling treatment effect
@@ -429,7 +429,7 @@ updating framework [@levy2022development].
 
 Finally, we applied the framework presented in **[@sec-framework]** to assess
 heterogeneity of the effect of treatment with teriparatide compared to oral
-bisphsophonates in patients with osteoporosis with regard to three outcomes of
+bisphosphonates in patients with osteoporosis with regard to three outcomes of
 interest---namely hip fracture, major osteoporotic fracture, and vetebral
 fracture. Capitalizing on the OMOP-CDM we were able to include hundreds of
 thousands of patients, resulting in one of the first large-scale observational

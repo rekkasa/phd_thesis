@@ -151,7 +151,7 @@ in each of the four separate hospitals. We assessed discriminative ability with
 the area under the receiver operating characteristic curve (AUC) and calibration
 with calibration plots of five equally sized groups of predicted risk,
 calibration intercepts and calibration slopes. The model-based concordance (mbc)
-was used to understand the impact of potential differences in casemix
+was used to understand the impact of potential differences in case-mix
 heterogeneity between the development and validation data on discriminative
 ability [@van_klaveren2016new].
 
@@ -405,7 +405,7 @@ first wave patients (online supplemental Figure 1); mbc in four hospitals 0.82;
 the four hospitals, both on average—expressed by hospital-specific calibration
 intercepts: 0.08 (95% CI −0.15 to 0.30); −0.17 (95% CI −0.65 to 0.30); −0.01
 (95% CI −0.40 to 0.39); −0.12 (95% CI −0.30 to 0.07)—and by predicted risk
-levels—expressed by hospitalspecific calibration slopes: 1.09 (95% CI 0.86 to
+levels—expressed by hospital-specific calibration slopes: 1.09 (95% CI 0.86 to
 1.31); 0.90 (95% CI 0.49 to 1.32); 0.91 (95% CI 0.57 to 1.25); 0.97 (95% CI 0.79
 to 1.14) (@fig-temporal).
 
@@ -670,7 +670,7 @@ presented to the ED with suspected COVID-19 were admitted to hospital and it is
 reasonable to assume that our predictions can be extrapolated to the less than
 10% of patients who were sent home. Of note, the discriminative ability of our
 model is probably better in all patients presenting to the ED, due to a more
-heterogeneous casemix: patients who were sent home are likely to have more
+heterogeneous case-mix: patients who were sent home are likely to have more
 favourable predictor levels and more favourable outcomes than patients who are
 admitted [@van_klaveren2016new].
 
@@ -706,12 +706,12 @@ validation—in separate hospitals—is a strength of this study
 validated across time and space, future research should focus on analyses of
 potential time trends not captured by the predictors—for example, changes in
 mortality due to: improvements in treating patients with COVID-19; mutations of
-COVID19; changes in patient casemix or critical care capacity fluctuations
+COVID19; changes in patient case-mix or critical care capacity fluctuations
 [@recovery_collaborative_group2021dexamethasone]
 ---potential changes in predictor effects in time (interactions between
 predictors and time), and the impact of potential differences in patient case
 mix and differences in clinical care in countries other than the Netherlands
-(international validation). These casemix and clinical care differences should
+(international validation). These case-mix and clinical care differences should
 primarily affect calibration, requiring an update of the model intercept, but
 not discrimination. The emergence of new COVID-19 variants with potentially
 different mortality risk may especially require frequent analyses of the need

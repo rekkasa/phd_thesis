@@ -115,7 +115,7 @@ anti-osteoporotic treatment was switched.
 We ran our analyses on four US observational databases mapped to OMOP-CDM
 version. More specifically:
 
-* IBM MarketScan Commercial Database (CCAE) includes health insurance claims
+* IBM MarketScan® Commercial Database (CCAE) includes health insurance claims
 across the continuum of care (e.g. inpatient, outpatient, outpatient pharmacy,
 carve-out behavioral healthcare) as well as enrollment data from large employers
 and health plans across the United States who provide private healthcare
@@ -129,14 +129,14 @@ supplemental coverage through employer-sponsored plans. This database contains
 primarily fee-for-service plans and includes health insurance claims across the
 continuum of care (e.g. inpatient, outpatient and outpatient pharmacy).
 
-* Optum De-Identified Clinformatics® Data Mart Database - Date of Death
+* Optum® De-Identified Clinformatics® Data Mart Database - Date of Death
 (Optum-DOD) is derived from a database of administrative health claims for
 members of large commercial and Medicare Advantage health plans. The database
 includes approximately 17-19 million annual covered lives, for a total of over
 65 million unique lives over a 12 year period (1/2007 through 12/2019). The
 population is geographically diverse, spanning all 50 states.
 
-* Optum de-identified Electronic Health Record Dataset (Optum-EHR) is derived from
+* Optum® de-identified Electronic Health Record Dataset (Optum-EHR) is derived from
 dozens of healthcare provider organizations in the United States, that include
 more than 700 Hospitals and 7000 Clinics; treating more than 102 million
 patients receiving care in the United States.
