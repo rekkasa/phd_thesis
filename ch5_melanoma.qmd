@@ -164,7 +164,7 @@ that was left out [@steyerberg2015prediction]. In addition we performed external
 validation using the prospective German cohort. We first needed to develop a
 model for recurrence where we replaced the continuous variable SN tumor burden
 with the categorical substitute used in the prospective German cohort (single
-cells, <0.5 mm, 0.5e1.0 mm, >1.0e2.0 mm, >2.0e5.0 mm and >5.0 mm). For the
+cells, <0.5 mm, 0.[H].0 mm, >1.0-2.0 mm, >2.0-5.0 mm and >5.0 mm). For the
 derivation cohort, single cells were defined as <0.1 mm according to the
 Rotterdam criteria [@van_akkooi2008sentinel]. Single cells in the validation
 cohort were not specifically defined, but as the Rotterdam criteria were used
@@ -195,10 +195,19 @@ cohort had less extensive disease in terms of Breslow thickness, number of
 positive SNs and tumor burden in the SN compared with those in the derivation
 cohort (Table \ref{table:ch5-table1}).
 
+
+In the derivation cohort, recurrence at five years occurred in 496 patients
+(46.0%), DM in 437 patients (40.5%) and OM in 364 patients (33.8%). Median
+follow-up time for all survivors was 106 months (interquartile range [IQR]
+6[H]30 months). In the prospective validation cohort, recurrence at five years
+occurred in 267 patients (38.6%), DM in 223 patients (32.2%) and OM in 174
+patients (25.1%). Median follow-up time for all survivors was 66 months (IQR:
+48-94 months).
+
 \begin{table}[]
 \caption{Baseline characteristics of derivation and validation cohort. Values in parentheses are percentages, unless indicated otherwise. Values for age are median (IQR). Information on positive non-SNs was retrived after CLND. For the derivation single cells were defined as metastasis \textless 0.1 mm (continues to next page).}
 \label{table:ch5-table1}
-\begin{tabular}{lrrr}
+\resizebox{\textwidth}{!}{\begin{tabular}{lrrr}
 \toprule
 Characteristic & Derivation cohort & Validation cohort & P value \\
  & (n =1078 ) & ( n = 692 ) &  \\
@@ -229,19 +238,6 @@ SN tumour burden, extended &  & n = 626 & \textless 0.001 \\
 \hspace{3mm}\textgreater 1.0-2.0 mm & 200 ( 18.6 ) & 114 ( 18.2 ) &  \\
 \hspace{3mm}\textgreater 2.0-5.0 mm & 195 ( 18.1 ) & 36 ( 5.8 ) &  \\
 \hspace{3mm}\textgreater 5.0 mm & 114 ( 10.6 ) & 24 ( 3.8 ) &  \\
-\bottomrule
-\end{tabular}
-\caption*{CLND: completion lymph node dissection; IQR: interquartile range; SN: sentinel node}
-\end{table}
-
-\begin{table}[]
-\ContinuedFloat
-\caption{Continued.}
-\begin{tabular}{lrrr}
-\toprule
-Characteristic & Derivation cohort & Validation cohort & P value \\
- & (n =1078 ) & ( n = 692 ) &  \\
-\midrule
 SN tumour burden, simple &  & n = 626 & \textless 0.001 \\
 \hspace{3mm}\textless 1.0 mm & 569 ( 52.8 ) & 452 ( 72.2 ) &  \\
 \hspace{3mm}\textgreater 1.0 mm & 509 ( 47.2 ) & 174 ( 27.8 ) &  \\
@@ -253,17 +249,9 @@ Positive non-SNs & n = 1007 & n = 302 & 0.088 \\
 \hspace{3mm}1 node & 127 ( 12.6 ) & 53 ( 17.5 ) &  \\
 \hspace{3mm}\textgreater 1 node & 76 ( 7.5 ) & 20 ( 6.6 ) & \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
-
-In the derivation cohort, recurrence at five years occurred in 496 patients
-(46.0%), DM in 437 patients (40.5%) and OM in 364 patients (33.8%). Median
-follow-up time for all survivors was 106 months (interquartile range [IQR]
-61e130 months). In the prospective validation cohort, recurrence at five years
-occurred in 267 patients (38.6%), DM in 223 patients (32.2%) and OM in 174
-patients (25.1%). Median follow-up time for all survivors was 66 months (IQR:
-48-94 months).
 
 ### Models for recurrence, distant metastasis and overall mortality {.unnumbered}
 
@@ -274,9 +262,11 @@ of the continuous variables adequately represented their effects. The c-index
 for the final recurrence model was 0.68 (95% confidence interval [CI]:
 0.65-0.70). In cross-validation, the recurrence model was reasonably calibrated
 across nine center in general, only in smaller centers there was substantial
-underestimation of the risk (Fig. S1).
+underestimation of the risk (Figure S1 of the
+[online Supplement](https://doi.org/10.1016/j.ejca.2020.04.022)^[https://doi.org/10.1016/j.ejca.2020.04.022]).
 
 \begin{table}[]
+\begin{center}
 \caption{Final model for 5-year recurrence (hazard ratio with 95\% confidence interval).}
 \label{table:ch5-table2}
 \begin{tabular}{lrrr}
@@ -291,32 +281,36 @@ Ulceration &  &  &  \\
 \hspace{3mm}Present & 1.41 & 1.16 & 1.73 \\
 \bottomrule
 \end{tabular}
+\end{center}
 \end{table}
 
 The association between linear predictors of recurrence and DM was of the same
 size (calibration slope: 1.01, 95% CI: 0.87-1.16). The c-index for the
 calibrated model for DM was 0.70 (95% CI: 0.67-0.72) and was reasonably
-calibrated across nine  in cross-validation (Fig. S2). The performance of
-this calibrated model, based on the baseline hazard and the slope of the
-recurrence model, was similar to that of the independently developed prediction
-model for DM (c-index: 0.70, 95% CI: 0.68-0.73)
+calibrated across nine  in cross-validation (Figure S2 of the
+[online Supplement](https://doi.org/10.1016/j.ejca.2020.04.022)).
+The performance of this calibrated model, based on the baseline hazard and the
+slope of the recurrence model, was similar to that of the independently
+developed prediction model for DM (c-index: 0.70, 95% CI: 0.68-0.73)
 
 The association between linear predictors of recurrence and OM was of the same
 size (calibration slope: 1.04, 95% CI: 0.88-1.20). The c-index for the
 calibrated model for OM was 0.70 (95% CI: 0.67-0.73), and was reasonably
-calibrated across nine centers in cross-validation (Fig. S3). The performance
-of this calibrated model was similar to that of the independently developed
-prediction model for OM (c-index: 0.70, 95% CI: 0.68-0.73).
+calibrated across nine centers in cross-validation (Figure S3 of the
+[online Supplement](https://doi.org/10.1016/j.ejca.2020.04.022)).
+The performance of this calibrated model was similar to that of the
+independently developed prediction model for OM (c-index: 0.70, 95% CI:
+0.68-0.73).
 
 A four-item risk score was developed, assigning points to each prognostic factor
 based on the magnitude of association with recurrence. A nomogram to calculate
-the score and the risk of recurrence, DM and OM is presented in Fig. 1. The
-scores were divided into four risk groups based on the 5-year probability of
-recurrence: <25% (low risk; score 6-9; 4.1% of the population); 25-50%
-(intermediate risk; score 10e15; 52.9% of the population); 50-75% (high risk;
-score 16-19; 33.2% of the population); and >75% (very high risk; score 20e23;
-10.0% of the population). The observed outcomes for recurrence, DM and OM per
-risk group are shown in Table \ref{table:ch5-table3}.
+the score and the risk of recurrence, DM and OM is presented in
+@fig-positiveSlnb. The scores were divided into four risk groups based on the
+5-year probability of recurrence: <25% (low risk; score 6-9; 4.1% of the
+population); 25-50% (intermediate risk; score 1[H]5; 52.9% of the population);
+50-75% (high risk; score 16-19; 33.2% of the population); and >75% (very high
+risk; score 2[H]3; 10.0% of the population). The observed outcomes for
+recurrence, DM and OM per risk group are shown in Table \ref{table:ch5-table3}.
 
 
 ### External validation {.unnumbered}
@@ -328,16 +322,20 @@ the final recurrence model (c- index 0.68, 95% CI: 0.65-0.70). In external
 validation, the c-index for the altered recurrence model was 0.70 (95% CI:tumor
 0.67-0.74), for DM 0.72 (95% CI: 0.68-0.75) and for OM 0.74 (95% CI: 0.71-0.78).
 The calibration plots indicate good calibration, though there may be slight
-underestimation for higher-risk patients in the recurrence and OM models (Fig.
-S4).
+underestimation for higher-risk patients in the recurrence and OM models (Figure S2 of the
+[online Supplement](https://doi.org/10.1016/j.ejca.2020.04.022)).
+
+```{r fig-positiveSlnb, cache=FALSE, echo=FALSE, fig.pos="H", fig.cap="Nomogram and risk distribution. The curves refer to predicted recurrence, distant metastasis or overall mortality at 5 years. The histogram refers to the risk score distribution in the cohort; each bar represents the proportion of patients in the cohort that was assigned that specific score. The histogram was divided in four risk groups based on the risk of recurrence: low risk: <25%, intermediate risk: 2[H]0%, high risk: 50-75% and very high risk: >75%. The nomogram incorporates four factors: ulceration, age, SN tumor burden and Breslow thickness. To calculate an individual’s probability of 5-year recurrence, distant metastasis and overall mortality, values for the prognostic factors must be determined first (for example: absent ulceration, 35 years, SN tumor burden 0.8 mm and Breslow thickness 1.0 mm). Second, for each value the corresponding points can be obtained by drawing a line from each value towards the point axis (in example: 0, 1, 4 and 5 points, respectively). Third, the points must be added up to obtain the total risk score (in example: risk score of 10). Finally, the 5-year recurrence, distant metastasis and overall mortality probability can be read by moving vertically from the x-axis (total risk score) to the predicted risk curves and corresponding probabilities on the left y-axis (in example: 26% for recurrence, 20% for distant metastasis and 16% for overall mortality). The percentage of patients in the entire population (1078) that also had a total risk score of 10 can be determined from the histogram, as well as the corresponding percentage of patients on the right y-axis (in example: 7%)."}
+knitr::include_graphics("figures/ch5-PositiveSlnb.pdf")
+```
 
 ### Additional prognostic value of CLND {.unnumbered}
 
 An extended model for recurrence was created by adding the variable, number of
 additional positive nodes after CLND, to the final recurrence model. This
-extended model for recurrence had a c-index of 0.69 (95% CI: 0.67e0.72). The
+extended model for recurrence had a c-index of 0.69 (95% CI: 0.6[H].72). The
 calibrated extended models for DM and OM showed c-indices of 0.72 (95% CI:
-0.69e0.74) and 0.72 (95% CI: 0.69e0.75), respectively.
+0.6[H].74) and 0.72 (95% CI: 0.69-0.75), respectively.
 
 ### Simple classification {.unnumbered}
 
@@ -345,9 +343,36 @@ A simplified version of the model stratifies patients into four groups based on
 ulceration and SN tumor burden: 1) absent ulceration and $\leq$ 1.0 mm; 2)
 absent ulceration and >1.0 mm; 3) present ulceration and $\leq$ 1.0 mm and 4)
 present ulceration and >1.0 mm. The c-indices for this classification in
-predicting recurrence, DM and OM were 0.63 (95% CI: 0.61e0.65), 0.64 (95% CI:
-0.62e0.67) and 0.64 (95% CI: 0.61e0.67), respectively. The observed outcomes for
+predicting recurrence, DM and OM were 0.63 (95% CI: 0.6[H].65), 0.64 (95% CI:
+0.6[H].67) and 0.64 (95% CI: 0.61-0.67), respectively. The observed outcomes for
 recurrence, DM and OM per risk group are shown in Table \ref{table:ch5-table3}.
+
+### The American Joint Committee on Cancer (AJCC) classifications {.unnumbered}
+
+Patients were classified based on the 7th AJCC classification into IIIA $\leq$
+1.0 mm, IIIA >1.0 mm, IIIB and IIIC and based on the 8th edition into IIIA
+$\leq$ 1.0 mm, IIIA >1.0 mm, IIIB, IIIC and IIID. The c-indices for predicting
+recurrence, DM and OM for the 7th AJCC edition were 0.61 (95% CI: 0.59-0.63),
+0.62 (95% CI: 0.60-0.65) and 0.62 (95% CI: 0.59-0.65), respectively, and for the
+8th AJCC edition 0.62 (95% CI: 0.59-0.64), 0.63 (95% CI: 0.60-0.65) and 0.63
+(95% CI: 0.61-0.66), respectively. The observed outcomes for recurrence, DM and
+OM for both AJCC classifications are shown in Table \ref{table:ch5-table3}. A
+cross-table comparing the patients staged in accordance with the AJCC
+classifications and the risk groups based on the EORTC-DeCOG model is
+illustrated in Table \ref{table:ch5-table4}. An overview of c-indices for all
+the different models is presented in Table \ref{table:ch5-table5}.
+
+## Discussion {.unnumbered}
+
+The present study developed and validated a nomogram to predict five-year
+recurrence, DM and OM in patients with SN-positive melanoma, by solely using
+information from the primary melanoma and SLNB. The resulting patient-specific
+probabilities could be used to tailor adjuvant therapeutic strategies for
+patients with SN-positive melanoma, without the prerequisite to undergo CLND
+and thereby avoiding potential significant morbidity. The greatest contemporary
+value of our prognostic nomogram is the possibility of identifying patients at
+sufficiently low risk for recurrence, DM and OM in whom adjuvant therapy could
+be omitted.
 
 \begin{landscape}
 \begin{table}[]
@@ -385,20 +410,6 @@ IIID & 0.66 ( 0.00-0.90 ) & 0.68 ( 0.00-0.91 ) & 0.70 ( 0.00-0.92 ) \\
 \end{landscape}
 
 
-### The American Joint Committee on Cancer (AJCC) classifications {.unnumbered}
-
-Patients were classified based on the 7th AJCC classification into IIIA $\leq$
-1.0 mm, IIIA >1.0 mm, IIIB and IIIC and based on the 8th edition into IIIA
-$\leq$ 1.0 mm, IIIA >1.0 mm, IIIB, IIIC and IIID. The c-indices for predicting
-recurrence, DM and OM for the 7th AJCC edition were 0.61 (95% CI: 0.59-0.63),
-0.62 (95% CI: 0.60-0.65) and 0.62 (95% CI: 0.59-0.65), respectively, and for the
-8th AJCC edition 0.62 (95% CI: 0.59-0.64), 0.63 (95% CI: 0.60-0.65) and 0.63
-(95% CI: 0.61-0.66), respectively. The observed outcomes for recurrence, DM and
-OM for both AJCC classifications are shown in Table \ref{table:ch5-table3}. A
-cross-table comparing the patients staged in accordance with the AJCC
-classifications and the risk groups based on the EORTC-DeCOG model is
-illustrated in Table \ref{table:ch5-table4}. An overview of c-indices for all
-the different models is presented in Table \ref{table:ch5-table5}.
 
 \begin{table}[]
 \caption{Cross-table comparing EORTC-DeCOG risk groups with the 7th and 8th AJCC classification, based on 937 complete cases.}
@@ -447,17 +458,6 @@ AJCC 8th edition & 0.62 (0.59-0.64) & 0.63 (0.60-0.65) & 0.63 (0.61-0.66) \\
 \label{table:ch5-table5}
 \end{table}
 
-## Discussion {.unnumbered}
-
-The present study developed and validated a nomogram to predict five-year
-recurrence, DM and OM in patients with SN-positive melanoma, by solely using
-information from the primary melanoma and SLNB. The resulting patient-specific
-probabilities could be used to tailor adjuvant therapeutic strategies for
-patients with SN-positive melanoma, without the prerequisite to undergo CLND
-and thereby avoiding potential significant morbidity. The greatest contemporary
-value of our prognostic nomogram is the possibility of identifying patients at
-sufficiently low risk for recurrence, DM and OM in whom adjuvant therapy could
-be omitted.
 
 Although the FDA and EMA pragmatically approved adjuvant therapy for all
 stage-III patients, it is still under debate which patients should not be
@@ -556,6 +556,7 @@ trial design. In addition it might aid in adjuvant therapy decision-making. To
 facilitate its use, an online calculator has been developed and can be accessed
 at [https://www. evidencio.com/models/show/2010](https://www. evidencio.com/models/show/2010).
 
-```{r fig-positiveSlnb, cache=FALSE, echo=FALSE, fig.cap="Nomogram and risk distribution. The curves refer to predicted recurrence, distant metastasis or overall mortality at 5 years. The histogram refers to the risk score distribution in the cohort; each bar represents the proportion of patients in the cohort that was assigned that specific score. The histogram was divided in four risk groups based on the risk of recurrence: low risk: <25%, intermediate risk: 25e50%, high risk: 50e75% and very high risk: >75%. The nomogram incorporates four factors: ulceration, age, SN tumor burden and Breslow thickness. To calculate an individual’s probability of 5-year recurrence, distant metastasis and overall mortality, values for the prognostic factors must be determined first (for example: absent ulceration, 35 years, SN tumor burden 0.8 mm and Breslow thickness 1.0 mm). Second, for each value the corresponding points can be obtained by drawing a line from each value towards the point axis (in example: 0, 1, 4 and 5 points, respectively). Third, the points must be added up to obtain the total risk score (in example: risk score of 10). Finally, the 5-year recurrence, distant metastasis and overall mortality probability can be read by moving vertically from the x-axis (total risk score) to the predicted risk curves and corresponding probabilities on the left y-axis (in example: 26% for recurrence, 20% for distant metastasis and 16% for overall mortality). The percentage of patients in the entire population (1078) that also had a total risk score of 10 can be determined from the histogram, as well as the corresponding percentage of patients on the right y-axis (in example: 7%)."}
-knitr::include_graphics("figures/ch5-PositiveSlnb.pdf")
-```
+## Supplementary material {.unnumbered}
+
+Supplementary material for this chapter is available online at
+[https://www.sciencedirect.com/science/article/pii/S0959804920302252](https://www.sciencedirect.com/science/article/pii/S0959804920302252).

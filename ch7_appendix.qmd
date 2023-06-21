@@ -2,11 +2,301 @@
 
 \pagebreak
 
+## Cohort definitions {#sec-osteoporosis-appendix-cohorts}
+
+### Teriparatide {.unnumbered}
+
+\textbf{Cohort Entry Events} \par
+People with continuous observation of 365 days
+before event may enter the cohort when observing any of the following:
+
+* drug exposures of Teriparatide (Table \ref{table:ch7-appendix-teriparatide})
+
+Limit cohort entry events to the earliest event per person.
+
+**Inclusion Criteria:**
+
+* [Inclusion] Established osteoporosis: Any fracture of the hip, wrist, spine, shoulder/humerus
+
+  * Entry events having at least 1 condition occurrence of osteoporosis (Table \ref{table:ch7-appendix-osteoporosis}), starting in the 365 days prior to cohort entry start date
+
+* [Inclusion] Women above the age of 50
+  * Entry events with the following event criteria: who are female > 50 years old
+* [Exclusion] No anti-osteoporosis drugs 1 year prior: SERMs (raloxifene, bazedoxifene), denosumab, abaloparatide (US), romosozumab (US)
+  * Entry events having no drug exposures of anti-osteoporosis drugs, other than teriparatide or bisphosphonates (Table \ref{table:ch7-appendix-antiosteoporosis-drugs}), starting in the 365 days prior to cohort entry start date
+* [Exclusion] No oral bisphosphonate treatment
+  * Entry events having no drug exposures of oral bisphosphonates (Table \ref{table:ch7-appendix-bisphosphonates}), starting between 365 days before and 0 days before cohort entry start date.
+* [Exclusion] No history of breast cancer
+  * Entry events having no condition occurrences of breast cancer (Table \ref{table:ch7-appendix-breast-cancer}), starting any time prior to cohort entry start date.
+* [Exclusion] No Paget's disease
+  * Entry events having no condition occurrences of Paget's disease of bone (Table \ref{table:ch7-appendix-paget}), starting any time prior to cohort entry start date
+  
+**Cohort Exit** \par
+The person exits the cohort at the end of continuous observation.
+
+**Cohort Eras** \par
+Entry events will be combined into cohort eras if they are within 0 days of each other.
+
+
+### Oral bisphosphonates {.unnumbered}
+
+\textbf{Cohort Entry Events} \par
+People with continuous observation of 365 days
+before event may enter the cohort when observing any of the following:
+
+* drug exposures of oral bisphosphonates (Table \ref{table:ch7-appendix-bisphosphonates})
+
+Limit cohort entry events to the earliest event per person.
+
+**Inclusion Criteria:**
+
+* [Inclusion] Established osteoporosis: Any fracture of the hip, wrist, spine, shoulder/humerus
+  ** Entry events having at least 1 condition occurrence of '[PR] Osteoporosis', starting in the 365 days prior to cohort entry start date.
+* [Inclusion] Women above the age of 50
+  * Entry events with the following event criteria: who are female > 50 years old.
+* [Exclusion] No anti-osteoporosis drugs 1 year prior: SERMs(raloxifene, bazedoxifene), denosumab, abaloparatide (US), romosozumab (US)
+  * Entry events having no drug exposures of anti-osteoporosis drugs, other than teriparatide or bisphosphonates (\ref{table:ch7-appendix-antiosteoporosis-drugs}), starting in the 365 days prior to cohort entry start date.
+* [Exclusion] No teriparatide treatment
+  * Entry events having no drug exposures of teriparatide (Table \ref{table:ch7-appendix-teriparatide}), starting in the 365 days prior to cohort entry start date.
+* [Exclusion] No history of breast cancer
+  * Entry events having no condition occurrences of breast cancer (Table \ref{table:ch7-appendix-breast-cancer}), starting any time prior to cohort entry start date.
+* [Exclusion] No Paget's disease
+  * Entry events having no condition occurrences of Paget's disease of bone (Table \ref{table:ch7-appendix-paget}), starting any time prior to cohort entry start date
+
+**Cohort Exit** \par
+The person exits the cohort at the end of continuous observation.
+
+**Cohort Eras** \par
+Entry events will be combined into cohort eras if they are within 0 days of each other.
+
+
+### Hip fracture {.unnumbered}
+
+\textbf{Cohort Entry Events} \par
+People may enter the cohort when observing any of the following:
+
+* condition occurence of hip fracture (Table \ref{table:ch7-appendix-hip-fracture})
+
+Restrict entry events to having at most 0 condition occurrences of hip fracture,
+starting in the 180 days prior to cohort entry start date. Limit qualifying
+entry events to the all events per person.
+
+**Cohort Exit** \par
+The person exits the cohort at the end of continuous observation.
+
+**Cohort Eras** \par
+Entry events will be combined into cohort eras if they are within 0 days of each other.
+
+### Major osteoporotic fracture {.unnumbered}
+
+\textbf{Cohort Entry Events} \par
+People with continuous observation of 180 days before event may enter the cohort
+when observing any of the following:
+
+* condition occurrences of hip fracture (Table \ref{table:ch7-appendix-hip-fracture}).
+* condition occurrences of vertebral fracture (Table \ref{table:ch7-appendix-vertebral-fracture}).
+* condition occurrences of wrist-forearm-proximal humerus fractures (Table \ref{table:ch7-appendix-wrist}).
+
+Restrict entry events to with all of the following criteria:
+
+* having at most 0 condition occurrences of hip fracture (Table \ref{table:ch7-appendix-hip-fracture}), starting in the 180 days prior to cohort entry start date.
+* having at most 0 condition occurrences of vertebral fracture (Table \ref{table:ch7-appendix-vertebral-fracture}), starting in the 180 days prior to cohort entry start date.
+* having at most 0 condition occurrences of wrist-forearm-proximal humerus fractures (Table \ref{table:ch7-appendix-wrist}), starting in the 180 days prior to cohort entry start date.
+
+Limit these restricted entry events to the earliest event per person.
+
+**Cohort Exit** \par
+The person exits the cohort at the end of continuous observation.
+
+**Cohort Eras** \par
+Entry events will be combined into cohort eras if they are within 0 days of each other.
+
+### Vertebral fracture {.unnumbered}
+
+\textbf{Cohort Entry Events} \par
+People may enter the cohort when observing any of the following:
+
+* condition occurrences of vertebral fracture (Table \ref{table:ch7-appendix-vertebral-fracture}).
+
+Restrict entry events to having at most 0 condition occurrences of vertebral
+fracture (Table \ref{table:ch7-appendix-vertebral-fracture}), starting in the 180 days prior to cohort entry
+start date. Limit these restricted entry events to the earliest event per
+person.
+
+**Cohort Exit** \par
+The person exits the cohort at the end of continuous observation.
+
+**Cohort Eras** \par
+Entry events will be combined into cohort eras if they are within 0 days of each other.
+
+
+\begin{table}[H]
+\caption{Concepts used to define anti-osteoporosis drugs (other than teriparatide or bisphosphonates).}
+\label{table:ch7-appendix-antiosteoporosis-drugs}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\toprule
+Concept Id & Concept name & Domain & Vocabulary & Excluded & Decendants \\
+\midrule
+1594148 & abaloparatide & Drug & RxNorm & NO & YES \\
+44506794 & bazedoxifene & Drug & RxNorm & NO & YES \\
+40222444 & denosumab & Drug & RxNorm & NO & YES \\
+1513103 & Raloxifene & Drug & RxNorm & NO & YES \\
+1511251 & romosozumab & Drug & RxNorm & NO & YES \\
+19000815 & Strontium & Drug & RxNorm & NO & YES\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\caption{Concepts used to define breast cancer.}
+\label{table:ch7-appendix-breast-cancer}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\toprule
+Concept Id & Concept name & Domain & Vocabulary & Excluded & Decendants \\
+\midrule
+4112853 & Malignant tumor of breast & Condition & SNOMED & NO & YES \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\caption{Concepts used to  define oral bisphosphonates.}
+\label{table:ch7-appendix-bisphosphonates}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\toprule
+Concept Id & Concept name & Domain & Vocabulary & Excluded & Decendants \\
+\bottomrule
+1557272 & Alendronate & Drug & RxNorm & NO & YES \\
+21604152 & alendronic acid & Drug & ATC & NO & YES \\
+1512480 & Ibandronate & Drug & RxNorm & NO & YES \\
+21604154 & ibandronic acid & Drug & ATC & NO & YES \\
+1516800 & Risedronate & Drug & RxNorm & NO & YES \\
+21604155 & risedronic acid & Drug & ATC & NO & YES \\
+1524674 & zoledronic acid & Drug & RxNorm & NO & YES \\
+21604156 & zoledronic acid & Drug & ATC & NO & YES \\
+40241457 & zoledronic acid 0.04 MG/ML {[}Zometa{]} & Drug & RxNorm & YES & YES \\
+1524677 & zoledronic acid 0.8 MG/ML & Drug & RxNorm & YES & YES \\
+21114423 & zoledronic acid 4 MG {[}Zometa{]} & Drug & RxNorm Extension & YES & YES \\
+42956218 & zoledronic acid Injectable Solution {[}Zometa{]} & Drug & RxNorm Extension & YES & YES \\
+42956220 & zoledronic acid Injectable Solution {[}ZOMETA READY{]} & Drug & RxNorm Extension & YES & YES \\
+41112021 & zoledronic acid Injectable Suspension {[}Zometa{]} & Drug & RxNorm Extension & YES & YES \\
+1593366 & zoledronic acid Injection {[}Zometa{]} & Drug & RxNorm & YES & YES \\
+36787242 & zoledronic acid Intravenous Solution {[}Zometa{]} & Drug & RxNorm Extension & YES & YES \\
+36882768 & zoledronic acid Prefilled Syringe {[}Zometa{]} & Drug & RxNorm Extension & YES & YES \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\caption{Concepts used to define osteoporosis}
+\label{table:ch7-appendix-osteoporosis}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\toprule
+Concept Id & Concept name & Domain & Vocabulary & Excluded & Decendants \\
+\midrule
+4138275 & Fracture dislocation of wrist joint & Condition & SNOMED & NO & YES \\
+45763653 & Fracture of bone of hip region & Condition & SNOMED & NO & YES \\
+4218884 & Fracture of carpal bone & Condition & SNOMED & NO & YES \\
+442619 & Fracture of humerus & Condition & SNOMED & NO & YES \\
+4174520 & Fracture of vertebral column & Condition & SNOMED & NO & YES \\
+80502 & Osteoporosis & Condition & SNOMED & NO & YES \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\caption{Concepts used to define Paget's disease.}
+\label{table:ch7-appendix-paget}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\toprule
+Concept Id & Concept name & Domain & Vocabulary & Excluded & Decendants \\
+\midrule
+4003461 & Paget's disease-clavicle & Condition & SNOMED & NO & YES \\
+4002990 & Paget's disease-femur & Condition & SNOMED & NO & YES \\
+4103167 & Pagets disease - hip & Condition & SNOMED & NO & YES \\
+4001314 & Paget's disease-lumbar spine & Condition & SNOMED & NO & YES \\
+4001445 & Paget's disease of humerus & Condition & SNOMED & NO & YES \\
+4001981 & Paget's disease of pelvis & Condition & SNOMED & NO & YES \\
+4001632 & Paget's disease of skull & Condition & SNOMED & NO & YES \\
+4001313 & Paget's disease-thoracic spine & Condition & SNOMED & NO & YES \\
+4003464 & Paget's disease-tibia & Condition & SNOMED & NO & YES \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\caption{Concepts used to define treatment with teriparatide.}
+\label{table:ch7-appendix-teriparatide}
+\resizebox{\textwidth}{!}{\begin{tabular}{lllllll}
+\toprule
+Concept Id & Concept name & Domain & Vocabulary & Excluded & Decendants & Mapped \\
+\midrule
+1521987 & Teriparatide & Drug & RxNorm & NO & YES & NO \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\caption{Concepts used to define hip fracture.}
+\label{table:ch7-appendix-hip-fracture}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\toprule
+Concept Id & Concept Name & Domain & Vocabulary & Excluded & Descendants \\
+\midrule
+433856 & Fracture of neck of femur & Condition & SNOMED & NO & YES \\
+4167913 & Open fracture of femur, subcapital & Condition & SNOMED & YES & YES \\
+436248 & Open fracture of neck of femur & Condition & SNOMED & YES & YES \\
+4012436 & Open fracture of proximal femur, pertrochanteric & Condition & SNOMED & YES & YES \\
+4015976 & Open fracture proximal femur,subcapital, Garden grade unspec & Condition & SNOMED & YES & YES \\
+4015975 & Open fracture proximal femur, transepiphyseal & Condition & SNOMED & YES & YES \\
+4230399 & Closed fracture of hip & Condition & SNOMED & NO & YES \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\caption{Concepts used to define vertebral fracture.}
+\label{table:ch7-appendix-vertebral-fracture}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\toprule
+Concept Id & Concept Name & Domain & Vocabulary & Excluded & Descendants \\
+\midrule
+36211121 & Lumbar vertebral fracture & Condition & MedDRA & NO & YES \\
+36211124 & Thoracic vertebral fracture & Condition & MedDRA & NO & YES \\
+45757320 & Osteoporotic fracture of vertebra & Condition & SNOMED & NO & YES \\
+4013604 & Closed fracture lumbar vertebra & Condition & SNOMED & NO & YES \\
+4013596 & Closed fracture thoracic vertebra & Condition & SNOMED & NO & YES \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\caption{Concepts used to define wrist/forearm/proximal humerus fractures.}
+\label{table:ch7-appendix-wrist}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\toprule
+Concept Id & Concept Name & Domain & Vocabulary & Excluded & Descendants \\
+\midrule
+440230 & Closed fracture of proximal humerus, anatomical neck & Condition & SNOMED & NO & YES \\
+441699 & Closed fracture proximal humerus, greater tuberosity & Condition & SNOMED & NO & YES \\
+4013920 & Closed fracture proximal humerus, neck & Condition & SNOMED & NO & YES \\
+36211130 & Forearm fracture & Condition & MedDRA & NO & YES \\
+432472 & Open fracture of proximal humerus, anatomical neck & Condition & SNOMED & NO & YES \\
+437690 & Open fracture proximal humerus, greater tuberosity & Condition & SNOMED & NO & YES \\
+4009431 & Open fracture proximal humerus, neck & Condition & SNOMED & NO & YES \\
+36211137 & Wrist fracture & Condition & MedDRA & NO & YES \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+
 ## Patient characteristics
 
 \begin{landscape}
-\begin{table}[p]
+\begin{table}[H]
 \caption{Characteristics of patients in CCAE receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
+\label{table:ch7-appendix-ccae}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 & \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
@@ -36,7 +326,7 @@ Viral hepatitis C & 0.8 & 0.3 & 0.06 & 0.8 & 0.7 & 0.01
 \end{tabular}}
 \end{table}
 
-\begin{table}[p]
+\begin{table}[H]
 \ContinuedFloat
 \caption{Continued.}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
@@ -63,6 +353,7 @@ Malignant neoplastic   disease & 0.4 & 0.3 & 0.02 & 0.4 & 0.4 & 0 \\
 
 \begin{table}[p]
 \caption{Characteristics of patients in MDCR receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
+\label{table:ch7-appendix-mdcr}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 & \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
@@ -118,6 +409,7 @@ Malignant neoplastic disease & 0.7 & 0.4 & 0.04 & 0.6 & 0.6 & -0.01 \\
 
 \begin{table}[p]
 \caption{Characteristics of patients in Optum-DOD receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
+\label{table:ch7-appendix-optum-dod}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 & \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\
@@ -173,6 +465,7 @@ Malignant neoplastic   disease & 0.4 & 0.3 & 0.02 & 0.3 & 0.5 & -0.02 \\
 
 \begin{table}[p]
 \caption{Characteristics of patients in Optum-EHR receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
+\label{table:ch7-appendix-optum-ehr}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
 \toprule
 & \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching} \\

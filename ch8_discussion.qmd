@@ -6,19 +6,19 @@
 ## Main findings 
 
 This thesis had three main research aims (Box \ref{resultsBox}). In
-@sec-review we reviewed the available literature on predictive approaches to
-treatment effect heterogeneity. In @sec-framework we presented a standardized
-framework for the assessment of treatment effect heterogeneity using a
-risk-based approach in observational data. We applied this framework in two
-different clinical settings. First, we evaluated effect heterogeneity of
+**[@sec-review]** we reviewed the available literature on predictive approaches to
+treatment effect heterogeneity. In **[@sec-framework]** we presented a
+standardized framework for the assessment of treatment effect heterogeneity
+using a risk-based approach in observational data. We applied this framework in
+two different clinical settings. First, we evaluated effect heterogeneity of
 thiazides or thiazide-like diuretics compared to angiotensin-converting enzyme
-inhibitors for the treatment of hypertension (@sec-framework). Second, we
+inhibitors for the treatment of hypertension (**[@sec-framework]**). Second, we
 evaluated treatment effect heterogeneity of teriparatide compared to oral
-bisphosphonates for patients with osteoporosis (@sec-osteoporosis). In
-@sec-simulation we presented risk-based approaches for predicting individualized
-treatment effect. Finally, in Chapters [-@sec-melanoma] and [-@sec-covid] we
-presented the development and validation of models for prediction of baseline
-risk in melanoma and COVID-19 patients.
+bisphosphonates for patients with osteoporosis (**[@sec-osteoporosis]**). In
+**[@sec-simulation]** we presented risk-based approaches for predicting 
+individualized treatment effect. Finally, in **[@sec-melanoma]** and
+**[@sec-covid]** we presented the development and validation of models for
+prediction of baseline risk in melanoma and COVID-19 patients.
 
 \begin{blackbox}[label={resultsBox}]{Results regarding the aims of this thesis}
 \textbf{Aim 1}: \textit{Systematically review the current literature on predictive
@@ -63,7 +63,7 @@ Risk-based approaches define patient similarity based solely on risk factors.
 They can be further divided into risk stratification approaches that rely on the
 definition of risk-based subgroups of patients and risk magnification approaches
 that assume a constant relative treatment effect. The latter can also be used to
-make personalized benefit predictions. In @sec-simulation, the strong
+make personalized benefit predictions. In **[@sec-simulation]**, the strong
 assumption of constant relative treatment effects was relaxed, allowing for
 increasingly linear and non-linear interactions of baseline risk with treatment.
 
@@ -116,24 +116,24 @@ main outcome of interest is not evaluated and, therefore, the absolute risk
 reduction achieved with treatment cannot be compared to the risk increase for
 the adverse event in question.
 
-In a similar literature review focusing on subgroup identification, Lipkovich
-et al divided existing methods into three main categories
-[@lipkovich2017tutorial]. The more general approach, global outcome modeling,
-builds a global model for the outcome of interest often including a large number
-of covariates and interactions of many of these covariates with treatment. As
-this approach is quite challenging in its implementation due to low power and
-limited knowledge on treatment effect modification, Lipkovich et al identified
-two main simplification approaches. First, global treatment effect modeling
-approaches focus only on the estimation of treatment-covariate interactions
-foregoing the estimation of purely prognostic covariate effects. The definition
-of this set of methods is very similar to the optimal treatment regime category
-of @sec-review. Second, local modeling methods focus on the
-identification of regions of the covariate space with desirable treatment
-effects. In this way, an outcome model is only required to perform adequately
-locally, avoiding the need to extend the derived models to covariate regions
-with limited information. Risk modeling methods presented in @sec-review can
-also be considered as an additional simplification approach, since they assume
-that treatment effect only interacts with baseline risk.
+In a similar literature review focusing on subgroup identification, Lipkovich et
+al divided existing methods into three main categories [@lipkovich2017tutorial].
+The more general approach, global outcome modeling, builds a global model for
+the outcome of interest often including a large number of covariates and
+interactions of many of these covariates with treatment. As this approach is
+quite challenging in its implementation due to low power and limited knowledge
+on treatment effect modification, Lipkovich et al identified two main
+simplification approaches. First, global treatment effect modeling approaches
+focus only on the estimation of treatment-covariate interactions foregoing the
+estimation of purely prognostic covariate effects. The definition of this set of
+methods is very similar to the optimal treatment regime category of
+**[@sec-review]**. Second, local modeling methods focus on the identification of
+regions of the covariate space with desirable treatment effects. In this way, an
+outcome model is only required to perform adequately locally, avoiding the need
+to extend the derived models to covariate regions with limited information. Risk
+modeling methods presented in **[@sec-review]** can also be considered as an
+additional simplification approach, since they assume that treatment effect only
+interacts with baseline risk.
 
 Our study had several limitations. We focused our review on the clinical trial
 setting and only regression modeling methods were considered. The analyzed
@@ -181,15 +181,15 @@ primarily defined based on treatment effect modifiers}.
 
 ## Risk-based predictive approaches to treatment effect heterogeneity
 
-In @sec-framework, we proposed a five-step standardized framework for evaluating
-treatment effect heterogeneity within the observational setting using a
-risk-based approach (box \ref{frameworkBox}). We also developed a software
+In **[@sec-framework]**, we proposed a five-step standardized framework for
+evaluating treatment effect heterogeneity within the observational setting using
+a risk-based approach (box \ref{frameworkBox}). We also developed a software
 package for performing such analyses. We made our software compatible with
 databases mapped to OMOP-CDM to allow for scalability and reproducibility of the
 analyses. The potential of this approach was demonstrated in a small-scale
 analysis of effect heterogeneity in the treatment of hypertension, while a more
 thorough application in the treatment of osteoporosis was presented in
-@sec-osteoporosis.
+**[@sec-osteoporosis]**.
 
 For the definition of the research aim we need to clearly define the set of
 characteristics required to qualify patients for any of the following sets: the
@@ -266,12 +266,12 @@ stratification schemes and analysis approaches. It is also highly scalable as
 any set of analyses could be implemented across a global network of
 observational databases mapped to OMOP-CDM.
 
-With the development of the framework presented in @sec-framework our aim was to
-enable the evaluation of treatment effect heterogeneity using readily available
-observational patient data. Despite its great promise, however, observational
-data suffers from major imbalances in treatment assignment (observed and
-unobserved confounding), great disparities in the level clinical information is
-captured between different vendors, and high-dimensionality
+With the development of the framework presented in **[@sec-framework]** our aim
+was to enable the evaluation of treatment effect heterogeneity using readily
+available observational patient data. Despite its great promise, however,
+observational data suffers from major imbalances in treatment assignment
+(observed and unobserved confounding), great disparities in the level clinical
+information is captured between different vendors, and high-dimensionality
 [@derouen2015promises;@shah2018big]. Consequently, traditional statistical
 inference methods often fail to produce unbiased treatment effect estimates.
 Despite great advances in methods research with observational data, strong
@@ -280,7 +280,7 @@ design limitations [@varadhan2013framework]. These issues may be compounded when
 evaluating treatment effect heterogeneity, mainly because of the risk of
 conflating confounding and effect modification.
 
-In the development of the framework in @sec-framework, considerable
+In the development of the framework in **[@sec-framework]**, considerable
 attention is given to the evaluation of diagnostics at every step of the
 process. More specifically, the overlap of the propensity score distributions
 between treatment arms along with the balance in standardized covariate means
@@ -296,7 +296,7 @@ Risk stratified approaches to treatment effect heterogeneity estimate treatment
 effects for groups of patients with more similar, but not necessarily equal,
 baseline risk. Consequently, with larger variability in predicted risk and
 strong treatment effects, strata-specific estimates of treatment effect may not
-apply to individuals. In @sec-simulation, we compared regression-based
+apply to individuals. In **[@sec-simulation]**, we compared regression-based
 methods for personalizing predictions of treatment effect using baseline risk in
 a simulation study. Focusing on the RCT setting, methods assuming a constant
 relative treatment effect, or a linear interaction of the linear predictor for
@@ -392,8 +392,8 @@ through December 2020). The proposed models were based on quickly and
 objectively obtainable predictors. Prediction of ICU admission risk is
 challenging as it depends on national, regional or hospital practices, as well
 ICU bed availability. In addition, as was already pointed out in
-@sec-covid, patients admitted to the ICU tended to be younger than the patients
-being discharged due to decisions not to admit frail patients. For the
+**[@sec-covid]**, patients admitted to the ICU tended to be younger than the
+patients being discharged due to decisions not to admit frail patients. For the
 development of our prediction model for ICU admission, the strong correlation
 between death and need for intensive care was exploited, by recalibrating the
 mortality prediction model for the outcome of ICU admission. The prediction
@@ -401,7 +401,7 @@ models displayed good performance (discrimination and calibration) in the
 validation set, were easy to use, and were freely available online and in mobile
 applications.
 
-The prediction models of [Chapters -@sec-melanoma] and [-@sec-covid] are
+The prediction models of **[@sec-melanoma]** and **[@sec-covid]** are
 applicable to the populations from which the model development samples were
 drawn. The general problem of transportability of prediction models in space and
 time is an important issue, that needs to be considered when evaluating
@@ -411,23 +411,23 @@ the characteristics of populations located in different places may be
 significantly different compared to the model development population  – beyond
 those represented in the prediction model – and disparities in data capture may
 also be present. To give insight into its transportability, we externally
-validated the EORTC-DeCOG nomgram of @sec-melanoma in data from Germany and
+validated the EORTC-DeCOG nomgram of **[@sec-melanoma]** in data from Germany and
 adopted a leave-one-center-out validation approach for the COPE prediction model
-of @sec-covid [@steyerberg2016prediction].
+of **[@sec-covid]**.
 
 Prediction models for COVID-19 are not easily transportable to settings outside
 the ones they were actually developed [@van_klaveren2022prognostic]. Response to
 COVID-19 has been characterized with large geographical and temporal disparities
 [@van_klaveren2022prognostic], as have the severity and progression of disease.
-Therefore, our developed prediction model of @sec-covid could be safely applied
-to aid medical decision making in the Netherlands during the earlier stages of
-the pandemic. However, its generalizability to other healthcare systems needs to
-be explored. In addition, evaluation of its temporal validity in subsequent
-periods is required and, if found necessary, the model should be updated. Recent
-work has shown promising results with the application of a model updating
-framework [@levy2022development].
+Therefore, our developed prediction model of **[@sec-covid]** could be safely
+applied to aid medical decision making in the Netherlands during the earlier
+stages of the pandemic. However, its generalizability to other healthcare
+systems needs to be explored. In addition, evaluation of its temporal validity
+in subsequent periods is required and, if found necessary, the model should be
+updated. Recent work has shown promising results with the application of a model
+updating framework [@levy2022development].
 
-Finally, we applied the framework presented in [@sec-framework] to assess
+Finally, we applied the framework presented in **[@sec-framework]** to assess
 heterogeneity of the effect of treatment with teriparatide compared to oral
 bisphsophonates in patients with osteoporosis with regard to three outcomes of
 interest---namely hip fracture, major osteoporotic fracture, and vetebral
@@ -486,13 +486,13 @@ Consequently, further research on the modeling approaches of the framework are
 required.
 
 The proposed approaches to modeling interactions of baseline risk with treatment
-compared in the simulation study of @sec-simulation need to be extended to the
-observational setting and evaluated in an extensive simulation study. Extensive
-literature on machine learning algorithms for estimating conditional average
-treatment effects and for correcting overfitted regression-based treatment
-effect modeling approaches provides a broad set of candidate methods for the
-evaluation of treatment effect heterogeneity on the observational setting
-[@athey2016recursive;@athey2019generalized;@wager2018estimation]. A head-to-head
-comparison of these methods and the proposed risk-based approaches can provide
-further insights into their relative performance and help guide model selection
-and implementation in different settings.
+compared in the simulation study of **[@sec-simulation]** need to be extended to
+the observational setting and evaluated in an extensive simulation study.
+Extensive literature on machine learning algorithms for estimating conditional
+average treatment effects and for correcting overfitted regression-based
+treatment effect modeling approaches provides a broad set of candidate methods
+for the evaluation of treatment effect heterogeneity on the observational
+setting [@athey2016recursive;@athey2019generalized;@wager2018estimation]. A
+head-to-head comparison of these methods and the proposed risk-based approaches
+can provide further insights into their relative performance and help guide
+model selection and implementation in different settings.

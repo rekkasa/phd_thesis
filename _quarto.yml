@@ -4,10 +4,8 @@ book:
   title: "Beyond the average treatment effect"
   subtitle: "Risk-based approaches to medical decision making"
   author: "Alexandros Rekkas"
-  date: "3/19/2023"
   chapters:
     - index.qmd
-    - ch1_introduction.qmd
     - ch2_review.qmd
     - ch3_framework.qmd
     - ch4_simulation.qmd
@@ -28,8 +26,10 @@ csl: american-medical-association-alphabetical.csl
 format:
   pdf:
     documentclass: book
+    template-partials:
+      - before-body.tex
     classoption: [10pt]
     include-in-header:
       - preamble.tex
-    toc-depth: 1
+    toc: false
     cite-method: citeproc

@@ -26,7 +26,7 @@ knit_hooks$set(
 )
 ```
 
-## Notation {.unnumbered}
+## Notation {#sec-simulation-appendix-notation}
 We observe RCT data $(Z, X, Y)$, where for each patient $Z_i= 0, 1$ is the
 treatment status, $Y_i = 0, 1$ is the observed outcome and $X_i$ is a set of
 covariates measured. Let $\{Y_i(z), z=0, 1\}$ denote the unobservable potential
@@ -53,7 +53,7 @@ $$
 where $f(u,z)$ describes interactions of the baseline risk linear predictor with
 treatment.
 
-## Simulation settings {.unnumbered}
+## Simulation settings {#sec-simulation-appendix-settings}
 For all patients we observe covariates $X_1,\dots,X_8$, of which $4$ are
 continuous and $4$ are binary. More specifically,
 
@@ -67,40 +67,37 @@ X_5,\dots,X_8 \sim B(1, 0.2)
 We first, generate the binary outcomes $Y$ for the untreated patients ($Z=0$),
 based on
 
-\begin{equation} 
+$$
 P(Y(0)=1\given X=x) = g(\beta_0 + \beta_1x_1+\dots+\beta_8x_8) = g(lp_0),
-(\#eq:p0)
-\end{equation}
+$${#eq-p0}
+
 
 where $$g(x) = \frac{e^x}{1+e^x}$$
 
 For treated patients, outcomes are generated from:
 
-\begin{equation}
+$$
 P(Y = 1\given X=x, Z=1) = g(lp_1)
-(\#eq:p1)
-\end{equation}
-
+$$
 
 where $$lp_1 = \gamma_2(lp_0-c)^2+\gamma_1(lp_0-c)+\gamma_0$$
 
-### Base-case scenario {.unnumbered}
-The base-case scenario assumes a constant odds ratio of $0.8$ in favor of
-treatment. The simulated datasets are of size $n=4250$, where treatment is
-allocated at random using a 50/50 split (80% power for the detection of an
-unadjusted OR of 0.8, assuming an event rate of 20% in the untreated
-arm). Outcome incidence in the untreated population is set at $20\%$. For the
-development of the prediction model we use the model defined in \@ref(eq:p0)
-including a constant treatment effect. When doing predictions, $Z$ is set to
-$0$. The value of the true $\beta$ is such that the above prediction model
-has an AUC of $0.75$.
+### Base-case scenario The base-case scenario assumes a constant odds ratio of
+$0.8$ in favor of treatment. The simulated datasets are of size $n=4250$, where
+treatment is allocated at random using a 50/50 split (80% power for the
+detection of an unadjusted OR of 0.8, assuming an event rate of 20% in the
+untreated arm). Outcome incidence in the untreated population is set at $20\%$.
+For the development of the prediction model we use the model defined in
+[equation @eq-p0] including a constant treatment effect. When doing predictions,
+$Z$ is set to $0$. The value of the true $\beta$ is such that the above
+prediction model has an AUC of $0.75$.
 
 
 The previously defined targets are achieved when $\beta=(-2.08,
 0.49,\dots,0.49)^t$. For the derivations in the treatment arm we use
 $\gamma=(\log(0.8), 1, 0)^t$.
 
-### Deviations from base-case {.unnumbered}
+### Deviations from base-case
 We deviate from the base-case scenario in two ways. First, we alter the overall
 target settings of sample size, overall treatment effect and prediction model
 AUC. In a second stage, we consider settings that violate the assumption of a
@@ -133,11 +130,11 @@ strong positive ($0.50\times\text{true average benefit}$) and negative
 treatment-related benefit). In case of true absent treatment effects,
 treatment-related harms are set to $1\%, 2\%$ and $-1\%$ for positive, strong
 positive and negative setting, respectively. The settings for these deviations
-are defined in Table ***ONLINE TABLE***.
+are defined in [online Table S1](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6)^[https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6]. 
 
-## Approaches to individualize benefit predictions {.unnumbered}
+## Approaches to individualize benefit predictions {#sec-simulation-appendix-individualize}
 
-### Risk modeling {.unnumbered}
+### Risk modeling
 Merging treatment arms, we develop prediction models including a constant relative treatment effect:
 
 $$
@@ -145,7 +142,7 @@ P(Y=1\given X=x,Z=z) = g(x^t\beta + \delta_0 z)
 $$ {#eq-risk}
 
 We derive baseline risk predictions for patients by setting $Z=0$ in
-\@ref(eq:risk). All methods for individualizing benefit predictions are 2-stage
+\@ref(eq-risk). All methods for individualizing benefit predictions are 2-stage
 methods, that start by fitting a model for predicting baseline risk. The
 estimated linear predictor of this model is
 
@@ -153,14 +150,14 @@ estimated linear predictor of this model is
 \hat{lp} = lp(x;\hat{\beta}) = x^t\hat{\beta}
 \end{equation*}
 
-### Risk stratification {.unnumbered}
+### Risk stratification
 Derive a prediction model using the same approach as above and divide the
 population in equally sized risk-based subgroups. Estimate subgroup-specific
 absolute benefit from the observed absolute differences. Subject-specific
 benefit predictions are made by attributing to individuals their corresponding
 subgroup-specific estimate.
 
-### Constant treatment effect {.unnumbered}
+### Constant treatment effect
 Assuming a constant relative treatment effect, fit the adjusted model in
 @eq-risk. Then, predict absolute benefit using 
 
@@ -171,13 +168,13 @@ $$ {#eq-main}
 where $f(\hat{lp}, z) = \hat{lp}+\hat{\delta}_0z$, with $\hat{\delta}_0$ the
 estimated relative treatment effect (log odds ratio).
 
-### Linear interaction {.unnumbered}
+### Linear interaction
 We relax the assumption of a constant relative treatment effect in
 @eq-main by setting
 
 $$ f(\hat{lp}, z) = \delta_0+\delta_1z+\delta_2\hat{lp}+\delta_3z\hat{lp} $$
 
-### Restricted cubic splines {.unnumbered}
+### Restricted cubic splines
 Finally, we drop the linearity assumption and predict absolute benefit using
 smoothing with restricted cubic splines with $k=3, 4$ and $5$ knots. More
 specifically, we set:
@@ -191,7 +188,7 @@ where
 $t_1,\dots,t_k$ are the selected knots [@harrell2017regression]. 
 
 
-## Adaptive model selection frequencies {.unnumbered}
+## Adaptive model selection frequencies {#sec-simulation-appendix-adaptive}
 ```{r fig-ch4-supp1, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. The scenario with the true constant relative treatment effect (first panel) had a true prediction AUC of 0.75 and sample size of 4,250.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_base.tiff")))
 ```
@@ -206,7 +203,7 @@ grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive
 ```
 
 
-## Discrimination and calibration for benefit {.unnumbered}
+## Discrimination and calibration for benefit {#sec-simulation-appendix-discrimination}
 
 The c-for-benefit represents the probability that from two randomly chosen
 matched patient pairs with unequal observed benefit, the pair with greater
@@ -224,23 +221,23 @@ smoother (loess). The ICI-for-benefit is the average absolute difference between
 predicted and smooth observed benefit. Values closer to represent better
 calibration.
 
-```{r fig-ch4-supp4, cache=TRUE, echo=FALSE, fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center'}
+```{r fig-ch4-supp4, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center'}
 knitr::include_graphics("figures/ch4-discrimination_moderate_sample_size.pdf")
 ```
 
-```{r fig-ch4-supp5, cache=TRUE, echo=FALSE, fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center'}
+```{r fig-ch4-supp5, cache=TRUE, echo=FALSE,fig.pos="H", fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center'}
 knitr::include_graphics("figures/ch4-discrimination_moderate_auc.pdf")
 ```
 
-```{r fig-ch4-supp6, cache=TRUE, echo=FALSE, fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center'}
+```{r fig-ch4-supp6, cache=TRUE, echo=FALSE,fig.pos="H", fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center'}
 knitr::include_graphics("figures/ch4-calibration_moderate_sample_size.pdf")
 ```
 
-```{r fig-ch4-supp7, cache=TRUE, echo=FALSE, fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center'}
+```{r fig-ch4-supp7, cache=TRUE, echo=FALSE,fig.pos="H", fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center'}
 knitr::include_graphics("figures/ch4-calibration_moderate_auc.pdf")
 ```
 
-## Strong relative treatment effect {.unnumbered}
+## Strong relative treatment effect {#sec-simulation-appendix-strong}
 
 Here we present the root mean squared error of the considered methods using
 strong constant relative treatment effect ($\text{OR}=0.5$) as the
@@ -250,7 +247,7 @@ deviations from the base case scenario of constant relative treatment effects
 are considered. All results can be found at
 [https://arekkas.shinyapps.io/simulation_viewer/](https://arekkas.shinyapps.io/simulation_viewer/).
 
-## Treatment interactions {.unnumbered}
+## Treatment interactions {#sec-simulation-appendix-interactions}
 
 We carried out a smaller set of simulations, in which we assumed true
 treatment-covariate interactions. Sample size was set to 4,250 and the AUC of
@@ -270,7 +267,7 @@ defined as 50\% of the true average benefit of the scenario without
 treatment-related harms; 4) negative treatment-related harms (benefit), defined
 as an absolute risk reduction for treated patients of 50\% of the true average
 benefit of the scenario without treatment-related harms. The exact settings can
-be found in Table ***ONLINE TABLE***.
+be found in [online Table S2](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6).
 
 ```{r fig-ch4-supp8, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in a simulated sample of size 500,000 where treatment-covariate interactions all favoring treatment were considered.",fig.align='center'}
 knitr::include_graphics("figures/ch4-rmse_interaction_positive.pdf")
@@ -284,7 +281,7 @@ knitr::include_graphics("figures/ch4-rmse_interaction_negative.pdf")
 knitr::include_graphics("figures/ch4-rmse_interaction_combined.pdf")
 ```
 
-## Correlated covariates {.unnumbered}
+## Correlated covariates {#sec-simulation-appendix-correlation}
 
 We analyzed the sensitivity of our results to correlation between baseline
 characteristics by incuding additional simulation scenarios. We sampled
@@ -313,7 +310,7 @@ In order to ensure that the simulated datasets were comparable to the original
 main simulation scenarios, i.e. control arm event rate of 20\% and true risk
 model c-statistic (AUC) equal to the target, we needed to adjust the
 coefficients of the true risk model. The exact settings of the simlation
-scenarios for the sensitivity analyses can be found in Table ***ONLINE TABLE***.
+scenarios for the sensitivity analyses can be found in [online Table S3](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6).
 
 We found no noticeable differences between methods for individualizing treatment
 benefit predictions compared to the results of the simulation scenarios where
@@ -332,7 +329,7 @@ knitr::include_graphics(here::here("figures/ch4-rmse_moderate_sample_size_sensit
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_auc_sensitivity.pdf"))
 ```
 
-## Empirical illustration {.unnumbered}
+## Empirical illustration {#sec-simulation-appendix-illustration}
 
 For predicting baseline risk of 30-day mortality we fitted a logistic regression
 model with age, Killip class (*Killip*), systolic blood pressure (*sysbp*),
@@ -441,7 +438,7 @@ kableExtra::kbl(
   kableExtra::kable_styling(font_size = 7)
 ```
 
-## Bootstrap confidence intervals {.unnumbered}
+## Bootstrap confidence intervals {#sec-simulation-appendix-bootstrap}
 
 Bootstrap confidence intervals in Figure 6 of the main manuscript were derived
 using the following approach:

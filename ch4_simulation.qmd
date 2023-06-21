@@ -170,20 +170,21 @@ baseline covariate coefficients, such that the AUC of the regression model in
 the control arm was 0.65 and 0.85, respectively. These settings resulted in a
 simulation study of 648 scenarios covering the heterogeneity of treatment
 effects observed in 32 large trials as well as many other potential variations
-of risk-based treatment effect (Supplement, Sections 2 and 3) [@kent2016risk].
+of risk-based treatment effect
+([online Supplement^[https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6]](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6), Sections 2 and 3) [@kent2016risk].
 
 We analyzed the sensitivity of the results to correlation between baseline
-characteristics. We first sampled 8 continuous variables 
-$W_1,\dots,W_8\sim N(0,\Sigma)$. We then generated four continuous baseline
-covariates from $X_1 = W_1,\dots,X_4 = W_4$ and four binary covariates with 20\%
-prevalence from $X_5 = I(W_5 > z_{0.8}),\dots,X_8 = I(W_8>z_{0.8})$, where $I$
-is the indicator function and $P(U\leq 0.8) = z_{0.8}$ for random variable
-$U\sim N(0,1)$. The covariance matrix $\Sigma$ was such that $cor(X_i,X_j )=0.5$
-for any $i\neq j$. To ensure that the outcome rate in the untreated subset was
-20\% and that true prediction c-statistic remained equal to the nominal values
-of the main simulation analyses, we adjusted the coefficients of the true
-outcome model. More details on the sensitivity analyses can be found in the
-Supplement, section 9.
+characteristics. We first sampled 8 continuous variables $W_1,\dots,W_8\sim
+N(0,\Sigma)$. We then generated four continuous baseline covariates from $X_1 =
+W_1,\dots,X_4 = W_4$ and four binary covariates with 20\% prevalence from $X_5 =
+I(W_5 > z_{0.8}),\dots,X_8 = I(W_8>z_{0.8})$, where $I$ is the indicator
+function and $P(U\leq 0.8) = z_{0.8}$ for random variable $U\sim N(0,1)$. The
+covariance matrix $\Sigma$ was such that $cor(X_i,X_j )=0.5$ for any $i\neq j$.
+To ensure that the outcome rate in the untreated subset was 20\% and that true
+prediction c-statistic remained equal to the nominal values of the main
+simulation analyses, we adjusted the coefficients of the true outcome model.
+More details on the sensitivity analyses can be found in
+[Appendix @sec-simulation-appendix-correlation].
 
 ### Individualized risk-based benefit predictions {.unnumbered}
 
@@ -231,7 +232,7 @@ Fourth, we used restricted cubic splines (RCS) to relax the linearity assumption
 on the effect of the linear predictor [@harrell1988regression]. We considered
 splines with 3 (RCS-3), 4 (RCS-4) and 5 (RCS-5) knots, together with their
 interaction with treatment, to compare models with different levels of
-flexibility (Supplement, section 4).
+flexibility ([Appendix @sec-simulation-appendix-individualize]).
 
 Finally, we considered an adaptive approach using Akaike’s Information Criterion
 (AIC) for model selection. More specifically, we ranked the constant relative
@@ -250,7 +251,7 @@ $$\text{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^n\big(\tau(x_i) - \hat{\tau}(x_i)\big)
 
 We compared the discriminative ability of the methods under study using
 c-for-benefit and the integrated calibration index (ICI) for benefit
-(Supplement, section 6).
+([Appendix @sec-simulation-appendix-discrimination]).
 
 Since true patient-specific benefit is unobservable, we calculated observed
 benefit using the following approach: patients in each treatment arm are ranked
@@ -290,9 +291,9 @@ This dataset has been used extensively in prior studies
 of seven covariates that was previously used to fit a logistic regression model
 (age, Killip class, systolic blood pressure, heart rate, an indicator of
 previous MI, and the location of MI) along with a binary covariate for treatment
-indication, to predict 30-day mortality risk (Supplement, Section 10). Predicted
-baseline risk is derived by setting the treatment indicator to 0 for all
-patients.
+indication, to predict 30-day mortality risk
+([Appendix @sec-simulation-appendix-illustration]). Predicted baseline risk is
+derived by setting the treatment indicator to 0 for all patients.
 
 
 ## Results {.unnumbered}
@@ -317,7 +318,7 @@ RCS-3 0.019; [@fig-rmseBase] panel D). A stronger average treatment effect
 absolute scale (difference in true outcome probabilities between treatment arms)
 and consequently to larger RMSE for all approaches. When we assumed a stronger
 relative treatment effect, the relative differences between approaches were
-similar to the base-case scenario (***Supplement, Figure S10***).
+similar to the base-case scenario ([Appendix @sec-simulation-appendix-strong]).
 
 ```{r fig-rmseBase, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications was calculated from a simulated super-population of size 500,000. The scenario with true constant relative treatment effect (panel A) had a true prediction c-statistic of 0.75 and sample size of 4250. The RMSE is also presented for strong linear (panel B), strong quadratic (panel C), and non-monotonic (panel D) deviations from constant relative treatment efects. Panels on the right side present the true relations between baseline risk (x-axis) and absolute treatment beneft (y-axis). The 2.5, 25, 50, 75, and 97.5 percentiles of the risk distribution are expressed by the boxplot on the top. The 2.5, 25, 50, 75, and 97.5 percentiles of the true beneft distributions are expressed by the boxplots on the side of the right-handside panel.",fig.align='center'}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_base.pdf"))
@@ -374,10 +375,10 @@ terms of discrimination for benefit, especially with treatment-related harms.
 With increasing number of RCS knots, we observed decreasing median values and
 increasing variability of the c-for-benefit in all scenarios. When we increased
 the sample size to 17,000 we observed similar trends, however the performance of
-all methods was more stable (***Supplement, Figure S6***). Finally, when we increased
+all methods was more stable ([@fig-ch4-supp4]). Finally, when we increased
 the true prediction c-statistic to 0.85 the adaptive approach was, again, more
 conservative, especially with non-monotonic deviations and null or moderate
-treatment-related harms (***Supplement, Figure S7***).
+treatment-related harms ([@fig-ch4-supp5]).
 
 ```{r fig-discriminationBase, cache=TRUE, echo=FALSE, fig.cap="Discrimination for beneft of the considered methods across 500 replications calculated in simulated samples of size 4,250 using the c-statistic for beneft. The c-statistic for beneft represents the probability that from two randomly chosen matched patient pairs with unequal observed beneft, the pair with greater observed beneft also has a higher predicted beneft. True prediction c-statistic of 0.75.",fig.align='center'}
 knitr::include_graphics("figures/ch4-discrimination_moderate_base.pdf")
@@ -391,8 +392,8 @@ and was only outperformed by RCS-3 in the case of non-monotonic deviations and
 treatment-related harms ([@fig-calibrationBase] panel D). The adaptive approach
 was worse calibrated under strong linear and non-monotonic deviations compared
 to the linear interaction model and RCS-3. When we increased the sample size to
-17,000 (***Supplement, Figure S8***) or the true prediction c-statistic to 0.85
-(***Supplement, Figure S9***), RCS-3 was somewhat better calibrated than the
+17,000 (@fig-ch4-supp6) or the true prediction c-statistic to 0.85
+(@fig-ch4-supp7), RCS-3 was somewhat better calibrated than the
 linear interaction model with strong quadratic deviations.
 
 ```{r fig-calibrationBase, cache=TRUE, echo=FALSE, fig.cap="Calibration for beneft of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction c-statistic of 0.75 and sample size of 4,250.",fig.align='center'}
@@ -489,27 +490,27 @@ values of c-for-benefit).
 
 The adaptive approach had adequate median performance, following the “true”
 model in most scenarios. With smaller sample sizes it tended to miss the
-treatment-baseline risk interaction and selected simpler models (Supplement
-Section 4). This conservative behavior resulted in increased RMSE variability in
-these scenarios, especially with true strong linear or non-monotonic deviations.
-Therefore, with smaller sample sizes the simpler linear interaction model may be
-a safer choice for predicting absolute benefits, especially in the presence of
-any suspected treatment-related harms.
+treatment-baseline risk interaction and selected simpler models. This
+conservative behavior resulted in increased RMSE variability in these scenarios,
+especially with true strong linear or non-monotonic deviations. Therefore, with
+smaller sample sizes the simpler linear interaction model may be a safer choice
+for predicting absolute benefits, especially in the presence of any suspected
+treatment-related harms.
 
 A limitation of our simulation study is that we assumed treatment benefit to be
 a function of baseline risk in the majority of the simulation scenarios, thus
 ignoring any actual treatment effect modification of individual factors. We
 attempted to expand our scenarios by considering moderate and strong constant
 treatment-related harms, applied on the absolute scale, in line with previous
-work [@glasziou1995evidence]. In a limited set of scenarios with true interactions between
-treatment assignment and covariates, our conclusions remained unchanged
-(Supplement, Section 8). Even though the average error rates increased for all
-the considered methods, due to the miss-specification of the outcome model, the
-linear interaction model had the lowest error rates. RCS-3 had very comparable
-performance. The constant treatment effect model was often biased, especially
-with moderate or strong treatment-related harms. Future simulation studies could
-explore the effect of more extensive deviations from risk-based treatment
-effects.
+work [@glasziou1995evidence]. In a limited set of scenarios with true
+interactions between treatment assignment and covariates, our conclusions
+remained unchanged ([Appendix @sec-simulation-appendix-interactions]). Even
+though the average error rates increased for all the considered methods, due to
+the miss-specification of the outcome model, the linear interaction model had
+the lowest error rates. RCS-3 had very comparable performance. The constant
+treatment effect model was often biased, especially with moderate or strong
+treatment-related harms. Future simulation studies could explore the effect of
+more extensive deviations from risk-based treatment effects.
 
 We only focused on risk-based methods, using baseline risk as a reference in a
 two-stage approach to individualizing benefit predictions. However, there is a
@@ -553,10 +554,8 @@ anticipated. Increasing the complexity of the RCS models by increasing the
 number of knots does not improve benefit prediction. Using AIC for model
 selection is attractive with larger sample size.
 
-## Acknowledgements {.unnumbered}
+## Supplementary material {.unnumbered}
 
-This work has been performed in the European Health Data and Evidence Network
-(EHDEN) project. This project has received funding from the Innovative Medicines
-Initiative 2 Joint Undertaking (JU) under grant agreement No 806968. The JU
-receives support from the European Union’s Horizon 2020 research and innovation
-program and EFPIA.
+Supplementary material for this chapter is available in [Appendix
+@sec-simulation-appendix] and online at
+[https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6).

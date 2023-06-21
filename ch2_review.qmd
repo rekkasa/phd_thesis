@@ -273,13 +273,8 @@ T_{\text{optimal}} = \text{argmax}_TE\Big\{ E\{ y\mid x_1,\dots,x_p,T(x_1,\dots,
 
 \end{blackbox}
 
-
-```{r reviewResults, cache=TRUE, echo=FALSE, fig.cap="Results of the review.", out.width = '100%', fig.show="hold"}
-grid::grid.raster(tiff::readTIFF(here::here("figures/reviewFigure.tiff")))
-```
-
-Although risk-based methods emerged earlier (***Fig. 2***), methodology papers
-on treatment effect modeling (9 papers) and optimal treatment regimes (12
+Although risk-based methods emerged earlier (@fig-reviewResults), methodology
+papers on treatment effect modeling (9 papers) and optimal treatment regimes (12
 papers) are more frequently published since 2010 than papers on risk-based
 methods (8 papers). Even though extensive literature exists on model evaluation
 when it comes to prediction modeling, the same task can be quite challenging
@@ -287,8 +282,14 @@ when modeling treatment effects [@steyerberg2019clinical]. That is due to the
 unavailability of counterfactual outcomes under the alternative treatment,
 providing a substantial challenge to the assessment of model fit. Methods
 included in the review concerning model evaluation in the setting of predictive
-heterogeneity of treatment effect (4 papers) were assigned to a separate category as they are relevant to all
-identified approaches.
+heterogeneity of treatment effect (4 papers) were assigned to a separate
+category as they are relevant to all identified approaches.
+
+
+
+```{r fig-reviewResults, cache=TRUE, echo=FALSE, fig.cap="Results of the review.", out.width = '100%', fig.show="hold"}
+grid::grid.raster(tiff::readTIFF(here::here("figures/reviewFigure.tiff")))
+```
 
 ### Risk-based methods {.unnumbered}
 
@@ -817,12 +818,3 @@ documented an exuberance of new methods, we do note a marked dearth of
 comparative studies in the literature. Future research could shed light on
 advantages and drawbacks of methods in terms of predictive performance in
 different settings.
-
-## Acknowledgements {.unnumbered}
-
-We acknowledge support from the Innovative Medicines Initiative (IMI) and
-helpful comments from Victor Talisa, Data Scientist from the University of
-Pittsburgh. The design, data collection, analysis, interpretation, and writing
-for this work were supported by a Patient Centered Outcomes Research Institute
-(PCORI) contract, the Predictive Analytics Resource Center
-[SA.Tufts.PARC.OSCO.2018.01.25].

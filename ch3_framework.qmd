@@ -162,13 +162,16 @@ For our demonstration we used data from three US claims databases, namely IBM®
 MarketScan® Commercial Claims and Encounters (CCAE), IBM® MarketScan®
 Multi-State Medicaid (MDCD), and IBM® MarketScan® Medicare Supplemental
 Beneficiaries (MDCR). More information on the included databases can be found in
-Supplementary Results, Section D of the online Supplement. Our analyses included
-a total of 355,826 (CCAE), 54,835 (MDCD), and 37,882 (MDCR) patients initiating
-treatment with thiazide or thiazide-like diuretics and 930,629 (CCAE), 106,492
-(MDCD), and 105,852 (MDCR) patients initiating treatment with ACE inhibitors
-(Table \ref{table:ch3-patients}). Patient characteristics are available in Table
-A.1 of [Appendix @sec-framework-appendix]. Adequate numbers of patients were
-included in all strata of predicted acute MI risk (Table A.2 of [Appendix @sec-framework-appendix]).
+Supplementary Results, Section D of the 
+[online Supplement](https://www.nature.com/articles/s41746-023-00794-y).
+Our analyses included a total of 355,826 (CCAE), 54,835 (MDCD), and 37,882
+(MDCR) patients initiating treatment with thiazide or thiazide-like diuretics
+and 930,629 (CCAE), 106,492 (MDCD), and 105,852 (MDCR) patients initiating
+treatment with ACE inhibitors (Table \ref{table:ch3-patients}). Patient
+characteristics are available in Table A.1 of [Appendix
+@sec-framework-appendix]. Adequate numbers of patients were included in all
+strata of predicted acute MI risk (Table A.2 of [Appendix
+@sec-framework-appendix]).
 
 
 \begin{table}[h]
@@ -214,10 +217,13 @@ across databases. However, due to the differences in data capture among
 databases, we cannot expect that all covariates will be present in all
 databases. We developed the prediction models using LASSO logistic regression
 with 3-fold cross validation for hyper-parameter selection. In Supplementary
-Table 24 of the online Supplement we show the available sample sizes on which
-the prediction models were developed, while in Supplementary Tables 25-27 of the
-online Supplement we show the 20 selected covariates with the largest
-coefficients in each database.
+Table 24 of the
+[online Supplement](https://www.nature.com/articles/s41746-023-00794-y)
+we show the available sample sizes on which the prediction models were
+developed, while in Supplementary Tables 25-27 of the
+[online Supplement](https://www.nature.com/articles/s41746-023-00794-y)
+we show the 20 selected covariates with the largest coefficients in each
+database.
 
 The models had moderate discriminative ability (internally validated) in CCAE
 and MDCD and lower discriminative ability in MDCR (Table
@@ -286,8 +292,9 @@ grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-CovariateBalance.tiff")
 ```
 
 Finally, the distribution of the estimated relative risks with regard to a total
-of 76 negative control outcomes (Supplementary Results Section C of the online
-Supplement) showed no evidence of residual confounding, except for CCAE
+of 76 negative control outcomes (Supplementary Results Section C of the 
+[online Supplement](https://www.nature.com/articles/s41746-023-00794-y))
+showed no evidence of residual confounding, except for CCAE
 (@fig-negativeControls). Hazard ratios for CCAE were often significantly larger
 than 1 (true effect size). This suggests significant negative effects of
 thiazide or thiazide-like diuretics compared to ACE inhibitors on causally
@@ -668,8 +675,8 @@ across risk strata. Due to this scale-dependence of treatment effect
 heterogeneity, results should be assessed both on the relative and the absolute
 scale.
 
-## Acknowledgements {.unnumbered}
+## Supplementary material {.unnumbered}
 
-This research received funding from the Innovative Medicines Initiative 2 Joint
-Undertaking (JU) under grant agreement No 80696. The JU receives support from
-the European Union’s Horizon 2020 research and innovation program and EFPIA.
+Supplementary material for this chapter is available in [Appendix @sec-framework-appendix]
+and online at
+[https://www.nature.com/articles/s41746-023-00794-y](https://www.nature.com/articles/s41746-023-00794-y).

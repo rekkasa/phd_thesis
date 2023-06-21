@@ -30,6 +30,9 @@ figures/%.pdf :
 figures/%.tiff :
 	wget -O $@ https://github.com/rekkasa/phd_thesis/raw/large-files/$@
 
+figures/%.png :
+	wget -O $@ https://github.com/rekkasa/phd_thesis/raw/large-files/$@
+
 figures/hypertensionGuidelines.png :
 	wget -O figures/hypertensionGuidelines.png \
 		https://raw.githubusercontent.com/rekkasa/phd_thesis/large-files/figures/hypertensionGuidelines.png
@@ -396,8 +399,8 @@ figures/ch4-calibration_moderate_auc.pdf : code/ch4-CalibrationBase.R\
 # ===================================================================================================================
 _book/Beyond-the-average-treatment-effect.pdf : _quarto.yml \
 	preamble.tex \
+	before-body.tex \
 	index.qmd \
-	ch1_introduction.qmd \
 	ch2_review.qmd \
 	ch3_framework.qmd \
 	ch4_simulation.qmd \
@@ -411,6 +414,8 @@ _book/Beyond-the-average-treatment-effect.pdf : _quarto.yml \
 	ch7_appendix.qmd \
 	summary.qmd \
 	data/introduction/gusto.rda \
+	figures/left.png \
+	figures/right.png \
 	figures/hypertensionGuidelines.png \
 	figures/PowerPlot.tiff \
 	figures/reviewFigure.tiff \

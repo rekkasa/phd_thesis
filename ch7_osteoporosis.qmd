@@ -93,8 +93,8 @@ to treatment initiation with TP or an BP. We included female participants above
 the age of 50 with established osteoporosis defined by a history of hip, wrist,
 spine or shoulder/humerus fracture prior to treatment initiation. We excluded
 patients with less than 1 year of data available before treatment start. More
-information on cohort definitions are available in section 1 of the supplement
-and in **supplementary Tables S1-S10**.
+information on cohort definitions are available in [Section
+@sec-osteoporosis-appendix-cohorts].
 
 ## Study design {.unnumbered}
 
@@ -202,19 +202,20 @@ matched (1:4) subset of the risk subgroup subset. We derived relative effect
 estimates using Cox proportional hazards models only with treatment as a
 predictor. Absolute effect estimates were calculated based on the difference of
 the Kaplan-Meier estimates, on day 1095 after treatment initiation. In the
-supplement (Supplementary Figures 3-5) we present a second approach where the
-population is stratified using existing guidelines based on age-dependent
-10-year major osteoporotic fracture risk [@kanis2019algorithm].
+appendix ([Figures @fig-ch7-supp3]-[-@fig-ch7-supp5]) we present a second
+approach where the population is stratified using existing guidelines based on
+age-dependent 10-year major osteoporotic fracture risk [@kanis2019algorithm].
 
 ## Results {.unnumbered}
 
 After propensity score matching, a total of 35,869 TP users contributed 75,849
 person-years, with 846 fractures observed. This compared to 133,437 matched BP
-users, 280,901 person-years, and 3,409 fractures (Table \ref{table:ch7-populations}).
-Before matching, TP users were more likely to have a diagnosis of
-osteoarthritis, rheumatoid arthritis, depressive disorder, and gastroesophageal
-reflux disease compared to BP users (Supplementary Tables 10-13). After matching,
-these imbalances disappeared (Table \ref{table:ch7-table1}).
+users, 280,901 person-years, and 3,409 fractures (Table
+\ref{table:ch7-populations}). Before matching, TP users were more likely to have
+a diagnosis of osteoarthritis, rheumatoid arthritis, depressive disorder, and
+gastroesophageal reflux disease compared to BP users (Tables
+\ref{table:ch7-appendix-ccae}-\ref{table:ch7-appendix-optum-ehr}). After
+matching, these imbalances disappeared (Table \ref{table:ch7-table1}).
 
 \begin{table}[]
 \caption{Population size, follow-up time and number of hip fractures of patients receiving teriparatide or bisphosphonates across the four databases after propensity score matching.}
@@ -361,7 +362,7 @@ meta-analytic HRs were 0.91 (0.75 to 1.11; 95% CI), 0.92 (0.76 to 1.10; 95% CI)
 between hip fracture risk and the comparative effectiveness of TP vs BP
 treatment, with a potential better protection in higher fracture risk. Risk
 stratified negative control analyses, again, showed evidence of residual
-confounding (Supplementary Figure 2).
+confounding (@fig-ch7-supp2).
 
 ```{r fig-ch7-metaRiskStratified, cache=TRUE,warning=FALSE, echo=FALSE, fig.cap="Hazard ratio estimates of the effect of treatment with teriparatide compared to oral bisphosphonates for the three outcomes of interest (hip fracture, major osteoporotic fracture, and vertebral fracture) stratified on baseline hip fracture risk. Estimates are calibrated for unobserved confounding using estimates on 147 negative control outcomes. We plot in red the meta-analytic estimate across the four databases for each of the outcomes of interest. We also plot in yellow the hazard ratio estimated in VERO clinical trial.", out.width = '100%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_itt_att_1095_custom.tiff")))
@@ -484,7 +485,10 @@ While we approximated trial findings, our study seems to systematically
 underestimate the effectiveness of teriparatide likely due to unresolved
 confounding.
 
+## Supplementary material
 
+Supplementary material for this chapter is available in [Appendix
+@sec-osteoporosis-appendix].
 
 
 

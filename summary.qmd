@@ -3,15 +3,15 @@
 In order to provide the most optimal medical care, doctors are advised to align
 their clinical practice with the results of well-conducted clinical trials, or
 the aggregated results from multiple such trials, assuming that all patients
-experience the same treatment effects---benefits and harms---as the reference
-trial population. However, the estimated treatment effect is often an average of
+experience the same treatment effects—benefits and harms—as the reference trial
+population. However, the estimated treatment effect is often an average of
 heterogeneous treatment effects and, as such, may not be applicable to most
-patient subgroups, let alone individual patients. A patient’s baseline
+patient subgroups, let alone individual patients. A patient's baseline
 risk---her or his probability of experiencing an outcome of interest---is an
-important determinant of treatment effect. Low risk patients can only experience
-minimal treatment benefit before their risk is reduced to zero, while high risk
+important determinant of treatment effect. Low-risk patients can only experience
+minimal treatment benefit before their risk is reduced to zero, while high-risk
 patients can benefit much more. Hence, baseline risk is a crucial component of
-medical decision making. For that reason many treatment guidelines are based on
+medical decision making. For that reason, many treatment guidelines are based on
 risk prediction models, i.e., mathematical functions relating the presence of
 the outcome of interest to a set of measured predictors, developed on data
 available from clinical trials or observational studies.
@@ -28,8 +28,8 @@ diverse body of data collectors has resulted in a plethora of data structures,
 very often incompatible with each other, which further complicates the
 incorporation of multiple data sources in statistical analyses. Providing a
 common data structure like the Observational Medical Outcomes Partnership Common
-Data Model (OMOP-CDM) has the potential to enable highly scalable observational
-studies.
+Data Model (OMOP-CDM) has the potential to enable large multi-cohort
+observational studies.
 
 The overall aim of this thesis was to explore the use of baseline risk
 prediction models as the basis for medical decision making. We studied and
@@ -41,34 +41,47 @@ reproducible risk-based predictive approaches to the assessment of treatment
 effect heterogeneity, and apply risk-based methods to better guide medical
 decisions.
 
-In **[chapter @sec-review]** we presented the results of a literature review
+In **[Chapter @sec-review]** we presented the results of a literature review
 using a broad search strategy, complemented by suggestions from a technical
 expert panel. We classified the identified approaches into three categories
-(risk-based, treatment effect modeling, and optimal treatment regime methods).
+(risk-based methods, treatment effect modeling, and optimal treatment regimes).
 Risk-based methods use only prognostic factors to define patient subgroups,
 relying on the mathematical dependency of the absolute risk difference on
-baseline risk. Treatment effect modeling methods use both prognostic factors and
+baseline risk. Treatment effect modeling use both prognostic factors and
 treatment effect modifiers to explore characteristics that interact with the
-effects of therapy on a relative scale. Finally, optimal treatment regime
-methods focus primarily on treatment effect modifiers to classify the trial
-population into those who benefit from treatment and those who do not.
+effects of therapy on a relative scale. Finally, optimal treatment regimes focus
+primarily on treatment effect modifiers to classify the trial population into
+those who benefit from treatment and those who do not.
 
-In **[chapter @sec-framework]** we presented a standardized framework for the
+In **[Chapter @sec-framework]** we presented a standardized framework for the
 evaluation of treatment effect heterogeneity using a risk-based approach. The
 proposed framework consists of five steps: 1) definition of the research aim,
-i.e., the population, the treatment, the comparator and the outcome(s) of
+including, the population, the treatment, the comparator and the outcome(s) of
 interest; 2) identification of relevant databases; 3) development of a
 prediction model for the outcome(s) of interest; 4) estimation of relative and
 absolute treatment effect within strata of predicted risk, after adjusting for
-observed confounding; presentation of the results. We demonstrated our framework
-by evaluating heterogeneity of the effect of thiazide or thiazide-like diuretics
-versus angiotensin-converting enzyme inhibitors on three eﬀicacy and nine safety
-out-comes across three observational databases. We showed that patients at low
-risk of acute myocardial infarction receive negligible absolute benefits for all
-three eﬀicacy outcomes, though these were more pronounced in the highest risk
-group, especially for acute myocardial infarction.
+observed confounding; 5) presentation of the results. We demonstrated our
+framework by evaluating heterogeneity of the effect of thiazide or thiazide-like
+diuretics versus angiotensin-converting enzyme inhibitors on three eﬀicacy and
+nine safety out-comes across three observational databases. We showed that
+patients at low risk of acute myocardial infarction receive negligible absolute
+benefits for all three eﬀicacy outcomes, though these were more pronounced in
+the highest risk group, especially for acute myocardial infarction.
 
-In **[chapter @sec-simulation]** we presented the results of an extensive
+In **[Chapter @sec-osteoporosis]** we used this framework to study the
+comparative effectiveness of teriparatide versus oral bisphosphonates to reduce
+hip, major osteoporotic and vertebral fracture risk. We conducted a network
+cohort study using data from four medical claims databases, all mapped to
+OMOP-CDM. We included all women above the age of 50, who initiated teriparatide
+or oral bisphosphonates and had no history of anti-osteoporotic treatment in the
+prior year. We stratified by predicted hip fracture risk to assess risk-based
+treatment effect heterogeneity. Overall, we found negligible differences in
+comparative fracture prevention effectiveness of teriparatide versus oral
+bisphosphonates, with a tendency towards favoring teriparatide in patients with
+high anticipated hip fracture risk. However, evidence of unresolved confounding
+complicated the interpretation of the results.
+
+In **[Chapter @sec-simulation]** we presented the results of an extensive
 simulation study for the comparison of easily applicable risk-based methods for
 the prediction of individualized treatment effects in the setting of randomized
 controlled trials. More specifically, we compared models with a constant
@@ -83,7 +96,7 @@ splines model required strong non-linear deviations from a constant treatment
 effect larger sample size. We also applied these methods in actual data using
 the dataset of the GUSTO-I trial.
 
-In **[chapter @sec-melanoma]** we developed prediction models for the management
+In **[Chapter @sec-melanoma]** we developed prediction models for the management
 of patients with sentinel node-positive melanoma. We first developed a model for
 recurrence, which we then re-calibrated for the prediction of distant metastasis
 and overall mortality, allowing for the prediction of all three outcomes from
@@ -93,7 +106,7 @@ lymph node dissection, which is no longer routine practice for sentinel
 node-positive melanoma patients. Finally, we provided a nomogram for graphical
 presentation of our derived prediction models.
 
-In **[chapter @sec-covid]** we developed simple and valid models for predicting
+In **[Chapter @sec-covid]** we developed simple and valid models for predicting
 mortality and need for intensive care unit admission in patients presenting at
 the emergency department with suspected COVID-19. We used first-wave patients
 from March till August 2020 for model development and second-wave patients from
@@ -108,38 +121,18 @@ web-based application and as independent mobile applications which also included
 detailed description of the derivation of COPE, descriptions of the derivation
 data and reported on model performance to ensure transparency.
 
-In **[chapter @sec-osteoporosis]** we studied the comparative effectiveness of
-teriparatide versus oral bisphosphonates to reduce hip, major osteoporotic and
-vertebral fracture risk. In addition, we stratified by predicted hip fracture
-risk to assess treatment effect heterogeneity. We conducted a network cohort
-study using data from four medical claims databases, all mapped to OMOP-CDM. We
-included all women above the age of 50, who initiated teriparatide or oral
-bisphosphonates and had no history of anti-osteoporotic treatment in the prior
-year. Propensity scores were used for 1:4 matching to minimize confounding by
-indication. Models to predict hip fracture risk were developed and validated
-separately in each of the four databases. Finally, 147 negative control outcomes
-were included to calibrate for residual confounding. Cox regression was used to
-estimate calibrated hazard ratios and Kaplan-Meier estimated differences 3 years
-after treatment initiation to estimate absolute effects.  Overall, we found
-negligible differences in comparative fracture prevention effectiveness of
-teriparatide versus oral bisphoshphonates with a tendency towards favoring
-teriparatide in patients with high anticipated hip fracture risk. However,
-evidence of unresolved confounding complicates the interpretation of the
-results.
-
 In conclusion, we divided methodological approaches to the assessment of
 heterogeneity of treatment effect in randomized controlled trials into three
 categories, these are, risk-based approaches, treatment effect modeling
-approaches, and optimal treatment regime approaches. We showed, through
-extensive simulations, that regression models with a linear interaction of
-baseline risk with treatment provide a viable option for the prediction of
-personalized treatment benefits with smaller sample sizes or moderately
-performing risk prediction models. We successfully developed and implemented a
-risk-based framework for the assessment of heterogeneity of treatment effect in
-the observational setting. We showed that prediction models developed in
-**[chapter @sec-melanoma]** and **[chapter @sec-covid]** can be used to aid 
-medical decisions in a timely manner. Finally, the implementation of our
-standardized framework for risk-based assessment of heterogeneity of treatment
-effect in the field of osteoporosis uncovered the potential of our methodology,
-while it also demonstrated its limitations due to the observational nature of
-the data.
+approaches, and optimal treatment regime approaches. For risk-based approaches,
+we showed through extensive simulations, that regression models with a linear
+interaction of baseline risk with treatment provide a viable option for the
+prediction of personalized treatment benefits with smaller sample sizes or
+moderately performing risk prediction models. We successfully developed and
+implemented a risk-based framework for the assessment of heterogeneity of
+treatment effect in the observational setting. The use of our standardized
+framework for risk-based assessment of heterogeneity of treatment effect in the
+field of osteoporosis uncovered the potential of our methodology, while it also
+demonstrated its limitations due to the observational nature of the data.
+Finally, we developed prediction models to aid decisions for melanoma patients
+and for COVID-19 patients.
