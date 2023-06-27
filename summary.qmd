@@ -1,18 +1,18 @@
 # Summary {.unnumbered}
 
 In order to provide the most optimal medical care, doctors are advised to align
-their clinical practice with the results of well-conducted clinical trials, or
-the aggregated results from multiple such trials, assuming that all patients
-experience the same treatment effects—benefits and harms—as the reference trial
-population. However, the estimated treatment effect is often an average of
-heterogeneous treatment effects and, as such, may not be applicable to most
-patient subgroups, let alone individual patients. A patient's baseline
+their clinical treatment    s with the results of well-conducted clinical
+trials, or the aggregated results from multiple such trials, assuming that all
+patients experience the same treatment effects—benefits and harms—as the
+reference trial population. However, the estimated treatment effect is often an
+average of heterogeneous treatment effects and, as such, may not be applicable
+to most patient subgroups, let alone individual patients. A patient's baseline
 risk---her or his probability of experiencing an outcome of interest---is an
 important determinant of treatment effect. Low-risk patients can only experience
 minimal treatment benefit before their risk is reduced to zero, while high-risk
 patients can benefit much more. Hence, baseline risk is a crucial component of
 medical decision making. For that reason, many treatment guidelines are based on
-risk prediction models, i.e., mathematical functions relating the presence of
+risk prediction models, i.e., mathematical functions relating the occurence of
 the outcome of interest to a set of measured predictors, developed on data
 available from clinical trials or observational studies.
 
@@ -93,8 +93,8 @@ criterion for automatically selecting among the previous methods. We showed that
 the linear-interaction model has optimal or close-to-optimal performance across
 many simulation scenarios with moderate sample size. The restricted cubic
 splines model required strong non-linear deviations from a constant treatment
-effect larger sample size. We also applied these methods in actual data using
-the dataset of the GUSTO-I trial.
+effect and larger sample size. We also applied these methods in actual data of
+the GUSTO-I trial.
 
 In **[Chapter @sec-melanoma]** we developed prediction models for the management
 of patients with sentinel node-positive melanoma. We first developed a model for
@@ -117,9 +117,9 @@ prediction of admission to the intensive care unit we re-calibrated the
 mortality prediction model. Our overall mortality prediction model displayed
 good discrimination and calibration across all hospitals in the development
 dataset. The resulting COPE models were implemented as a publicly accessible
-web-based application and as independent mobile applications which also included
-detailed description of the derivation of COPE, descriptions of the derivation
-data and reported on model performance to ensure transparency.
+web-based application and as independent mobile applications. These applications
+included a detailed description of the derivation of COPE, descriptions of the
+derivation data and reports on model performance.
 
 In conclusion, we divided methodological approaches to the assessment of
 heterogeneity of treatment effect in randomized controlled trials into three
@@ -127,12 +127,10 @@ categories, these are, risk-based approaches, treatment effect modeling
 approaches, and optimal treatment regime approaches. For risk-based approaches,
 we showed through extensive simulations, that regression models with a linear
 interaction of baseline risk with treatment provide a viable option for the
-prediction of personalized treatment benefits with smaller sample sizes or
-moderately performing risk prediction models. We successfully developed and
-implemented a risk-based framework for the assessment of heterogeneity of
-treatment effect in the observational setting. The use of our standardized
-framework for risk-based assessment of heterogeneity of treatment effect in the
-field of osteoporosis uncovered the potential of our methodology, while it also
-demonstrated its limitations due to the observational nature of the data.
-Finally, we developed prediction models to aid decisions for melanoma patients
-and for COVID-19 patients.
+prediction of personalized treatment benefits with smaller sample sizes. We
+successfully developed and implemented a risk-based framework for the assessment
+of heterogeneity of treatment effect in the observational setting. The use of
+this standardized framework in the field of osteoporosis uncovered the potential
+of our methodology, while it also demonstrated its limitations due to the
+observational nature of the data. Finally, we developed prediction models to aid
+decisions for melanoma patients and for COVID-19 patients.

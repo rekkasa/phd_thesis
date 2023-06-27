@@ -1,0 +1,55 @@
+---
+format:
+  pdf:
+    fontsize: 8pt
+---
+
+# List of publications {.unnumbered}
+
+## In this thesis {.unnumbered}
+
+\begin{footnotesize}
+Rekkas A, Paulus JK, Raman G, et al., Predictive approaches to heterogeneous
+treatment effects: A scoping review. \textit{BMC Medical Research Methodology}
+2020;20:1--12. doi:
+\url{https://doi.org/10.1186/s12874-020-01145-1}
+\newline
+
+Verver D, Rekkas A, Garbe C, et al., The EORTC-DeCOG nomogram
+adequately predicts outcomes of patients with sentinel node–positive melanoma
+without the need for completion lymph node dissection, \textit{European Journal of Cancer},
+2020;134:9--18, doi: \url{https://doi.org/10.1016/j.ejca.2020.04.022}
+\newline
+
+van Klaveren D, Rekkas A, Alsma J, et al., COVID outcome prediction in the
+emergency department (COPE): using retrospective Dutch hospital data to develop
+simple and valid models for predicting mortality and need for intensive care
+unit admission in patients who present at the emergency department with
+suspected COVID-19 \textit{BMJ Open}, 2021;11:e051468. doi: \url{https://doi.org/10.1136/bmjopen-2021-051468}
+\newline
+
+Rekkas A, van Klaveren D, Ryan PB et al., A standardized framework for
+risk-based assessment of treatment effect heterogeneity in observational
+healthcare databases, \textit{npj Digit. Med.}, 2023;6:58, doi:
+\url{https://doi.org/10.1038/s41746-023-00794-y}
+\newline
+
+Rekkas A, Rijnbeek PR, Kent DM et al., Estimating individualized
+treatment effects from randomized controlled trials: a simulation study to
+compare riskbased approaches, \textit{BMC Med Res Methodol}, 2023:23:74, doi: \url{https://doi.org/10.1186/s12874-023-01889-6}
+\end{footnotesize}
+
+## Other publications
+
+\begin{footnotesize}
+Yang C, Kors JA, Ioannou S, et al., Trends in the conduct and reporting of clinical
+prediction model development and validation: a systematic review, \textit{Journal of the
+American Medical Informatics Association}, 2022;29:5, Pages
+983–-989, doi: \url{https://doi.org/10.1093/jamia/ocac002}
+\newline
+
+Tom M Seinen and others, Use of unstructured text in prognostic clinical
+prediction models: a systematic review, Journal of the \textit{American Medical
+Informatics Association}, 2022;29:7, Pages 1292–1302,
+doi: \url{https://doi.org/10.1093/jamia/ocac058}
+\end{footnotesize}

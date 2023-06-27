@@ -1,0 +1,51 @@
+# PhD Portfolio {.unnumbered}
+
+\setlength{\LTleft}{-0.2cm}
+\normalsize
+
+
+\noindent{Name:} \tabto{5cm} Alexandros Rekkas \newline
+PhD period: \tabto{5cm} December 2017 until July 2023 \newline
+Promotors: \tabto{5cm} Prof. dr. ir. P.R. Rijnbeek and \newline
+\tabto{5cm} Prof. dr. E.W. Steyerberg \newline
+Co-promotor: \tabto{5cm} dr. D. van Klaveren
+
+\noindent
+\renewcommand{\arraystretch}{1.3}
+
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash\hsize=1.6\hsize}X >{\centering\arraybackslash\hsize=0.4\hsize}X}
+\toprule
+& Year \\
+\midrule		 
+\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\textbf{General courses}} \\
+Scientific integrity course & 2021 \\
+\textit{Erasmus Medical Center, Rotterdam, The Netherlands} & \\ \\
+
+Causal Diagrams, Target Trial Emulation and Causal Inference in Medical Decision Making – Theory and Application in Real World Observational Data and Pragmatic Trials & 2023 \\
+\textit{18th biennial European conference of the Society for Medical Decision Making, Berlin, Germany} & \\ \\
+
+\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\textbf{International conferences}} \\
+17th Biennial European Conference of the Society for Medical Decision Making, Leiden, The Netherlands & 2018 \\
+2018 OHDSI Europe Symposium, Rotterdam, The Netherlands & 2018 \\
+2018 OHDSI Global Symposium, Bethesda, MD, USA & 2018 \\
+2019 OHDSI Europe Symposium, Rotterdam, The Netherlands & 2019 \\
+2019 OHDSI Global Symposium, Bethesda, MD, USA & 2019 \\
+2020 OHDSI Global Symposium, Online & 2020 \\
+2022 OHDSI Europe Symposium, Rotterdam, The Netherlands & 2022 \\
+43rd Annual Conference of the International Society for Clinical Biostatistics, Newcastle, UK & 2022 \\
+38th International Conference Pharmacoepidemiology \& Therapeutic Risk Management (ICPE), Copenhagen, Denmark & 2022 \\
+2022 OHDSI Global Symposium, Bethesda, MD, USA & 2022 \\
+18th biennial European conference of the Society for Medical Decision Making, Berlin, Germany & 2023 \\ \\
+
+\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\textbf{Teaching}} \\
+Population effect estimation workshop at 2019 OHDSI Global Symposium & 2019 \\
+Advanced Prognosis (teaching assistance) & 2019 \\
+Supervision of Master student internship & 2022 \\ \\
+
+\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\textbf{Other}} \\
+Weekly research meetings pharmaco-epidemiology / medical informatics & 2018 - \\
+Weekly OHDSI community calls & 2018 - \\
+
+\bottomrule
+
+\end{tabularx}

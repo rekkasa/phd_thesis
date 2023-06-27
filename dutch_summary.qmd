@@ -1,0 +1,152 @@
+# Samenvatting {.unnumbered}
+
+Om de meest optimale medische zorg te bieden, wordt artsen geadviseerd om hun
+klinische behandelingen af te stemmen op de resultaten van goed uitgevoerde
+gerandomiseerde gecontroleerde studies, of de geaggregeerde resultaten van
+meerdere van dergelijke studies, ervan uitgaande dat alle patiënten dezelfde
+behandeleffecten - voordelen en nadelen - ervaren als de studiepopulatie. Het
+geschatte behandeleffect is echter vaak een gemiddelde van heterogene
+behandeleffecten en is daarom mogelijk niet van toepassing op de meeste
+subgroepen van patiënten, laat staan op individuele patiënten. Het
+uitgangsrisico van een patiënt - haar of zijn kans op het ervaren van een
+belangrijke uitkomst - is een belangrijke determinant van het behandeleffect.
+Patiënten met een laag risico kunnen slechts een minimaal voordeel ondervinden
+van de behandeling voordat hun risico tot nul is gereduceerd, terwijl patiënten
+met een hoog risico veel meer voordeel kunnen ondervinden. Daarom is risico een
+cruciaal onderdeel van medische besluitvorming. Om die reden zijn veel
+behandelrichtlijnen gebaseerd op risicovoorspelmodellen, d.w.z. wiskundige
+functies die een belangrijke uitkomst relateren aan een verzameling gemeten
+voorspellers, ontwikkeld op basis van gegevens uit gerandomiseerde
+gecontroleerde studies of observationele studies.
+
+Gegevens uit de gezondheidszorg worden routinematig verzameld door huisartsen,
+ziekenhuizen, verzekeringsmaatschappijen en vele andere particuliere of openbare
+instanties en komen steeds meer beschikbaar, waardoor onderzoekers toegang
+krijgen tot grote hoeveelheden patiëntgegevens die kunnen worden gebruikt om
+medische beslissingen te ondersteunen. Omdat artsen echter niet willekeurig
+behandelingen voorschrijven, hebben analyses van observationele
+gezondheidszorggegevens vaak te lijden onder “confounding”, d.w.z. patiënten die
+een onderzochte behandeling krijgen, verschillen systematisch van patiënten die
+een andere behandeling krijgen, waardoor vergelijkingen worden bemoeilijkt.
+Bovendien heeft de grote verscheidenheid aan gegevensverzamelaars geresulteerd
+in een overvloed aan gegevensstructuren, die vaak niet compatibel zijn, wat de
+integratie van meerdere gegevensbronnen in statistische analyses verder
+bemoeilijkt. Het aanbieden van een gemeenschappelijke datastructuur zoals het
+Observational Medical Outcomes Partnership Common Data Model (OMOP-CDM) heeft de
+potentie om grote multi-cohort observationele studies mogelijk te maken.
+
+Het doel van dit proefschrift was het verkennen van het gebruik van
+risicovoorspelmodellen als basis voor medische besluitvorming. We hebben
+methoden voor de evaluatie van heterogeniteit van behandeleffecten bestudeerd en
+toegepast  zowel in gerandomiseerde data als in observationele data. Meer
+specifiek beoogden we de bestaande literatuur over voorspellende methoden voor
+de evaluatie van heterogeniteit van behandeleffecten systematisch te beoordelen,
+schaalbare en reproduceerbare risicogebaseerde voorspellende benaderingen voor
+de evaluatie van heterogeniteit van behandeleffecten te ontwikkelen, en
+risico-gebaseerde methoden toe te passen om medische beslissingen beter te
+sturen.
+
+In **hoofdstuk 1** presenteren we de resultaten van een literatuuronderzoek op
+basis van een brede zoekstrategie, aangevuld met suggesties van een panel van
+technische experts. We hebben de geïdentificeerde benaderingen in drie
+categorieën ingedeeld (risicogebaseerde methoden, behandeleffect-modellering en
+optimale behandelregimes). Risicogebaseerde methoden gebruiken alleen
+prognostische factoren om patiëntsubgroepen te definiëren, vertrouwend op de
+wiskundige relatie tussen het absolute risicoverschil en het uitgangsrisico.
+Behandeleffect-modellering gebruikt zowel prognostische factoren als
+behandeleffect-modificatoren om kenmerken te onderzoeken die op een relatieve
+schaal interacteren met de effecten van therapie. Ten slotte richten optimale
+behandelregimes zich voornamelijk op behandeleffect-modificatoren om de
+onderzoekspopulatie in te delen in degenen die baat hebben bij behandeling en
+degenen die dat niet hebben.
+
+In **hoofdstuk 2** hebben we een gestandaardiseerd raamwerk gepresenteerd voor
+de evaluatie van heterogeniteit van behandeleffecten met behulp van een
+risicogebaseerde benadering. Het voorgestelde raamwerk bestaat uit vijf stappen:
+1) definitie van het onderzoeksdoel, inclusief de populatie, de te vergelijken
+behandelingen en de belangrijke uitkomst(en); 2) identificatie van relevante
+databases; 3) ontwikkeling van een voorspelmodel voor de uitkomst(en); 4)
+schatting van het relatieve en absolute behandeleffect binnen strata van
+voorspeld risico, na aanpassing voor waargenomen confounding; 5) presentatie van
+de resultaten. We hebben ons raamwerk gedemonstreerd met een evaluatie van de
+heterogeniteit van het effect van thiazide of thiazide-achtige diuretica versus
+angiotensine-converterendeenzymremmers voor drie effectiviteits- en negen
+veiligheidsuitkomsten in drie observationele databases. We toonden aan dat
+patiënten met een laag risico op een acuut hartinfarct verwaarloosbare absolute
+voordelen kregen voor alle drie de effectiviteitsuitkomsten, maar dat deze
+voordelen meer uitgesproken waren in de groep met het hoogste risico.
+
+In **hoofdstuk 6** hebben we dit raamwerk gebruikt om de  effectiviteit te
+bestuderen van teriparatide versus orale bisfosfonaten om het risico op heup-,
+grote osteoporotische- en wervelfracturen te verminderen. We voerden een
+netwerkcohortstudie uit met gegevens uit vier databases met medische claims, die
+alle gekoppeld waren aan het OMOP-CDM. We includeerden alle vrouwen ouder dan 50
+jaar die begonnen met teriparatide of orale bisfosfonaten en geen geschiedenis
+hadden van anti-osteoporotische behandeling in het voorgaande jaar. We
+stratificeerden naar voorspeld heupfractuurrisico om de heterogeniteit van het
+behandeleffect te beoordelen. Over het geheel genomen vonden we verwaarloosbare
+verschillen in de effectiviteit van de fractuurpreventie van teriparatide versus
+orale bisfosfonaten, met een tendens ten gunste van teriparatide bij patiënten
+met een hoog verwacht heupfractuurrisico. De interpretatie van de resultaten
+werd echter bemoeilijkt door aanwijzingen van onopgeloste confounding.
+
+In **hoofdstuk 3** presenteerden we de resultaten van een uitgebreide
+simulatiestudie voor de vergelijking van eenvoudig toepasbare risicogebaseerde
+methoden voor de voorspelling van geïndividualiseerde behandeleffecten in de
+setting van een gerandomiseerde gecontroleerde studies. Meer specifiek
+vergeleken we modellen met een constant relatief behandeleffect, modellen met
+een lineaire interactie van behandeling met de prognostische index van het
+uitgangsrisico en modellen met een interactie van behandeling met een
+niet-lineaire transformatie van de prognostische index. We hebben ook een
+adaptieve aanpak bestudeerd die gebruik maakt van het Akaike informatiecriterium
+om automatisch een keuze te maken uit de voorgaande methoden. We toonden aan dat
+het lineaire-interactiemodel optimaal of bijna optimaal presteert in veel
+simulatiescenario's met een beperkte steekproefgrootte. Het model met flexibele
+transformaties vereiste sterke niet-lineaire afwijkingen van een constant
+behandeleffect en grotere steekproeven. We hebben deze methoden ook toegepast op
+werkelijke data van de GUSTO-I trial.
+
+In **hoofdstuk 4** ontwikkelden we voorspelmodellen voor het management van
+melanoom patiënten met een positieve schildwachtklier. We ontwikkelden eerst een
+model voor recidief, dat we vervolgens opnieuw kalibreerden voor de voorspelling
+van afstandsmetastase en mortaliteit, waardoor alle drie de uitkomsten met
+voldoende nauwkeurigheid met hetzelfde model konden worden voorspeld. Een
+belangrijke toevoeging van deze modellen is dat ze geen informatie vereisen over
+positieve lymfeklieren na volledige lymfeklierdissectie, omdat dit niet langer
+routine is voor melanoompatiënten met een positieve schildwachtklier. Tot slot
+presenteerden we een nomogram als grafische weergave van de afgeleide
+voorspelmodellen.
+
+In **hoofdstuk 5** ontwikkelden we eenvoudige en valide modellen voor het
+voorspellen van de mortaliteit en de noodzaak voor opname op de intensive care
+van patiënten die zich met een verdenking op COVID-19 op de spoedeisende hulp
+meldden. We gebruikten patiënten uit de eerste golf van maart tot augustus 2020
+voor modelontwikkeling en patiënten uit de tweede golf van september tot
+december 2020 voor modelvalidatie. Het uiteindelijke model voor het voorspellen
+van mortaliteit was gebaseerd op leeftijd en logaritmische transformaties van
+ademhalingssnelheid, C-reactief proteïne, lactaatdehydrogenase, albumine en
+ureum. Voor het voorspellen van opname op de intensive care hebben we het
+mortaliteitsvoorspellingsmodel opnieuw gekalibreerd. Het
+mortaliteitsvoorspelmodel vertoonde een goede discriminatie en kalibratie voor
+alle ziekenhuizen in de ontwikkelingsdataset. De resulterende COPE-modellen
+werden geïmplementeerd als een publiek toegankelijke webapplicatie en als
+onafhankelijke mobiele applicaties. Deze applicaties bevatten een gedetailleerde
+beschrijving van de afleiding van COPE, beschrijvingen van de gebruikte data en
+rapportages over de prestaties van het model.
+
+Concluderend kunnen we stellen dat we methodologische benaderingen voor de
+beoordeling van heterogeniteit van behandeleffecten in gerandomiseerde
+gecontroleerde studies hebben onderverdeeld in drie categorieën, namelijk,
+methoden op basis van risico's, methoden op basis van behandeleffectmodellering
+en methoden op basis van optimale behandelregimes. Voor risico-gebaseerde
+methoden toonden we door middel van uitgebreide simulaties aan dat
+regressiemodellen met een lineaire interactie van voorspeld risico met de
+behandeling een goede optie zijn voor de voorspelling van gepersonaliseerde
+behandelvoordelen in het geval van kleinere steekproefgroottes. We hebben met
+succes een op risico gebaseerd raamwerk ontwikkeld en geïmplementeerd voor de
+beoordeling van heterogeniteit van behandeleffecten in observationele data. Het
+gebruik van dit gestandaardiseerde raamwerk op het gebied van osteoporose bracht
+de potentie van onze methodologie aan het licht, maar toonde ook de beperkingen
+vanwege de observationele aard van de data. Tot slot ontwikkelden we
+voorspelmodellen om beslissingen te ondersteunen voor melanoompatiënten en voor
+COVID-19-patiënten.

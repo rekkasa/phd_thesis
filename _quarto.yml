@@ -19,6 +19,9 @@ book:
     - ch4_appendix.qmd
     - ch7_appendix.qmd
     - summary.qmd
+    - dutch_summary.qmd
+    - portfolio.qmd
+    - publications.qmd
 
 bibliography: references.bib
 csl: american-medical-association-alphabetical.csl

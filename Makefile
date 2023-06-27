@@ -413,6 +413,9 @@ _book/Beyond-the-average-treatment-effect.pdf : _quarto.yml \
 	ch4_appendix.qmd \
 	ch7_appendix.qmd \
 	summary.qmd \
+	dutch_summary.qmd \
+	portfolio.qmd \
+	publications.qmd \
 	data/introduction/gusto.rda \
 	figures/left.png \
 	figures/right.png \
