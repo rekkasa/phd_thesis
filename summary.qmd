@@ -1,7 +1,7 @@
 # Summary {.unnumbered}
 
 In order to provide the most optimal medical care, doctors are advised to align
-their clinical treatment    s with the results of well-conducted clinical
+their clinical treatments with the results of well-conducted clinical
 trials, or the aggregated results from multiple such trials, assuming that all
 patients experience the same treatment effects—benefits and harms—as the
 reference trial population. However, the estimated treatment effect is often an

@@ -1,6 +1,6 @@
 # A framework for risk-based assessment of treatment effect heterogeneity {#sec-framework}
 
-\blfootnote{Chapter based on \textit{Rekkas, A., van Klaveren, D., Ryan, P.B. et al. A standardized framework for risk-based assessment of treatment effect heterogeneity in observational healthcare databases. npj Digit. Med. 6, 58 (2023). https://doi.org/10.1038/s41746-023-00794-y}}
+\blfootnote{Chapter based on \textit{Rekkas A, van Klaveren D, Ryan PB et al. A standardized framework for risk-based assessment of treatment effect heterogeneity in observational healthcare databases. npj Digit. Med. 6, 58 (2023). https://doi.org/10.1038/s41746-023-00794-y}}
 
 \chaptermark{Treatment effect heterogeneity assessment framework}
 \vspace*{\fill}\par

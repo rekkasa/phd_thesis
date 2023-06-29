@@ -1,6 +1,6 @@
 # COVID outcome prediction in the emergency department (COPE) {#sec-covid}
 
-\blfootnote{Chapter based on \textit{van Klaveren D, Rekkas A, Alsma J, et alCOVID outcome prediction in the emergency department (COPE): using retrospective Dutch hospital data to develop simple and valid models for predicting mortality and need for intensive care unit admission in patients who present at the emergency department with suspected COVID-19BMJ Open 2021;11:e051468. doi: 10.1136/bmjopen-2021-051468}}
+\blfootnote{Chapter based on \textit{van Klaveren D, Rekkas A, Alsma J, et al. COVID outcome prediction in the emergency department (COPE): using retrospective Dutch hospital data to develop simple and valid models for predicting mortality and need for intensive care unit admission in patients who present at the emergency department with suspected COVID-19BMJ Open 2021;11:e051468. doi: 10.1136/bmjopen-2021-051468}}
 
 \chaptermark{COVID Outcome Prediction in the emergency department}
 \vspace*{\fill}\par

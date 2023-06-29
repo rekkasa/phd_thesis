@@ -1,5 +1,7 @@
 # Teriparatide vs bisphosphonates: A treatment effect heterogeneity study {#sec-osteoporosis}
 
+\blfootnote{Chapter basde on \textit{Rekkas A, Jödicke A, van Klaveren D, Ryan PB, Prieto-Alhambra D, Rijnbeek PR. Treatment heterogeneity in the study of the comparative effectiveness of teriparatide vs bisphosphonates in routine practice conditions: a multi-database cohort study, In submission}}
+
 \chaptermark{Teriparatide vs bisphosphonates}
 \vspace*{\fill}\par
 \pagebreak

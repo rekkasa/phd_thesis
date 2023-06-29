@@ -1,6 +1,6 @@
 # The EORTC-DeCOG nomogram {#sec-melanoma}
 
-\blfootnote{Chapter based on \textit{Daniëlle Verver, A. Rekkas, Claus Garbe et al., The EORTC-DeCOG nomogram adequately predicts outcomes of patients with sentinel node–positive melanoma without the need for completion lymph node dissection, European Journal of Cancer, Volume 134, 2020, Pages 9-18, ISSN 0959-8049, https://doi.org/10.1016/j.ejca.2020.04.022}}
+\blfootnote{Chapter based on \textit{Verver D, Rekkas A, Garbe C, et al. The EORTC-DeCOG nomogram adequately predicts outcomes of patients with sentinel node–positive melanoma without the need for completion lymph node dissection, European Journal of Cancer, Volume 134, 2020, Pages 9-18, ISSN 0959-8049, https://doi.org/10.1016/j.ejca.2020.04.022}}
 
 \vspace*{\fill}\par
 \pagebreak
