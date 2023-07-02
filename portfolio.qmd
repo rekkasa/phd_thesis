@@ -8,7 +8,7 @@
 PhD period: \tabto{5cm} December 2017 until July 2023 \newline
 Promotors: \tabto{5cm} Prof. dr. ir. P.R. Rijnbeek and \newline
 \tabto{5cm} Prof. dr. E.W. Steyerberg \newline
-Co-promotor: \tabto{5cm} dr. D. van Klaveren
+Co-promotor: \tabto{5cm} dr. ir. D. van Klaveren
 
 \noindent
 \renewcommand{\arraystretch}{1.3}
@@ -17,7 +17,7 @@ Co-promotor: \tabto{5cm} dr. D. van Klaveren
 \toprule
 & Year \\
 \midrule		 
-\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\textbf{General courses}} \\
+\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\textbf{Courses}} \\
 Scientific integrity course & 2021 \\
 \textit{Erasmus Medical Center, Rotterdam, The Netherlands} & \\ \\
 
