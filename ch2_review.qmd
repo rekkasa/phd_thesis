@@ -195,7 +195,7 @@ from reference lists of eligible articles. These 174 full-text articles were
 again screened in duplicate with group consensus resolution of conflicts in
 meetings. A total of 36 articles met eligibility criteria (@fig-reviewFlowChart).
 
-```{r fig-reviewFlowChart, cache=TRUE, echo=FALSE, fig.cap="Figure flow chart"}
+```{r fig-reviewFlowChart, cache=TRUE, echo=FALSE, fig.cap="Study flow chart."}
 knitr::include_graphics("figures/reviewDiagram.pdf")
 ```
 
@@ -742,9 +742,9 @@ treatment burdens (such as costs) that are not captured in the primary
 outcome—as is often the case—estimates of the magnitude of treatment effect are
 required to ensure that only patients above a certain expected net benefit
 threshold (i.e. outweighing the harms and burdens of therapy) are treated.
-Similarly, these classification methods do not provide comparable opportunity
-for incorporation of patient values and preferences for shared decision making
-which prediction methods do.
+Similarly, these classification methods do not provide opportunity for
+incorporation of patient values and preferences for shared decision making which
+prediction methods do.
 
 While there is an abundance of proposed methodological approaches, examples of
 clinical application of prediction models for treatment effect heterogeneity

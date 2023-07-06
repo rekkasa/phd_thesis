@@ -31,7 +31,9 @@ format:
     documentclass: book
     template-partials:
       - before-body.tex
-    classoption: [10pt]
+    classoption:
+      - 10pt
+      - twoside
     include-in-header:
       - preamble.tex
     toc: false

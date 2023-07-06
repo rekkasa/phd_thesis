@@ -8,6 +8,7 @@
 \vspace*{\fill}\par
 \pagebreak
 ```
+
 ## Prediction of outcome risk {.unnumbered}
 
 A patient's baseline risk---her or his probability of experiencing an outcome of
@@ -33,7 +34,6 @@ responsiveness to treatment, their vulnerability to side-effects and their
 preferences for other relevant outcomes is necessary information required for
 making truly informed clinical decisions [@kravitz2004evidence]. Predicting more
 individualized responses to treatment is the main challenge of this thesis.
-
 
 ## Prediction of treatment effect {.unnumbered}
 
@@ -119,7 +119,7 @@ treatment with baseline outcome risk may provide more accurate absolute benefit
 predictions for individual patients.
 
 Depending on the scale treatment effect is measured on, heterogeneity of
-treatment effect may or may not be identified ([@fig-scale]). For example, despite
+treatment effect may or may not be identified (Figure 1.2). For example, despite
 finding statistically significant subgroup effect evaluated on the relative
 scale, the absolute risk difference between the two groups may be too small to
 have any clinical relevance [@venekamp2014subgroup]. Therefore, in the presence
@@ -145,23 +145,26 @@ data. Theoretically, the aforementioned statistical power challenges for the
 evaluation of heterogeneity of treatment effect would be largely mitigated if
 the analyses were performed on even a single such database. However, as this
 data is not being accumulated for research purposes, it suffers from many biases
-causing many commonly used methods to fail. Doctors prescribing a specific
-treatment expect---usually based on results from clinical trials---that it will
-be beneficial for the patient they are treating. This causes systematic
-differences in important characteristics among patients receiving different
-treatments and renders their comparison very challenging.
+that need to be accounted for. Doctors prescribing a specific treatment
+expect---usually based on results from clinical trials---that it will be
+beneficial for the patient they are treating. Therefore, patients receiving
+different treatments tend to differ in several characteristics, often relevant
+to their prognosis for the outcomes of interest and, thus, treatment comparisons
+cannot be performed directly.
 
-If all relevant patient characteristics on which the treating physician based
-their decision have been captured in the observational dataset, methods are
-available that can be used to account for these systematic differences [@rosenbaum1983central;@d_agostino_jr_1998propensity;@austin2011introduction;@dahabreh2012do]. Among the more popular ones is limiting the analyses to the
-propensity score matched subpopulation. Propensity scores are the
-patient-specific probabilities of receiving the treatment under study and have
-been shown to have the balancing property, that is, conditional on the
-propensity score, treatment assignment is independent of the potential outcomes
-[@rosenbaum1983central]. This means that in a subset of patients with equal
-propensity scores, covariate distributions do not differ between patients
-receiving the treatment under study and those who are not. Consequently,
-patients within this subset can be assumed to be randomized.
+If all patient characteristics on which the treating physician based their
+decision have been captured in the observational dataset, methods are available
+that can be used to account for these systematic differences
+[@rosenbaum1983central;@d_agostino_jr_1998propensity;@austin2011introduction;@dahabreh2012do].
+Among the more popular ones is limiting the analyses to the propensity score
+matched subpopulation. Propensity scores are the patient-specific probabilities
+of receiving the treatment under study and have been shown to have the balancing
+property, that is, conditional on the propensity score, treatment assignment is
+independent of the potential outcomes [@rosenbaum1983central]. This means that
+in a subset of patients with equal propensity scores, covariate distributions do
+not differ between patients receiving the treatment under study and those who
+are not. Consequently, patients within this subset can be assumed to be
+randomized.
 
 Unfortunately, more often than not, a critical amount of the information that
 was used for treatment decisions is not captured. As a consequence, propensity
@@ -171,34 +174,38 @@ searching for evidence of this systematic unmeasured imbalances have been
 proposed and can be of assistance in many situations
 [@schuemie2014interpreting;@ryan2013defining;@schuemie2016robust;@schuemie2018empirical].
 
-Another important problem with observational databases is that they use
-different architectures. As anyone gathering routinely observed healthcare data
-did so in a way that was more convenient to them, a plethora of structures for
-the resulting databases arose. Diseases, treatments, medical exams and many more
-aspects of healthcare are often coded differently in different observational
-databases. In addition, more fundamental disparities between databases also
-factor in database incompatibility: different types of information are recorded
-in different databases. Different patient characteristics are captured---at
-different levels of detail---in a general practitioner database, in a hospital
-medical record or in an administrative claims database. This means that
-combining results from multiple databases is not a simple task
+Another important problem with observational databases is lack of syntactic and
+semantic interoperability. As anyone gathering routinely observed healthcare
+data did so in a way that was more convenient to them, a plethora of structures
+for the resulting databases arose. Diseases, treatments, medical exams and many
+more aspects of healthcare are often coded differently in different
+observational databases. In addition, more fundamental disparities between
+databases also factor in database incompatibility: different types of
+information are recorded in different databases. Different patient
+characteristics are captured---at different levels of detail---in a general
+practitioner database, in a hospital medical record or in an administrative
+claims database. This means that combining results from multiple databases is
+not a simple task and requires in-depth understanding of the underlying
+healthcare system.
 
-One of the solutions for handling database incompatibility was the creation of
-the Observational Medical Outcomes Partnership Common Data Model (OMOP-CDM)
-[@hripcsak2015observational;@matcho2014fidelity]. This provided a standard for
-structuring an observational database, while large effort was put into
-developing processes for mapping existing databases from their own specific
-structure to OMOP-CDM. With this high level of standardization achieved, the
-design and execution of highly scalable observational studies was made possible.
-Common definitions of diseases, treatments, and outcomes can now be applied
-uniformly across a network of many databases containing information on hundreds
-of millions of patients. An analysis plan can be executed following the exact
-same steps across the network providing effect estimates derived in different
-populations. The fragmented information scattered across multiple databases can
-now be summarized in a consistent way to give a fuller picture.
+A widely accepted approach to improve interoperability is the use of a common
+data model, specifically the Observational Medical Outcomes Partnership Common
+Data Model (OMOP-CDM) which is maintained by the Observational Health Data
+Sciences and Informatics initiative
+[@hripcsak2015observational;@matcho2014fidelity]. The OMOP-CDM standardizes both
+the structure and the coding system. Many databases have been mapped to the
+OMOP-CDM by the European Health Data and Evidence Network (EHDEN) project in
+Europe. With this high level of standardization, the design and execution of
+highly scalable observational studies was made possible. Common definitions of
+diseases, treatments, and outcomes can now be applied uniformly across a network
+of many databases containing information on hundreds of millions of patients. An
+analysis plan can be executed following the exact same steps across the network
+providing effect estimates derived in different populations. The fragmented
+information scattered across multiple databases can now be summarized in a
+consistent way to give a fuller picture.
 
-The power of the common database structure was demonstrated in a large-scale
-comparative effectiveness study of first-line treatment for hypertension
+The power of this approach was demonstrated in a large-scale comparative
+effectiveness study of first-line treatment for hypertension
 [@suchard2019comprehensive]. This study compared five different first-line drug
 classes prescribed for hypertension regarding three primary effectiveness, six
 secondary effectiveness, and 46 safety outcomes across a global network of nine
@@ -239,22 +246,22 @@ approaches in the clinical trial setting.
 3.  *Apply risk-based methods to better guide medical decisions*. We will
 develop baseline risk prediction models in several clinical case studies.
 
-In **[@sec-review]** we present the results of a scoping literature
-review of regression modeling approaches for the assessment of treatment effect
-heterogeneity in the clinical trial setting. In **[@sec-framework]** we
-develop a standardized scalable framework for the assessment of treatment effect
+In **@sec-review** we present the results of a scoping literature review of
+regression modeling approaches for the assessment of treatment effect
+heterogeneity in the clinical trial setting. In **@sec-framework** we develop a
+standardized scalable framework for the assessment of treatment effect
 heterogeneity using a risk-stratified approach in the observational setting. In
-**[@sec-simulation]** we compare different risk-based methods for predicting
+**@sec-simulation** we compare different risk-based methods for predicting
 individualized treatment effects using extensive simulations of clinical trials.
-In **[@sec-melanoma]** we develop and externally validate a model for
-the prediction of 5-year recurrence risk in sentinel node positive melanoma
+In **@sec-melanoma** we develop and externally validate a model for the
+prediction of 5-year recurrence risk in sentinel node positive melanoma
 patients, using data from nine European Organization for Research and Treatment
-of Cancer centers. In **[@sec-covid]** we develop and temporally
-validate a model for the prediction of 28-day mortality and admission to the ICU
-for patients presenting at the emergency department with suspected COVID-19
-infection at four large Dutch hospitals between March and August, 2020. In
-**[@sec-osteoporosis]** we apply the standardized framework developed in
-@sec-framework to evaluate effect heterogeneity of teripatide treatment compared
-to oral bisphosphonates in female patients above the age of 50 with established
-osteoporosis. Finally, in **[@sec-discussion]** we present a general
-discussion along with perspectives on future work.
+of Cancer centers. In **@sec-covid** we develop and temporally validate a model
+for the prediction of 28-day mortality and admission to the ICU for patients
+presenting at the emergency department with suspected COVID-19 infection at four
+large Dutch hospitals between March and August, 2020. In **@sec-osteoporosis**
+we apply the standardized framework developed in **@sec-framework** to evaluate
+effect heterogeneity of teripatide treatment compared to oral bisphosphonates in
+female patients above the age of 50 with established osteoporosis. Finally, in
+**@sec-discussion** we present a general discussion along with perspectives on
+future work.
