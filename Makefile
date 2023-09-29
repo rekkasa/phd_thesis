@@ -394,6 +394,7 @@ figures/ch4-calibration_moderate_auc.pdf : code/ch4-CalibrationBase.R\
 	code/ch4-PlotResult.R\
 	data/simulation/calibration.csv
 	$< moderate 4250 0.85 auc
+	
 # ===================================================================================================================
 # Make thesis
 # ===================================================================================================================
@@ -414,8 +415,10 @@ _book/Beyond-the-average-treatment-effect.pdf : _quarto.yml \
 	ch7_appendix.qmd \
 	summary.qmd \
 	dutch_summary.qmd \
+	acknowledgements.qmd \
 	portfolio.qmd \
 	publications.qmd \
+	about.qmd \
 	data/introduction/gusto.rda \
 	figures/left.png \
 	figures/right.png \

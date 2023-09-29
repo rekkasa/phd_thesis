@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # A framework for risk-based assessment of treatment effect heterogeneity {#sec-framework-appendix}
 
 \vspace*{\fill}\par
@@ -129,3 +130,5 @@ knitr::include_graphics("figures/ch3-SupplementaryFigure10.pdf")
 ```{r fig-ch3-supp11, cache=TRUE, echo=FALSE, fig.cap=". Absolute treatment effects for the safety outcomes in patients with cardiovascular disease. Treatment effect heterogeneity in the subset of patients with cardiovascular disease for acute renal failure, angioedema, cough, gastrointestinal bleeding, hyperkalemia, hypokalemia, hyponatremia, hypotension, and kidney disease on the absolute scale of thiazide or thiazide-like diuretics within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Absolute treatment effects estimated in CCAE and MDCD are represented by blue and green circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors. Results in MDCR are not presented because the majority of the patients were at risk above 1.5% for acute MI.",fig.align='center'}
 knitr::include_graphics("figures/ch3-SupplementaryFigure11.pdf")
 ```
+
+\clearpage\null\pagestyle{empty}

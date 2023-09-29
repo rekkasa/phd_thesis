@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # Summary {.unnumbered}
 
 In order to provide the most optimal medical care, doctors are advised to align
@@ -134,3 +135,5 @@ this standardized framework in the field of osteoporosis uncovered the potential
 of our methodology, while it also demonstrated its limitations due to the
 observational nature of the data. Finally, we developed prediction models to aid
 decisions for melanoma patients and for COVID-19 patients.
+
+\clearpage\null\pagestyle{empty}

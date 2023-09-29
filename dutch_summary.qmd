@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # Samenvatting {.unnumbered}
 
 Om de meest optimale medische zorg te bieden, wordt artsen geadviseerd om hun
@@ -150,3 +151,5 @@ de potentie van onze methodologie aan het licht, maar toonde ook de beperkingen
 vanwege de observationele aard van de data. Tot slot ontwikkelden we
 voorspelmodellen om beslissingen te ondersteunen voor melanoompatiënten en voor
 COVID-19-patiënten.
+
+\clearpage\null\pagestyle{empty}

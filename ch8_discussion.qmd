@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # General discussion {#sec-discussion}
 
 \vspace*{\fill}\par

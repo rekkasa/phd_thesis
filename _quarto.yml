@@ -20,8 +20,10 @@ book:
     - ch7_appendix.qmd
     - summary.qmd
     - dutch_summary.qmd
+    - acknowledgements.qmd
     - portfolio.qmd
     - publications.qmd
+    - about.qmd
 
 bibliography: references.bib
 csl: american-medical-association-alphabetical.csl

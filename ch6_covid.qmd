@@ -726,3 +726,5 @@ may support patients and doctors in decision making.
 
 Supplementary material for this chapter is available online at
 [https://doi.org/10.1016/j.ejca.2020.04.022](https://doi.org/10.1016/j.ejca.2020.04.022).
+
+\clearpage\null\pagestyle{empty}

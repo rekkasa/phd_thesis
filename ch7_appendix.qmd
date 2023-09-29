@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # Teriparatide vs bisphosphonates: A treatment effect heterogeneity study {#sec-osteoporosis-appendix}
 
 \pagebreak
@@ -545,3 +546,5 @@ grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_
 ```{r fig-ch7-supp5, cache=TRUE, echo=FALSE, fig.cap="Treatment effect estimates on the absolute scale for the three outcomes of interest stratified on baseline major osteoporotic fracture risk.",fig.align='center'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_gl.tiff")))
 ```
+
+\clearpage\null\pagestyle{empty}

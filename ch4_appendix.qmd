@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # Estimating individualized treatment effects from clinical trial data {#sec-simulation-appendix}
 \chaptermark{Individualized treatment effects}
 \vspace*{\fill}\par
@@ -479,3 +480,4 @@ as follows:
     risk is derived from the 2.5 and 97.5 percentiles of the mean predicted
     risks estimated within each risk quarter across the $b$ bootstrap samples.
 
+\clearpage\null\pagestyle{empty}

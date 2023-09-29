@@ -818,3 +818,5 @@ documented an exuberance of new methods, we do note a marked dearth of
 comparative studies in the literature. Future research could shed light on
 advantages and drawbacks of methods in terms of predictive performance in
 different settings.
+
+\clearpage\null\pagestyle{empty}
