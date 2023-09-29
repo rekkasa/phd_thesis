@@ -1,5 +1,5 @@
 \pagestyle{fancy}
-# Teriparatide vs bisphosphonates: A treatment effect heterogeneity study {#sec-osteoporosis-appendix}
+# Comparative effectiveness of teriparatide vs oral bisphosphonates {#sec-osteoporosis-appendix}
 
 \pagebreak
 
