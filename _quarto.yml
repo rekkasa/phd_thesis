@@ -25,6 +25,7 @@ book:
     - publications.qmd
     - about.qmd
 
+
 bibliography: references.bib
 csl: american-medical-association-alphabetical.csl
 
@@ -35,7 +36,7 @@ format:
       - before-body.tex
     classoption:
       - 10pt
-      - twoside
+      - twoside,symmetric
     include-in-header:
       - preamble.tex
     toc: false

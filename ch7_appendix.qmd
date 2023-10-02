@@ -1,6 +1,8 @@
 \pagestyle{fancy}
 # Comparative effectiveness of teriparatide vs oral bisphosphonates {#sec-osteoporosis-appendix}
 
+\chaptermark{Teriparatide vs bisphosphonates}
+
 \pagebreak
 
 ## Cohort definitions {#sec-osteoporosis-appendix-cohorts}
