@@ -6,4 +6,7 @@ his undergraduate education studying Mathematics at the Aristotle University of
 Thessaloniki. After the completion of his undergraduate studies in 2015, he was
 enrolled to the postgraduate program of Statistics at KU Leuven in Belgium. He
 graduated, cum laude, in 2017 with his thesis titled "Robust Model Selection for
-Generalized Linear Models". In 2017 he started his PhD research, first at the Department of Biomedical Data Sciences of Leiden University Medical Center, and later (2019) he moved to the Department of Medical Informatics of Erasmus Medical Center, Rotterdam.
+Generalized Linear Models". In 2017 he started his PhD research, first at the
+Department of Biomedical Data Sciences of Leiden University Medical Center, and
+later (2019) at the Department of Medical Informatics of Erasmus Medical Center,
+Rotterdam.

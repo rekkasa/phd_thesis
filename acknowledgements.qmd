@@ -2,7 +2,7 @@
 # Acknowledgements {.unnumbered}
 
 I feel the obligation to express my sincere gratitude to several people, whose
-help and guidance has been crucial for the completion of this dissertation.\newline
+help and guidance have been crucial for the completion of this dissertation.\newline
 
 My promoter, **Prof. Peter Rijnbeek**, guided my work from the start and
 provided the necessary environment for completing this thesis. This work could
