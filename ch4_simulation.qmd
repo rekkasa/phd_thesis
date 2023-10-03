@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # Estimating individualized treatment effects from clinical trial data {#sec-simulation}
 \blfootnote{Chapter based on \textit{Rekkas A, Rijnbeek PR, Kent DM et al. Estimating individualized treatment effects from randomized controlled trials: a simulation study to compare risk-based approaches. BMC Med Res Methodol 23, 74 (2023). https://doi.org/10.1186/s12874-023-01889-6}}
 
@@ -320,7 +321,7 @@ and consequently to larger RMSE for all approaches. When we assumed a stronger
 relative treatment effect, the relative differences between approaches were
 similar to the base-case scenario ([Appendix @sec-simulation-appendix-strong]).
 
-```{r fig-rmseBase, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications was calculated from a simulated super-population of size 500,000. The scenario with true constant relative treatment effect (panel A) had a true prediction c-statistic of 0.75 and sample size of 4250. The RMSE is also presented for strong linear (panel B), strong quadratic (panel C), and non-monotonic (panel D) deviations from constant relative treatment effects. Panels on the right side present the true relations between baseline risk (x-axis) and absolute treatment benefit (y-axis). The 2.5, 25, 50, 75, and 97.5 percentiles of the risk distribution are expressed by the boxplot on the top. The 2.5, 25, 50, 75, and 97.5 percentiles of the true benefit distributions are expressed by the boxplots on the side of the right-hand side panel.",fig.align='center'}
+```{r fig-rmseBase, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications was calculated from a simulated super-population of size 500,000. The scenario with true constant relative treatment effect (panel A) had a true prediction c-statistic of 0.75 and sample size of 4250. The RMSE is also presented for strong linear (panel B), strong quadratic (panel C), and non-monotonic (panel D) deviations from constant relative treatment effects. Panels on the right side present the true relations between baseline risk (x-axis) and absolute treatment benefit (y-axis). The 2.5, 25, 50, 75, and 97.5 percentiles of the risk distribution are expressed by the boxplot on the top. The 2.5, 25, 50, 75, and 97.5 percentiles of the true benefit distributions are expressed by the boxplots on the side of the right-hand side panel.",fig.align='center',out.width="80%"}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_base.pdf"))
 ```
 
@@ -343,7 +344,7 @@ linear interaction 0.014; RCS-3 0.010). Due to the large sample size, the RMSE
 of the adaptive approach was even more similar to the best-performing method,
 and the constant relative treatment effect model was less often wrongly selected
 ([@fig-ch4-supp2]).
-```{r fig-rmseSampleSize, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples of size 17,000 rather than 4,250 in @fig-rmseBase. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
+```{r fig-rmseSampleSize, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples of size 17,000 rather than 4,250 in @fig-rmseBase. RMSE was calculated on a super-population of size 500,000",fig.align='center',out.width="80%"}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_sample_size.pdf"))
 ```
 
@@ -358,7 +359,7 @@ replications in the strong linear and non-monotonic deviation scenarios without
 treatment-related harms, respectively), leading to increased variability of the
 RMSE ([@fig-ch4-supp3]).
 
-```{r fig-rmseAuc, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples 4,250. True prediction c-statistic of 0.85. RMSE was calculated on a super-population of size 500,000",fig.align='center'}
+```{r fig-rmseAuc, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in simulated samples 4,250. True prediction c-statistic of 0.85. RMSE was calculated on a super-population of size 500,000",fig.align='center',out.width="80%"}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_auc.pdf"))
 ```
 
@@ -380,7 +381,7 @@ the true prediction c-statistic to 0.85 the adaptive approach was, again, more
 conservative, especially with non-monotonic deviations and null or moderate
 treatment-related harms ([@fig-ch4-supp5]).
 
-```{r fig-discriminationBase, cache=TRUE, echo=FALSE, fig.cap="Discrimination for benefit of the considered methods across 500 replications calculated in simulated samples of size 4,250 using the c-statistic for benefit. The c-statistic for benefit represents the probability that from two randomly chosen matched patient pairs with unequal observed benefit, the pair with greater observed benefit also has a higher predicted benefit. True prediction c-statistic of 0.75.",fig.align='center'}
+```{r fig-discriminationBase, cache=TRUE, echo=FALSE, fig.cap="Discrimination for benefit of the considered methods across 500 replications calculated in simulated samples of size 4,250 using the c-statistic for benefit. The c-statistic for benefit represents the probability that from two randomly chosen matched patient pairs with unequal observed benefit, the pair with greater observed benefit also has a higher predicted benefit. True prediction c-statistic of 0.75.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch4-discrimination_moderate_base.pdf")
 ```
 
@@ -396,7 +397,7 @@ to the linear interaction model and RCS-3. When we increased the sample size to
 (@fig-ch4-supp7), RCS-3 was somewhat better calibrated than the
 linear interaction model with strong quadratic deviations.
 
-```{r fig-calibrationBase, cache=TRUE, echo=FALSE, fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction c-statistic of 0.75 and sample size of 4,250.",fig.align='center'}
+```{r fig-calibrationBase, cache=TRUE, echo=FALSE, fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction c-statistic of 0.75 and sample size of 4,250.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch4-calibration_moderate_base.pdf")
 ```
 
@@ -429,7 +430,7 @@ events) allowed for flexible modeling approaches, a simpler constant treatment
 effect model is adequate for predicting absolute 30-day mortality benefits of
 treatment with tPA in patients with acute MI.
 
-```{r fig-gusto, cache=TRUE, echo=FALSE, fig.cap="6 Individualized absolute benefit predictions based on baseline risk when using a constant treatment effect approach, a linear interaction approach and RCS smoothing using 3 knots. Risk stratified estimates of absolute benefit are presented within quartiles of baseline risk as reference. 95% confidence bands were generated using 10,000 bootstrap resamples, where the prediction model was refitted in each run to capture the uncertainty in baseline risk predictions. For the risk stratifcation approach, we also provide 95% confidence intervals for the baseline risk quarter-specific average predicted risk over the 10,000 bootstrap samples.",fig.align='center'}
+```{r fig-gusto, cache=TRUE, echo=FALSE, fig.cap="6 Individualized absolute benefit predictions based on baseline risk when using a constant treatment effect approach, a linear interaction approach and RCS smoothing using 3 knots. Risk stratified estimates of absolute benefit are presented within quartiles of baseline risk as reference. 95% confidence bands were generated using 10,000 bootstrap resamples, where the prediction model was refitted in each run to capture the uncertainty in baseline risk predictions. For the risk stratifcation approach, we also provide 95% confidence intervals for the baseline risk quarter-specific average predicted risk over the 10,000 bootstrap samples.",fig.align='center',out.width="80%"}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Gusto.tiff")))
 ```
 
@@ -559,3 +560,5 @@ selection is attractive with larger sample size.
 Supplementary material for this chapter is available in [Appendix
 @sec-simulation-appendix] and online at
 [https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6).
+
+\clearpage\null\pagestyle{empty}

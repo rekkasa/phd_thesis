@@ -190,16 +190,16 @@ $t_1,\dots,t_k$ are the selected knots [@harrell2017regression].
 
 
 ## Adaptive model selection frequencies {#sec-simulation-appendix-adaptive}
-```{r fig-ch4-supp1, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. The scenario with the true constant relative treatment effect (first panel) had a true prediction AUC of 0.75 and sample size of 4,250.",fig.align='center'}
+```{r fig-ch4-supp1, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. The scenario with the true constant relative treatment effect (first panel) had a true prediction AUC of 0.75 and sample size of 4,250.",fig.align='center',out.width="80%"}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_base.tiff")))
 ```
 
 
-```{r fig-ch4-supp2, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap=" Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. Sample size is 17,000.",fig.align='center'}
+```{r fig-ch4-supp2, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap=" Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. Sample size is 17,000.",fig.align='center',out.width="80%"}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_sample_size.tiff")))
 ```
 
-```{r fig-ch4-supp3, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. AUC is 0.85.",fig.align='center'}
+```{r fig-ch4-supp3, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap="Model selection frequencies of the adaptive approach based on Akaike’s Information Criterion across 500 replications. AUC is 0.85.",fig.align='center',out.width="80%"}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch4-Selected_model_adaptive_auc.tiff")))
 ```
 
@@ -222,19 +222,19 @@ smoother (loess). The ICI-for-benefit is the average absolute difference between
 predicted and smooth observed benefit. Values closer to represent better
 calibration.
 
-```{r fig-ch4-supp4, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center'}
+```{r fig-ch4-supp4, cache=TRUE, echo=FALSE, fig.pos="H", fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch4-discrimination_moderate_sample_size.pdf")
 ```
 
-```{r fig-ch4-supp5, cache=TRUE, echo=FALSE,fig.pos="H", fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center'}
+```{r fig-ch4-supp5, cache=TRUE, echo=FALSE,fig.pos="H", fig.cap=" Discrimination for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch4-discrimination_moderate_auc.pdf")
 ```
 
-```{r fig-ch4-supp6, cache=TRUE, echo=FALSE,fig.pos="H", fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center'}
+```{r fig-ch4-supp6, cache=TRUE, echo=FALSE,fig.pos="H", fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.75 and sample size of 17,000.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch4-calibration_moderate_sample_size.pdf")
 ```
 
-```{r fig-ch4-supp7, cache=TRUE, echo=FALSE,fig.pos="H", fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center'}
+```{r fig-ch4-supp7, cache=TRUE, echo=FALSE,fig.pos="H", fig.cap="Calibration for benefit of the considered methods across 500 replications calculated in a simulated sample of size 500,000. True prediction AUC of 0.85 and sample size of 4,250.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch4-calibration_moderate_auc.pdf")
 ```
 
@@ -270,15 +270,15 @@ as an absolute risk reduction for treated patients of 50\% of the true average
 benefit of the scenario without treatment-related harms. The exact settings can
 be found in [online Table S2](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-023-01889-6).
 
-```{r fig-ch4-supp8, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in a simulated sample of size 500,000 where treatment-covariate interactions all favoring treatment were considered.",fig.align='center'}
+```{r fig-ch4-supp8, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in a simulated sample of size 500,000 where treatment-covariate interactions all favoring treatment were considered.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch4-rmse_interaction_positive.pdf")
 ```
 
-```{r fig-ch4-supp9, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in a simulated sample of size 500,000 where treatment-covariate interactions all favoring the control were considered.",fig.align='center'}
+```{r fig-ch4-supp9, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in a simulated sample of size 500,000 where treatment-covariate interactions all favoring the control were considered.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch4-rmse_interaction_negative.pdf")
 ```
 
-```{r fig-ch4-supp10, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in a simulated sample of size 500,000 where treatment-covariate interactions 2 favoring treatment and 2 favoring the control were considered.",fig.align='center'}
+```{r fig-ch4-supp10, cache=TRUE, echo=FALSE, fig.cap="RMSE of the considered methods across 500 replications calculated in a simulated sample of size 500,000 where treatment-covariate interactions 2 favoring treatment and 2 favoring the control were considered.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch4-rmse_interaction_combined.pdf")
 ```
 
@@ -318,15 +318,15 @@ benefit predictions compared to the results of the simulation scenarios where
 baseline covariates were assumed to be statistically independent (Figures
 [-@fig-ch4-supp11] to [-@fig-ch4-supp13]).
 
-```{r fig-ch4-supp11, cache=FALSE, echo=FALSE, fig.cap="RMSE of the sensitivity analyses assuming correlated baseline covariates. All considered methods were derived using simulated samples of size 4,250 and true prediction c-statistic of 0.75.",fig.align='center'}
+```{r fig-ch4-supp11, cache=FALSE, echo=FALSE, fig.cap="RMSE of the sensitivity analyses assuming correlated baseline covariates. All considered methods were derived using simulated samples of size 4,250 and true prediction c-statistic of 0.75.",fig.align='center',out.width="80%"}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_base_sensitivity.pdf"))
 ```
 
-```{r fig-ch4-supp12, cache=FALSE, echo=FALSE, fig.cap="RMSE of the sensitivity analyses assuming correlated baseline covariates. All considered methods were derived using simulated samples of size 17,000 and true prediction c-statistic of 0.75.",fig.align='center'}
+```{r fig-ch4-supp12, cache=FALSE, echo=FALSE, fig.cap="RMSE of the sensitivity analyses assuming correlated baseline covariates. All considered methods were derived using simulated samples of size 17,000 and true prediction c-statistic of 0.75.",fig.align='center',out.width="80%"}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_sample_size_sensitivity.pdf"))
 ```
 
-```{r fig-ch4-supp13, cache=FALSE, echo=FALSE, fig.cap="RMSE of the sensitivity analyses assuming correlated baseline covariates. All considered methods were derived using simulated samples of size 4,250 and true prediction c-statistic of 0.85",fig.align='center'}
+```{r fig-ch4-supp13, cache=FALSE, echo=FALSE, fig.cap="RMSE of the sensitivity analyses assuming correlated baseline covariates. All considered methods were derived using simulated samples of size 4,250 and true prediction c-statistic of 0.85",fig.align='center',out.width="80%"}
 knitr::include_graphics(here::here("figures/ch4-rmse_moderate_auc_sensitivity.pdf"))
 ```
 

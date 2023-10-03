@@ -354,7 +354,7 @@ Malignant neoplastic   disease & 0.4 & 0.3 & 0.02 & 0.4 & 0.4 & 0 \\
 \end{tabular}}
 \end{table}
 
-\begin{table}[p]
+\begin{table}[H]
 \caption{Characteristics of patients in MDCR receiving teriparatide or bisphosphonates before and after matching on the propensity score.}
 \label{table:ch7-appendix-mdcr}
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrr}
@@ -529,23 +529,23 @@ Malignant tumor of lung & 0.1 & 0.1 & 0 & 0.1 & 0.1 & 0 \\
 \end{landscape}
 
 
-```{r fig-ch7-supp1, cache=TRUE, echo=FALSE, fig.cap="Follow-up distributions of patients treated with teriparatide or bisphosphonates across the four databases.",fig.align='center'}
+```{r fig-ch7-supp1, cache=TRUE, echo=FALSE, fig.cap="Follow-up distributions of patients treated with teriparatide or bisphosphonates across the four databases.",fig.align='center',out.width="80%"}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-followup.tiff")))
 ```
 
-```{r fig-ch7-supp2, cache=TRUE, echo=FALSE, fig.cap="Effect size estimates for the negative controls (true hazard ratio of 1) stratified on baseline hip fracture risk across the four databases.",fig.align='center'}
+```{r fig-ch7-supp2, cache=TRUE, echo=FALSE, fig.cap="Effect size estimates for the negative controls (true hazard ratio of 1) stratified on baseline hip fracture risk across the four databases.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch7-riskStratifiedNcPlot_itt_att_1095_custom.pdf")
 ```
 
-```{r fig-ch7-supp3, cache=TRUE, echo=FALSE, fig.cap="Effect size estimates for the negative controls (true hazard ratio of 1) stratified on baseline major osteoporotic fracture risk across the four databases.",fig.align='center'}
+```{r fig-ch7-supp3, cache=TRUE, echo=FALSE, fig.cap="Effect size estimates for the negative controls (true hazard ratio of 1) stratified on baseline major osteoporotic fracture risk across the four databases.",fig.align='center',out.width="80%"}
 knitr::include_graphics("figures/ch7-riskStratifiedNcPlot_itt_att_1095_gl.pdf")
 ```
 
-```{r fig-ch7-supp4, cache=TRUE, echo=FALSE, fig.cap="Hazard ratio estimates of the effect of treatment with teriparatide compared to oral bisphosphonates for the three outcomes of interest (hip fracture, major osteoporotic fracture, and vertebral fracture) stratified on baseline major osteoporotic fracture risk. Estimates are calibrated for unobserved confounding using estimates on 147 negative control outcomes. We plot in red the meta-analytic estimate across the four databases for each of the outcomes of interest. We also plot in yellow the hazard ratio estimated in VERO clinical trial.",fig.align='center'}
+```{r fig-ch7-supp4, cache=TRUE, echo=FALSE, fig.cap="Hazard ratio estimates of the effect of treatment with teriparatide compared to oral bisphosphonates for the three outcomes of interest (hip fracture, major osteoporotic fracture, and vertebral fracture) stratified on baseline major osteoporotic fracture risk. Estimates are calibrated for unobserved confounding using estimates on 147 negative control outcomes. We plot in red the meta-analytic estimate across the four databases for each of the outcomes of interest. We also plot in yellow the hazard ratio estimated in VERO clinical trial.",fig.align='center',out.width="80%"}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotMetaRiskStratified_itt_att_1095_gl.tiff")))
 ```
 
-```{r fig-ch7-supp5, cache=TRUE, echo=FALSE, fig.cap="Treatment effect estimates on the absolute scale for the three outcomes of interest stratified on baseline major osteoporotic fracture risk.",fig.align='center'}
+```{r fig-ch7-supp5, cache=TRUE, echo=FALSE, fig.cap="Treatment effect estimates on the absolute scale for the three outcomes of interest stratified on baseline major osteoporotic fracture risk.",fig.align='center',out.width="80%"}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch7-plotAbsoluteRiskStratified_itt_att_1095_gl.tiff")))
 ```
 

@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # COVID outcome prediction in the emergency department (COPE) {#sec-covid}
 
 \blfootnote{Chapter based on \textit{van Klaveren D, Rekkas A, Alsma J, et al. COVID outcome prediction in the emergency department (COPE): using retrospective Dutch hospital data to develop simple and valid models for predicting mortality and need for intensive care unit admission in patients who present at the emergency department with suspected COVID-19BMJ Open 2021;11:e051468. doi: 10.1136/bmjopen-2021-051468}}
@@ -615,6 +616,7 @@ Max{[}Age-70, 0{]} (years) * & 80 vs 58                   & 0.2         & 0.13 t
 \end{table}
 \end{landscape}
 
+
 \begin{table}[h]
 \caption{COPE definition. COPE: COVID-19 outcome prediction in the emergency
 department; CRP: C reactive protein; ICU: intensive care unit;
@@ -632,16 +634,15 @@ Albumin (g/L) & 10 & 60 \\
 Urea (mmol/L) & 1 & 80 \\
 \midrule
 \multicolumn{3}{c}{
-$\begin{aligned} \text{lp} = &-13.6 + 0.04575\times \text{age} + 1.654\times\log(\text{RR}) + 0.1688\times\log(\text{CRP}) + \\ & 1.197\times\log(\text{LDH}) + −1.585\times\log(\text{albumin}) + 0.5953\times\log(\text{urea})\end{aligned}$
+$\begin{aligned} \text{lp} = &-13.6 + 0.04575\times \text{age} + 1.654\times\log(\text{RR}) + \\ & 0.1688\times\log(\text{CRP}) + 1.197\times\log(\text{LDH}) − \\ & 1.585\times\log(\text{albumin}) + 0.5953\times\log(\text{urea})\end{aligned}$
 } \\
 \midrule
-\multicolumn{3}{l}{Probability of death within 28 days $=\frac{1}{(1+exp(-\text{lp}))}$} \\
+\multicolumn{3}{l}{\makecell{Probability of death \\ within 28 days $=\frac{1}{(1+exp(-\text{lp}))}$}} \\
 \midrule
-\multicolumn{3}{l}{Probability of ICU admission within 28 days $=\frac{1}{(1+exp(-(−0.08949+0.5970\times\text{lp})))}$} \\
+\multicolumn{3}{l}{\makecell{Probability of ICU admission \\ within 28 days $=\frac{1}{(1+exp(-(−0.08949+0.5970\times\text{lp})))}$}} \\
 \bottomrule
 \end{tabular}
 \end{table}
-
 
 
 Our explicit aim was to develop a score based on quickly and objectively

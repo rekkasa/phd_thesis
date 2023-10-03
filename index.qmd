@@ -267,3 +267,4 @@ female patients above the age of 50 with established osteoporosis. Finally, in
 **@sec-discussion** we present a general discussion along with perspectives on
 future work.
 
+\clearpage\null\pagestyle{empty}

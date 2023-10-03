@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # Literature review {#sec-review}
 \blfootnote{Chapter based on \textit{Rekkas A, Paulus JK, Raman G et al. Predictive approaches to heterogeneous treatment effects: a scoping review. BMC Med Res Methodol 20, 264 (2020). https://doi.org/10.1186/s12874-020-01145-1
 }}

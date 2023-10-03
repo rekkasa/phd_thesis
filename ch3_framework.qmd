@@ -126,7 +126,7 @@ framework and made it publicly available
 (https://github.com/OHDSI/RiskStratifiedEstimation). An overview of the entire
 framework can be found in @fig-framework.
 
-```{r fig-framework, cache=FALSE, echo=FALSE, fig.cap="Illustration of the framework’s application on two observational databases, preferably mapped to OMOP-CDM.",fig.align='center'}
+```{r fig-framework, cache=FALSE, echo=FALSE, fig.cap="Illustration of the framework’s application on two observational databases, preferably mapped to OMOP-CDM."}
 knitr::include_graphics("figures/ch3-Framework.pdf")
 ```
 
@@ -284,11 +284,11 @@ stratification on the propensity scores for the two lower acute MI risk groups
 of MDCD (@fig-covariateBalance). Therefore, results from analyses in this
 database should be interpreted with caution.
 
-```{r fig-psDensity, cache=TRUE, echo=FALSE, fig.cap="Preference score distributions within strata of predicted acute MI risk. RG-1 represents patients with acute MI risk lower than 1%; RG2 represents patients with acute MI risk between 1% and 1.5%; RG-3 represents patients with acute MI risk larger than 1.5%. The preference score is a transformation of the propensity score that adjusts for prevalence differences between populations. The percentages in each figure represent the amount of preference score overlap between treatment arms. Higher overlap of the preference score distributions indicates that patients in the target and the comparator cohorts are more similar in terms of the predicted probability of receiving treatment (thiazide or thiazide-like diuretics).", fig.show="hold", out.width = '100%'}
+```{r fig-psDensity, cache=TRUE, echo=FALSE, fig.cap="Preference score distributions within strata of predicted acute MI risk. RG-1 represents patients with acute MI risk lower than 1%; RG2 represents patients with acute MI risk between 1% and 1.5%; RG-3 represents patients with acute MI risk larger than 1.5%. The preference score is a transformation of the propensity score that adjusts for prevalence differences between populations. The percentages in each figure represent the amount of preference score overlap between treatment arms. Higher overlap of the preference score distributions indicates that patients in the target and the comparator cohorts are more similar in terms of the predicted probability of receiving treatment (thiazide or thiazide-like diuretics).", fig.show="hold", out.width = '80%',fig.pos="H"}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-PsDensity.tiff")))
 ```
 
-```{r fig-covariateBalance, cache=TRUE, echo=FALSE, fig.cap="Patient characteristic balance for thiazide or thiazide-like diuretics and ACE inhibitors before and after stratification on the propensity scores. RG-1 represents patients with acute MI risk lower than 1%; RG-2 represents patients with acute MI risk between 1% and 1.5%; RG-3 represents patients with acute MI risk larger than 1.5%. Each point represents the standardized difference of means for a single covariate before (x-axis) and after (y-axis) stratification. A commonly used rule of thumb suggests that standardized mean differences above 0.1 after propensity score adjustment indicate insufficient covariate balance.", fig.show="hold", out.width = '100%'}
+```{r fig-covariateBalance, cache=TRUE, echo=FALSE, fig.cap="Patient characteristic balance for thiazide or thiazide-like diuretics and ACE inhibitors before and after stratification on the propensity scores. RG-1 represents patients with acute MI risk lower than 1%; RG-2 represents patients with acute MI risk between 1% and 1.5%; RG-3 represents patients with acute MI risk larger than 1.5%. Each point represents the standardized difference of means for a single covariate before (x-axis) and after (y-axis) stratification. A commonly used rule of thumb suggests that standardized mean differences above 0.1 after propensity score adjustment indicate insufficient covariate balance.", fig.show="hold", out.width = '80%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-CovariateBalance.tiff")))
 ```
 
@@ -306,7 +306,7 @@ adjustment. The results of the risk-stratified negative control analyses for
 each database can be found in [Figures @fig-ch3-supp1] to [-@fig-ch3-supp3] of
 [Appendix @sec-framework-appendix].
 
-```{r fig-negativeControls, cache=TRUE, echo=FALSE, fig.cap="Effect size estimates for the negative controls (true hazard ratio = 1) in CCAE, MDCD, and MDCR databases. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size; alpha = 0.05). A well-calibrated estimator should include the true effect size within the 95% confidence interval, 95% of times", fig.show="hold", out.width = '100%'}
+```{r fig-negativeControls, cache=TRUE, echo=FALSE, fig.cap="Effect size estimates for the negative controls (true hazard ratio = 1) in CCAE, MDCD, and MDCR databases. Estimates below the diagonal dashed lines are statistically significant (different from the true effect size; alpha = 0.05). A well-calibrated estimator should include the true effect size within the 95% confidence interval, 95% of times", fig.show="hold", out.width = '80%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-NegativeControlsOverall.tiff")))
 ```
 
@@ -342,11 +342,6 @@ diuretics versus ACE inhibitors varied substantially across risk groups, but no
 clear trends indicating an association between risk and relative treatment
 effect estimates were observed (@fig-relativeResultsMain).
 
-```{r fig-relativeResultsMain, cache=TRUE, echo=FALSE, fig.cap="Relative treatment effects for main outcomes. Treatment effect heterogeneity for the main outcomes on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics compared to ACE inhibitors within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors.", fig.show="hold", out.width = '100%'}
-
-grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-RelativeResultsMain.tiff")))
-```
-
 For acute MI, hazard ratios showed an increasing trend with increasing baseline
 acute MI risk in MDCD and CCAE, implying larger benefit on the relative scale
 for patients in the lower risk groups. This was less pronounced in MDCR
@@ -374,6 +369,12 @@ found negligible treatment effects on the absolute scale for all three outcomes.
 Finally, for stroke, the differences on the absolute scale were small in all
 risk groups and databases (@fig-absoluteResultsMain).
 
+
+```{r fig-relativeResultsMain, cache=TRUE, echo=FALSE, fig.cap="Relative treatment effects for main outcomes. Treatment effect heterogeneity for the main outcomes on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics compared to ACE inhibitors within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors.", fig.show="hold", out.width = '100%'}
+
+grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-RelativeResultsMain.tiff")))
+```
+
 ```{r fig-absoluteResultsMain, cache=TRUE, echo=FALSE, fig.cap="Absolute treatment effects for main outcomes. Treatment effect heterogeneity for the main outcomes on the absolute scale of thiazide or thiazide-like diuretics compared to ACE inhibitors within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5. Absolute treatment effects estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors.",  out.width = '100%'}
 
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-AbsoluteResultsMain.tiff")))
@@ -385,7 +386,7 @@ and hypotension, but were associated with increased risk of hypokalemia and
 hyponatremia. For cough and hypokalemia, the relative treatment effect tended to
 decrease with increasing MI risk (hazard ratios moving closer to 1).
 
-```{r fig-relativeResultsSafety, cache=TRUE, echo=FALSE, fig.cap="Relative treatment effects for safety outcomes. Treatment effect heterogeneity for the safety outcomes on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics compared to ACE inhibitors within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. Bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors.", fig.show="hold", out.width = '100%'}
+```{r fig-relativeResultsSafety, cache=TRUE, echo=FALSE, fig.cap="Relative treatment effects for safety outcomes. Treatment effect heterogeneity for the safety outcomes on the relative scale (hazard ratios) of thiazide or thiazide-like diuretics compared to ACE inhibitors within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Hazard ratios estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. Bars represent 95% confidence intervals. Values below 1 favor thiazide or thiazide-like diuretics, while values above 1 favor ACE inhibitors.", fig.show="hold", out.width = '80%',fig.pos="H"}
 
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-RelativeResultsSafety.tiff")))
 ```
@@ -413,7 +414,7 @@ high acute MI risk in MDCR (-1.91% with a 95% CI from -3.43% to
 -0.38%).
 
 
-```{r fig-absoluteResultsSafety, cache=TRUE, echo=FALSE, fig.cap="Absolute treatment effects for safety outcomes. Treatment effect heterogeneity for the safety outcomes on the absolute scale of thiazide or thiazide-like diuretics compared to ACE inhibitors within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Absolute treatment effects estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors.", fig.show="hold", out.width = '100%'}
+```{r fig-absoluteResultsSafety, cache=TRUE, echo=FALSE, fig.cap="Absolute treatment effects for safety outcomes. Treatment effect heterogeneity for the safety outcomes on the absolute scale of thiazide or thiazide-like diuretics compared to ACE inhibitors within strata of predicted acute MI risk. RG-1 represents the group of patients with acute MI risk below 1%; RG-2 represents the group of patients with acute MI risk between 1% and 1.5%; RG-3 represents the group of patients with acute MI risk larger than 1.5%. Absolute treatment effects estimated in CCAE, MDCD, and MDCR are represented by blue, green, and orange circles, respectively. The bars represent 95% confidence intervals. Values above 0 favor thiazide or thiazide-like diuretics, while values below 0 favor ACE inhibitors.", fig.show="hold", out.width = '80%',fig.pos="H"}
 
 grid::grid.raster(tiff::readTIFF(here::here("figures/ch3-AbsoluteResultsSafety.tiff")))
 ```
@@ -682,3 +683,4 @@ Supplementary material for this chapter is available in [Appendix @sec-framework
 and online at
 [https://www.nature.com/articles/s41746-023-00794-y](https://www.nature.com/articles/s41746-023-00794-y).
 
+\clearpage\null\pagestyle{empty}

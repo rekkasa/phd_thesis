@@ -4,6 +4,7 @@ format:
     fontsize: 8pt
 ---
 
+\pagestyle{fancy}
 # List of publications {.unnumbered}
 
 ## In this thesis {.unnumbered}
@@ -53,3 +54,5 @@ prediction models: a systematic review, Journal of the \textit{American Medical
 Informatics Association}, 2022;29:7, Pages 1292–1302,
 doi: \url{https://doi.org/10.1093/jamia/ocac058}
 \end{footnotesize}
+
+\clearpage\null\pagestyle{empty}

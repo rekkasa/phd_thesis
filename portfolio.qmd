@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # PhD Portfolio {.unnumbered}
 
 \setlength{\LTleft}{-0.2cm}
@@ -49,3 +50,5 @@ Weekly OHDSI community calls & 2018 - \\
 \bottomrule
 
 \end{tabularx}
+
+\clearpage\null\pagestyle{empty}

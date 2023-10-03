@@ -22,11 +22,13 @@ my PhD.\newline
 
 **Prof. David Kent** provided invaluable input, especially during the initial formative stages of my PhD.\newline
 
-**Dr. Patrick Ryan**, provided incredibly helpful input regarding many chapters of
-this thesis.\newline
+**Dr. Patrick Ryan**, facilitated data access and provided incredibly helpful
+input regarding many chapters of this thesis.\newline
 
 My colleagues, **Egill Fridgeirsson, Henrik John, and Solomon Ioannou**, who
 became my closest friends while working at the department of Medical
 Informatics. Our discussions often challenged my way of thinking and provoked me
-to learn new things, both related to science and more general. They certainly
+to expand my knowledge, both related to science and more general. They certainly
 made the expat life a lot easier.
+
+\clearpage\null\pagestyle{empty}

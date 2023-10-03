@@ -1,3 +1,4 @@
+\pagestyle{fancy}
 # References {.unnumbered}
 
 ::: {#refs}
