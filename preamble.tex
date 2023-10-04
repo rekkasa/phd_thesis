@@ -1,4 +1,5 @@
 \usepackage{makecell}
+\usepackage{afterpage}
 \usepackage{ltablex}
 \usepackage{tabto}
 \usepackage{booktabs}
@@ -82,3 +83,8 @@
 \newcommand\given[1][]{\:#1\vert\:}
 
 \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+
+\usepackage{tocloft}
+
+\renewcommand\cftchapfont{\small}
+\renewcommand\cftchappagefont{\small}

@@ -1,5 +1,6 @@
+\addtocontents{toc}{\vspace{1\baselineskip}}
 \pagestyle{fancy}
-# Comparative effectiveness of teriparatide vs oral bisphosphonates {#sec-osteoporosis-appendix}
+# Comparative effectiveness of teriparatide versus oral bisphosphonates {#sec-osteoporosis-appendix}
 
 \chaptermark{Teriparatide vs bisphosphonates}
 

@@ -1,5 +1,5 @@
 \pagestyle{fancy}
-# About the author {.unnumbered .unlisted}
+# About the author {.unnumbered}
 
 Alexandros Rekkas was born on the $\text{30}^\text{th}$ of September, 1991 in
 Thessaloniki, Greece. He completed his secondary education in 2009 and started

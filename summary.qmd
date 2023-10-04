@@ -1,3 +1,4 @@
+\afterpage{\cfoot{\thepage}}
 \pagestyle{fancy}
 # Summary {.unnumbered}
 

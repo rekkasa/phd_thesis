@@ -83,15 +83,17 @@ $$
 
 where $$lp_1 = \gamma_2(lp_0-c)^2+\gamma_1(lp_0-c)+\gamma_0$$
 
-### Base-case scenario The base-case scenario assumes a constant odds ratio of
-$0.8$ in favor of treatment. The simulated datasets are of size $n=4250$, where
-treatment is allocated at random using a 50/50 split (80% power for the
-detection of an unadjusted OR of 0.8, assuming an event rate of 20% in the
-untreated arm). Outcome incidence in the untreated population is set at $20\%$.
-For the development of the prediction model we use the model defined in
-[equation @eq-p0] including a constant treatment effect. When doing predictions,
-$Z$ is set to $0$. The value of the true $\beta$ is such that the above
-prediction model has an AUC of $0.75$.
+### Base-case scenario 
+
+The base-case scenario assumes a constant odds ratio of $0.8$ in favor of
+treatment. The simulated datasets are of size $n=4250$, where treatment is
+allocated at random using a 50/50 split (80% power for the detection of an
+unadjusted OR of 0.8, assuming an event rate of 20% in the untreated arm).
+Outcome incidence in the untreated population is set at $20\%$. For the
+development of the prediction model we use the model defined in [equation
+@eq-p0] including a constant treatment effect. When doing predictions, $Z$ is
+set to $0$. The value of the true $\beta$ is such that the above prediction
+model has an AUC of $0.75$.
 
 
 The previously defined targets are achieved when $\beta=(-2.08,
