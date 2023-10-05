@@ -85,7 +85,7 @@ at 80% for the detection of the overall effect. Existing guidance on carrying
 out subgroup analyses attempts to mitigate these issues
 [@guyatt1993users;@sun2014how;@rothwell2005subgroup].
 
-```{r fig-power, cache=TRUE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", fig.show="hold", out.width = '100%'}
+```{r fig-power, cache=TRUE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", fig.show="hold", out.width = '80%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/PowerPlot.tiff")))
 ```
 
@@ -105,7 +105,7 @@ researcher can develop one in the dataset that is used for treatment effect
 estimation
 [@kent2010assessing;@burke2014using;@kent2019predictive1;@kent2019predictive2;@abadie2018endogenous].
 
-```{r fig-riskBenefit, cache=TRUE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", out.width = '100%'}
+```{r fig-riskBenefit, cache=TRUE, echo=FALSE, fig.cap="Statistical power for the detection of an interaction when the interaction effect size is between 0 and 4 times the main effect size. For simplicity, we assume equal number of treated and untreated patients and that patients are equally separated between the subgroup levels", out.width = '80%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/riskBenefit.tiff")))
 ```
 
@@ -120,7 +120,7 @@ treatment with baseline outcome risk may provide more accurate absolute benefit
 predictions for individual patients.
 
 Depending on the scale treatment effect is measured on, heterogeneity of
-treatment effect may or may not be identified (Figure 1.2). For example, despite
+treatment effect may or may not be identified (@fig-scale). For example, despite
 finding statistically significant subgroup effect evaluated on the relative
 scale, the absolute risk difference between the two groups may be too small to
 have any clinical relevance [@venekamp2014subgroup]. Therefore, in the presence
@@ -133,7 +133,7 @@ optimal approach for assessing heterogeneity of treatment effect. However, this
 approach may lead to overfitting and unstable estimates for the interaction
 effects if the aforementioned conditions are not met [@klaveren2018proposed].
 
-```{r fig-scale, cache=TRUE, echo=FALSE, fig.cap="Scale dependency of treatment effect heterogeneity. In the left panel a constant odds ratio of 0.8 is assumed. In the right panel a constant absolute risk reduction of 0.1 is assumed.", fig.show="hold", out.width = '100%'}
+```{r fig-scale, cache=TRUE, echo=FALSE, fig.cap="Scale dependency of treatment effect heterogeneity. In the left panel a constant odds ratio of 0.8 is assumed. In the right panel a constant absolute risk reduction of 0.1 is assumed.", fig.show="hold", out.width = '80%'}
 grid::grid.raster(tiff::readTIFF(here::here("figures/ScalePlot.tiff")))
 ```
 

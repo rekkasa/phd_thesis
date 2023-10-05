@@ -411,7 +411,7 @@ levels—expressed by hospital-specific calibration slopes: 1.09 (95% CI 0.86 to
 to 1.14) (@fig-temporal).
 
 
-```{r fig-multivariable-effects, cache=FALSE, echo=FALSE, fig.cap="Multivariable effects of continuous predictors of death within 28 days predictions of the logarithm of the odds by continuous predictor levels, with other predictor levels set to the median. Wald statistics are listed within each plot to express variable importance (higher is better). CRP, C reactive protein; LDH, lactic dehydrogenase; RR, respiratory rate."}
+```{r fig-multivariable-effects, cache=FALSE, echo=FALSE, fig.cap="Multivariable effects of continuous predictors of death within 28 days predictions of the logarithm of the odds by continuous predictor levels, with other predictor levels set to the median. Wald statistics are listed within each plot to express variable importance (higher is better). CRP, C reactive protein; LDH, lactic dehydrogenase; RR, respiratory rate.",out.width="80%"}
 knitr::include_graphics("figures/ch6-Figure1.pdf")
 ```
 
@@ -456,7 +456,7 @@ Urea (mmol/L)                          & 9.7 vs 4.6                 & 2.48      
 \end{landscape}
 
 
-```{r fig-temporal, cache=FALSE, echo=FALSE, fig.show="hold", fig.cap="Temporal validation: Performance of COPE for predicting death in second wave patients calibration plots of patients who were admitted since September 2020 in four separate Dutch hospitals. n is number of patients; a=calibration intercept (0 is perfect); b=calibration slope (1 is perfect); c=AUC (0.5 is useless; 1 is perfect); mbc=model-based AUC. AUC, area under the curve; COPE, COVID-19 outcome prediction in the emergency department."}
+```{r fig-temporal, cache=FALSE, echo=FALSE, fig.show="hold", fig.cap="Temporal validation: Performance of COPE for predicting death in second wave patients calibration plots of patients who were admitted since September 2020 in four separate Dutch hospitals. n is number of patients; a=calibration intercept (0 is perfect); b=calibration slope (1 is perfect); c=AUC (0.5 is useless; 1 is perfect); mbc=model-based AUC. AUC, area under the curve; COPE, COVID-19 outcome prediction in the emergency department.", out.width="80%"}
 knitr::include_graphics("figures/ch6-Figure2.pdf")
 ```
 
@@ -504,7 +504,7 @@ to 0.90); 0.81 (95% CI 0.66 to 0.95)) and substantially stronger predictor
 effects (calibration slope in two hospitals: 1.55 (95% CI 1.03 to 2.06); 1.53
 (95% CI 0.60 to 2.46)).
 
-```{r fig-temporal2, cache=FALSE, echo=FALSE, fig.cap="Temporal validation: Performance of COPE for predicting ICU admission in second wave patients calibration plots of patients who were admitted since September 2020 in two separate Dutch hospitals. n is number of patients; a=calibration intercept (0 is perfect); b=calibration slope (1 is perfect); c=AUC (0.5 is useless; 1 is perfect); mbc=model-based AUC. AUC, area under the curve; COPE, COVID-19 outcome prediction in the emergency department; ICU, intensive care unit."}
+```{r fig-temporal2, cache=FALSE, echo=FALSE, fig.cap="Temporal validation: Performance of COPE for predicting ICU admission in second wave patients calibration plots of patients who were admitted since September 2020 in two separate Dutch hospitals. n is number of patients; a=calibration intercept (0 is perfect); b=calibration slope (1 is perfect); c=AUC (0.5 is useless; 1 is perfect); mbc=model-based AUC. AUC, area under the curve; COPE, COVID-19 outcome prediction in the emergency department; ICU, intensive care unit.",out.width="80%"}
 knitr::include_graphics("figures/ch6-Figure3.pdf")
 ```
 ### Model presentation {.unnumbered}

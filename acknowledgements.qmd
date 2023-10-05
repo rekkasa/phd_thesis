@@ -29,8 +29,7 @@ of my PhD.\newline
 
 My colleagues **Egill Fridgeirsson, Henrik John, and Solomon Ioannou** became my
 closest friends while working at the department of Medical Informatics. Our
-discussions often challenged my way of thinking and provoked me to expand my
-knowledge, both related to science and more general. They certainly made the
-expat life a lot easier.
+discussions very often provoked me to expand my scientific and general
+knowledge. They certainly made the expat life a lot easier.
 
 \clearpage\null\pagestyle{empty}

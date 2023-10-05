@@ -6,10 +6,10 @@
 
 
 \noindent{Name:} \tabto{5cm} Alexandros Rekkas \newline
-PhD period: \tabto{5cm} December 2017 until July 2023 \newline
-Promotors: \tabto{5cm} Prof. dr. ir. P.R. Rijnbeek and \newline
-\tabto{5cm} Prof. dr. E.W. Steyerberg \newline
-Co-promotor: \tabto{5cm} dr. ir. D. van Klaveren
+PhD period: \tabto{5cm} 2017 until 2023 \newline
+Promotors: \tabto{5cm} Prof.dr.ir. P.R. Rijnbeek and \newline
+\tabto{5cm} Prof.dr. E.W. Steyerberg \newline
+Co-promotor: \tabto{5cm} Dr.ir. D. van Klaveren
 
 \noindent
 \renewcommand{\arraystretch}{1.3}
