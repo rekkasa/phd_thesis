@@ -487,6 +487,8 @@ _book/Beyond-the-average-treatment-effect.pdf : _quarto.yml \
 .PHONY:
 thesis :
 	quarto render
+propositions :
+	quarto render propositions.qmd
 
 environment :
 	R -e "renv::restore()"

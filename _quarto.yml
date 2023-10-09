@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: "_book"
 book:
   title: "Beyond the average treatment effect"
   subtitle: "Risk-based approaches to medical decision making"
@@ -24,7 +25,6 @@ book:
     - portfolio.qmd
     - publications.qmd
     - about.qmd
-
 
 bibliography: references.bib
 csl: american-medical-association-alphabetical.csl

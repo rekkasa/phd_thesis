@@ -1,0 +1,58 @@
+---
+format: 
+  pdf: 
+    documentclass: article
+    papersize: a5
+    fontsize: 10pt
+    geometry: margin=13mm
+    include-in-header: 
+      - text: |
+            \pagestyle{empty}
+---
+
+\begin{center}
+Propositions belonging to the thesis: \\
+\textbf{Beyond the average treatment effect} \bigskip
+\end{center}
+
+1. Methods for estimating treatment effect heterogeneity can be categorized on
+the basis of the reference class, i.e. the set of characteristics chosen to
+determine patient similarity in treatment effects. (this thesis)
+
+2. Standardization of healthcare databases is needed for comprehensive
+evaluation of treatment effect heterogeneity at scale. (this thesis)
+
+3. A standardized framework for the assessment of treatment effect heterogeneity
+in observational settings has potential to aid medical decision making, but
+diagnostics for the quality of evidence are required. (this thesis)
+
+4. A linear interaction of baseline risk with treatment often provides more
+reliable treatment benefit predictions than more flexible methods. (this thesis)
+
+5. Publicly accessible, well-documented prediction models developed using best
+current practices can aid medical decision making. (this thesis)
+
+6. It should be obvious that treatment effects are not necessarily the same for
+everyone. What may not be so obvious is that misapplying averages can cause
+harm, by either giving patients treatments that do not help or denying patients
+treatments that would help them. (Kravitz, R.L. et al, The Milbank Quarterly, 2004)
+
+
+7. Analyses of large-scale medical data have the potential to identify new and
+unknown associations, patterns and trends in the data that may pave the way to
+scientific discoveries in pathogenesis, classification, diagnosis, treatment and
+progression of disease. (Shilo, S. et al, Nature Medicine, 2020)
+
+8. Big data in healthcare is overwhelming not only because of its volume but
+also because of the diversity of data types and the speed at which it must be
+managed. (Raghupathi, W. and Raghupathi, V., Health Science and Systems, 2014)
+
+9. Fragmentation is the primary problem that needs to be addressed if EHRs have
+any hope of being used in any serious clinical capacity. (Agrawal, R. and
+Prabakaran, S., Heredity, 2020)
+
+10. Many factors are usually required for an effect to occur, but we rarely know
+all of them and how they relate to each other. (Pearl, J., Causality, 2009)
+
+11. The aim of science is not to open the door to infinite wisdom, but to set a
+limit to infinite error. (Bertolt Brecht, Life of Galileo)

@@ -6,7 +6,9 @@ _book/
 figures/
 *cache/
 *_files/
+*tmb
 .quarto/
 data/
 Rplots.pdf
+propositions.pdf
 /.quarto/
