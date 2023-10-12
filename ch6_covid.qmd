@@ -212,6 +212,7 @@ pandemic.
 median (‘M’) and quartile range (‘Q1’=first quartile; ‘Q3’=third quartile) are
 presented for all continuous variables (continues to next page).}
 \label{table:ch6-table1}
+\footnotesize
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrrrr}
 \toprule
 & \% missing & All patients &   Discharged or dead &  In hospital & ICU admission \\
@@ -248,6 +249,7 @@ Urea (mmol/L) & 9 & 6.5 (4.6, 9.7) & 6.2 (4.5, 9) & 7.4 (5.1, 11) & 9.6 (6.6, 15
 \begin{table}[h]
 \ContinuedFloat
 \caption{Continued.}
+\footnotesize
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrrrr}
 \toprule
  &  \% missing & All patients &   Discharged or dead &  In hospital & ICU admission \\
@@ -288,6 +290,7 @@ of two hospitals with a full record of ICU admissions median (‘M’) and quart
 range (‘Q1’=first quartile; ‘Q3’=third quartile) are presented for all
 continuous variables (continues to next page).}
 \label{table:ch6-table2}
+\footnotesize
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrrrr}
 \toprule
                                        & &  \% missing & All patients &   Discharged or dead &  In hospital & ICU admission \\
@@ -323,6 +326,7 @@ Urea (mmol/L)                          &            & 5  & 6.6 (4.7, 9.9)  & 6.6
 \begin{table}[h]
 \ContinuedFloat
 \caption{Continued.}
+\footnotesize
 \resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrrrrrrrrrrr}
 \toprule
  &             &  \% missing & All patients &   Discharged or dead &  In hospital & ICU admission \\
