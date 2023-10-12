@@ -4,7 +4,11 @@ format:
     documentclass: article
     papersize: a5
     fontsize: 10pt
-    geometry: margin=13mm
+    geometry:
+      - top=13mm
+      - bottom=13mm
+      - left=8mm
+      - right=13mm
     include-in-header: 
       - text: |
             \pagestyle{empty}
