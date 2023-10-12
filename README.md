@@ -5,7 +5,7 @@
 To download the source code for building the thesis run:
 
 ```bash
-git clone --branch develop --depth 1 https://github.com/rekkasa/phd_thesis.git
+git clone --branch main --depth 1 https://github.com/rekkasa/phd_thesis.git
 ```
 
 Before building the thesis, the development environment needs to be generated:
